@@ -1,0 +1,308 @@
+\section{Percobaan Numerik}
+Pada bagian ini, dilakukan percobaan numerik untuk menguji laju konvergensi dari skema iterasi Sabri dibanding dengan skema iterasi lainnya. Untuk percobaan ini, terlebih dahulu dikenalkan skema iterasi JK yang dikembangkan pada ruang $CAT_p(0)$ oleh Salisu sebagai berikut. 
+\begin{defn}[\textbf{Skema Iterasi JK}]\cite{Salisu2022}\label{defn:jk}
+Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi JK pada ruang $CAT_p(0)$ sebagai berikut:
+    \begin{align}\label{eq:jkcat}
+       \begin{cases}
+            q_n &= (1-c_n)x_n \oplus c_nTx_n,\\
+        y_n&= Tq_n,\\
+        x_{n+1} &= T\left((1-a_n)Tq_n\oplus a_n Ty_n\right),
+       \end{cases}
+    \end{align}
+    dengan $\{a_n\}\subseteq [0,1]$ dan $\{c_n\}\subseteq [0,1]$.
+\end{defn}
+Selain itu, berikut ini dikenalkan pula skema iterasi Thakur, Abbas, dan Agarwal pada ruang $CAT_p(0)$. 
+\begin{defn}[\textbf{Skema Iterasi Thakur}]\label{defn:thakur}
+Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi Thakur pada ruang $CAT_p(0)$ sebagai berikut:
+    \begin{align}\label{eq:thakurcat}
+       \begin{cases}
+            q_n&= (1-c_n)x_n \oplus c_nTx_n,\\
+        y_n&= T((1-a_n)x_n\oplus b_nq_n),\\
+        x_{n+1} &= Ty_n,
+       \end{cases}
+    \end{align}
+    dengan $\{a_n\}\subseteq [0,1]$ dan $\{c_n\}\subseteq [0,1]$.
+\end{defn}
+\begin{defn}[\textbf{Skema Iterasi Abbas}]\label{defn:abbas}
+Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi Abbas pada ruang $CAT_p(0)$ sebagai berikut:
+    \begin{align}\label{eq:abbascat}
+       \begin{cases}
+            q_n&= (1-c_n)x_n \oplus c_nTx_n,\\
+        y_n&= (1-b_n)Tx_n\oplus b_nTq_n,\\
+        x_{n+1} &= (1-a_n)Ty_n\oplus a_n Tq_n,
+       \end{cases}
+    \end{align}
+    dengan $\{a_n\}\subseteq [0,1]$, $\{b_n\}\subseteq [0,1]$, dan $\{c_n\}\subseteq [0,1]$.
+\end{defn}
+\begin{defn}[\textbf{Skema Iterasi Agarwal}]\label{defn:agarwal}
+Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi Agarwal pada ruang $CAT_p(0)$ sebagai berikut:
+    \begin{align}\label{eq:agarwalcat}
+       \begin{cases}
+        y_n&= (1-c_n)x_n\oplus b_n Tx_n,\\
+        x_{n+1} &= (1-a_n)Tx_n\oplus a_n Ty_n,
+       \end{cases}
+    \end{align}
+    dengan $\{a_n\}\subseteq [0,1]$ dan $\{c_n\}\subseteq [0,1]$.
+\end{defn}
+
+Percobaan numerik dilakukan dengan bahasa pemrograman Python dan perangkat lunak Google Colab. Digunakan beberapa variasi parameter, baik dari nilai awal $x_0$ maupun parameter di skema iterasinya, yaitu barisan $\{a_n\},\{b_n\},\{c_n\}$.
+Pemetaan dan ruang yang digunakan dalam percobaan ini diambil dari Contoh \ref{con:abcnon} yang memiliki titik tetap $x^*=(1,1,0,0,\dots)$. Untuk hasil numerik tiap iterasi, digunakan batas galat $d(x_{n+1},x^*)<10^{-6}$, sedangkan untuk jumlah iterasi yang diperlukan untuk konvergen dari masing-masing skema iterasi, digunakan batas galat $d(x_{n+1},x^*)<10^{-16}$. Dalam percobaan ini, laju konvergensi skema iterasi Sabri \eqref{eq:sabricat} dibandingkan dengan Skema iterasi JK \eqref{eq:jkcat}, Thakur \eqref{eq:thakurcat}, Abbas \ref{eq:abbascat}, dan Agarwal \eqref{eq:agarwalcat}. Kode dari percobaan ini dapat dilihat pada Lampiran A.1.
+
+Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} disajikan hasil numerik dari tiap iterasi dengan nilai awal $(2,3,0,0,\dots)$ dan parameter $a_n=0.42, b_n=0.83, c_n=0.31$ untuk setiap $n\in\mathbb{N}$.
+\begin{table}[H]
+    \centering
+    \caption{Hasil numerik skema iterasi Sabri dan JK}
+    \begin{tabular}{ccc}
+\hline
+\textbf{n} & \textbf{Sabri} & \textbf{JK} \\
+\hline
+0 & (2.000000, 3.000000, 0, 0, \dots) & (2.000000, 3.000000, 0, 0, \dots) \\
+1 & (1.007270, 1.021970, 0, 0, \dots) & (1.032859, 1.101850, 0, 0, \dots) \\
+2 & (1.000053, 1.000159, 0, 0, \dots) & (1.001080, 1.003243, 0, 0, \dots) \\
+3 & (1.000000, 1.000001, 0, 0, \dots) & (1.000035, 1.000106, 0, 0, \dots) \\
+4 & NaN & (1.000001, 1.000003, 0, 0, \dots) \\
+5 & NaN & (1.000000, 1.000000, 0, 0, \dots) \\
+\hline
+\end{tabular}
+    \label{tab:sabjk}
+\end{table}
+
+\begin{table}[H]
+    \centering
+        \caption{Hasil numerik skema iterasi Sabri dan Thakur}
+    \begin{tabular}{ccc}
+\hline
+\textbf{n} & \textbf{Sabri} & \textbf{Thakur} \\
+\hline
+0 & (2.000000, 3.000000, 0, 0, \dots) & (2.000000, 3.000000, 0, 0, \dots) \\
+1 & (1.007270, 1.021970, 0, 0, \dots) & (1.056397, 1.178912, 0, 0, \dots) \\
+2 & (1.000053, 1.000159, 0, 0, \dots) & (1.003181, 1.009572, 0, 0, \dots) \\
+3 & (1.000000, 1.000001, 0, 0, \dots) & (1.000179, 1.000538, 0, 0, \dots) \\
+4 & NaN & (1.000010, 1.000030, 0, 0, \dots) \\
+5 & NaN & (1.000001, 1.000002, 0, 0, \dots) \\
+\hline
+\end{tabular}
+    \label{tab:sabthkur}
+\end{table}
+
+\begin{longtable}{ccc}
+\caption{\centering Hasil numerik skema iterasi Sabri dan Abbas}\\
+\hline
+\textbf{n} & \textbf{Sabri} & \textbf{Abbas} \\
+\hline
+\endfirsthead 
+\multicolumn{3}{c}{ \thetable{} -- Lanjutan dari halaman sebelumnya} \\
+\hline
+\textbf{n} & \textbf{Sabri} & \textbf{Abbas} \\
+\hline
+\endhead 
+\hline
+0 & (2.000000, 3.000000, 0, 0, \dots) & (2.000000, 3.000000, 0, 0, \dots) \\
+1 & (1.007270, 1.021970, 0, 0, \dots) & (1.109842, 1.367048, 0, 0, \dots) \\
+2 & (1.000053, 1.000159, 0, 0, \dots) & (1.012065, 1.036634, 0, 0, \dots) \\
+3 & (1.000000, 1.000001, 0, 0, \dots) & (1.001325, 1.003981, 0, 0, \dots) \\
+4 & NaN & (1.000146, 1.000437, 0, 0, \dots) \\
+5 & NaN & (1.000016, 1.000048, 0, 0, \dots) \\
+6 & NaN & (1.000002, 1.000005, 0, 0, \dots) \\
+7 & NaN & (1.000000, 1.000001, 0, 0, \dots) \\
+\hline
+\label{tab:sababb}
+\end{longtable}
+
+
+\begin{table}[H]
+    \centering
+        \caption{Hasil numerik skema iterasi Sabri dan Agarwal}
+    \begin{tabular}{ccc}
+\hline
+\textbf{n} & \textbf{Sabri} & \textbf{Agarwal} \\
+\hline
+0 & (2.000000, 3.000000, 0, 0, \dots) & (2.000000, 3.000000, 0, 0, \dots) \\
+1 & (1.007270, 1.021970, 0, 0, \dots) & (1.225588, 1.840912, 0, 0, \dots) \\
+2 & (1.000053, 1.000159, 0, 0, \dots) & (1.050890, 1.160570, 0, 0, \dots) \\
+3 & (1.000000, 1.000001, 0, 0, \dots) & (1.011480, 1.034837, 0, 0, \dots) \\
+4 & NaN & (1.002590, 1.007789, 0, 0, \dots) \\
+5 & NaN & (1.000584, 1.001754, 0, 0, \dots) \\
+6 & NaN & (1.000132, 1.000395, 0, 0, \dots) \\
+7 & NaN & (1.000030, 1.000089, 0, 0, \dots) \\
+8 & NaN & (1.000007, 1.000020, 0, 0, \dots) \\
+9 & NaN & (1.000002, 1.000005, 0, 0, \dots) \\
+10 & NaN & (1.000000, 1.000001, 0, 0, \dots) \\
+\hline
+\end{tabular}
+    \label{tab:sabag}
+\end{table}
+
+Dengan galat kurang dari $10^{-6}$, skema iterasi Sabri hanya membutuhkan 3 iterasi dibanding dengan JK dan Thakur (5 iterasi), Abbas (7 iterasi), dan Agarwal (10 iterasi). Pada \ref{tab:galat}, diberikan pula nilai galat $d(x_n,x^*)$ dari tiap iterasi. \ref{fig:galatperc} juga memberikan gambaran mengenai penurunan galatnya. 
+\begin{longtable}{cccccc}
+\caption{\centering Galat $d(x_n, x^*)$}\label{tab:galat}\\
+\hline
+$\mathbf{n}$ & \textbf{Sabri} & \textbf{JK} & \textbf{Thakur} & \textbf{Abbas} & \textbf{Agarwal} \\
+\hline
+\endfirsthead 
+\multicolumn{6}{c}{ \thetable{} -- Lanjutan dari halaman sebelumnya} \\
+\hline
+$\mathbf{n}$ & \textbf{Sabri} & \textbf{JK} & \textbf{Thakur} & \textbf{Abbas} & \textbf{Agarwal} \\
+\hline
+\endhead 
+\hline
+% \multicolumn{3}{|c|}{{Lanjut pada halaman berikutnya}} \\
+\endfoot 
+\hline
+\endlastfoot
+\hline
+1 & 0.007270 & 0.032859 & 0.056397 & 0.109842 & 0.225588 \\
+    2& 0.000053 & 0.001080 & 0.003181 & 0.012065 & 0.050890 \\
+3 & 0.000000 & 0.000035 & 0.000179 & 0.001325 & 0.011480 \\
+4 & NaN & 0.000001 & 0.000010 & 0.000146 & 0.002590 \\
+5 & NaN & 0.000000 & 0.000001 & 0.000016 & 0.000584 \\
+6 & NaN & NaN & NaN & 0.000002 & 0.000132 \\
+7 & NaN & NaN & NaN & 0.000000 & 0.000030 \\
+8 & NaN & NaN & NaN & NaN & 0.000007 \\
+9 & NaN & NaN & NaN & NaN & 0.000002 \\
+10 & NaN & NaN & NaN & NaN & 0.000000 \\
+\hline
+\end{longtable}
+% \begin{table}[H]
+%     \centering
+%         \caption{Galat $d(x_n, x^*)$}
+%     \label{tab:galat}
+%     \begin{tabular}{cccccc}
+%     \hline
+%     $\mathbf{n}$ & \textbf{Sabri} & \textbf{JK} & \textbf{Thakur} & \textbf{Abbas} & \textbf{Agarwal} \\
+%     \hline
+%     1 & 0.007270 & 0.032859 & 0.056397 & 0.109842 & 0.225588 \\
+%     2& 0.000053 & 0.001080 & 0.003181 & 0.012065 & 0.050890 \\
+% 3 & 0.000000 & 0.000035 & 0.000179 & 0.001325 & 0.011480 \\
+% 4 & NaN & 0.000001 & 0.000010 & 0.000146 & 0.002590 \\
+% 5 & NaN & 0.000000 & 0.000001 & 0.000016 & 0.000584 \\
+% 6 & NaN & NaN & NaN & 0.000002 & 0.000132 \\
+% 7 & NaN & NaN & NaN & 0.000000 & 0.000030 \\
+% 8 & NaN & NaN & NaN & NaN & 0.000007 \\
+% 9 & NaN & NaN & NaN & NaN & 0.000002 \\
+% 10 & NaN & NaN & NaN & NaN & 0.000000 \\
+% \hline
+%     \end{tabular}
+% \end{table}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Bab_4/galatpercobaan.png}
+    \caption{Galat $d(x_n,x^*)$ vs iterasi}
+    \label{fig:galatperc}
+\end{figure}
+
+Selanjutnya, pada \ref{tab:paramkonstan}, \ref{tab:paramturun}, \ref{tab:paramnaik}, \ref{tab:paramnaikturun}, dan \ref{tab:paramturunnaik}, disajikan jumlah iterasi yang diperlukan sampai batas galat $d(x_{n+1},x^*)<10^{-16}$ dari masing-masing skema iterasi dengan nilai awal dan parameter yang berbeda. Pada tabel-tabel tersebut parameter barisan $\{a_n\}$ dan $\{c_n\}$ berturut-turut dipilih dengan kondisi konstan-konstan, turun-turun, naik-naik, naik-turun, dan turun-naik. 
+% \begin{longtable}{cccccc}
+% \caption{\centering Iterasi dengan parameter $a_n = 0.42, b_n=0.83, c_n=0.31$}\\
+% \hline
+% $\mathbf{n}$ & \textbf{Sabri} & \textbf{JK} & \textbf{Thakur} & \textbf{Abbas} & \textbf{Agarwal} \\
+% \hline
+% \endfirsthead 
+% \multicolumn{6}{c}{ \thetable{} -- Lanjutan dari halaman sebelumnya} \\
+% \hline
+% $\mathbf{n}$ & \textbf{Sabri} & \textbf{JK} & \textbf{Thakur} & \textbf{Abbas} & \textbf{Agarwal} \\
+% \hline
+% \endhead 
+% \hline
+% (2.0, 3.0, 0, 0, \dots) & 9 & 12 & 14 & 18 & 26 \\
+% (3.0, 4.0, 0, 0, \dots) & 9 & 12 & 14 & 19 & 26 \\
+% (4.0, 1.0, 0, 0, \dots) & 9 & 12 & 14 & 19 & 26 \\
+% (1.5, 4.0, 0, 0, \dots) & 9 & 12 & 14 & 18 & 26 \\
+% (2.7, 4.2, 0, 0, \dots) & 9 & 12 & 14 & 19 & 26 \\
+% (5.0, 1.8, 0, 0, \dots) & 9 & 12 & 15 & 19 & 27 \\
+% (3.1, 3.5, 0, 0, \dots) & 9 & 12 & 14 & 19 & 26 \\
+% \hline
+% \label{tab:paramkonstan}
+% \end{longtable}
+\begin{table}[H]
+\caption{Iterasi dengan parameter $a_n = 0.42, b_n=0.83, c_n=0.31$}
+    \centering
+    \begin{tabular}{cccccc}
+\hline
+$x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
+\hline
+(2.0, 3.0, 0, 0, \dots) & 9 & 12 & 14 & 18 & 26 \\
+(3.0, 4.0, 0, 0, \dots) & 9 & 12 & 14 & 19 & 26 \\
+(4.0, 1.0, 0, 0, \dots) & 9 & 12 & 14 & 19 & 26 \\
+(1.5, 4.0, 0, 0, \dots) & 9 & 12 & 14 & 18 & 26 \\
+(2.7, 4.2, 0, 0, \dots) & 9 & 12 & 14 & 19 & 26 \\
+(5.0, 1.8, 0, 0, \dots) & 9 & 12 & 15 & 19 & 27 \\
+(3.1, 3.5, 0, 0, \dots) & 9 & 12 & 14 & 19 & 26 \\
+\hline
+\end{tabular}
+    \label{tab:paramkonstan}
+\end{table}
+\begin{table}[H]
+\caption{Iterasi dengan parameter $a_n =\frac{n^2}{n^3+1}, b_n=\frac{2}{n+3},c_n=\frac{4n+2}{{7n+4}}.$}
+    \centering
+    \begin{tabular}{cccccc}
+\hline
+$x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
+\hline
+(2.0, 3.0, 0, 0, \dots) & 9 & 12 & 14 & 15 & 27 \\
+(3.0, 4.0, 0, 0, \dots) & 9 & 12 & 14 & 15 & 27 \\
+(4.0, 1.0, 0, 0, \dots) & 9 & 12 & 15 & 16 & 27 \\
+(1.5, 4.0, 0, 0, \dots) & 9 & 12 & 14 & 15 & 26 \\
+(2.7, 4.2, 0, 0, \dots) & 9 & 12 & 14 & 16 & 27 \\
+(5.0, 1.8, 0, 0, \dots) & 9 & 12 & 15 & 16 & 28 \\
+(3.1, 3.5, 0, 0, \dots) & 9 & 12 & 14 & 15 & 27 \\
+\hline
+\end{tabular}
+    \label{tab:paramturun}
+\end{table}
+\begin{table}[H]
+\caption{Iterasi dengan parameter $a_n =1- \frac{\sqrt{4n+9}}{2n+13}, b_n=0.8,c_n=1-\frac{n^2}{\sqrt{n^7+3}}.$}
+    \centering
+    \begin{tabular}{cccccc}
+\hline
+$x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
+\hline
+(2.0, 3.0, 0, 0, \dots) & 7 & 9 & 12 & 15 & 18 \\
+(3.0, 4.0, 0, 0, \dots) & 7 & 9 & 12 & 15 & 18 \\
+(4.0, 1.0, 0, 0, \dots) & 7 & 10 & 12 & 15 & 18 \\
+(1.5, 4.0, 0, 0, \dots) & 7 & 9 & 12 & 15 & 18 \\
+(2.7, 4.2, 0, 0, \dots) & 7 & 10 & 12 & 15 & 18 \\
+(5.0, 1.8, 0, 0, \dots) & 7 & 10 & 12 & 16 & 19 \\
+(3.1, 3.5, 0, 0, \dots) & 7 & 9 & 12 & 15 & 18 \\
+\hline
+\end{tabular}
+    \label{tab:paramnaik}
+\end{table}
+\begin{table}[H]
+\caption{Iterasi dengan parameter $a_n = 1-\frac{n^3}{n^5+1}, b_n=\frac{1}{n+1},c_n=\frac{3n+4}{5n^2+4}.$}
+    \centering
+    \begin{tabular}{cccccc}
+\hline
+$x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
+\hline
+(2.0, 3.0, 0, 0, \dots) & 7 & 10 & 14 & 24 & 26 \\
+(3.0, 4.0, 0, 0, \dots) & 7 & 10 & 14 & 24 & 26 \\
+(4.0, 1.0, 0, 0, \dots) & 7 & 10 & 14 & 25 & 26 \\
+(1.5, 4.0, 0, 0, \dots) & 7 & 10 & 13 & 24 & 25 \\
+(2.7, 4.2, 0, 0, \dots) & 7 & 10 & 14 & 25 & 26 \\
+(5.0, 1.8, 0, 0, \dots) & 7 & 10 & 14 & 25 & 26 \\
+(3.1, 3.5, 0, 0, \dots) & 7 & 10 & 14 & 25 & 26 \\
+\hline
+\end{tabular}
+    \label{tab:paramnaikturun}
+\end{table}
+\begin{table}[H]
+\caption{Iterasi dengan parameter $a_n = \frac{n^5+1}{5n^7+9}, b_n=1-\frac{3}{n+5},c_n=1-\frac{\sqrt{n^3+8}}{5n^5+9}.$}
+    \centering
+    \begin{tabular}{cccccc}
+\hline
+$x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
+\hline
+(2.0, 3.0, 0, 0, \dots) & 8 & 10 & 15 & 12 & 28 \\
+(3.0, 4.0, 0, 0, \dots) & 8 & 11 & 15 & 12 & 28 \\
+(4.0, 1.0, 0, 0, \dots) & 8 & 11 & 15 & 13 & 28 \\
+(1.5, 4.0, 0, 0, \dots) & 8 & 10 & 14 & 12 & 27 \\
+(2.7, 4.2, 0, 0, \dots) & 8 & 11 & 15 & 12 & 28 \\
+(5.0, 1.8, 0, 0, \dots) & 8 & 11 & 15 & 13 & 28 \\
+(3.1, 3.5, 0, 0, \dots) & 8 & 11 & 15 & 12 & 28 \\
+\hline
+\end{tabular}
+    \label{tab:paramturunnaik}
+\end{table}
+
+Hasil tersebut menunjukkan bahwa skema iterasi Sabri memiliki laju konvergensi yang lebih baik daripada yang lainnya secara numerik. Dengan parameter tertentu, skema tersebut hanya membutuhkan 7 iterasi untuk konvergen ke titik tetapnya dengan galat kurang dari $10^{-16}$. 

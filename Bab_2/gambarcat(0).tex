@@ -1,0 +1,61 @@
+\begin{tikzpicture}[scale=1.1, line cap=round, line join=round]
+
+% =====================
+% Gambar kiri
+% =====================
+\begin{scope}
+% Titik-titik
+\path (0,0) coordinate (p) (2.4,2.2) coordinate (q) (4.2,0.3) coordinate (r);
+\path (1.0964,0.726) coordinate (A) (2.075,0.427) coordinate (B);
+
+% Segitiga utama
+\draw (p) arc(-90-15+42.51:-90+15+42.51:{3.256/(2*sin(15))}) -- (q);
+\draw (r) arc(90-15+4.0856:90+15+4.0856:{4.21/(2*sin(15))}) -- (p);
+\draw (q) arc(-90-15-46.5481577:-90+15-46.5481577:{2.617/(2*sin(15))}) -- (r);
+
+
+% Garis dalam
+% \draw (A) arc(-90-15-16.99:-90+15-16.99:{1.02325/(2*sin(15))});
+\draw (A) -- (B);
+
+% Titik
+\fill (p) circle (1.5pt) node[below left] {$p$};
+\fill (q) circle (1.5pt) node[above] {$q$};
+\fill (r) circle (1.5pt) node[below right] {$r$};
+
+\fill (A) circle (1.5pt) node[above left] {$x$};
+\fill (B) circle (1.5pt) node[below right] {$y$};
+
+% Tanda ruas sama panjang
+\end{scope}
+
+% =====================
+% Gambar kanan
+% =====================
+\begin{scope}[xshift=6cm]
+% Titik-titik
+\coordinate (pb) at (0,0);
+\coordinate (qb) at (2.4,2.2);
+\coordinate (rb) at (4.2,0.3);
+
+\coordinate (xb) at (0.4*2.4,0.4*2.2);
+\coordinate (yb) at (0.5*4.2,0.5*0.3);
+
+% Segitiga utama
+\draw (pb)  --(qb) --(rb)--cycle;
+
+% Garis dalam
+\draw (xb)--(yb);
+
+% Titik
+\fill (pb) circle (1.5pt) node[below left] {$\overline{p}$};
+\fill (qb) circle (1.5pt) node[above] {$\overline{q}$};
+\fill (rb) circle (1.5pt) node[below right] {$\overline{r}$};
+
+\fill (xb) circle (1.5pt) node[above left] {$\overline{x}$};
+\fill (yb) circle (1.5pt) node[below right] {$\overline{y}$};
+
+% Tanda ruas sama panjang
+\end{scope}
+
+\end{tikzpicture}

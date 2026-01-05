@@ -1,0 +1,39 @@
+\contentsline {chapter}{HALAMAN JUDUL}{i}{Doc-Start}%
+\contentsline {chapter}{LEMBAR PENGESAHAN}{v}{Doc-Start}%
+\contentsline {chapter}{ABSTRAK}{vii}{Doc-Start}%
+\contentsline {chapter}{ABSTRACT}{ix}{Doc-Start}%
+\contentsline {chapter}{KATA PENGANTAR}{xi}{Doc-Start}%
+\contentsline {chapter}{DAFTAR ISI}{xiii}{Item.4}%
+\contentsline {chapter}{DAFTAR GAMBAR}{xv}{Item.4}%
+\contentsline {chapter}{DAFTAR TABEL}{xvii}{Item.4}%
+\contentsline {chapter}{DAFTAR NOTASI}{xix}{Item.4}%
+\contentsline {chapter}{\numberline {BAB 1}PENDAHULUAN}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Rumusan Masalah}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Batasan Masalah}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Tujuan Penelitian}{4}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Manfaat Penelitian}{4}{section.1.5}%
+\contentsline {chapter}{\numberline {BAB 2}KAJIAN PUSTAKA DAN DASAR TEORI}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Penelitian Terdahulu}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Ruang Geodesik}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Ruang $CAT_p(0)$}{8}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Pemetaan Nonekspansif}{10}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Aproksimasi Titik Tetap dari Pemetaan Nonekspansif}{12}{section.2.5}%
+\contentsline {chapter}{\numberline {BAB 3}METODE PENELITIAN}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Tahapan Penelitian}{15}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Diagram Alir Penelitian}{17}{section.3.2}%
+\contentsline {chapter}{\numberline {BAB 4}HASIL DAN PEMBAHASAN}{19}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Pemetaan $(\alpha ,\beta ,\gamma )$-nonekspansif di Ruang $CAT_p(0)$}{19}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Konvergensi Skema Iterasi Sabri untuk Pemetaan $(\alpha ,\beta ,\gamma )$-nonekspansif}{29}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Percobaan Numerik}{33}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Aplikasi pada Masalah Optimasi}{39}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Masalah Minimalisasi}{39}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Rekonstruksi Citra}{47}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {BAB 5}KESIMPULAN DAN SARAN}{53}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Kesimpulan}{53}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Saran}{53}{section.5.2}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{55}{Item.37}%
+\addvspace {1ex}
+\contentsline {chapter}{LAMPIRAN}{59}{Item.37}%
+\contentsline {chapter}{UCAPAN TERIMA KASIH}{75}{lstnumber.1.3.153}%
+\contentsline {chapter}{BIODATA PENULIS}{77}{lstnumber.1.3.153}%

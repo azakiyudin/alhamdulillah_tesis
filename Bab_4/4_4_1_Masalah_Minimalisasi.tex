@@ -1,0 +1,238 @@
+\subsection{Masalah Minimalisasi}
+Diberikan suatu himpunan tak kosong $X$ dan $f:X\to\mathbb{R}\cup\{\infty\}$ adalah suatu pemetaan. Masalah pencarian titik yang meminimumkan fungsi $f$ dapat diformulasikan sebagai mencari nilai 
+\begin{align}\label{eq:minprob}
+    x\in X \quad \text{sehingga}\quad f(x)\leq f(y), \quad \text{untuk setiap}\quad y\in X.
+\end{align}
+Permasalahan ini merupakan permasalahan penting dalam bidang optimasi dan analisis tak linier. Selanjutnya, diperkenalkan operator resolvent dari suatu fungsi.
+\begin{defn}
+    Diberikan $(X,d)$ adalah suatu ruang $CAT_p(0)$ dan $f:X\to \mathbb{R}\cup\{+\infty\}$ adalah suatu fungsi. Untuk $\lambda>0$, operator resolvent $\lambda$ dari $f$ didefinisikan sebagai
+    \begin{align}
+        J^f_{\lambda}(x) = \text{argmin}_{y\in X} \qty[f(y)+\frac{1}{2\lambda}d^2(x,y)].
+    \end{align}
+\end{defn}
+Untuk fungsi yang memenuhi kondisi konveks dan \textit{proper lower semi-continuous}, himpunan solusi dari masalah \eqref{eq:minprob} sama dengan himpunan titik tetap dari operator resolvent $J^f_{\lambda}$ (lihat proposisi 6.5 pada \cite{ArizaRuiz2014}). Berdasarkan hal tersebut, didapatkan Teorema berikut. 
+\begin{thm}\label{thm:apl1}
+    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $f:X\to\mathbb{R}\cup\{+\infty\}$ adalah fungsi yang memenuhi kondisi konveks dan \textit{proper lower semi-continuous}. Untuk $x\in X$, barisan $\{x_n\}$ yang didefinisikan sebagai 
+    \begin{align}
+        \begin{cases}
+            q_n &= J^f_{\lambda}\qty((1-c_n)x_n\oplus c_n J^f_{\lambda} (x_n))\\
+            y_n &= J^f_{\lambda} \qty(J^f_{\lambda} (q_n))\\
+            x_{n+1} &=J^f_{\lambda} \qty((1-a_n)J^f_{\lambda} (q_n)\oplus a_n J^f_{\lambda} (y_n)),
+        \end{cases}
+    \end{align}
+    dengan $\{a_n\},\{c_n\}\subseteq [a,b]\subset (0,1)$ konvergen-$\Delta$ ke solusi dari permasalahan \eqref{eq:minprob}. Jika $X$ kompak, maka $\{x_n\}$ konvergen kuat. 
+\end{thm}
+\begin{bukti}
+    Dengan menggunakan Lema 4 di \cite{Jost1995}, diketahui bahwa $J^f_{\lambda}$ merupakan pemetaan nonekspansif, sehingga merupakan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif juga. Akibatnya, dengan Teorema \ref{thm:konvD} diperoleh bahwa $\{x_n\}$ konvergen-$\Delta$ ke titik tetap dari $J^f_{\lambda}$. Jika $X$ kompak, Teorema \ref{thm:konvK}, menjamin bahwa konvergensinya kuat. Karena titik tetap dari $J^f_{\lambda}$ sama dengan solusi dari permasalahan \eqref{eq:minprob}, artinya Teorema \ref{thm:apl1} terbukti. 
+\end{bukti}
+
+Sebagai gambaran, dilakukan simulasi untuk contoh berikut ini. 
+\begin{exam}\label{con:fkonvk}
+    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ sebagaimana Contoh \ref{con:Catp} dan $W=\{(x_1,x_2,0,0,\dots)\mid x_1,x_2\in X\}$. Suatu fungsi $f:W\to \mathbb{R}\cup\{+\infty\}$ yang didefinisikan sebagai 
+    \begin{align}
+        f\qty(x) = 20\qty|x_2-x_1^3|^3+|26-x_1|^3, \quad \text{untuk}\quad x=(x_1,x_2,0,0,\dots)\in X,
+    \end{align}
+    merupakan fungsi tak konveks pada definisi klasiknya, tetapi konveks secara geodesik dengan geodesik sebagaimana pada Contoh \ref{con:Catp}. Lebih lanjut, $f$ merupakan fungsi yang \textit{proper lower semicontinuous}. 
+\end{exam}
+Penjelasan dari Contoh \ref{con:fkonvk} diberikan sebagai berikut. 
+\begin{enumerate}
+    \item Pertama, ditunjukkan bahwa $f$ tak konveks dalam definisi klasiknya. Untuk itu digunakan matriks Hessian, yaitu 
+    \begin{align*}
+        H = \begin{bmatrix}
+           \dfrac{\partial^2 f}{\partial x_1^2} & \dfrac{\partial^2 f}{\partial x_1x_2} \vspace*{0.3cm}\\ 
+           \dfrac{\partial^2 f}{\partial x_2x_1} & \dfrac{\partial^2 f}{\partial x_2^2}
+        \end{bmatrix}.
+    \end{align*}
+    Dapat dihitung bahwa 
+    \begin{align*}
+        \dfrac{\partial f}{\partial x_1} &= -180(x_2x_1^2-x_1^5)|x_2-x_1^3|-3(26-x_1)|26-x_1|.\\
+        \dfrac{\partial^2 f}{\partial x_1^2} &= -180\qty((2x_1x_2-5x_1^4)|x_2-x_1^3|-\frac{3x_1^4(x_2-x_1^3)^2}{|x_2-x_1^3|}) + \frac{6(26-x_1)^2}{|26-x_1|}.\\
+        \dfrac{\partial^2 f}{\partial x_1x_2} &= \frac{-360x_1^2(x_2-x_1^3)^2}{|x_2-x_1^3|}.\\
+        \dfrac{\partial f}{\partial x_2} &= 60(x_2-x_1^3)|x_2-x_1|^3.\\
+        \dfrac{\partial^2 f}{\partial x_2 x_1} &= \frac{-360x_1^2(x_2-x_1^3)^2}{|x_2-x_1^3|}.\\
+        \dfrac{\partial^2 f}{\partial x_2^2} &= 60\qty(|x_2-x_1^3|+\frac{(x_2-x_1^3)^2}{|x_2-x_1^3|}).
+    \end{align*}
+    Untuk $x_1=1$ dan $x_2=5$, diperoleh 
+    \begin{align*}
+        H = \begin{bmatrix}
+            -1290 & -1440\\
+            -1440 & 480
+        \end{bmatrix}.
+    \end{align*}
+    Diperhatikan bahwa $H$ memiliki persamaan karakteristik $p(\lambda)=\lambda^2+810\lambda-2692800$ dengan akar-akar 
+    \begin{align*}
+        \lambda_{1,2} = \frac{-810 \pm \sqrt{810^2-4(2692800)}}{2},
+    \end{align*}
+    yang jelas memiliki akar negatif. Hal ini berarti matriks Hessian $H$ memiliki nilai eigen negatif, sehingga $H$ bukan matriks semidefinit positif. Akibatnya $f$ bukanlah fungsi konveks dalam definisi klasik. 
+    \item Kedua, ditunjukkan bahwa $f$ adalah fungsi konveks secara geodesik. Sebelum itu, diperhatikan bahwa fungsi $f(x)=|x|^3$ adalah fungsi konveks, karena $f''(x)=\frac{6x^2}{|x|}\geq 0$ untuk setiap $x\in \mathbb{R}\backslash \{0\}$. Dengan fakta tersebut, didapatkan bahwa untuk setiap $t\in(0,1)$ dan $w,z\in X$ berlaku
+    \begin{align*}
+        f\qty((1-t)w\oplus tz) =~& f\big((1-t)w_1+tz_1, \qty((1-t)w_1+tz_1)^3\\
+        &\quad\,\,    -(1-t)(w_1^3-w_2)-t(z_1^3-z_2)\big)\\
+        =~& 20\qty|(1-t)(w_2-w_1^3)+t(z_2-z_1)^3|^3\\
+        ~&+\qty|26-\qty((1-t)w_1+tz_1)|^3\\
+        \leq ~& 20 \qty((1-t)|w_2-w_1^3|^3+t|z_2-z_1^3|^3)\\
+        ~&+ \qty |(1-t)(26-w_1)+t(26-z_1)|^3\\
+        \leq ~& (1-t) \qty(20|w_2-w_1^3|^3+|26-w_1|^3)\\
+        ~&+ t\qty(20|z_2-z_1^3|^3+|26-z_1|^3)\\
+        =~& (1-t)f(w)+tf(z).
+    \end{align*}
+    Jadi $f$ adalah fungsi konveks secara geodesik. 
+\end{enumerate}
+Selanjutnya, jelas bahwa $D(f)=\{x\in X\mid f(x)<+\infty\}\neq\emptyset$, sehingga $f$ adalah fungsi \textit{proper}. Jelas pula bahwa $f$ adalah fungsi kontinu, yang berarti juga memenuhi kondisi \textit{lower semicontinuous}. Dalam hal ini kondisi pada Teorema \ref{thm:konvK} terpenuhi. Diperhatikan bahwa $f$ memiliki nilai minimum $0$ yang dicapai pada titik $x^*=(26, 17576, 0,0,\dots)$. Kemudian, dilakukan simulasi dengan perangkat lunak Google Colab yang menggunakan bahasa pemrograman python. Kode dari program ini dapat dilihat pada Lampiran A.2. Selanjutnya, hasil dari simulasi ini dapat dilihat pada \ref{tab:simulasimin} dan \ref{tab:errsimulasi}, dengan parameter $\lambda=20$, $a_n=0.34$, dan $c_n=0.93$. Galat dari simulasi ini juga digambarkan sebagai grafik dengan koordinat-$y$ berskala log yang disajikan pada \ref{fig:galatsim}.
+\begin{longtable}{|c|c|c|}
+\caption{\centering Hasil simulasi untuk Contoh \ref{con:fkonvk} dengan skema iterasi Sabri dan JK}\label{tab:simulasimin}\\
+\hline
+\textbf{n} & \textbf{Sabri} & \textbf{JK} \\
+\hline
+\endfirsthead 
+\multicolumn{3}{c}{ \thetable{} -- Lanjutan dari halaman sebelumnya} \\
+\hline
+\textbf{n} & \textbf{Sabri} & \textbf{JK} \\
+\hline
+\endhead 
+\hline
+% \multicolumn{3}{|c|}{{Lanjut pada halaman berikutnya}} \\
+\endfoot 
+\hline
+\endlastfoot
+\hline
+0 & (10.00000, 10.00000, 0, 0, \dots) & (10.00000, 10.00000, 0, 0, \dots) \\
+1 & (25.04431, 15708.11708, 0, 0, \dots) & (22.68123, 11668.32829, 0, 0, \dots) \\
+2 & (25.98980, 17555.31676, 0, 0, \dots) & (25.96654, 17508.22787, 0, 0, \dots) \\
+3 & (25.99672, 17569.35288, 0, 0, \dots) & (25.99313, 17562.07883, 0, 0, \dots) \\
+4 & (25.99816, 17572.26781, 0, 0, \dots) & (25.99666, 17569.23601, 0, 0, \dots) \\
+5 & (25.99874, 17573.44601, 0, 0, \dots) & (25.99787, 17571.67427, 0, 0, \dots) \\
+6 & (25.99905, 17574.07075, 0, 0, \dots) & (25.99845, 17572.85677, 0, 0, \dots) \\
+7 & (25.99924, 17574.45456, 0, 0, \dots) & (25.99879, 17573.54447, 0, 0, \dots) \\
+8 & (25.99937, 17574.71316, 0, 0, \dots) & (25.99901, 17573.99088, 0, 0, \dots) \\
+9 & (25.99946, 17574.89874, 0, 0, \dots) & (25.99916, 17574.30275, 0, 0, \dots) \\
+10 & (25.99953, 17575.03819, 0, 0, \dots) & (25.99928, 17574.53235, 0, 0, \dots) \\
+11 & (25.99958, 17575.14668, 0, 0, \dots) & (25.99936, 17574.70814, 0, 0, \dots) \\
+12 & (25.99962, 17575.23343, 0, 0, \dots) & (25.99943, 17574.84690, 0, 0, \dots) \\
+13 & (25.99966, 17575.30434, 0, 0, \dots) & (25.99949, 17574.95913, 0, 0, \dots) \\
+14 & (25.99969, 17575.36336, 0, 0, \dots) & (25.99953, 17575.05170, 0, 0, \dots) \\
+15 & (25.99971, 17575.41324, 0, 0, \dots) & (25.99957, 17575.12934, 0, 0, \dots) \\
+16 & (25.99973, 17575.45593, 0, 0, \dots) & (25.99960, 17575.19536, 0, 0, \dots) \\
+17 & (25.99975, 17575.49287, 0, 0, \dots) & (25.99963, 17575.25217, 0, 0, \dots) \\
+18 & (25.99977, 17575.52516, 0, 0, \dots) & (25.99966, 17575.30157, 0, 0, \dots) \\
+19 & (25.99978, 17575.55360, 0, 0, \dots) & (25.99968, 17575.34490, 0, 0, \dots) \\
+20 & (25.99979, 17575.57886, 0, 0, \dots) & (25.99970, 17575.38321, 0, 0, \dots) \\
+21 & (25.99980, 17575.60142, 0, 0, \dots) & (25.99971, 17575.41733, 0, 0, \dots) \\
+22 & (25.99981, 17575.62171, 0, 0, \dots) & (25.99973, 17575.44790, 0, 0, \dots) \\
+23 & (25.99982, 17575.64004, 0, 0, \dots) & (25.99974, 17575.47544, 0, 0, \dots) \\
+24 & (25.99983, 17575.65669, 0, 0, \dots) & (25.99975, 17575.50039, 0, 0, \dots) \\
+25 & (25.99984, 17575.67187, 0, 0, \dots) & (25.99976, 17575.52309, 0, 0, \dots) \\
+26 & (25.99985, 17575.68578, 0, 0, \dots) & (25.99978, 17575.54382, 0, 0, \dots) \\
+27 & (25.99985, 17575.69856, 0, 0, \dots) & (25.99978, 17575.56285, 0, 0, \dots) \\
+28 & (25.99986, 17575.71034, 0, 0, \dots) & (25.99979, 17575.58035, 0, 0, \dots) \\
+29 & (25.99986, 17575.72124, 0, 0, \dots) & (25.99980, 17575.59652, 0, 0, \dots) \\
+30 & (25.99987, 17575.73136, 0, 0, \dots) & (25.99981, 17575.61150, 0, 0, \dots) \\
+31 & (25.99987, 17575.74077, 0, 0, \dots) & (25.99982, 17575.62541, 0, 0, \dots) \\
+32 & (25.99988, 17575.74954, 0, 0, \dots) & (25.99982, 17575.63836, 0, 0, \dots) \\
+33 & (25.99988, 17575.75775, 0, 0, \dots) & (25.99983, 17575.65045, 0, 0, \dots) \\
+34 & (25.99988, 17575.76543, 0, 0, \dots) & (25.99983, 17575.66177, 0, 0, \dots) \\
+35 & (25.99989, 17575.77265, 0, 0, \dots) & (25.99984, 17575.67237, 0, 0, \dots) \\
+36 & (25.99989, 17575.77943, 0, 0, \dots) & (25.99984, 17575.68234, 0, 0, \dots) \\
+37 & (25.99989, 17575.78583, 0, 0, \dots) & (25.99985, 17575.69172, 0, 0, \dots) \\
+38 & (25.99990, 17575.79186, 0, 0, \dots) & (25.99985, 17575.70056, 0, 0, \dots) \\
+39 & (25.99990, 17575.79757, 0, 0, \dots) & (25.99986, 17575.70892, 0, 0, \dots) \\
+40 & NaN & (25.99986, 17575.71682, 0, 0, \dots) \\
+41 & NaN & (25.99986, 17575.72430, 0, 0, \dots) \\
+42 & NaN & (25.99987, 17575.73141, 0, 0, \dots) \\
+43 & NaN & (25.99987, 17575.73815, 0, 0, \dots) \\
+44 & NaN & (25.99987, 17575.74457, 0, 0, \dots) \\
+45 & NaN & (25.99988, 17575.75068, 0, 0, \dots) \\
+46 & NaN & (25.99988, 17575.75651, 0, 0, \dots) \\
+47 & NaN & (25.99988, 17575.76207, 0, 0, \dots) \\
+48 & NaN & (25.99989, 17575.76739, 0, 0, \dots) \\
+49 & NaN & (25.99989, 17575.77247, 0, 0, \dots) \\
+50 & NaN & (25.99989, 17575.77733, 0, 0, \dots) \\
+51 & NaN & (25.99989, 17575.78200, 0, 0, \dots) \\
+52 & NaN & (25.99989, 17575.78647, 0, 0, \dots) \\
+53 & NaN & (25.99990, 17575.79076, 0, 0, \dots) \\
+54 & NaN & (25.99990, 17575.79489, 0, 0, \dots) \\
+55 & NaN & (25.99990, 17575.79885, 0, 0, \dots) \\
+\hline
+\end{longtable}
+
+
+\begin{longtable}{|c|>{\centering\arraybackslash}p{4cm} | >{\centering\arraybackslash}p{4cm} |}
+\caption{\centering Galat simulasi $d(x_n,x^*)$ untuk Contoh \ref{con:fkonvk} dengan skema iterasi Sabri dan JK}\label{tab:errsimulasi}\\
+\hline
+{\textbf{n}} & {\textbf{Galat Sabri}} & {\textbf{Galat JK}} \\
+\hline
+\endfirsthead 
+\multicolumn{3}{c}{\centering \thetable{} -- Lanjutan dari halaman sebelumnya} \\
+\hline
+{\textbf{n}} & {\textbf{Sabri}} & {\textbf{JK}} \\
+\hline
+\endhead 
+% \multicolumn{3}{c}{{Lanjut pada halaman berikutnya}} \\
+\hline
+\endfoot 
+\hline
+\endlastfoot
+\hline
+1 & 0.956089 & 3.319194 \\
+2 & 0.010203 & 0.033461 \\
+3 & 0.003278 & 0.006866 \\
+4 & 0.001840 & 0.003336 \\
+5 & 0.001259 & 0.002133 \\
+6 & 0.000951 & 0.001550 \\
+7 & 0.000762 & 0.001211 \\
+8 & 0.000635 & 0.000991 \\
+9 & 0.000543 & 0.000837 \\
+10 & 0.000474 & 0.000724 \\
+11 & 0.000421 & 0.000637 \\
+12 & 0.000378 & 0.000569 \\
+13 & 0.000343 & 0.000513 \\
+14 & 0.000314 & 0.000468 \\
+15 & 0.000289 & 0.000429 \\
+16 & 0.000268 & 0.000397 \\
+17 & 0.000250 & 0.000369 \\
+18 & 0.000234 & 0.000344 \\
+19 & 0.000220 & 0.000323 \\
+20 & 0.000208 & 0.000304 \\
+21 & 0.000197 & 0.000287 \\
+22 & 0.000187 & 0.000272 \\
+23 & 0.000177 & 0.000259 \\
+24 & 0.000169 & 0.000246 \\
+25 & 0.000162 & 0.000235 \\
+26 & 0.000155 & 0.000225 \\
+27 & 0.000149 & 0.000216 \\
+28 & 0.000143 & 0.000207 \\
+29 & 0.000137 & 0.000199 \\
+30 & 0.000132 & 0.000192 \\
+31 & 0.000128 & 0.000185 \\
+32 & 0.000123 & 0.000178 \\
+33 & 0.000119 & 0.000172 \\
+34 & 0.000116 & 0.000167 \\
+35 & 0.000112 & 0.000162 \\
+36 & 0.000109 & 0.000157 \\
+37 & 0.000106 & 0.000152 \\
+38 & 0.000103 & 0.000148 \\
+39 & 0.000100 & 0.000144 \\
+40 & NaN & 0.000140 \\
+41 & NaN & 0.000136 \\
+42 & NaN & 0.000132 \\
+43 & NaN & 0.000129 \\
+44 & NaN & 0.000126 \\
+45 & NaN & 0.000123 \\
+46 & NaN & 0.000120 \\
+47 & NaN & 0.000117 \\
+48 & NaN & 0.000115 \\
+49 & NaN & 0.000112 \\
+50 & NaN & 0.000110 \\
+51 & NaN & 0.000107 \\
+52 & NaN & 0.000105 \\
+53 & NaN & 0.000103 \\
+54 & NaN & 0.000101 \\
+55 & NaN & 0.000099 \\
+\hline
+\end{longtable}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Bab_4/galatsim.png}
+    \caption{Galat $d(x_n,x^*)$ (skala log) vs iterasi}
+    \label{fig:galatsim}
+\end{figure}

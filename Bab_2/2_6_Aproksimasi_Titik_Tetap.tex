@@ -1,0 +1,50 @@
+\section{Aproksimasi Titik Tetap dari Pemetaan Nonekspansif}
+Salah satu cara untuk mendapatkan titik tetap dari suatu pemetaan $f$ adalah dengan mendapatkan nilai $x_0$ yang memenuhi persamaan titik tetap yaitu, $x_0=f(x_0)$. Akan tetapi, menyelesaikan persamaan tersebut tidak selalu mudah, khususnya untuk persamaan tak linier. Oleh karena itu, nilai pendekatan atau aproksimasi dari titik tetap diperlukan. 
+
+Untuk melakukan aproksimasi, tentunya diperlukan algoritma atau dalam hal ini adalah skema iterasi yang konvergen ke titik tetap dari pemetaan tersebut. Untuk pemetaan yang bersifat kontraktif, skema iterasi Picard adalah skema iterasi paling sederhana yang dapat digunakan. Berikut adalah skema iterasi Picard
+Diberikan $X$ adalah himpunan tak kosong dan $T:X\to X$ adalah suatu pemetaan, serta $x_1\in X$, maka $\{x_n\}$ yang didefinisikan sebagai $x_{n+1}=T(x_n)$ untuk setiap $n\in\mathbb{N}$ adalah barisan yang dihasilkan oleh skema iterasi Picard. 
+Namun, skema ini tidak selalu konvergen untuk pemetaan yang bersifat nonekspansif. Sebagai ilustrasi, diberikan contoh berikut 
+\begin{exam}
+    Diberikan $f:\mathbb{R}\to\mathbb{R}$ dengan $f(x)=1-x$. Pemetaan ini adalah pemetaan nonekspansif dengan titik tetap adalah $x=\frac{1}{2}$, tetapi untuk setiap $x\in \mathbb{R}\backslash \{\frac{1}{2}\}$ iterasi Picard menghasilkan barisan 
+    $\{x,1-x,x,1-x,x,\dots\}$ yang divergen.
+\end{exam}
+Misalkan $W$ adalah himpunan yang tertutup dan konveks dari suatu ruang Banach, $x_0\in W$ dan $\{a_k\},\{b_k\},\{c_k\}$ adalah barisan di $(0,1]$, serta $T:W\to W$ adalah suatu pemetaan nonekspansif. 
+Pada tahun 1953, Mann memperkenalkan skema iterasinya yang konvergen untuk pemetaan nonekspansif yang diberikan sebagai berikut \cite{mann1953}
+\begin{align}
+        x_{k+1} &= (1-a_k)x_k +a_k Tx_k.
+\end{align}
+Berbagai perkembangan skema iterasi juga terus bermunculan hingga saat ini dengan salah satu tujuannya adalah mencari skema iterasi yang tercepat untuk aproksimasi titik tetap dari suatu pemetaan. Untuk selanjutnya, berikut ini diberikan skema iterasi yang konvergen ke titik tetap dari pemetaan nonekspansif diperumum oleh Agarwal, Abbas dan Nazir, Thakur, Ahmad dkk. serta Sabri dkk. secara berurutan \cite{agarwal,abbas,Thakur2016,Ahmad2021,sabri2025}. 
+\begin{align}\label{eq:itagarwal}
+    \begin{cases}
+        y_k &= (1-b_k)x_k+b_kTx_k,\\
+        x_{k+1} &= (1-a_k)Tx_k +a_k Ty_k.
+    \end{cases}
+\end{align}
+\begin{align}\label{eq:itabbas}
+    \begin{cases}
+        q_k &= (1-c_k)x_k+c_kTx_k,\\
+        y_k &= (1-b_k)Tx_k +b_kTq_k,\\
+        x_{k+1} &= (1-a_k)Ty_k+a_kTq_k.
+    \end{cases}
+\end{align}
+\begin{align}\label{eq:itthakur}
+    \begin{cases}
+        q_k &= (1-c_k)x_k+c_kTx_k,\\
+        y_k &= T((1-b_k)x_k +b_k q_k),\\
+        x_{k+1} &= Ty_k.
+    \end{cases}
+\end{align}
+\begin{align}\label{eq:itjk}
+    \begin{cases}
+        q_k &= (1-c_k)x_k+c_kTx_k,\\
+        y_k &= Tq_k,\\
+        x_{k+1} &= T((1-a_k)Tq_k+a_kTy_k).
+    \end{cases}
+\end{align}
+\begin{align}\label{eq:itSabri}
+    \begin{cases}
+        q_k &= T\qty(\qty(1-c_k)x_k+c_kTx_k),\\
+        y_k &= T\qty(Tq_k),\\
+        x_{k+1} &= T\qty((1-a_k)Tq_k+a_kTy_k).
+    \end{cases}
+\end{align}

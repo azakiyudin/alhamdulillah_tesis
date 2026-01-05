@@ -1,0 +1,170 @@
+\documentclass{ProposalTesis-ITSpdf}
+\usepackage{enumerate}
+\usepackage[table]{xcolor}
+\usepackage{ragged2e}
+\usepackage{array}
+% \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+% \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+% \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\DeclareMathOperator{\sgn}{sgn}
+\newcommand{\R}{\mathbb{R}}
+\usepackage{setspace}
+\usepackage{pdfpages}
+\usepackage{physics}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows}
+\usepackage{todonotes}
+\usepackage{bm}
+\usepackage{siunitx}
+
+\RequirePackage{mathptmx,amsthm,enumitem}
+\usepackage{palatino,url}
+\usepackage{longtable}
+\RequirePackage{euscript} %
+\onehalfspacing
+\definecolor{mygreen}{RGB}{0,128, 0}
+\newtheorem{defn}{Definisi}[section]
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+\usepackage{cleveref}
+\usetikzlibrary{calc}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily\small,
+  numbers=left,
+  numberstyle=\tiny,
+  stepnumber=1,
+  numbersep=5pt,
+  frame=single,
+  breaklines=true,
+  captionpos=b,
+  showstringspaces=false,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{red},
+}
+
+\begin{document}
+
+
+%\input{Data-Proposal}
+
+\Judul{Konvergensi Skema Iterasi Sabri untuk Kelas Pemetaan Nonekspansif Diperumum di Ruang Geodesik beserta Aplikasinya} %%Tuliskan Judul Yang sesuai (bhs.Indonesia)
+
+\JudulEng{Convergence of Sabri's Iterative Scheme for The Generalized Class of Nonexpansive Mappings in Geodesic Spaces and Its Applications} % Tuiskan Judul Yang seuai (bhs.Inggris)
+
+\Nama{Ahmad Hisbu Zakiyudin} % Tuliskan Nama penulis proposal tesis
+
+\NRP{6002241016} % Tuliskan Nrp penulis proposal tesis
+
+\Jurusan{Matematika} % Tuliskan Departemen penulis proposal Tesis
+
+\Department{Mathematics} % Tuliskan Departement Penulis proposal tesis
+
+
+\Tahun{2025} % Tuliskan tahun pembuatan proposal tesis
+
+\Fakultas{Sains dan Analitika Data}{FSAD} % Tuliskan Fakultas pembuatan tesis
+
+\Faculty{Science and Data analytics} % Tuliskan Fakultas pembuatan tesis (bhs. Inggris)
+
+\Pembimbing{Dr.mont. Kistosil Fahim, S. Si., M. Si.} % Tuliskan nama pembimbing 1           % Tuliskan nama pembimbing2, bila hanya satu jangan diisi
+{}             % Tuliskan nama pembimbing3, bila hanya dua jangan diisi
+
+\NIPPembimbing{19910522 201504 1 001}    % Isi dengan NIP pembimbing
+{}    % Isi dengan NIP pembimbing kedua bila ada
+{}    % Isi dengan NIP pembimbing ketiga bila ada
+
+\Penguji{Dr. Mahmud Yunus, M.Si}   % Isi nama penguji 1 yang sesuai
+{Dr. Sunarsini, S.Si, M.Si}     % Isi nama penguji 2 yang sesuai
+{Dr. Imam Mukhlash, S.Si, MT}         % Isi nama penguji 3 yang bila ada bila tidak kosongkan
+
+\NIPPenguji{19620407 198703 1 005}  % Isi Nip penguji 1 yang sesuai
+{19691004 199402 2 001}             % Isi Nip penguji 2 yang sesuai
+{19700831 199403 1 003}             % Isi Nip penguji 3 yang sesuai bila ada bila tidak kosongkan
+
+\TanggalDisetujui{2 September 2025} %  Isi dengan tanggal seminar
+\allowdisplaybreaks
+\BagianAwal
+\LembarJudul
+\TitlePage
+\LembarPengesahan
+
+\include{Abstrak_Ind/AbstrakInd} %%  menampilkan Abstrak Bhs.Indonesia
+
+\include{Abstract_Eng/AbstrakEnglish} %%  menampilkan Abstrak Bhs.Inggris
+\input{katapengantar.tex}
+
+\DaftarIsi %% menampilkan daftar isi
+
+\DaftarGambar
+
+\DaftarTabel %% menampilkan tabel
+
+\DaftarNotasi
+\begin{flushleft}
+\begin{tabular}{lrl}
+$\R$ &:& Himpunan semua bilangan real\\
+$\R^+$ &:& Himpunan semua bilangan real positif\\
+$\N$ &:& Himpunan semua bilangan asli\\
+$d$ &:& Metrik\\
+$\displaystyle\sum$ &:& Notasi Sigma\\
+$\in$ &:& Elemen atau anggota\\
+$\notin$ &:& Bukan anggota\\
+$:=$ &:& Didefinisikan\\
+$\neq$ &:& Tidak sama dengan\\
+$\geq$ &:& Lebih besar atau sama dengan\\
+$\leq$ &:& Lebih kecil atau sama dengan\\
+$>$ &:& Lebih besar\\
+$<$ &:& Lebih kecil\\
+$\nless$ &:& Tidak kurang dari\\
+$\subset$ &:& Himpunan bagian sejati\\
+$\subseteq$ &:& Himpunan bagian tak sejati\\
+$|x|$ &:& Harga mutlak dari $x$\\
+$\sup$ &:& Supremum (batas atas terkecil)\\
+$Tx$ &:& Hasil pemetaan dari $x$ oleh $T$\\
+$\displaystyle \lim_{n\rightarrow \infty} x_n$ &:& Limit barisan $(x_n)$\\
+$\varepsilon$ &:& Epsilon\\
+$\delta$ &:& Delta\\
+$\alpha$ &:& Alpha\\
+    $\Upsilon$ &:& Upsilon\\
+    $\lambda$ &:& Lambda\\
+    $\Delta$ &:& Delta\\
+    $\emptyset$ &:& Himpunan kosong\\
+    $\cap$ &:& Operasi irisan pada himpunan\\
+    $\infty$ &:& Tak hingga\\
+    $\|x\|$ &:& Norm dari $x$\\
+    \end{tabular}
+\end{flushleft}
+
+\newpage
+
+
+\BagianInti %%% menampilkan bagian inti proposal tesis yang berisi:
+
+\input{Bab_1/Bab1} %%  menampilkan Bab I
+
+\input{Bab_2/Bab2} %% menampilkan Bab II
+
+\input{Bab_3/Bab3}  %%% menampilkan Bab III
+\input{Bab_4/Bab4}
+\input{Bab_5/Bab5}
+\DaftarPustaka{Bibitem}
+\pagebreak
+\BukaLampiran
+\input{lampiran1.tex}
+\pagebreak
+% \input{lampiran2.tex}
+% \pagebreak
+% \input{lampiran3.tex}
+% \pagebreak
+\input{terimakasih.tex}
+\pagebreak
+\input{biodata}
+\end{document}

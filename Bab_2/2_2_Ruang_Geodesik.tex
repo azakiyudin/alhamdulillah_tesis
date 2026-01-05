@@ -1,0 +1,20 @@
+\section{Ruang Geodesik}
+% \subsection{Definisi dan Notasi Ruang $CAT_p(0)$}
+Pada bagian ini akan dikenalkan konsep terkait ruang geodesik. Secara intuisi, ruang geodesik adalah ruang metrik dengan sifat terdapat jalur terpendek di antara dua titik dari ruang metrik tersebut. Jalur terpendek di sini tidak selalu garis lurus seperti yang ada di $\mathbb{R}^2$, tetapi jalurnya bisa melengkung atau berkelok asalkan lintasannya memiliki panjang minimum terhadap metriknya. Berikut diberikan definisi ruang metrik geodesik secara formal. 
+\begin{defn}\cite{Bridson1999}
+    Diberikan $(X,d)$ adalah ruang metrik dan $x,y\in X$. Pemetaan $\gamma: \qty[0, 1]\subset \mathbb{R} \to X$ disebut jalur geodesik yang menghubungkan $x$ dan $y$ jika memenuhi 
+    \begin{enumerate}
+        \item[(a)] $\gamma(0)=x$,
+        \item[(b)] $\gamma(1)=y$
+        \item[(c)] $d(\gamma(t),\gamma(s))=|t-s|d(x,y)$ untuk setiap $t,s\in [0,1]$.
+    \end{enumerate}
+ Ruang metrik $(X,d)$ disebut sebagai ruang metrik geodesik jika setiap elemen $x,y\in X$ dihubungkan oleh suatu jalur geodesik. Dalam hal ini suatu geodesik dinotasikan sebagai $[x,y]$.
+\end{defn}
+Berikut ini adalah contoh dari ruang metrik geodesik.
+\begin{exam}\cite{Bridson1999}
+    Setiap ruang bernorma $(V,\norm{\cdot})$ yang dilengkapi dengan metrik $d(v,w)=\|v-w\|$ untuk setiap $v,w\in V$ adalah ruang metrik geodesik.  
+\end{exam}
+Selanjutnya, diberikan definisi dari segitiga di ruang geodesik. 
+\begin{defn}\cite{Bridson1999}
+    Diberikan $(X,d)$ ruang metrik geodesik. Suatu segitiga geodesik $\triangle(p, q,r)$ di ruang metrik geodesik berisi tiga titik $p, q,r\in X$ sebagai titik sudut dan jalur geodesik di antara dua titik tersebut yaitu $[p,q], [p,r], [q,r]$ disebut sebagai sisi dari segitiganya. 
+\end{defn}

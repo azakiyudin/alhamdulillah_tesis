@@ -1,0 +1,552 @@
+\lampiran{Kode Progam Simulasi dalam Bahasa Pemrograman Python}
+\begin{lstlisting}[caption={Kode Python untuk Percobaan Numerik}]
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import random
+
+#metrik
+def metrik(x,y):
+  x1,x2 = x[0], x[1]
+  y1,y2 = y[0], y[1]
+
+  suku1 = np.abs(x1-y1)**3
+  suku2 = np.abs(x1**3-x2-y1**3+y2)**3
+  return (suku1+suku2)**(1/3)
+
+#jalur geodesik
+def geodesik(t,w,z):
+  w1,w2 = w[0],w[1]
+  z1,z2 = z[0],z[1]
+  sk1 = (1-t)*w1+t*z1
+  sk2 = (1-t)*(w1**3-w2)+t*(z1**3-z2)
+  if (t>=0 and t<=1):
+    return [sk1,sk1**3-sk2]
+  else:
+     raise ValueError("di luar domain")
+
+#Pemetaan (alpha, beta, gamma)-nonekspansif
+def pemetaan(w):
+    w1 = w[0]
+
+    if 1 <= w1 < 3:
+        return [
+            (w1+3)/4,
+            (w1+3)**3 / 64
+        ]
+
+    elif 3 <= w1 <= 5:
+        return [
+            (w1+2)/4,
+            (w1+2)**3 / 64
+        ]
+
+    else:
+        raise ValueError("di luar domain")
+
+#skema iterasi Sabri
+def iterSabri(x0, tol, max_iter):
+  data_x = [x0]
+  data_error = []
+  for n in range(max_iter):
+    x_n = data_x[-1].copy()
+    a_n = a(n)
+    b_n = b(n)
+    c_n = c(n)
+    q_n = pemetaan(geodesik(c_n,x_n,pemetaan(x_n)))
+    y_n = pemetaan(pemetaan(q_n))
+    x_next = pemetaan(geodesik(a_n,pemetaan(q_n),pemetaan(y_n)))
+    data_x.append(x_next)
+    error = metrik([1,1],x_next)
+    data_error.append(error)
+    if error < tol:
+      break
+  return data_x, data_error
+
+#skema iterasi JK
+def iterJK(x0, tol, max_iter):
+  data_x = [x0]
+  data_error = []
+  for n in range(max_iter):
+    x_n = data_x[-1].copy()
+    a_n = a(n)
+    b_n = b(n)
+    c_n = c(n)
+    q_n = (geodesik(c_n,x_n,pemetaan(x_n)))
+    y_n = (pemetaan(q_n))
+    x_next = pemetaan(geodesik(a_n,pemetaan(q_n),pemetaan(y_n)))
+    data_x.append(x_next)
+    error = metrik([1,1], x_next)
+    data_error.append(error)
+    if error < tol:
+      break
+  return data_x, data_error
+
+#skema iterasi Thakur
+def iterThakur(x0, tol, max_iter):
+  data_x = [x0]
+  data_error = []
+  for n in range(max_iter):
+    x_n = data_x[-1].copy()
+    a_n = a(n)
+    b_n = b(n)
+    c_n = c(n)
+    q_n = (geodesik(c_n,x_n,pemetaan(x_n)))
+    y_n = (pemetaan(geodesik(a_n, x_n, q_n)))
+    x_next = pemetaan(y_n)
+    data_x.append(x_next)
+    error = metrik([1,1], x_next)
+    data_error.append(error)
+    if error < tol:
+      break
+  return data_x, data_error
+
+#skema iterasi Abbas
+def iterAbbas(x0, tol, max_iter):
+  data_x = [x0]
+  data_error = []
+  for n in range(max_iter):
+    x_n = data_x[-1].copy()
+    a_n = a(n)
+    b_n = b(n)
+    c_n = c(n)
+    q_n = geodesik(c_n,x_n,pemetaan(x_n))
+    y_n = geodesik(b_n, pemetaan(x_n), pemetaan(q_n))
+    x_next = geodesik(a_n,pemetaan(y_n),pemetaan(q_n))
+    data_x.append(x_next)
+    error = metrik([1,1], x_next)
+    data_error.append(error)
+    if error < tol:
+      break
+  return data_x, data_error
+
+#skema iterasi Agarwal
+def iterAgarwal(x0, tol, max_iter):
+  data_x = [x0]
+  data_error = []
+  for n in range(max_iter):
+    x_n = data_x[-1].copy()
+    a_n = a(n)
+    b_n = b(n)
+    c_n = c(n)
+    y_n = (geodesik(c_n, x_n, pemetaan(x_n)))
+    x_next = geodesik(a_n,pemetaan(x_n),pemetaan(y_n))
+    data_x.append(x_next)
+    error = metrik([1,1], x_next)
+    data_error.append(error)
+    if error < tol:
+      break
+  return data_x, data_error
+
+#konstan
+def a(n): return 0.42
+def b(n): return 0.83
+def c(n): return 0.31
+
+#turun
+def a(n): return (n**2/(n**3+1))
+def b(n): return (2/(n+3))
+def c(n): return (4*n+2)/(7*n+4)
+
+#naik
+def a(n): return (1-(4*n+9)**(1/2)/(2*n+13))
+def b(n): return 0.8
+def c(n): return (1-(n**2/(n**7+3)**(1/2)))
+
+#naikturun
+def a(n): return 1-(n**3)/(n**5+1)
+def b(n): return (1/(n+1))
+def c(n): return (3*n+4)/(5*n**2+4)
+
+#turunnaik
+def c(n): return 1-np.sqrt(n**3+8)/(5*n**5+9)
+def b(n): return (1-3/(n+5))
+def a(n): return (n**5+1)/(5*n**7+4)
+
+
+x0=[2,3]
+tol = 1e-6
+max_iter = 100
+
+dataSabri, errorSabri = iterSabri(x0, tol, max_iter)
+dataJK, errorJK = iterJK(x0, tol, max_iter)
+dataThakur, errorThakur = iterThakur(x0, tol, max_iter)
+dataAbbas, errorAbbas = iterAbbas(x0, tol, max_iter)
+dataAgarwal, errorAgarwal = iterAgarwal(x0, tol, max_iter)
+max_len = max(len(dataSabri), len(dataJK), len(dataThakur), len(dataAbbas), len(dataAgarwal))
+dataSabri += [np.nan] * (max_len - len(dataSabri))
+dataJK += [np.nan] * (max_len - len(dataJK))
+dataThakur += [np.nan] * (max_len - len(dataThakur))
+dataAbbas += [np.nan] * (max_len - len(dataAbbas))
+dataAgarwal += [np.nan] * (max_len - len(dataAgarwal))
+errorSabri += [np.nan] * (max_len - len(errorSabri))
+errorJK += [np.nan] * (max_len - len(errorJK))
+errorThakur += [np.nan] * (max_len - len(errorThakur))
+errorAbbas += [np.nan] * (max_len - len(errorAbbas))
+errorAgarwal += [np.nan] * (max_len - len(errorAgarwal))
+
+table = pd.DataFrame({
+    'Iterasi n': np.arange(max_len),
+    'Sabri': dataSabri,
+    'JK': dataJK,
+    'Thakur': dataThakur,
+    'Abbas': dataAbbas,
+    'Agarwal': dataAgarwal
+})
+
+def titikX(x, d=6):
+    if isinstance(x, (list, np.ndarray)):
+        return f"({x[0]:.{d}f}, {x[1]:.{d}f}, 0, 0, \\dots)"
+    return x
+
+table_fmt = table.copy()
+
+for col in ["Sabri", "JK", "Thakur", "Abbas", "Agarwal"]:
+    table_fmt[col] = table_fmt[col].apply(titikX)
+def show_pair(table, scheme_name):
+    sub = table_fmt[["Iterasi n", "Sabri", scheme_name]]
+    print(f"Tabel Sabri-{scheme_name}")
+    print(sub.to_latex(index=False))
+    return sub
+
+skema = ["JK", "Thakur", "Abbas", "Agarwal"]
+for s in skema:
+    show_pair(table_fmt, s)
+table_error = pd.DataFrame({
+    'Iterasi n': np.arange(max_len),
+    'Sabri': errorSabri,
+    'JK': errorJK,
+    'Thakur': errorThakur,
+    'Abbas': errorAbbas,
+    'Agarwal': errorAgarwal
+})
+
+print(table_error.to_latex(index=False))
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.figure(figsize=(12, 10))
+
+for col in ['Sabri', 'JK', 'Thakur', 'Abbas', 'Agarwal']:
+    plt.plot(table_error['Iterasi n'], table_error[col], marker='o', linestyle='-', label=col)
+
+plt.xlabel('Iterasi n', fontsize=18)
+plt.ylabel('Galat $d(x_n,x^*)$', fontsize=18)
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
+plt.legend(fontsize=14)
+plt.grid(True, which='both', ls='-', alpha=0.8)
+plt.show()
+
+
+x0_list = [
+    [2,3], [3,4], [4,1], [1.5,4], [2.7,4.2], [5,1.8], [3.1,3.5]
+]
+
+#Perhitungan jumlah iterasi yang diperlukan
+tol = 1e-16
+max_iter = 100
+data = []
+for x0 in x0_list:
+  row = {"x0" : tuple(x0)}
+  row["Sabri"] = len(iterSabri(x0,tol,max_iter)[0])
+  row["JK"] = len(iterJK(x0,tol,max_iter)[0])
+  row["Thakur"] = len(iterThakur(x0,tol,max_iter)[0])
+  row["Abbas"] = len(iterAbbas(x0,tol,max_iter)[0])
+  row["Agarwal"] = len(iterAgarwal(x0,tol,max_iter)[0])
+  data.append(row)
+tabel = pd.DataFrame(data)
+tabel.set_index("x0", inplace=True)
+
+#Penyesuaian titik
+def titikdiX(x):
+    if isinstance(x, tuple) and len(x) == 2:
+        return f"({x[0]:.1f}, {x[1]:.1f}, 0, 0, \\dots)"
+    return str(x)
+tabel_display = tabel.copy()
+tabel_display.index = tabel_display.index.map(titikdiX)
+
+print(tabel_display.to_string())
+print(tabel_display.to_latex())
+\end{lstlisting}
+\begin{lstlisting}[caption={Kode Python untuk Simulasi Minimalisasi Fungsi}]
+import numpy as np
+from scipy.optimize import minimize
+
+
+def d(x, y):
+    x1,x2 = x[0], x[1]
+    y1,y2 = y[0], y[1]
+
+    suku1 = np.abs(x1-y1)**3
+    suku2 = np.abs(x1**3-x2-y1**3+y2)**3
+    return (suku1+suku2)**(1/3)
+
+def f(x):
+    x1, x2 = x
+    term1 = 20 * np.abs(x2 - x1**3)**3
+    term2 = np.abs(26 - x1)**3
+    return term1 + term2
+
+def res(x):
+  lam = 20
+  def objective(y):
+    di = d(x,y)
+    return f(y)+1.0/(2.0*lam)*di**2
+  res = minimize(objective, x,method="Nelder-Mead", tol=1e-15)
+  return res.x
+
+def geodesik(t,w,z):
+  w1,w2 = w[0],w[1]
+  z1,z2 = z[0],z[1]
+  sk1 = (1-t)*w1+t*z1
+  sk2 = (1-t)*(w1**3-w2)+t*(z1**3-z2)
+  if (t>=0 and t<=1):
+    return np.array([sk1,sk1**3-sk2])
+  else:
+     raise ValueError("di luar domain")
+
+def iterSabri(x0, tol, max_iter):
+  data_x = [x0]
+  data_error = [np.nan]
+  for n in range(max_iter):
+    x_n = data_x[-1].copy()
+    a_n = 0.34
+    b_n = 0
+    c_n = 0.93
+    q_n = res(geodesik(c_n,x_n,res(x_n)))
+    y_n = res(res(q_n))
+    x_next = res(geodesik(a_n,res(q_n),res(y_n)))
+    data_x.append(x_next)
+    error = d(x_next,[26,26**3])
+    data_error.append(error)
+    if error < tol:
+      break
+  return data_x, data_error
+
+def iterJK(x0, tol, max_iter):
+  data_x = [x0]
+  data_error = [np.nan]
+  for n in range(max_iter):
+    x_n = data_x[-1].copy()
+    a_n = 0.34
+    b_n = 0
+    c_n = 0.93
+    q_n = geodesik(c_n,x_n,res(x_n))
+    y_n = res(q_n)
+    x_next = res(geodesik(a_n,res(q_n),res(y_n)))
+    data_x.append(x_next)
+    error = d(x_next,[26,26**3])
+    data_error.append(error)
+    if error < tol:
+      break
+  return data_x, data_error
+
+dataSabri, errorSabri = iterSabri([10,10],1e-4,500)
+dataJK, errorJK = iterJK([10,10],1e-4,500)
+
+max_len = max(len(dataSabri), len(dataJK))
+
+dataSabri += [np.nan] * (max_len - len(dataSabri))
+dataJK += [np.nan] * (max_len - len(dataJK))
+errorSabri += [np.nan] * (max_len - len(errorSabri))
+errorJK += [np.nan] * (max_len - len(errorJK))
+
+import pandas as pd
+table = pd.DataFrame({
+    'Iterasi n': np.arange(max_len),
+    'Sabri': dataSabri,
+    'JK': dataJK
+})
+def fmt_point(x, d=5):
+    if isinstance(x, (list, np.ndarray)):
+        return f"({x[0]:.{d}f}, {x[1]:.{d}f}, 0, 0, \\dots)"
+    return x
+
+
+table_fmt = table.copy()
+
+for col in ["Sabri", "JK"]:
+    table_fmt[col] = table_fmt[col].apply(fmt_point)
+
+print(table_fmt.to_latex(index=False, escape=False))
+
+table_error = pd.DataFrame({
+    'Iterasi n': np.arange(max_len),
+    'Galat Sabri': errorSabri,
+    'Galat JK': errorJK
+})
+
+print(table_error.to_latex(index=False, escape=False))
+
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(14, 10))
+
+for col in ['Galat Sabri', 'Galat JK']:
+    plt.plot(table_error['Iterasi n'], table_error[col], marker='o', linestyle='-', label=col)
+
+plt.yscale('log') 
+plt.xlabel('Iterasi n',fontsize=18)
+plt.ylabel('Galat $d(x_n,x^*)$',fontsize=18)
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
+plt.legend(fontsize=14)
+plt.grid(True, which='both', ls='--')
+plt.show()
+\end{lstlisting}
+\begin{lstlisting}[caption={Kode Python untuk Rekonstruksi Gambar}]
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import os
+from google.colab import files 
+from skimage import io, color, transform
+from skimage.data import shepp_logan_phantom, grass, moon, coins, text, brain
+from skimage.transform import radon, iradon
+from skimage.metrics import peak_signal_noise_ratio, mean_squared_error
+
+image_size = 512
+theta = np.linspace(0., 180., 180, endpoint=False)
+n_iterations = 60
+alpha_n = 0.7
+beta_n = 0.5
+gamma_n = 0.4
+checkpoints = [5, 10, 30, 60]
+
+def load_and_prep_image(uploaded_filename, target_size=512):
+    print(f"-> Memproses gambar: {uploaded_filename}")
+    image = io.imread(uploaded_filename)
+
+    # Jika gambar berwarna (RGB/RGBA), ubah ke Grayscale
+    if image.ndim == 3:
+        if image.shape[2] == 4: # RGBA
+            image = color.rgba2rgb(image)
+        image = color.rgb2gray(image)
+
+    # Resize ke target_size (128x128)
+    image_resized = transform.resize(image, (target_size, target_size), anti_aliasing=True)
+    return image_resized
+
+def gambar():
+    print("=== UPLOAD GAMBAR ===")
+    uploaded = files.upload()
+
+    if not uploaded:
+        print("Tidak ada file yang diupload. Menggunakan default Shepp-Logan Phantom.")
+        original_image = shepp_logan_phantom()
+        original_image = transform.resize(original_image, (image_size, image_size), anti_aliasing=True)
+    else:
+        filename = next(iter(uploaded))
+        original_image = load_and_prep_image(filename, target_size=image_size)
+    return original_image
+
+original_image = gambar()
+
+def gammaoptm():
+    print("-> Menghitung step size optimal...")
+    # Menggunakan random noise untuk estimasi operator
+    x_test = np.random.rand(image_size, image_size)
+    for _ in range(10):
+        Ax = A(x_test)
+        AtAx = A_adjoint(Ax)
+        norm_val = np.linalg.norm(AtAx)
+        x_test = AtAx / norm_val
+
+    Lx = A_adjoint(A(x_test))
+    L = np.linalg.norm(Lx) / np.linalg.norm(x_test)
+    gamma_step = 1.9 / L
+    #gamma_step = 0.001
+    print(f"   Gamma Step: {gamma_step:.5f}")
+    return gamma_step
+
+def A(x):
+        return radon(x, theta=theta, circle=False)
+
+def A_adjoint(sinogram):
+        return iradon(sinogram, theta=theta, circle=False, output_size=image_size, filter_name=None)
+
+def P_C(x):
+        return np.clip(x, 0, 1)
+
+Q = A(original_image)
+gamma_step = gammaoptm()
+def T(x):
+    Ax = A(x)
+    residual = Ax - Q
+    gradient = A_adjoint(residual)
+    return P_C(x - gamma_step * gradient)
+
+def sabriIter():
+    x = np.zeros((image_size, image_size))
+
+    saved_images = {}
+    saved_metrics = {}
+    data_mse = []
+    data_psnr = []
+
+    print(f"-> Memulai Rekonstruksi ({n_iterations} iterasi)...")
+
+    for n in range(n_iterations):
+        Tx = T(x)
+        z = T((1 - gamma_n) * x + gamma_n * Tx)
+        Tz = T(z)
+        y = T(Tz)
+        Ty = T(y)
+        x_next = T((1 - alpha_n) * Tz + alpha_n * Ty)
+
+        x = x_next
+
+        current_psnr = peak_signal_noise_ratio(original_image, x, data_range=1)
+        current_mse = mean_squared_error(original_image, x)
+        data_mse.append(current_mse)
+        data_psnr.append(current_psnr)
+
+        current_iter = n + 1
+        if current_iter in checkpoints:
+            saved_images[current_iter] = x.copy()
+            saved_metrics[current_iter] = (current_psnr, current_mse)
+            print(f"   Iterasi {current_iter}:")
+            print(f"     PSNR = {current_psnr:.2f} dB")
+            print(f"     MSE  = {current_mse:.6f}")
+    return saved_images, saved_metrics, data_mse, data_psnr
+
+saved_images, saved_metrics, data_mse, data_psnr = sabriIter()
+
+table = pd.DataFrame({
+    'Iterasi n': np.arange(1, len(data_mse) + 1),
+    'mse': data_mse,
+    'psnr': data_psnr
+})
+print(table.to_latex(index=False))
+
+def tampilgambar():
+    fig, axes = plt.subplots(3, 2, figsize=(10,15))
+    ax = axes.ravel()
+
+    # Tampilkan Gambar Asli
+    im0 = ax[0].imshow(original_image, cmap='gray', vmin=0, vmax=1)
+    ax[0].set_title('Gambar Asli')
+
+    # Tampilkan Sinogram
+    ax[1].imshow(Q, cmap='gray', aspect='auto')
+    ax[1].set_title('Sinogram')
+
+    # Tampilkan Hasil Iterasi
+    for i, iteration in enumerate(checkpoints):
+        if iteration in saved_images:
+            idx = i + 2
+            if idx < 6:
+                psnr_val, mse_val = saved_metrics[iteration]
+                im = ax[idx].imshow(saved_images[iteration], cmap='gray', vmin=0, vmax=1)
+                title_text = (f"Iterasi {iteration}\n"
+                              f"PSNR: {psnr_val:.2f} dB\n"
+                              f"MSE: {mse_val:.5f}")
+                ax[idx].set_title(title_text)
+                plt.colorbar(im, ax=ax[idx], fraction=0.046, pad=0.04)
+
+    plt.tight_layout()
+    plt.show()
+
+tampilgambar()
+\end{lstlisting}

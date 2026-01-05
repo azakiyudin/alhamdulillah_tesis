@@ -1,0 +1,220 @@
+\section{Ruang $CAT_p(0)$}
+Sebelum membahas mengenai ruang $CAT_p(0)$, terlebih dahulu akan dikenalkan apa itu ruang $CAT(0)$ karena ruang $CAT_p(0)$ adalah perumuman dari ruang $CAT(0)$. Ruang $CAT(0)$ sejatinya adalah ruang geodesik, tetapi dengan syarat tambahan bahwa segitiga di ruang geodesik setipis seperti pada segitiga di $\mathbb{R}^2$. Untuk itu berikut diberikan konsep dari segitiga komparasi. 
+\begin{defn}\cite{Bridson1999}
+    Diberikan suatu segitiga geodesik $\triangle (p,q,r)$. Suatu segitiga komparasi $\overline{\triangle}(\overline{p},\overline{q},\overline{r})$ adalah suatu segitiga di ruang bernorma $(\mathbb{E},\|\cdot\|)$ yang memenuhi $d(p,q)=\|\overline{p}-\overline{q}\|, d(p,r)=\|\overline{p}-\overline{r}\|$, dan $d(q,r)=\|\overline{q}-\overline{r}\|$.
+\end{defn}
+Selanjutnya, berikut ini diberikan definisi ruang $CAT(0)$.
+\begin{defn}\cite{Bridson1999}
+    Diberikan ruang metrik geodesik $(X,d)$ dan ruang Euclid $(\mathbb{R}^2,\|\cdot\|_2)$. Ruang $(X,d)$ disebut sebagai ruang $CAT(0)$ jika untuk setiap segitiga geodesik $\triangle\in X$ dan $x,y\in \triangle$, terdapat segitiga komparasi $\overline{\triangle}\in \mathbb{R}^2$ sehingga untuk setiap $\overline{x},\overline{y}\in\overline{\triangle}$ berlaku $d(x,y)\leq \|\overline{x}-\overline{y}\|_2$.
+\end{defn}
+% \begin{figure}
+%     \centering
+%     \input{Bab_2/gambarcat(0)}
+%     \caption{Caption}
+%     \label{fig:placeholder}
+% \end{figure}
+% \begin{tikzpicture}[
+%     year/.style={
+%         rectangle,
+%         rounded corners,
+%         draw=black,
+%         fill=#1,
+%         minimum width=2.8cm,
+%         minimum height=0.9cm,
+%         font=\bfseries,
+%         align=center
+%     },
+%     desc/.style={
+%         align=left,
+%         font=\small,
+%         text width=10cm
+%     },
+%     arrow/.style={
+%         thick, ->, >=stealth
+%     }
+% ]
+
+% % Nodes Tahun
+% \node[year=cyan!40] (y2025) at (0,0) {$\dots$ - 2025};
+% \node[year=red] (mulai) at (0, -2) {mulai};
+% \node[year=blue!55] (y2026) at (0,-3.8) {2026};
+% \node[year=red] (selesai) at (0,-5.6) {selesai};
+% \node[year=cyan!40] (y2027) at (0,-7.6) {2027};
+% \node[year=cyan!40] (y2028) at (0,-9.6) {2028};
+% \node[year=cyan!40] (y2029) at (0,-11.6) {2029};
+% \node[year=cyan!40] (y2030) at (0,-13.6) {2030};
+
+% % Deskripsi
+% \node[desc] at (7,0) {
+% Aproksimasi titik tetap dari pemetaan nonekspansif di ruang Banach.
+% };
+
+% \node[desc] at (7,-2) {
+% Studi pendahuluan (proposal)
+% };
+% \node[desc] at (7,-3.8) {
+% - Konvergensi skema iterasi Sabri untuk pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di ruang CAT$_p(0)$.\\
+% - Aplikasi pada rekonstruksi gambar.
+
+% };
+% \node[desc] at (7,-5.6) {
+% Submit hasil penelitian ke jurnal Scopus peringkat Q2, naskah tesis, dan penyusunan laporan akhir. 
+% };
+
+% \node[desc] at (7,-7.6) {
+% Pengembangan skema iterasi Sabri dan perbandingan laju konvergensi secara analitik.
+% };
+
+% \node[desc] at (7,-9.6) {
+% Aplikasi skema iterasi Sabri pada pelacakan kendali gerak robot berlengan ganda.
+% };
+
+% \node[desc] at (7,-11.6) {
+% Aplikasi skema iterasi Sabri pada permasalahan pemulihan sinyal.
+% };
+
+% \node[desc] at (7,-13.6) {
+% Generalisasi aproksimasi titik tetap pada ruang geodesik nonlinier lainnya.
+% };
+
+% % Panah
+% \draw[arrow] (y2025) -- (mulai);
+% \draw[arrow] (mulai) -- (y2026);
+% \draw[arrow] (y2026) -- (selesai);
+% \draw[arrow] (selesai) -- (y2027);
+% \draw[arrow] (y2027) -- (y2028);
+% \draw[arrow] (y2028) -- (y2029);
+% \draw[arrow] (y2029) -- (y2030);
+
+% \end{tikzpicture}
+% \begin{tikzpicture}[
+%     >=stealth,
+%     main/.style={draw, fill=blue!15, rounded corners, align=center, font=\small},
+%     box/.style={draw, fill=red!10, rounded corners, align=center, font=\small},
+%     line/.style={thick}
+% ]
+
+% % Spine
+% \draw[line] (0,0) -- (12,0);
+
+% % Head
+% \node[main, minimum width=2cm, minimum height=1cm] 
+%     at (12,0) {Aproksimasi titik tetap\\ dari pemetaan \\$(\alpha,\beta,\gamma)$-nonekspansif\\ di ruang $CAT_p(0)$ \\beserta aplikasinya};
+
+% % === Upper bones ===
+% % Pemetaan nonekspansif
+% \draw[line] (3,0) -- (2,4);
+% \node[box, minimum height=1cm, minimum width=2.5cm] at (1.3,4.5)
+% {Pemetaan nonekspansif\\ diperumum
+% % mencakup lebih banyak pemetaan 
+% % aplikasi lebih luas
+% % hasil terbaru abcnonekspansif
+% % Suzuki\\
+% % Reich--Suzuki\\
+% % $(\alpha,\beta,\gamma)$-nonekspansif\\
+% % Skema iterasi Sabri
+% };
+% \node at (0,1) {Suzuki};
+
+% % Ruang geodesik
+% \draw[line] (8,0) -- (6.5,2);
+% \node[box, minimum width=4cm] at (6,2.4)
+% {Ruang Geodesik
+% % \footnotesize
+% % struktur nonlinear 
+% % hasil terbaru ruang cat_p
+% % Ruang CAT(0)\\
+% % Ruang CAT$_p$(0)\\
+% % Struktur nonlinier\\
+% % Konveksitas geodesik
+% };
+
+% % === Lower bones ===
+% % Urgensitas
+% \draw[line] (4,0) -- (1.3,-4.3);
+% \node[box, minimum width=4.5cm] at (6,-4.6)
+% {Urgensitas Penelitian
+% % \footnotesize
+% % Keterbatasan hasil di ruang Banach\\
+% % Minimnya studi di CAT$_p$(0)\\
+% % Kebutuhan skema iterasi yang efisien
+% };
+
+% % Aplikasi
+% \draw[line] (8,0) -- (6,-4.2);
+% \node[box, minimum width=4cm] at (1,-4.6)
+% {Aplikasi Optimasi
+% % \footnotesize
+% % Rekonstruksi gambar\\
+% % Masalah minimisasi konveks\\
+% % Formulasi sebagai titik tetap\\
+% };
+
+% \end{tikzpicture}
+
+
+Khamsi mengembangkan ruang yang lebih umum, yaitu ruang $CAT_p(0)$, dengan $p\geq 2$, dengan mengganti segitiga komparasi pada ruang $CAT(0)$ dari yang awalnya segitiga di $\mathbb{R}^2$ menjadi segitiga di $\ell_p$. Berikut ini definisi dari ruang $CAT_p(0)$. 
+\begin{defn}\cite{Khamsi2017}\label{defn:catp0}
+    Diberikan ruang metrik geodesik $(X,d)$ dan ruang $(\ell_p,\|\cdot\|_p)$ untuk $p\geq 2$. Ruang $(X,d)$ disebut sebagai ruang $CAT_p(0)$, untuk $p\geq 2$, jika untuk setiap segitiga geodesik $\triangle\in X$ dan $x,y\in\triangle$, terdapat segitiga komparasi $\overline{\triangle}\in \ell_p$ sehingga untuk setiap $\overline{x},\overline{y}\in \overline{\triangle}$ berlaku $d(x,y)\leq \|\overline{x}-\overline{y}\|_p$.
+\end{defn}
+\begin{exam}\cite{Khamsi2017}\label{con:lpcatp}
+Setiap ruang $(\ell_p, \|\cdot\|_p)$ dengan $p\geq 2$ adalah ruang $CAT_p(0)$. 
+\end{exam}
+\begin{lemma}\cite{Khamsi2017}\label{lema:p=2}
+Untuk $p>2$ ruang $CAT_p(0)$ bukan merupakan ruang $CAT(0)$.
+\end{lemma}
+
+Untuk selanjutnya, pada suatu segitiga geodesik $\triangle(x_1,x_2,x_3)$, setiap titik $z\in [x_i,x_j]$ dengan $i,j\in \{1,2,3\}$ dan $i\neq j$, dinotasikan sebagai $z=(1-t)x_i\oplus tx_j$ dengan $t=\frac{d(x_i,z)}{d(x_i,x_j)}$.  
+Berikut ini diberikan beberapa konsep yang berlaku pada ruang $CAT_p(0)$ dengan $p\geq 2$.
+\begin{defn}\cite{Khamsi2017} \label{defn:konveks}
+    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$. Suatu himpunan bagian $C\subseteq X$ disebut konveks jika $[x,y]\subset C$ untuk setiap $x,y\in C$.
+\end{defn}
+% \todo{himpunan kompak}
+% \begin{defn}
+
+% \end{defn}
+\begin{defn}\cite{Salisu2022}\label{defn:asimtotik}
+    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $\{x_n\}$ adalah barisan terbatas di $X$. Pusat asimtotik dari barisan $\{x_n\}$ di suatu $CAT_p(0)$ didefinisikan sebagai 
+    \begin{equation}
+        A(\{x_n\}) := \{x\in X:\limsup_{n\to\infty} d(x,x_n) = \inf_{y\in X} \limsup_{n\to \infty} d(y,x_n)\}
+    \end{equation}
+\end{defn}
+\begin{defn}\cite{Salisu2022}\label{defn:konvD}
+    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $\{x_n\}$ adalah barisan terbatas di $X$. Barisan $\{x_n\}$ disebut sebagai konvergen-$\Delta$ ke suatu titik $x$ di $X$ (dinotasikan $\Delta-\lim_{n\to\infty} x_n=x$) jika $\{x\}$ adalah pusat asimtotik dari setiap subbarisan $\{x_{n_k}\}$ dari $\{x_n\}$.
+\end{defn}
+\begin{defn}\cite{Salisu2022}\label{defn:konvK}
+    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $\{x_n\}$ adalah barisan di $X$. Barisan $\{x_n\}$ disebut konvergen kuat ke suatu titik $x$ di $X$ (dinotasikan $\lim_{n\to\infty} d(x_n,x)=0$) jika untuk setiap $\varepsilon>0$, terdapat $n_0\in \mathbb{N}$ sedemikian sehingga untuk setiap $n\geq n_0$ berlaku $d(x_n,x)<\varepsilon$.
+\end{defn}
+\begin{defn}\cite{Salisu2022}\label{defn:demi}
+    Diberikan $(X,d)$ adalah suatu ruang $CAT_p(0)$. Pemetaan $T:X\to X$ disebut memiliki sifat \textbf{demiclosedness} jika untuk setiap barisan $\{x_n\}\subseteq X$ yang konvergen-$\Delta$ dan memenuhi $\lim_{n\to \infty} d(x_n,Tx_n)=0$, maka berlaku $x=Tx$. 
+\end{defn}
+
+Selanjutnya, berikut ini diberikan ketaksamaan penting yang berlaku pada ruang $CAT_p(0)$. Dalam tesis ini dinotasikan $d^p(x,y)=[d(x,y)]^p$.
+\begin{lemma}\cite{CALDERN2021}\label{lema:d,d^p}
+    Diberikan $(X,d)$ adalah suatu ruang $CAT_p(0)$. Jika $x,y,z\in X$ dan $t\in[0,1]$, maka 
+    \begin{enumerate}
+        \item $d((1-t)x\oplus tz, y)\leq (1-t)d(x,y)+td(z,y)$. 
+        \item $d^p((1-t)x\oplus tz, y)\leq (1-t)d^p(x,y)+td^p(z,y)-\dfrac{t(1-t)}{2^{p-1}}d^p(x,z)$.
+    \end{enumerate}
+\end{lemma}
+% \begin{remark}\cite{CALDERN2021}
+%     Suatu ruang metrik geodesik merupakan ruang $CAT_p(0)$ jika dan hanya jika memenuhi 
+% \end{remark}
+\begin{lemma}\cite{Salisu2022}\label{lema:asimtotik}
+    Pusat asimtotik dari suatu barisan terbatas di ruang $CAT_p(0)$ memiliki tepat satu elemen. 
+\end{lemma}
+\begin{thm}\cite{Salisu2022}\label{thm:kondisikonvD}
+    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup dan konveks. Diberikan pula $T:W\to W$ adalah pemetaan yang memiliki titik tetap dan memenuhi sifat demiclosedness \ref{defn:demi}. Jika $\{x_n\}$ adalah barisan di $W$ sedemikian sehingga $\lim_{n\to\infty}d(x_n,Tx_n)=0$ dan barisan $\{d(x_n,x^*)\}$ konvergen di $\mathbb{R}$ untuk setiap $x^*$ titik tetap dari $T$, maka barisan $\{x_n\}$ konvergen-$\Delta$ ke titik tetap dari $T$.
+\end{thm}
+\begin{defn}
+    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$. Suatu fungsi $f:X\to \mathbb{R}\cup \{+\infty\}$ disebut konveks secara geodesik jika untuk setiap $t\in(0,1)$ dan $x,y\in X$, berlaku
+    \begin{align*}
+        f(tx\oplus (1-t)y)\leq tf(x)+(1-t)f(y).
+    \end{align*}
+\end{defn}
+\begin{defn}
+    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$. Suatu fungsi $f:X\to \mathbb{R}\cup \{+\infty\}$ disebut \textit{proper} jika himpunan $D(f):=\{x\in X\mid f(x)<+\infty\}\neq \emptyset$.
+\end{defn}
+\begin{defn}
+    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$. Suatu fungsi $f:X\to \mathbb{R}\cup \{+\infty\}$ disebut \textit{lower semi-continuous} pada suatu titik $x\in D(f)$ jika $f(x)\leq \liminf_{n\to\infty} f(x_n)$ untuk setiap barisan $\{x_n\}$ yang konvergen di $D(f)$ dengan limit $x\in X$. Jika $f$ \textit{lower semi-continuous} pada setiap titik di $D(f)$, maka $f$ disebut \textit{lower semi-continuous} pada $X$.
+\end{defn}

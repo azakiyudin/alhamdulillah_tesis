@@ -1,0 +1,157 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{geometry}
+\usepackage{amsfonts}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{lastpage}
+\geometry{a4paper, portrait, top=3cm, left=3cm, right=3cm, bottom=3cm}
+\setlength{\multicolsep}{5.0pt plus 2.0pt minus 1.5pt}% 50% of original values
+\renewcommand{\baselinestretch}{1}
+\newcommand{\kali}{\otimes}
+\newcommand{\plus}{\oplus}
+\newcommand{\homotopic}{\simeq}
+\newcommand{\homeq}{\cong}
+\newcommand{\iso}{\approx}
+\DeclareMathOperator{\ho}{Ho}
+\DeclareMathOperator*{\colim}{colim}
+\newcommand{\Real}{\mathbb{R}}
+
+\newcommand{\dis}{\displaystyle}
+\newcommand*{\defeq}{\stackrel{\text{def}}{=}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\PP}{\mathrm{P}}
+\newcommand{\QQ}{\mathrm{Q}}
+\newcommand{\KQ}{\mathrm{H}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\W}{\mathcal{W}}
+\newcommand{\Riemann}{\mathcal{R}}
+\newcommand{\epsi}{\varepsilon}
+\newcommand{\nor}{\parallel}
+\newcommand{\deltaepsilon}{\delta_\varepsilon}
+\newcommand{\pdot}{\dot{\mathcal{P}}}
+\newcommand{\p}{\mathcal{P}}
+\newcommand{\itilde}{\tilde{\imath}}
+\newcommand{\jtilde}{\tilde{\jmath}}
+\newcommand{\ihat}{\hat{\imath}}
+\newcommand{\jhat}{\hat{\jmath}}
+%
+
+\newcounter{choice}
+\renewcommand\thechoice{\alph{choice}}
+\newcommand\choicelabel{\thechoice.}
+
+\newenvironment{choices}%
+{\list{\choicelabel}%
+	{\usecounter{choice}\def\makelabel##1{\hspace{0.3cm}\llap{##1}}%
+		\settowidth{\leftmargin}{\hskip\labelsep\hskip 0em}%
+		\def\choice{%
+			\item
+		} % choice
+		\labelwidth\leftmargin\advance\labelwidth-\labelsep
+		\topsep=0pt
+		\partopsep=0pt
+	}%
+}%
+{\endlist}
+
+\newenvironment{oneparchoices}%
+{%
+	\setcounter{choice}{0}%
+	\def\choice{%
+		\refstepcounter{choice}%
+		\ifnum\value{choice}>1\relax
+		\penalty -50\hskip 2cm plus 1em
+		\fi
+		\choicelabel
+		\nobreak\enskip
+	}% choice
+	% If we're continuing the paragraph containing the question,
+	% then leave a bit of space before the first choice:
+	\ifvmode\else\enskip\fi
+	\ignorespaces
+}%
+{}
+
+\begin{document}
+ \sffamily
+\begin{center}\large{
+\textbf{Coretan bab 4}}
+\end{center}
+Matriks operator koin perjalanan kuantum tak beraturan 
+$$
+\mathrm{H}_n=\left[\begin{array}{ll}
+    a_n &b_n  \\
+     c_n&d_n 
+\end{array}\right]
+$$
+dimana $a_n,b_n,c_n,d_n\in \Real_{\max} \setminus \{\varepsilon\}$. Didefinisikan matriks $\mathrm{P}_n$ dan  $\mathrm{Q}_n$ sedemikian hingga $\mathrm{H}_n=\mathrm{P}_n\plus \mathrm{Q}_n$.
+$$
+\mathrm{P}_n=\left[\begin{array}{cc}
+    a_n &b_n  \\
+     \varepsilon&\varepsilon 
+\end{array}\right]~~\text{ dan }~~\mathrm{Q}_n=\left[\begin{array}{cc}
+    \varepsilon &\varepsilon  \\
+     c_n&d_n 
+\end{array}\right]
+$$
+Model evolusi waktu total perjalanan kuantum tak beratruan $$
+\varphi(n,k)=\left(P_n\kali \varphi(n-1,k+1)\right)\plus\left(Q_n\kali \varphi(n-1,k-1)\right)
+$$
+dimana inisial state
+$$
+\varepsilon(0,k)=\begin{cases}
+\left[\begin{array}{l}
+     \alpha\\\beta
+\end{array}\right],~~\text{ untuk  }k=0\\\\\left[\begin{array}{l}
+     \varepsilon\\ \varepsilon
+\end{array}\right],~~\text{ untuk  }k\neq0
+\end{cases}
+$$
+dengan $\alpha,\beta$ tidak semuanya $\varepsilon$.\newline
+Didefinisikan $A(n,k)$ disebut dengan matriks \textit{decision} yang memenuhi 
+$$
+\varphi(n,k)=\left(P_n\kali \varphi(n-1,k+1)\right)\plus\left(Q_n\kali \varphi(n-1,k-1)\right)=A(n,k)\varphi(0,0)
+$$
+Sebagai contoh untuk $n=4,k=2$\
+$$
+\begin{array}{lll}
+\lefteqn{\varphi(4,2)}\\&=&\left(P_4\kali \varphi(3,3)\right)\plus\left(Q_4\kali \varphi(3,1)\right)\\
+&=&
+\left(P_4\kali[\left(P_3\kali \varphi(2,4)\right)\plus\left(Q_3\kali \varphi(2,2)\right)]\right)\plus\left(Q_4\kali [\left(P_3\kali \varphi(2,2)\right)\plus\left(Q_3\kali \varphi(2,0)\right)]\right)\\
+&=&\left(P_4\kali[\left(Q_3\kali \varphi(2,2)\right)]\right)\plus\left(Q_4\kali [\left(P_3\kali \varphi(2,2)\right)\plus\left(Q_3\kali \varphi(2,0)\right)]\right)\\
+&=&\left(P_4\kali[\left(Q_3\kali [\left(P_2\kali \varphi(1,3)\right)\plus\left(Q_2\kali \varphi(1,1)\right)]\right)]\right)\\
+&&\plus\left(Q_4\kali [\left(P_3\kali [\left(P_2\kali \varphi(1,3)\right)\plus\left(Q_2\kali \varphi(1,1)\right)]\right)\right.\\
+&&\plus\left.\left(Q_3\kali [\left(P_2\kali \varphi(1,1)\right)\plus\left(Q_2\kali \varphi(1,-1)\right)]\right)]\right)\\
+&=&\left(P_4\kali[\left(Q_3\kali \varphi(2,2)\right)]\right)\plus\left(Q_4\kali [\left(P_3\kali \varphi(2,2)\right)\plus\left(Q_3\kali \varphi(2,0)\right)]\right)\\
+&=&\left(P_4\kali[\left(Q_3\kali [\left(Q_2\kali [\left(P_1\kali \varphi(0,2)\right)\plus\left(Q_1\kali \varphi(0,0)\right)]\right)]\right)]\right)\\
+&&\plus\left(Q_4\kali [\left(P_3\kali [\left(Q_2\kali [\left(P_1\kali \varphi(0,2)\right)\plus\left(Q_1\kali \varphi(0,0)\right)]\right)]\right)\right.\\
+&&\plus\left.\left(Q_3\kali [\left(P_2\kali [\left(P_1\kali \varphi(0,2)\right)\plus\left(Q_1\kali \varphi(0,0)\right)]\right)\right.\right.\\&&\left.\left.\plus\left(Q_2\kali  [\left(P_1\kali \varphi(0,0)\right)\plus\left(Q_1\kali \varphi(0,-2)\right)]\right)]\right)]\right)\\
+&=&\left(P_4\kali[\left(Q_3\kali [\left(Q_2\kali [\left(Q_1\kali \varphi(0,0)\right)]\right)]\right)]\right)\plus\left(Q_4\kali [\left(P_3\kali [\left(Q_2\kali [\left(Q_1\kali \varphi(0,0)\right)]\right)]\right)\right.\\
+&&\plus\left.\left(Q_3\kali [\left(P_2\kali [\left(Q_1\kali \varphi(0,0)\right)]\right)\plus\left(Q_2\kali  [\left(P_1\kali \varphi(0,0)\right)]\right)]\right)]\right)\\
+&=&\left[(P_4\kali Q_3\kali Q_2\kali Q_1)\plus(Q_4\kali P_3\kali Q_2\kali Q_1)\right.\\&&\left.\plus(Q_4\kali Q_3\kali P_2\kali Q_1)\plus(Q_4\kali Q_3\kali Q_2\kali P_1)\right]\varphi(0,0)
+\end{array}
+$$
+Sehingga diperoleh 
+$$
+A(4,2)=(P_4\kali Q_3\kali Q_2\kali Q_1)\plus(Q_4\kali P_3\kali Q_2\kali Q_1)\plus(Q_4\kali Q_3\kali P_2\kali Q_1)\plus(Q_4\kali Q_3\kali Q_2\kali P_1)
+$$
+\newpage
+Diberikan gambar evolusi waktu total perjalanan kuantum aljabar max-plus tak beraturan
+\begin{figure}[h] 
+	\begin{center}
+	\includegraphics[scale=0.45]{evolusi.png}
+		\caption{Evolusi Waktu total perjalanan kuantum waktu diskrit tak beraturan}
+		\vspace{-20pt}
+			\label{g2}
+	\end{center}
+\end{figure}
+\end{document}

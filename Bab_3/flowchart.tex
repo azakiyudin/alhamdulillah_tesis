@@ -1,0 +1,49 @@
+\tikzstyle{startstop} = [ellipse, 
+minimum width=5.5cm, 
+minimum height=0.5cm,
+text centered, 
+draw=black]
+
+\tikzstyle{io} = [trapezium, 
+trapezium stretches=true, % A later addition
+trapezium left angle=70, 
+trapezium right angle=110, 
+minimum width=6cm, 
+minimum height=0.5cm, text centered, 
+draw=black]
+
+\tikzstyle{process} = [rectangle, 
+minimum height=0.5cm, 
+text centered, 
+text width=8.5cm, 
+draw=black]
+
+\tikzstyle{decision} = [diamond, 
+minimum width=5cm, 
+minimum height=1cm, 
+text centered, 
+draw=black]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\begin{tikzpicture}[node distance=1cm]
+
+\node (start) [startstop] {Mulai};
+\node (pro1) [process, below of=start,yshift=-0.3cm] {Studi Literatur};
+\node (pro2) [process, below of=pro1, yshift=-0.6cm] {Mengkaji Pemetaan \\$(\alpha,\beta,\gamma)$-nonekspansif di ruang $CAT_p(0)$ };
+\node (pro3) [process, below of=pro2, yshift=-1.6cm] {Mendapatkan Konvergensi dari Skema Iterasi Sabri di Ruang $CAT_p(0)$ untuk Aproksimasi Titik Tetap dari Pemetaan $(\alpha,\beta,\gamma)$-nonekspansif };
+\node (pro4) [process, below of=pro3, yshift=-1.2cm] {Melakukan Percobaan Numerik };
+\node (pro5) [process, below of=pro4,yshift=-0.6cm] {Mendapatkan Aplikasi dari Skema Iterasi Sabri untuk Masalah Optimasi};
+\node (pro6) [process, below of=pro5,yshift=-0.6cm] {Diseminasi};
+\node (pro7) [process, below of=pro6, yshift=-0.2cm] {Penyusunan Laporan Tesis};
+
+\node (stop) [startstop, below of=pro7, yshift=-0.3cm] {Selesai};
+
+\draw [arrow] (start) -- (pro1);
+\draw [arrow] (pro1) -- (pro2);
+\draw [arrow] (pro2) -- (pro3);
+\draw [arrow] (pro3) -- (pro4);
+\draw [arrow] (pro4) -- (pro5);
+\draw [arrow] (pro5) -- (pro6);
+\draw [arrow] (pro6) -- (pro7);
+\draw [arrow] (pro7) -- (stop);
+
+\end{tikzpicture}

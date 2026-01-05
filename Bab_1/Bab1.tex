@@ -1,0 +1,57 @@
+\chapter{PENDAHULUAN}
+ Pada bab ini dijelaskan tentang latar belakang, rumusan masalah, batasan masalah, tujuan penelitian, dan manfaat penulisan Tesis. 
+\section{Latar Belakang}
+Teorema titik tetap Banach merupakan temuan awal yang mengilhami berkembangnya teori mengenai titik tetap dan berbagai macam aplikasinya di bidang matematika maupun sains terapan. Teorema ini menyatakan bahwa jika $T:W\to W $ adalah suatu pemetaan kontraktif pada suatu himpunan bagian tertutup $W$ dari ruang Banach $B$, yaitu terdapat konstanta $C\in [0,1)$ sehingga
+\begin{equation}
+    \|Tx-Ty\|\leq C\|x-y\|
+\end{equation}
+untuk setiap $x,y\in W$, maka pemetaan $T$ memiliki tepat satu titik tetap \cite{Banach1922}. Jika konstanta $C$ boleh bernilai 1, pemetaan tersebut dinamakan pemetaan nonekspansif. Pemetaan ini merupakan perluasan dari pemetaan kontraktif yang memainkan peranan penting dalam teori titik tetap, terutama dalam memastikan eksistensi serta konvergensi solusi dari berbagai permasalahan. Namun, berbeda dengan pemetaan kontraktif, pemetaan nonekspansif tidak selalu memiliki titik tetap yang tunggal. Selain itu, keberadaan titik tetap pada kelas pemetaan ini hanya dijamin jika $W$ merupakan himpunan bagian tertutup dan terbatas dari ruang Banach konveks seragam \cite{Browder1965}. 
+
+Dengan menggunakan teori mengenai titik tetap, eksistensi solusi dari suatu model matematika dapat dijamin dengan mendefinisikan pemetaan yang bersesuaian. Walaupun demikian, solusi tersebut tidak selalu dalam bentuk eksak, atau mungkin sulit untuk diperoleh secara analitik, sehingga diperlukan solusi numerik. Untuk mendapatkan solusi numeriknya, diperlukan suatu algoritma iterasi yang konvergen ke solusi dari model tersebut. 
+
+Pada pemetaan kontraktif Banach, skema iterasi Picard merupakan skema iterasi paling sederhana yang dapat digunakan untuk mendapatkan solusi numerik dari suatu model matematika. Namun, skema ini tidak selalu konvergen untuk pemetaan nonekspansif \cite{Krasnoselski}. Pada tahun 1953, Mann memperkenalkan skema iterasinya yang konvergen untuk pemetaan nonekspansif, tetapi skemanya juga tidak selalu konvergen pada pemetaan pseudo-kontraktif \cite{mann1953}. Mengatasi hal tersebut, Ishikawa mengembangkan skema iterasi dua tahap untuk mendapatkan nilai aproksimasi titik tetap dari pemetaan pseudo-kontraktif \cite{Ishikawa1974}. Berbagai variasi dan pengembangan skema iterasi untuk pemetaan nonekspansif ini juga terus bermunculan, sebagaimana oleh \cite{Noor2000,agarwal,abbas,Thakur2016,Ahmad2021}. Tidak hanya itu, berbagai jenis pemetaan nonekspansif juga dikembangkan oleh berbagai peneliti, antara lain: pemetaan Suzuki nonekspansif \cite{Suzuki2008}, pemetaan $\alpha$-nonekspansif \cite{Aoyama2011}, pemetaan yang memenuhi kondisi $(C_\mu)$ \cite{GARCIAFALSET2011185}, pemetaan tipe Reich-Suzuki nonekspansif \cite{Pant2019}, serta pemetaan $(\alpha,\beta,\gamma)$-nonekspansif \cite{Ullah2023}. 
+
+
+
+Konvergensi dari skema iterasi terhadap titik tetap dari berbagai macam jenis pemetaan juga diteliti di berbagai macam jenis ruang, baik itu ruang linear seperti ruang Hilbert dan ruang Banach, maupun di ruang geodesik. (lihat \cite{ArizaRuiz2014,Bridson1999,dehghan,Kirk2014,kumam}, dan referensi di dalamnya). Pada dasarnya, ruang geodesik adalah ruang yang memiliki suatu geodesik, atau lintasan terpendek di antara dua titik. Ruang ini memungkinkan struktur nonlinier sehingga model matematika nonlinier dapat dimodelkan dengan lebih akurat. Salah satu contoh dari ruang ini adalah ruang $CAT(0)$ yang lengkap atau dapat disebut juga ruang Hadamard. Pada tahun 2017, Khamsi dkk. mengembangkan ruang yang lebih umum dari $CAT(0)$ yaitu ruang $CAT_p(0)$ dan membuktikan bahwa pemetaan nonekspansif pada himpunan bagian tak kosong yang tertutup, terbatas, dan konveks, dari ruang $CAT_p(0)$ selalu memiliki titik tetap \cite{Khamsi2017}. Kemudian Salisu dkk. mendapatkan konvergensi dari skema iterasi JK untuk pemetaan nonekspansif yang memenuhi kondisi $(C_\mu)$ di ruang $CAT_p(0)$. Mereka juga mendapatkan aplikasinya untuk masalah optimasi. Kemudian mereka memberikan hasil eksperimen numeriknya \cite{Salisu2022}.
+
+Baru-baru ini, Sabri dkk. memperkenalkan skema iterasi baru untuk aproksimasi titik tetap pada pemetaan tipe Reich-Suzuki nonekspansif di ruang Banach konveks seragam. Melalui eksperimen numerik, mereka mendapatkan tingkat konvergensi yang lebih cepat dibanding beberapa skema iterasi lainnya \cite{sabri2025}.
+Pada penelitian ini, akan diselidiki syarat-syarat konvergensi dari skema iterasi Sabri di ruang $CAT_p(0)$, khususnya untuk pemetaan nonekspansif tipe $(\alpha,\beta,\gamma)$ yang diberikan oleh Ullah dkk. Kemudian akan dilakukan eksperimen numerik dengan skema iterasi tersebut serta didapatkan aplikasinya pada masalah optimasi. 
+
+
+
+\section{Rumusan Masalah}
+Dari latar belakang yang telah dipaparkan sebelumnya, maka konsep baru yang diangkat dalam perumusan masalah ini adalah sebagai berikut:
+\begin{enumerate}
+\item Bagaimana konvergensi dari skema iterasi Sabri di ruang $CAT_p(0)$ untuk pemetaan nonekspansif $(\alpha,\beta,\gamma)$-nonekspansif?
+\item Bagaimana laju konvergensi dari skema iterasi Sabri untuk pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dibanding dengan skema iterasi lainnya secara numerik?
+\item Bagaimana aplikasi dari skema iterasi Sabri untuk pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di ruang $CAT_p(0)$ pada masalah optimasi?
+\end{enumerate}
+
+\section{Batasan Masalah}
+Batasan masalah dalam penelitian ini adalah :
+\begin{enumerate}
+    \item Laju konvergensi yang dibandingkan adalah laju dari skema iterasi Sabri, JK, Thakur, dan Agarwal berdasarkan banyaknya iterasi yang diperlukan. 
+    %\item Masalah optimasi yang dibahas adalah masalah kelayakan terpisah atau lebih umumnya dikenal sebagai \textit{split feasibility problem}.
+     \item Terdapat dua masalah optimasi yang dibahas, yaitu
+\begin{enumerate}
+\item permasalahan minimalisasi fungsi, lebih tepatnya mencari titik $x\in X$ sehingga $f(x)\leq f(y)$ untuk setiap $y\in X$, dengan $X$ adalah suatu himpunan tak kosong dan $f:X\to \mathbb{R}$ adalah suatu fungsi yang memenuhi kondisi konveks \textit{proper lower semicontinuous}.
+\item permasalahan \textit{split feasibility problem} yang kemudian diterapkan dalam rekonstruksi citra tomografi.
+\end{enumerate}
+\end{enumerate}
+\section{Tujuan Penelitian}
+Tujuan dari penelitian ini adalah :
+\begin{enumerate}
+   \item Mendapatkan hasil konvergensi dari skema iterasi Sabri di ruang $CAT_p(0)$ untuk pemetaan $(\alpha,\beta,\gamma)$-nonekspansif.
+\item Mengetahui laju konvergensi dari skema iterasi Sabri untuk $(\alpha, \beta,\gamma)$-nonekspansif diperumum dibanding dengan skema iterasi lainnya secara numerik.
+\item Mendapatkan aplikasi dari skema iterasi Sabri untuk pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di ruang $CAT_p(0)$ pada masalah optimasi.
+
+\end{enumerate}
+\section{Manfaat Penelitian}
+Manfaat dari penelitian ini adalah :
+\begin{enumerate}
+    \item Sebagai kontribusi pada pengembangan teori titik tetap, khususnya pada analisis konvergensi skema iterasi untuk kelas pemetaan yang lebih umum dan ruang yang lebih umum, yaitu pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di ruang $CAT_p(0)$. 
+    \item Sebagai bahan kajian dan perbandingan mengenai laju konvergensi antara skema iterasi Sabri dengan skema iterasi lainnya.
+    \item Sebagai alternatif penyelesaian masalah optimasi. 
+\end{enumerate}
+

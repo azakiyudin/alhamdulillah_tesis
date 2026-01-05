@@ -1,0 +1,143 @@
+\subsection{Rekonstruksi Citra}
+Selain dapat digunakan dalam minimalisasi fungsi, skema iterasi Sabri juga dapat digunakan dalam permasalahan \textit{split feasibility}, yang memiliki aplikasi nyata dalam rekonstruksi citra. Permasalahan \textit{split feasibility} ini dikenalkan oleh Censor dan Elfving pada tahun 1994, yang diformulasikan sebagai 
+\begin{align}\label{eq:sfp}
+    \text{Cari titik } x^*\in C \quad \text{yang memenuhi}\quad Ax^*\in Q,
+\end{align}
+dengan $C$ dan $Q$ berturut-turut adalah himpunan bagian tertutup dan konveks dari ruang Hilbert $H_1$ dan $H_2$, serta $A:H_1\to H_2$ adalah transformasi linier terbatas \cite{Censor1994}. Permasalahan \eqref{eq:sfp} disebut konsisten jika setidaknya memiliki satu solusi. Suatu titik $x^*\in C$ merupakan solusi dari permasalahan tersebut jika dan hanya jika $x^*$ memenuhi persamaan titik tetap 
+\begin{align}
+    x=P_C(I-\gamma A^*(I-P_Q)A)x,
+\end{align}
+dengan $P_C$ dan $P_Q$ adalah proyeksi titik terdekat pada $C$ dan $Q$, secara berturut-turut, $\gamma>0$, dan $A^*$ adalah transformasi adjoin dari $A$ \cite{feng2019}. Dari permasalahan tersebut, skema iterasi Sabri dapat digunakan sebagaimana Teorema berikut.
+\begin{thm}
+    Diberikan ruang Hilbert $H$ yang kompak dan $C$ adalah himpunan bagian yang tertutup dan konveks dari $H$.
+    Jika permasalahan \eqref{eq:sfp} konsisten dengan solusi yang tunggal dan $\gamma\in (0,\frac{2}{k})$ dengan $k$ adalah radius spektral dari $A^*A$, maka pemetaan $T:C\to C$ yang didefinisikan sebagai $T(x)=P_C(I-\gamma A^*(I-P_Q)A)x$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif, serta barisan $\{x_n\}$ yang didefinisikan sebagai
+    \begin{align}
+        \begin{cases}
+            q_n &= T\qty((1-c_n)x_n\oplus c_n T(x_n))\\
+            y_n &= T(T(q_n))\\
+            x_{n+1} &= T\qty((1-a_n)T(q_n)\oplus a_n T(y_n))
+        \end{cases},
+    \end{align}
+    dengan $\{a_n\},\{c_n\}\subseteq [a,b]\subset (0,1)$ konvergen kuat ke solusi tunggal $x^*\in C$ dari permasalahan \eqref{eq:sfp} untuk setiap nilai awal $x_0\in C$.
+    \begin{bukti}
+        Berdasarkan hasil dari Byrne (lihat \cite{Byrne2003}), diperoleh bahwa pemetaan $T$ yang memenuhi kondisi tersebut adalah pemetaan nonekspansif sehingga juga merupakan $(\alpha,\beta,\gamma)$-nonekpansif. Kemudian, berdasarkan Contoh \ref{con:lpcatp}, didapatkan bahwa $H$ adalah ruang $CAT(0)$ yang juga merupakan ruang $CAT_p(0)$ dengan $p=2$. Akibatnya, dengan Teorema \ref{thm:konvK}, diperoleh bahwa $\{x_n\}$ konvergen kuat ke titik tetap dari $T$, yang berarti $\{x_n\}$ konvergen kuat ke solusi tunggal dari $x^*\in C$.
+    \end{bukti}
+\end{thm}
+
+Hasil ini dapat diterapkan pada permasalahan rekonstruksi citra tomografi. Permasalahan tersebut memiliki peranan penting dalam dunia medis, khususunya dalam rekonstruksi citra sinar-X, yang datanya berupa proyeksi yang dikenal sebagai sinogram. Pada umumnya, rekonstruksi citra organ tubuh dari data sinogram dilakukan menggunakan proyeksi mundur berfilter (\textit{filtered back projection}). Dari segi waktu komputasi, metode ini relatif cepat dalam menghasilkan citra. Namun, metode tersebut memiliki keterbatasan dalam kualitas citra yang dihasilkan, akibat tingginya tingkat derau. Untuk mereduksi derau pada citra hasil rekonstruksi, metode ini memerlukan dosis radiasi yang lebih tinggi pada pasien, yang berpotensi menimbulkan dampak negatif pada kesehatan pasien. Sebagai alternatif, rekonstruksi citra dapat dilakukan menggunakan proyeksi mundur tanpa filter yang dikombinasikan dengan algoritma skema iterasi. Pendekatan ini terbukti mampu mereduksi derau secara signifikan, yaitu sekitar 40\% sampai 70\% dibandingkan dengan metode proyeksi mundur berfilter \cite{Ramage2023}. 
+
+Pada bagian ini, dilakukan simulasi rekonstruksi citra tomografi berbasis skema iterasi Sabri. Transformasi maju $A$ yang digunakan adalah transformasi Radon, sedangkan himpunan batas $C$ dan $Q$ adalah himpunan bagian yang konveks dari suatu ruang Euclid, yang masing-masing merepresentasikan solusi \textit{feasible} untuk citra dan domain proyeksi. Pada simulasi ini, digunakan bahasa pemrograman Python dengan bantuan pustaka Scikit-image. Data citra yang digunakan adalah Shepp-Logan Phantom $x^*\in \mathbb{R}^n$ dengan resolusi $512\times 512$. Shepp-Logan Phantom dipilih karena merupakan model sintetik yang dirancang untuk menyerupai potongan gambar bagian dalam kepala manusia, sehingga sering digunakan dalam penelitian tomografi untuk menguji kemampuan algoritma rekonstruksi dalam membedakan struktur dengan tingkat kontras yang berbeda. Selanjutnya, data sinogram dibentuk sebagai $Q=Ax^*$ dengan menerapkan transformasi Radon pada sudut-sudut proyeksi yang terdistribusi merata pada interval $[0,180^{\circ})$. Tujuan simulasi ini adalah merekonstruksi citra $x^*$ berdasarkan data sinogram tersebut menggunakan skema iterasi Sabri. Untuk itu, digunakan pemetaan 
+\begin{align*}
+    T(x)=P_C(x-\gamma A^*(Ax-Q)),
+\end{align*}
+dengan $A^*$ merupakan aproksimasi dari transformasi adjoin $A$ yang diperoleh menggunakan proyeksi mundur tanpa filter, serta $P_C$ menyatakan operator proyeksi ke himpunan batas $C=[0,1]^n$. 
+Berikut ini diberikan data parameter yang digunakan dalam simulasi ini.
+\begin{table}[H]
+    \centering
+    \caption{Parameter simulasi rekonstruksi citra}
+    \begin{tabular}{ll}
+    \hline
+    \textbf{Parameter} & \textbf{Nilai/Deskripsi}\\
+    \hline
+    Ukuran gambar     &  $512\times 512$ \\
+    Sudut proyeksi     &  180 terdistribusi merata pada $[0^\circ, 180^\circ)$\\
+    Transformasi maju $A$ & Transformasi Radon\\
+    Transformasi adjoin $A^*$ & Proyeksi mundur tanpa filter\\
+    Himpunan batas $C$ & $[0,1]^n$\\
+    Nilai awal $x_0$ & $x_0=\mathbf{0}$\\
+    Jumlah iterasi & 60\\
+    Parameter $\gamma$ & Konstan: 0.01\\
+    Parameter $a_n,c_n$ & Konstan: $a_n=0.42, c_n=0.31$\\
+    Implementasi & Google Colab dengan scikit-image, matplotlib\\
+    \hline
+    \end{tabular}
+    \label{tab:placeholder}
+\end{table}
+
+Hasil simulasi ini diberikan oleh \ref{fig:rekoncit}. Pada iterasi ke-5, terlihat bahwa derau dari citra tersebut masih cukup tinggi, yang juga tertera pada nilai (\textit{peak signal noise ratio}) PSNR, yaitu 22.03 dB. Pada iterasi ke-60, nilai PSNR citra tersebut adalah 35.61 dB, yang mengindikasikan semakin sedikit derau pada citra. Nilai galat, yaitu (\textit{mean squared error}) dari citra tersebut juga relatif kecil pada iterasi ke-60, yaitu $2.7\times 10^{-4}$. Hasil ini menunjukkan bahwa skema iterasi Sabri dapat digunakan dalam rekonstruksi citra tomografi. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Bab_4/citrafix.png}
+    \caption{Hasil simulasi rekonstruksi citra}
+    \label{fig:rekoncit}
+\end{figure}
+Untuk lebih detailnya, tabel berikut ini memberikan hasil PSNR dan MSE dari tiap langkah iterasi.
+\begin{longtable}{|c|>{\centering\arraybackslash}p{4cm} | >{\centering\arraybackslash}p{4cm} |}
+\caption{\centering MSE dan PSNR Rekonstruksi Citra}\label{tab:msepsnr}\\
+\hline
+{\textbf{Iterasi ke-$n$}} & {\textbf{MSE}} & {\textbf{PSNR}} \\
+\hline
+\endfirsthead 
+\multicolumn{3}{c}{\centering \thetable{} -- Lanjutan dari halaman sebelumnya} \\
+\hline
+{\textbf{Iterasi ke-$n$}} & {\textbf{MSE}} & {\textbf{PSNR}} \\
+\hline
+\endhead 
+% \multicolumn{3}{c}{{Lanjut pada halaman berikutnya}} \\
+\hline
+\endfoot 
+\hline
+\endlastfoot
+\hline
+1  & 0.020302 & 16.924673 \\
+2  & 0.013587 & 18.668847 \\
+3  & 0.010072 & 19.968693 \\
+4  & 0.007823 & 21.066098 \\
+5  & 0.006272 & 22.026258 \\
+6  & 0.005149 & 22.882519 \\
+7  & 0.004309 & 23.655780 \\
+8  & 0.003664 & 24.360387 \\
+9  & 0.003157 & 25.006683 \\
+10 & 0.002753 & 25.602432 \\
+11 & 0.002425 & 26.153733 \\
+12 & 0.002155 & 26.665575 \\
+13 & 0.001931 & 27.142128 \\
+14 & 0.001743 & 27.587012 \\
+15 & 0.001584 & 28.003332 \\
+16 & 0.001448 & 28.393736 \\
+17 & 0.001330 & 28.760530 \\
+18 & 0.001229 & 29.105746 \\
+19 & 0.001140 & 29.431187 \\
+20 & 0.001062 & 29.738458 \\
+21 & 0.000993 & 30.028997 \\
+22 & 0.000932 & 30.304104 \\
+23 & 0.000878 & 30.564968 \\
+24 & 0.000829 & 30.812682 \\
+25 & 0.000786 & 31.048254 \\
+26 & 0.000746 & 31.272582 \\
+27 & 0.000710 & 31.486496 \\
+28 & 0.000678 & 31.690770 \\
+29 & 0.000648 & 31.886142 \\
+30 & 0.000620 & 32.073295 \\
+31 & 0.000595 & 32.252847 \\
+32 & 0.000572 & 32.425370 \\
+33 & 0.000551 & 32.591386 \\
+34 & 0.000531 & 32.751347 \\
+35 & 0.000512 & 32.905658 \\
+36 & 0.000495 & 33.054684 \\
+37 & 0.000479 & 33.198752 \\
+38 & 0.000464 & 33.338168 \\
+39 & 0.000449 & 33.473223 \\
+40 & 0.000436 & 33.604183 \\
+41 & 0.000424 & 33.731285 \\
+42 & 0.000412 & 33.854741 \\
+43 & 0.000400 & 33.974740 \\
+44 & 0.000390 & 34.091450 \\
+45 & 0.000380 & 34.205025 \\
+46 & 0.000370 & 34.315610 \\
+47 & 0.000361 & 34.423339 \\
+48 & 0.000353 & 34.528338 \\
+49 & 0.000344 & 34.630725 \\
+50 & 0.000336 & 34.730611 \\
+51 & 0.000329 & 34.828102 \\
+52 & 0.000322 & 34.923289 \\
+53 & 0.000315 & 35.016256 \\
+54 & 0.000309 & 35.107081 \\
+55 & 0.000302 & 35.195841 \\
+56 & 0.000296 & 35.282605 \\
+57 & 0.000291 & 35.367439 \\
+58 & 0.000285 & 35.450403 \\
+59 & 0.000280 & 35.531556 \\
+60 & 0.000275 & 35.610951 \\
+\hline
+\end{longtable}
