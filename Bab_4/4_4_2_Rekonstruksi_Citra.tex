@@ -46,7 +46,7 @@ Berikut ini diberikan data parameter yang digunakan dalam simulasi ini.
     Himpunan batas $C$ & $[0,1]^n$\\
     Nilai awal $x_0$ & $x_0=\mathbf{0}$\\
     Jumlah iterasi & 60\\
-    Parameter $\gamma$ & Konstan: 0.01\\
+    Parameter $\gamma$ & Konstan: 0.00245\\
     Parameter $a_n,c_n$ & Konstan: $a_n=0.42, c_n=0.31$\\
     Implementasi & Google Colab dengan scikit-image, matplotlib\\
     \hline
@@ -57,7 +57,7 @@ Berikut ini diberikan data parameter yang digunakan dalam simulasi ini.
 Hasil simulasi ini diberikan oleh \ref{fig:rekoncit}. Pada iterasi ke-5, terlihat bahwa derau dari citra tersebut masih cukup tinggi, yang juga tertera pada nilai (\textit{peak signal noise ratio}) PSNR, yaitu 22.03 dB. Pada iterasi ke-60, nilai PSNR citra tersebut adalah 35.61 dB, yang mengindikasikan semakin sedikit derau pada citra. Nilai galat, yaitu (\textit{mean squared error}) dari citra tersebut juga relatif kecil pada iterasi ke-60, yaitu $2.7\times 10^{-4}$. Hasil ini menunjukkan bahwa skema iterasi Sabri dapat digunakan dalam rekonstruksi citra tomografi. 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\linewidth]{Bab_4/citrafix.png}
+    \includegraphics[width=0.95\linewidth]{Bab_4/citrafix.png}
     \caption{Hasil simulasi rekonstruksi citra}
     \label{fig:rekoncit}
 \end{figure}

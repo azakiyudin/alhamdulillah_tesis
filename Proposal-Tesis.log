@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.21)  5 JAN 2026 15:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.21)  6 JAN 2026 14:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -345,11 +345,16 @@ Package amsthm Warning: Unknown theoremstyle `proof' on input line 31.
 \c@dfn=\count322
 \c@exam=\count323
 \c@lemma=\count324
-(itsbib.sty
+(C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/tools\afterpage.sty
+Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
+\AP@output=\toks36
+\AP@partial=\box63
+\AP@footins=\box64
+) (itsbib.sty
 Package: itsbib 
 ) (picins.sty Option `picins' Version 3.0 Sep. 1992, TH Darmstadt/HRZ
-\@BILD=\box63
-\@TEXT=\box64
+\@BILD=\box65
+\@TEXT=\box66
 \d@breite=\dimen182
 \d@hoehe=\dimen183
 \d@xoff=\dimen184
@@ -386,7 +391,7 @@ Package: itsbib
 \d@leftskip=\skip66
 \ptoti=\dimen195
 \ptotii=\dimen196
-\env@box=\box65
+\env@box=\box67
 \d@envdp=\dimen197
 \c@hsize=\count345
 \c@envdp=\count346
@@ -407,10 +412,10 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthL=\skip78
 \f@nch@widthC=\skip79
 \f@nch@widthR=\skip80
-\@temptokenb=\toks36
+\@temptokenb=\toks37
 )) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/tools\enumerate.sty
 Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
-\@enLab=\toks37
+\@enLab=\toks38
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
@@ -429,7 +434,7 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
 Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
-\everycr=\toks38
+\everycr=\toks39
 \minrowclearance=\skip81
 \rownum=\count347
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty
@@ -476,13 +481,13 @@ Package: eso-pic 2025/12/10 v3.0d eso-pic (RN)
 File: pppdftex.def 2025/07/23 v0.6g Pdfpages driver for pdfTeX (AM)
 )
 \pdfpages@includegraphics@status=\count351
-\AM@pagebox=\box66
-\AM@global@opts=\toks39
+\AM@pagebox=\box68
+\AM@global@opts=\toks40
 \AM@pagecnt=\count352
-\AM@toc@title=\toks40
-\AM@lof@heading=\toks41
+\AM@toc@title=\toks41
+\AM@lof@heading=\toks42
 \c@AM@survey=\count353
-\AM@templatesizebox=\box67
+\AM@templatesizebox=\box69
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/physics\physics.sty
 Package: physics 
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
@@ -495,16 +500,16 @@ Package: xparse 2024-08-16 L3 Experimental document command parser
 )) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count355
-\float@exts=\toks42
-\float@box=\box68
-\@float@everytoks=\toks43
-\@floatcapt=\box69
+\float@exts=\toks43
+\float@box=\box70
+\@float@everytoks=\toks44
+\@floatcapt=\box71
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks44
+\pgfutil@everybye=\toks45
 \pgfutil@tempdima=\dimen262
 \pgfutil@tempdimb=\dimen263
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
-\pgfutil@abb=\box70
+\pgfutil@abb=\box72
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
@@ -512,10 +517,10 @@ Package: pgf 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks45
-\pgfkeys@temptoks=\toks46
+\pgfkeys@pathtoks=\toks46
+\pgfkeys@temptoks=\toks47
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks47
+\pgfkeys@tmptoks=\toks48
 ))
 \pgf@x=\dimen264
 \pgf@y=\dimen265
@@ -533,9 +538,9 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \c@pgf@countb=\count357
 \c@pgf@countc=\count358
 \c@pgf@countd=\count359
-\t@pgf@toka=\toks48
-\t@pgf@tokb=\toks49
-\t@pgf@tokc=\toks50
+\t@pgf@toka=\toks49
+\t@pgf@tokb=\toks50
+\t@pgf@tokc=\toks51
 \pgf@sys@id@count=\count360
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
@@ -556,10 +561,10 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
 \pgfmath@dimen=\dimen274
 \pgfmath@count=\count363
-\pgfmath@box=\box71
-\pgfmath@toks=\toks51
-\pgfmath@stack@operand=\toks52
-\pgfmath@stack@operation=\toks53
+\pgfmath@box=\box73
+\pgfmath@toks=\toks52
+\pgfmath@stack@operand=\toks53
+\pgfmath@stack@operation=\toks54
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count364
 )) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
@@ -588,9 +593,9 @@ File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@shorten@start@additional=\dimen292
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box72
-\pgf@hbox=\box73
-\pgf@layerbox@main=\box74
+\pgfpic=\box74
+\pgf@hbox=\box75
+\pgf@layerbox@main=\box76
 \pgf@picture@serial@count=\count365
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -618,7 +623,7 @@ File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box75
+\pgfexternal@startupbox=\box77
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
@@ -629,7 +634,7 @@ File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box76
+\pgfnodeparttextbox=\box78
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
@@ -642,8 +647,8 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen301
 \pgffor@skip=\dimen302
-\pgffor@stack=\toks54
-\pgffor@toks=\toks55
+\pgffor@stack=\toks55
+\pgffor@toks=\toks56
 )) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
@@ -659,10 +664,10 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@lastmovetoy=\dimen309
 \tikzleveldistance=\dimen310
 \tikzsiblingdistance=\dimen311
-\tikz@figbox=\box77
-\tikz@figbox@bg=\box78
-\tikz@tempbox=\box79
-\tikz@tempbox@bg=\box80
+\tikz@figbox=\box79
+\tikz@figbox@bg=\box80
+\tikz@tempbox=\box81
+\tikz@tempbox@bg=\box82
 \tikztreelevel=\count369
 \tikznumberofchildren=\count370
 \tikznumberofcurrentchild=\count371
@@ -715,20 +720,20 @@ Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
 \l__siunitx_number_group_size_int=\count386
 \l__siunitx_number_group_minimum_int=\count387
 \l__siunitx_angle_tmp_dim=\dimen313
-\l__siunitx_angle_marker_box=\box81
-\l__siunitx_angle_unit_box=\box82
+\l__siunitx_angle_marker_box=\box83
+\l__siunitx_angle_unit_box=\box84
 \l__siunitx_compound_count_int=\count388
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/translations\translations.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
 )
-\l__siunitx_table_tmp_box=\box83
+\l__siunitx_table_tmp_box=\box85
 \l__siunitx_table_tmp_dim=\dimen314
 \l__siunitx_table_column_width_dim=\dimen315
-\l__siunitx_table_integer_box=\box84
-\l__siunitx_table_decimal_box=\box85
-\l__siunitx_table_uncert_box=\box86
-\l__siunitx_table_before_box=\box87
-\l__siunitx_table_after_box=\box88
+\l__siunitx_table_integer_box=\box86
+\l__siunitx_table_decimal_box=\box87
+\l__siunitx_table_uncert_box=\box88
+\l__siunitx_table_before_box=\box89
+\l__siunitx_table_after_box=\box90
 \l__siunitx_table_before_dim=\dimen316
 \l__siunitx_table_carry_dim=\dimen317
 \l__siunitx_unit_tmp_int=\count389
@@ -769,8 +774,8 @@ LaTeX Info: Redefining \hbar on input line 50.
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip99
 \enit@outerparindent=\dimen318
-\enit@toks=\toks56
-\enit@inbox=\box89
+\enit@toks=\toks57
+\enit@inbox=\box91
 \enit@count@id=\count392
 \enitdp@description=\count393
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\palatino.sty
@@ -801,8 +806,8 @@ Package cleveref Info: `amsthm' support loaded on input line 3026.
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
 \lst@mode=\count395
-\lst@gtempboxa=\box90
-\lst@token=\toks57
+\lst@gtempboxa=\box92
+\lst@token=\toks58
 \lst@length=\count396
 \lst@currlwidth=\dimen319
 \lst@column=\count397
@@ -818,7 +823,7 @@ File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 \c@lstnumber=\count401
 \lst@skipnumbers=\count402
-\lst@framebox=\box91
+\lst@framebox=\box93
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
@@ -826,31 +831,31 @@ Package: listings 2024/09/23 1.10c (Carsten Heinz)
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 53.
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 53.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 55.
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 55.
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 ) (Proposal-Tesis.aux (Abstrak_Ind/AbstrakInd.aux) (Abstract_Eng/AbstrakEnglish.aux))
 \openout1 = `Proposal-Tesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -890,22 +895,22 @@ LaTeX Font Info:    ... okay on input line 53.
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count403
 \scratchdimen=\dimen323
-\scratchbox=\box92
+\scratchbox=\box94
 \nofMPsegments=\count404
 \nofMParguments=\count405
-\everyMPshowfont=\toks58
+\everyMPshowfont=\toks59
 \MPscratchCnt=\count406
 \MPscratchDim=\dimen324
 \MPnumerator=\count407
 \makeMPintoPDFobject=\count408
-\everyMPtoPDFconversion=\toks59
+\everyMPtoPDFconversion=\toks60
 ) (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 53.
+Package hyperref Info: Link coloring OFF on input line 55.
  (Proposal-Tesis.out) (Proposal-Tesis.out)
 \@outlinefile=\write5
 \openout5 = `Proposal-Tesis.out'.
@@ -933,16 +938,48 @@ Package siunitx Warning: Detected the "physics" package:
 (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 53.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 55.
 \c@lstlisting=\count409
 Package tocbasic Info: omitting babel extension for `lol'
-(tocbasic)             because of missing \bbl@set@language on input line 53.
-<lambang-its.jpg, id=149, 150.5625pt x 150.5625pt>
+(tocbasic)             because of missing \bbl@set@language on input line 55.
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(42.67912pt, 717.00946pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=717.00946pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-61.46466pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=88.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<lambang-its.jpg, id=146, 150.5625pt x 150.5625pt>
 File: lambang-its.jpg Graphic file (type jpg)
 <use lambang-its.jpg>
-Package pdftex.def Info: lambang-its.jpg  used on input line 95.
-(pdftex.def)             Requested size: 99.58464pt x 99.5875pt.
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 95.
+Package pdftex.def Info: lambang-its.jpg  used on input line 100.
+(pdftex.def)             Requested size: 99.5875pt x 99.58464pt.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 100.
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
@@ -951,14 +988,16 @@ File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 
 
 
+
 {C:/Users/Jekiyudin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./lambang-its.jpg>]
 
 [2
 
+
 ]
 File: lambang-its.jpg Graphic file (type jpg)
 <use lambang-its.jpg>
-Package pdftex.def Info: lambang-its.jpg  used on input line 96.
+Package pdftex.def Info: lambang-its.jpg  used on input line 101.
 (pdftex.def)             Requested size: 99.58464pt x 99.5875pt.
 
 
@@ -967,71 +1006,112 @@ Package pdftex.def Info: lambang-its.jpg  used on input line 96.
 [4
 
 ]
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 98.
+File: lambang-its.jpg Graphic file (type jpg)
+<use lambang-its.jpg>
+Package pdftex.def Info: lambang-its.jpg  used on input line 102.
+(pdftex.def)             Requested size: 99.58464pt x 99.5875pt.
+
+
+[5]
+
+[6
+
+]
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 103.
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 98.
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 103.
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 98.
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 103.
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 98.
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 103.
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 98.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 103.
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 98.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 103.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 98.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 103.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 98.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 103.
 
 
-[5]
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.105 \include{Abstrak_Ind/AbstrakInd}
+                                       %%  menampilkan Abstrak Bhs.Indonesia [1]
 \openout2 = `Abstrak_Ind/AbstrakInd.aux'.
 
  (Abstrak_Ind/AbstrakInd.tex
 
-[6
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2 \begin{Abstrak}
+                    [2
+
+
+])
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.iii}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.105 \include{Abstrak_Ind/AbstrakInd}
+                                       %%  menampilkan Abstrak Bhs.Indonesia [3]
+\openout2 = `Abstract_Eng/AbstrakEnglish.aux'.
+
+ (Abstract_Eng/AbstrakEnglish.tex
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.iv}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \begin{Abstract}
+                     [4
+
+
+
+
+])
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.v}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.107 \include{Abstract_Eng/AbstrakEnglish}
+                                            %%  menampilkan Abstrak Bhs.Inggris [5] (katapengantar.tex
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.vi}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \KataPengantar
+                   [6
+
 
 
 ])
 
 [7]
-\openout2 = `Abstract_Eng/AbstrakEnglish.aux'.
-
- (Abstract_Eng/AbstrakEnglish.tex
 
 [8
 
-
-
-
-])
-
-[9] (katapengantar.tex
-
-[10
-
-
-
-])
-
-[11]
-
-[12
-
 ] (Proposal-Tesis.toc
 
-[13
+[9
 
 ])
 \tf@toc=\write6
@@ -1039,18 +1119,18 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 
 
 
-[14] (Proposal-Tesis.lof)
+[10] (Proposal-Tesis.lof)
 \tf@lof=\write7
 \openout7 = `Proposal-Tesis.lof'.
 
 
 
-[15
+[11
 
 
 ]
 
-[16
+[12
 
 ] (Proposal-Tesis.lot)
 \tf@lot=\write8
@@ -1058,23 +1138,46 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 
 
 
-[17
+[13
 
 ]
 
-[18
+[14
 
 ]
+Overfull \hbox (45.24788pt too wide) in alignment at lines 118--119
+ [] [] [] 
+ []
 
-[19]
 
-[20
+Overfull \hbox (45.24788pt too wide) in alignment at lines 119--120
+ [] [] [] 
+ []
 
-] (Bab_1/Bab1.tex
+
+Overfull \hbox (45.24788pt too wide) in alignment at lines 120--121
+ [] [] [] 
+ []
+
+
+Overfull \hbox (45.24788pt too wide) in alignment at lines 121--122
+ [] [] [] 
+ []
+
+
+Overfull \hbox (45.24788pt too wide) in alignment at lines 122--175
+ [] [] [] 
+ []
+
+[15]
+
+[16] (Bab_1/Bab1.tex
 BAB 1.
 
 
 [1
+
+
 
 
 ]
@@ -1345,11 +1448,11 @@ l.3 \begin{align}
 [47]
 
 [48]
-<Bab_4/citrafix.png, id=729, 714.7503pt x 1068.1506pt>
+<Bab_4/citrafix.png, id=728, 714.7503pt x 1068.1506pt>
 File: Bab_4/citrafix.png Graphic file (type png)
 <use Bab_4/citrafix.png>
 Package pdftex.def Info: Bab_4/citrafix.png  used on input line 60.
-(pdftex.def)             Requested size: 358.50229pt x 535.76906pt.
+(pdftex.def)             Requested size: 378.42044pt x 565.54668pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1474,29 +1577,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[73] (terimakasih.tex
+[73] (biodata.tex
 
 [74
 
-])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[75] (biodata.tex
-
-[76
-
 ]
-\foto=\box93
-<foto.jpg, id=1401, 1484.54625pt x 2227.32124pt>
+\foto=\box95
+<foto.jpg, id=1392, 1484.54625pt x 2227.32124pt>
 File: foto.jpg Graphic file (type jpg)
 <use foto.jpg>
 Package pdftex.def Info: foto.jpg  used on input line 1.
 (pdftex.def)             Requested size: 113.80527pt x 170.71239pt.
 )
 
-[77 <./foto.jpg>] (Proposal-Tesis.aux (Abstrak_Ind/AbstrakInd.aux) (Abstract_Eng/AbstrakEnglish.aux))
+[75 <./foto.jpg>] (Proposal-Tesis.aux (Abstrak_Ind/AbstrakInd.aux) (Abstract_Eng/AbstrakEnglish.aux))
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
@@ -1506,20 +1600,20 @@ L3 programming layer <2025-07-20>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Proposal-Tesis.out' has not changed.
-(rerunfilecheck)             Checksum: 5C7640246CA9D4DE678B6A3DF97DF268;5610.
+(rerunfilecheck)             Checksum: 612CEA22E392E4C77FF6E0006B59DD22;5457.
  ) 
 Here is how much of TeX's memory you used:
- 35890 strings out of 468134
- 719462 string characters out of 5428804
- 1580159 words of memory out of 5000000
- 63011 multiletter control sequences out of 15000+600000
- 667303 words of font info for 130 fonts, out of 8000000 for 9000
+ 35947 strings out of 468134
+ 720635 string characters out of 5428804
+ 1582750 words of memory out of 5000000
+ 63070 multiletter control sequences out of 15000+600000
+ 672591 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,18n,121p,1514b,2765s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,18n,121p,1605b,2769s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Proposal-Tesis.pdf (97 pages, 1447978 bytes).
+Output written on Proposal-Tesis.pdf (97 pages, 1453814 bytes).
 PDF statistics:
- 1649 PDF objects out of 1728 (max. 8388607)
- 816 named destinations out of 1000 (max. 500000)
- 342 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1640 PDF objects out of 1728 (max. 8388607)
+ 811 named destinations out of 1000 (max. 500000)
+ 334 words of extra memory for PDF output out of 10000 (max. 10000000)
 

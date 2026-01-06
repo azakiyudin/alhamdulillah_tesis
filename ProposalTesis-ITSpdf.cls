@@ -40,7 +40,7 @@
 \newtheorem{exam}{Contoh}[section]
 \theoremstyle{plain}
 \newtheorem{lemma}{Lema}[section]
-
+\RequirePackage{afterpage}
 
 \newcommand{\tensor}{\otimes}
 \newcommand{\homotopic}{\simeq}
@@ -158,22 +158,82 @@
     \frontmatter
     \pagestyle{plain}
 }
+
+\renewcommand{\baselinestretch}{1}
+\newcommand*{\changepagecolor}{%
+  \@ifnextchar[\@changepagecolor@i\@changepagecolor@ii
+}
+% Case: \changepagecolor[...]{...}
+\def\@changepagecolor@i[#1]#2{%
+  \@changepagecolor@do{[{#1}]{#2}}%
+}
+% Case: \changepagecolor{...}
+\newcommand*{\@changepagecolor@ii}[1]{%
+  \@changepagecolor@do{{#1}}%
+}
+\newcommand*{\@changepagecolor@do}[1]{%
+  % Fill the remaining space with a colored rule
+  \begingroup
+    \offinterlineskip
+    \hbox to 0pt{%
+      \kern-\paperwidth
+      \vtop to 0pt{%
+        \color#1%
+        \hrule width 2\paperwidth height \paperheight
+        \vss
+      }%
+      \hss
+    }%
+  \endgroup
+  % Set page color for the next page
+  \afterpage{\pagecolor#1}%
+}
+\newcommand\Cover{%
+\newgeometry{left=3cm, right=3cm, top=1.5cm, bottom=3cm}
+    \cleardoublepage\thispagestyle{empty}
+    \color{white}
+    \begin{flushleft}
+    % \vspace*{-2cm}
+    % \hspace{-1cm}
+    \includegraphics[height=3.5cm]{lambang-its.jpg}\\
+    \vspace{1cm}
+    {\color{mygreen}\makebox[\textwidth]{\rule{200cm}{0.8cm}}}\\
+    \vspace{0.2cm}
+    \changepagecolor{blue}\afterpage{\nopagecolor}
+    \vfill
+    \textsf{\noindent
+    {\fontsize{14}{2}\selectfont{\textbf{TESIS~ - ~SM255401}}}\\[3ex]
+    {\fontsize{18}{2}\selectfont{\textbf{\MakeUppercase{\@judul}}}}\\[3ex]
+    		\MakeUppercase{\@nama}\\NRP \@NRP\\[3ex]
+    		\MakeUppercase{Dosen Pembimbing}:\\
+    		\@pbbsatu\\ \@pbbdua\mbox{}\\ \@pbbtiga\mbox{}\\
+        \vspace{1cm}
+    		\textbf{Departemen~ {\@jur}}\\
+    		\textbf{Fakultas~}{\@fak}\\
+    		\textbf{Institut Teknologi Sepuluh Nopember}\\
+    		\textbf{Surabaya}\\
+    		\@thn}		
+    \end{flushleft}
+    \color{black}
+    \restoregeometry
+    % \addcontentsline{toc}{chapter}{COVER}
+}
 \newcommand\LembarJudul{%
     \cleardoublepage\thispagestyle{empty}
     \enlargethispage{1cm}
     \begin{flushleft}
-    	\includegraphics[width=35mm]{lambang-its}\\[15mm]{\color{mygreen}\makebox[\textwidth]{\rule{200cm}{8pt}}}\\
-    	\vfill\noindent\textsf{%
+    	\includegraphics[width=35mm]{lambang-its}\\[10mm]{\color{mygreen}\makebox[\textwidth]{\rule{200cm}{0.8cm}}}\\
+    	\vspace{0.2cm}\vfill\noindent\textsf{%
     		TESIS~ - ~SM255401\\[2ex]
     		{\fontsize{18}{2}\selectfont{\textbf{\MakeUppercase{\@judul}}}}\\[3ex]
     		\MakeUppercase{\@nama}\\NRP \@NRP\\[3ex]
     		\MakeUppercase{Dosen Pembimbing}:\\
-    		\@pbbsatu\\ \@pbbdua\mbox{}\\ \@pbbtiga\mbox{}\\[2ex]
-    		PROGRAM MAGISTER\\
-    		DEPARTEMEN~ \MakeUppercase{\@jur}\\
-    		\MakeUppercase{FAKULTAS~}\MakeUppercase{\@fak}\\
-    		\MakeUppercase{Institut Teknologi Sepuluh Nopember}\\
-    		\MakeUppercase{Surabaya}\\
+    		\@pbbsatu\\ \@pbbdua\mbox{}\\ \@pbbtiga\mbox{}\\
+        \vspace{1cm}
+    		\textbf{Departemen~ {\@jur}}\\
+    		\textbf{Fakultas~}{\@fak}\\
+    		\textbf{Institut Teknologi Sepuluh Nopember}\\
+    		\textbf{Surabaya}\\
     		\@thn}		
     \end{flushleft}
     \addcontentsline{toc}{chapter}{HALAMAN JUDUL}
@@ -183,21 +243,23 @@
     \cleardoublepage\thispagestyle{empty}
     \enlargethispage{1cm}
     \begin{flushleft}
-    	\includegraphics[width=35mm]{lambang-its}\\[15mm]{\color{mygreen}\makebox[\textwidth]{\rule{200cm}{8pt}}}\\
-    	\vfill\noindent\textsf{%
+    	\includegraphics[width=35mm]{lambang-its}\\[10mm]{\color{mygreen}\makebox[\textwidth]{\rule{200cm}{0.8cm}}}\\
+    	\vspace{0.2cm}\vfill\noindent\textsf{%
     		THESIS ~ - SM255401\\[2ex]
     		{\fontsize{18}{2}\selectfont{\textbf{\MakeUppercase{\@juduleng}}}}\\[3ex]
     		\MakeUppercase{\@nama}\\NRP \@NRP\\[3ex]
     		\MakeUppercase{Supervisor}:\\
-    		\@pbbsatu\\ \@pbbdua\mbox{}\\ \@pbbtiga\mbox{}\\[2ex]
-    		MASTER PROGRAM\\
-    		DEPARTMENT OF~\MakeUppercase{\@dept}\\
-    		\MakeUppercase{Faculty of~}\MakeUppercase{\@fac}\\
-    		\MakeUppercase{Institut Teknologi Sepuluh Nopember}\\
-    		\MakeUppercase{Surabaya}\\
+    		\@pbbsatu\\ \@pbbdua\mbox{}\\ \@pbbtiga\mbox{}
+        \\
+        \vspace{1cm}
+    		\textbf{Department of~{\@dept}}\\
+    		\textbf{Faculty of~}{\@fac}\\
+    		\textbf{Institut Teknologi Sepuluh Nopember}\\
+    		\textbf{Surabaya}\\
     		\@thn}	
     \end{flushleft}
 }
+
 \newcommand\@tglsetuju{22 Januari 2014}
 \DeclareRobustCommand\TanggalDisetujui[1]{%
    \renewcommand\@tglsetuju{#1}
@@ -208,68 +270,133 @@
 	\renewcommand\@tempat{#1}
 }
 
-
-\newcommand\LembarPengesahan[1]{ %
-	\renewcommand\@tempat{#1}
-    \cleardoublepage
-    \enlargethispage{1.5cm}
-    \addcontentsline{toc}{chapter}{LEMBAR PENGESAHAN}
-    \begin{center}
-%    \large\bfseries
-    LEMBAR PENGESAHAN TESIS\\
-   \vfill
-    \MakeUppercase{\textbf{\@judul}}\\
-    \vfill
-    \normalfont\normalsize
-    Oleh:\\
-    \MakeUppercase{\@nama}\\
-    NRP.~ \@NRP\\ \vfill
-    
-    \begin{flushright}
-    \begin{tabular}{l@{}c@{ : }l@{}} %{lcl}
-    Tanggal Seminar & & {\@tglsetuju} %\\	
-  %  Tempat  & & {\@tempat}
+\newcommand\LembarPengesahan{%
+\cleardoublepage
+\setcounter{page}{1} 
+\begin{center}
+  \setstretch{1}
+{\fontsize{14}{2}\selectfont{\textbf{LEMBAR PENGESAHAN TESIS}}}\vspace{1.5cm}\\
+Telah disusun untuk memenuhi salah satu syarat memperoleh gelar\\
+\textbf{Magister Matematika (M.Mat)}\\
+di\\
+\textbf{Institut Teknologi Sepuluh Nopember}\\
+Oleh:\\
+        \textbf{\@nama}\\
+        \textbf{NRP:~\@NRP}\vspace{0.5cm}\\
+      	Tanggal Ujian: \@tglsetuju\\
+      	Periode Wisuda: September 2025\vspace{0.5cm}\\
+       Disetujui oleh:\vspace{0.2cm}\\
+      \ifthenelse{\equal{\@pbbdua}{}\OR\equal{\@pbbdua}{}}
+        {
+\begin{tabular}{ll}
+\multicolumn{2}{c}{\textbf{Pembimbing:}}\vspace{0.5cm}\\
+1. \@pbbsatu & \hspace{1cm}(\dots\dots\dots\dots\dots\dots) \\
+\hspace{0.5cm}NIP. \@NIPpbbsatu & \vspace{0.5cm}\\
+\multicolumn{2}{c}{\textbf{Penguji:}}\vspace{0.5cm}\\
+1. \@pujsatu & \hspace{1cm}(\dots\dots\dots\dots\dots\dots) \\
+\hspace{0.5cm}NIP. \@NIPpujsatu & \vspace{0.75cm}\\
+2. \@pujdua & \hspace{1cm}(\dots\dots\dots\dots\dots\dots) \\
+\hspace{0.5cm}NIP. \@NIPpujdua & \vspace{0.75cm}\\
+3. \@pujtiga & \hspace{1cm}(\dots\dots\dots\dots\dots\dots) \\
+\hspace{0.5cm}NIP. \@NIPpujtiga & \vspace{0.3cm}\\
+\end{tabular}
+        }
+        {
+\begin{tabular}{ll}
+\multicolumn{2}{c}{\textbf{Pembimbing:}}\vspace{0.5cm}\\
+1. \@pbbsatu & \hspace{1cm}(\dots\dots\dots\dots\dots\dots) \\
+\hspace{0.5cm}NIP. \@NIPpbbsatu & \vspace{0.5cm}\\
+2. \@pbbdua & \hspace{1cm}(\dots\dots\dots\dots\dots\dots) \\
+\hspace{0.5cm}NIP. \@NIPpbbdua & \vspace{0.5cm}\\
+\multicolumn{2}{c}{\textbf{Penguji:}}\vspace{0.5cm}\\
+1. \@pujsatu & \hspace{1cm}(\dots\dots\dots\dots\dots\dots) \\
+\hspace{0.5cm}NIP. \@NIPpujsatu & \vspace{0.5cm}\\
+2. \@pujdua & \hspace{1cm}(\dots\dots\dots\dots\dots\dots) \\
+\hspace{0.5cm}NIP. \@NIPpujdua & \vspace{0.5cm}\\
+% 3. \@pujtiga & \hspace{1cm}(\dots\dots\dots\dots\dots\dots) \\
+% \hspace{0.5cm}NIP. \@NIPpujtiga & \vspace{0.2cm}\\
+\end{tabular}
+        }\vspace{1cm}\\
+    \begin{tabular}{c}
+    Kepala Departemen Matematika      \\
+    Fakultas Sains dan Analitika Data \vspace{1.5cm}\\
+    \underline{\@kadep}                   \\
+    NIP. \@NIPkadep                       
     \end{tabular}
-    \vspace*{2ex}
-    \end{flushright}
-  
-    \begin{tabularx}{\textwidth}{@{}lXc@{}}
-    Disetujui oleh \\[8ex]
-    \ifthenelse{\equal{\@pbbtiga}{}\OR\equal{\@pbbtiga}{ }}
-          {\ifthenelse{\equal{\@pbbdua}{}\OR\equal{\@pbbdua}{ }}
-              {\@pbbsatu & & \\
-               NIP~\@NIPpbbsatu & & (Pembimbing) \\[8ex]}
-               {\@pbbsatu & & \\
-               NIP~\@NIPpbbsatu & & Pembimbing I\\[8ex]
-               \@pbbdua & & \\
-               NIP~\@NIPpbbdua & & Pembimbing II\\[8ex]}
-          }
-          {\@pbbsatu & &\\
-            NIP~\@NIPpbbsatu & & Pembimbing \\[8ex]
-            \@pbbdua & & \\
-            NIP~\@NIPpbbdua && Pembimbing II \\[8ex]
-            \@pbbtiga & & \\
-            NIP~\@NIPpbbtiga & & Pembimbing III \\[8ex]
-          }
-    \ifthenelse{\equal{\@pujtiga}{}\OR\equal{\@pujtiga}{ }}
-          {\ifthenelse{\equal{\@pujdua}{}\OR\equal{\@pujdua}{ }}
-              {\@pujsatu & & \\
-               NIP~\@NIPpujsatu && (Penguji)\\[8ex]}
-               {\@pujsatu & & \\
-               NIP~\@NIPpujsatu & & (Penguji)\\[8ex]
-               \@pujdua && \\
-               NIP~\@NIPpujdua & & (Penguji) }
-          }
-          {\@pujsatu &&\\
-            NIP~\@NIPpujsatu & & (Penguji)\\[8ex]
-            \@pujdua && \\
-            NIP~\@NIPpujdua & & (Penguji) \\[8ex]
-            \@pujtiga && \\
-            NIP~\@NIPpujtiga & & (Penguji) \\[5ex]
-          }  
-    \end{tabularx}\\  %\\[5ex]
 \end{center}
+\addcontentsline{toc}{chapter}{LEMBAR PENGESAHAN}
 }
+\newcommand\@NIPkadep{19710513 199702 1 001}
+\DeclareRobustCommand\NIPKadep[1]{%
+   \renewcommand\@NIPkadep{#1}
+}
+
+\newcommand\@kadep{Nama Kepala Departemen}
+\DeclareRobustCommand\Kadep[1]{%
+   \renewcommand\@kadep{#1}
+}
+
+% \newcommand\LembarPengesahan[1]{ %
+% 	\renewcommand\@tempat{#1}
+%     \cleardoublepage
+%     \enlargethispage{1.5cm}
+%     \addcontentsline{toc}{chapter}{LEMBAR PENGESAHAN}
+%     \begin{center}
+% %    \large\bfseries
+%     LEMBAR PENGESAHAN TESIS\\
+%    \vfill
+%     \MakeUppercase{\textbf{\@judul}}\\
+%     \vfill
+%     \normalfont\normalsize
+%     Oleh:\\
+%     \MakeUppercase{\@nama}\\
+%     NRP.~ \@NRP\\ \vfill
+    
+%     \begin{flushright}
+%     \begin{tabular}{l@{}c@{ : }l@{}} %{lcl}
+%     Tanggal Seminar & & {\@tglsetuju} %\\	
+%   %  Tempat  & & {\@tempat}
+%     \end{tabular}
+%     \vspace*{2ex}
+%     \end{flushright}
+  
+%     \begin{tabularx}{\textwidth}{@{}lXc@{}}
+%     Disetujui oleh \\[8ex]
+%     \ifthenelse{\equal{\@pbbtiga}{}\OR\equal{\@pbbtiga}{ }}
+%           {\ifthenelse{\equal{\@pbbdua}{}\OR\equal{\@pbbdua}{ }}
+%               {\@pbbsatu & & \\
+%                NIP~\@NIPpbbsatu & & (Pembimbing) \\[8ex]}
+%                {\@pbbsatu & & \\
+%                NIP~\@NIPpbbsatu & & Pembimbing I\\[8ex]
+%                \@pbbdua & & \\
+%                NIP~\@NIPpbbdua & & Pembimbing II\\[8ex]}
+%           }
+%           {\@pbbsatu & &\\
+%             NIP~\@NIPpbbsatu & & Pembimbing \\[8ex]
+%             \@pbbdua & & \\
+%             NIP~\@NIPpbbdua && Pembimbing II \\[8ex]
+%             \@pbbtiga & & \\
+%             NIP~\@NIPpbbtiga & & Pembimbing III \\[8ex]
+%           }
+%     \ifthenelse{\equal{\@pujtiga}{}\OR\equal{\@pujtiga}{ }}
+%           {\ifthenelse{\equal{\@pujdua}{}\OR\equal{\@pujdua}{ }}
+%               {\@pujsatu & & \\
+%                NIP~\@NIPpujsatu && (Penguji)\\[8ex]}
+%                {\@pujsatu & & \\
+%                NIP~\@NIPpujsatu & & (Penguji)\\[8ex]
+%                \@pujdua && \\
+%                NIP~\@NIPpujdua & & (Penguji) }
+%           }
+%           {\@pujsatu &&\\
+%             NIP~\@NIPpujsatu & & (Penguji)\\[8ex]
+%             \@pujdua && \\
+%             NIP~\@NIPpujdua & & (Penguji) \\[8ex]
+%             \@pujtiga && \\
+%             NIP~\@NIPpujtiga & & (Penguji) \\[5ex]
+%           }  
+%     \end{tabularx}\\  %\\[5ex]
+% \end{center}
+% }
 \newcommand{\katakunci}[1]{%
     \vspace*{1ex}
     \noindent
@@ -371,6 +498,11 @@
 \newcommand\BagianInti{%--------------------
     \cleardoublepage
     \mainmatter
+    \pagestyle{fancy}
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyfoot[R]{\ifthenelse{\isodd{\value{page}}}{\thepage}{}}
+    \fancyfoot[L]{\ifthenelse{\isodd{\value{page}}}{}{\thepage}}
     %\pagestyle{myheadings}
 }
 \renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi

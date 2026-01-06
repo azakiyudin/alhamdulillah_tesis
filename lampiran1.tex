@@ -443,6 +443,15 @@ def gambar():
 
 original_image = gambar()
 
+def A(x):
+        return radon(x, theta=theta, circle=False)
+
+def A_adjoint(sinogram):
+        return iradon(sinogram, theta=theta, circle=False, output_size=image_size, filter_name=None)
+
+def P_C(x):
+        return np.clip(x, 0, 1)
+
 def gammaoptm():
     print("-> Menghitung step size optimal...")
     # Menggunakan random noise untuk estimasi operator
@@ -459,16 +468,7 @@ def gammaoptm():
     #gamma_step = 0.001
     print(f"   Gamma Step: {gamma_step:.5f}")
     return gamma_step
-
-def A(x):
-        return radon(x, theta=theta, circle=False)
-
-def A_adjoint(sinogram):
-        return iradon(sinogram, theta=theta, circle=False, output_size=image_size, filter_name=None)
-
-def P_C(x):
-        return np.clip(x, 0, 1)
-
+    
 Q = A(original_image)
 gamma_step = gammaoptm()
 def T(x):

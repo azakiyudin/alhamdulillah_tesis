@@ -23,7 +23,9 @@
 \usepackage{longtable}
 \RequirePackage{euscript} %
 \onehalfspacing
-\definecolor{mygreen}{RGB}{0,128, 0}
+\definecolor{mygreen}{RGB}{0,154,78}
+\definecolor{blue}{RGB}{0,103,172}
+\definecolor{green}{RGB}{0,154,78}
 \newtheorem{defn}{Definisi}[section]
 \tolerance=1
 \emergencystretch=\maxdimen
@@ -68,7 +70,7 @@
 \Department{Mathematics} % Tuliskan Departement Penulis proposal tesis
 
 
-\Tahun{2025} % Tuliskan tahun pembuatan proposal tesis
+\Tahun{2026} % Tuliskan tahun pembuatan proposal tesis
 
 \Fakultas{Sains dan Analitika Data}{FSAD} % Tuliskan Fakultas pembuatan tesis
 
@@ -88,10 +90,14 @@
 \NIPPenguji{19620407 198703 1 005}  % Isi Nip penguji 1 yang sesuai
 {19691004 199402 2 001}             % Isi Nip penguji 2 yang sesuai
 {19700831 199403 1 003}             % Isi Nip penguji 3 yang sesuai bila ada bila tidak kosongkan
+\Kadep{Dr. Didik Khusnul Arif, S.Si, M.Si}
 
+\NIPKadep{19730930 199702 1 001}
 \TanggalDisetujui{2 September 2025} %  Isi dengan tanggal seminar
 \allowdisplaybreaks
+
 \BagianAwal
+\Cover
 \LembarJudul
 \TitlePage
 \LembarPengesahan
@@ -109,12 +115,19 @@
 
 \DaftarNotasi
 \begin{flushleft}
-\begin{tabular}{lrl}
+\begin{longtable}{lll}
+\endfirsthead 
+\endhead 
+\endfoot 
+\endlastfoot
 $\R$ &:& Himpunan semua bilangan real\\
 $\R^+$ &:& Himpunan semua bilangan real positif\\
 $\N$ &:& Himpunan semua bilangan asli\\
-$d$ &:& Metrik\\
-$\displaystyle\sum$ &:& Notasi Sigma\\
+$\R^n$ &:& Himpunan semua vektor kolom dengan $n$ komponen real\\
+$\mathbf{0}$ &:& Vektor yang semua anggotanya bernilai 0\\
+$d(x,y)$ &:& Metrik jarak antara titik $x$ dan $y$\\
+$d^p(x,y)$ &:& $(d(x,y))^p$\\
+$\displaystyle\sum$ &:& Jumlahan\\
 $\in$ &:& Elemen atau anggota\\
 $\notin$ &:& Bukan anggota\\
 $:=$ &:& Didefinisikan\\
@@ -126,24 +139,43 @@ $<$ &:& Lebih kecil\\
 $\nless$ &:& Tidak kurang dari\\
 $\subset$ &:& Himpunan bagian sejati\\
 $\subseteq$ &:& Himpunan bagian tak sejati\\
-$|x|$ &:& Harga mutlak dari $x$\\
-$\sup$ &:& Supremum (batas atas terkecil)\\
-$Tx$ &:& Hasil pemetaan dari $x$ oleh $T$\\
-$\displaystyle \lim_{n\rightarrow \infty} x_n$ &:& Limit barisan $(x_n)$\\
+$\cup$ &:& Operasi gabungan pada himpunan\\
 $\varepsilon$ &:& Epsilon\\
 $\delta$ &:& Delta\\
+$\delta$ &:& Delta\\
 $\alpha$ &:& Alpha\\
-    $\Upsilon$ &:& Upsilon\\
-    $\lambda$ &:& Lambda\\
+$\beta$ &:& Beta\\
+$\gamma$ &:& Gamma\\
+$\lambda$ &:& Lambda\\
+    $\mu$ &:& Mu\\
     $\Delta$ &:& Delta\\
     $\emptyset$ &:& Himpunan kosong\\
     $\cap$ &:& Operasi irisan pada himpunan\\
     $\infty$ &:& Tak hingga\\
     $\|x\|$ &:& Norm dari $x$\\
-    \end{tabular}
+    $\|x\|_p$ &:& Norm $p$ dari $x$\\
+    $\%$ &:& Persentase\\
+$\circ$ &:& Derajat\\
+$|x|$ &:& Harga mutlak dari $x$\\
+$\partial$ &:& Turunan parsial\\
+$\displaystyle \lim_{n\rightarrow \infty} x_n$ &:& Limit barisan $(x_n)$\\
+$\sup$ &:& Supremum (batas atas terkecil)\\
+$\limsup$ &:& Limit superior\\
+$Tx$ &:& Hasil pemetaan dari $x$ oleh $T$\\
+$Fix(T)$ &:& Titik tetap dari pemetaan $T$\\
+$\triangle$ &:& Segitiga \\
+$\overline{x}$ &:& Titik komparasi\\
+$\overline{\triangle}$ &:& Segitiga komparasi\\
+$\oplus$ &:& Operasi konveks antara dua titik pada ruang geodesik (Oplus)\\
+$J^f_{\lambda} (x)$ &:& Operator resolvent $\lambda$ dari $f$\\
+$P_C$ &:& Proyeksi titik terdekat pada himpunan $C$\\
+$A^*$ &:& Transformasi adjoin dari transformasi $A$\\
+$\displaystyle argmin_{y\in X} f(y)$ &:& Nilai $y\in X$ sehingga $f(y)$ minimum\\ 
+    
+\end{longtable}
 \end{flushleft}
+\cleardoublepage
 
-\newpage
 
 
 \BagianInti %%% menampilkan bagian inti proposal tesis yang berisi:
@@ -164,7 +196,7 @@ $\alpha$ &:& Alpha\\
 % \pagebreak
 % \input{lampiran3.tex}
 % \pagebreak
-\input{terimakasih.tex}
-\pagebreak
+% % \input{terimakasih.tex}
+% \pagebreak
 \input{biodata}
 \end{document}
