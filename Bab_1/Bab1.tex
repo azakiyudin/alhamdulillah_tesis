@@ -5,7 +5,7 @@ Teorema titik tetap Banach merupakan temuan awal yang mengilhami berkembangnya t
 \begin{equation}
     \|Tx-Ty\|\leq C\|x-y\|
 \end{equation}
-untuk setiap $x,y\in W$, maka pemetaan $T$ memiliki tepat satu titik tetap \cite{Banach1922}. Jika konstanta $C$ boleh bernilai 1, pemetaan tersebut dinamakan pemetaan nonekspansif. Pemetaan ini merupakan perluasan dari pemetaan kontraktif yang memainkan peranan penting dalam teori titik tetap, terutama dalam memastikan eksistensi serta konvergensi solusi dari berbagai permasalahan. Namun, berbeda dengan pemetaan kontraktif, pemetaan nonekspansif tidak selalu memiliki titik tetap yang tunggal. Selain itu, keberadaan titik tetap pada kelas pemetaan ini hanya dijamin jika $W$ merupakan himpunan bagian tertutup dan terbatas dari ruang Banach konveks seragam \cite{Browder1965}. 
+untuk setiap $x,y\in W$, maka pemetaan $T$ memiliki tepat satu titik tetap \cite{Banach1922}. Jika konstanta $C$ boleh bernilai 1, pemetaan tersebut dinamakan pemetaan nonekspansif. Pemetaan ini merupakan perluasan dari pemetaan kontraktif yang memainkan peranan penting dalam teori titik tetap, terutama dalam memastikan eksistensi serta konvergensi solusi dari berbagai permasalahan. Namun, berbeda dengan pemetaan kontraktif, pemetaan nonekspansif tidak selalu memiliki titik tetap yang tunggal. Selain itu, terdapat syarat cukup untuk keberadaan titik tetap pada kelas pemetaan ini, yaitu jika $W$ merupakan himpunan bagian tertutup dan terbatas dari ruang Banach konveks seragam \cite{Browder1965}. 
 
 Dengan menggunakan teori mengenai titik tetap, eksistensi solusi dari suatu model matematika dapat dijamin dengan mendefinisikan pemetaan yang bersesuaian. Walaupun demikian, solusi tersebut tidak selalu dalam bentuk eksak, atau mungkin sulit untuk diperoleh secara analitik, sehingga diperlukan solusi numerik. Untuk mendapatkan solusi numeriknya, diperlukan suatu algoritma iterasi yang konvergen ke solusi dari model tersebut. 
 
@@ -23,8 +23,8 @@ Pada penelitian ini, akan diselidiki syarat-syarat konvergensi dari skema iteras
 \section{Rumusan Masalah}
 Dari latar belakang yang telah dipaparkan sebelumnya, maka konsep baru yang diangkat dalam perumusan masalah ini adalah sebagai berikut:
 \begin{enumerate}
-\item Bagaimana konvergensi dari skema iterasi Sabri di ruang $CAT_p(0)$ untuk pemetaan nonekspansif $(\alpha,\beta,\gamma)$-nonekspansif?
-\item Bagaimana laju konvergensi dari skema iterasi Sabri untuk pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dibanding dengan skema iterasi lainnya secara numerik?
+\item Bagaimana syarat perlu dan cukup untuk konvergensi dari skema iterasi Sabri di ruang $CAT_p(0)$ dalam aproksimasi titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif?
+\item Bagaimana laju konvergensi dari skema iterasi Sabri untuk mendapatkan aproksimasi titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dibanding dengan skema iterasi lainnya secara numerik?
 \item Bagaimana aplikasi dari skema iterasi Sabri untuk pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di ruang $CAT_p(0)$ pada masalah optimasi?
 \end{enumerate}
 
@@ -42,8 +42,8 @@ Batasan masalah dalam penelitian ini adalah :
 \section{Tujuan Penelitian}
 Tujuan dari penelitian ini adalah :
 \begin{enumerate}
-   \item Mendapatkan hasil konvergensi dari skema iterasi Sabri di ruang $CAT_p(0)$ untuk pemetaan $(\alpha,\beta,\gamma)$-nonekspansif.
-\item Mengetahui laju konvergensi dari skema iterasi Sabri untuk $(\alpha, \beta,\gamma)$-nonekspansif diperumum dibanding dengan skema iterasi lainnya secara numerik.
+   \item Mendapatkan syarat perlu dan cukup untuk konvergensi dari skema iterasi Sabri di ruang $CAT_p(0)$ dalam aproksimasi titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif.
+\item Mengetahui laju konvergensi dari skema iterasi Sabri untuk mendapatkan aproksimasi titik tetap dari pemetaan $(\alpha, \beta,\gamma)$-nonekspansif dibanding dengan skema iterasi lainnya secara numerik.
 \item Mendapatkan aplikasi dari skema iterasi Sabri untuk pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di ruang $CAT_p(0)$ pada masalah optimasi.
 
 \end{enumerate}
@@ -52,6 +52,6 @@ Manfaat dari penelitian ini adalah :
 \begin{enumerate}
     \item Sebagai kontribusi pada pengembangan teori titik tetap, khususnya pada analisis konvergensi skema iterasi untuk kelas pemetaan yang lebih umum dan ruang yang lebih umum, yaitu pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di ruang $CAT_p(0)$. 
     \item Sebagai bahan kajian dan perbandingan mengenai laju konvergensi antara skema iterasi Sabri dengan skema iterasi lainnya.
-    \item Sebagai alternatif penyelesaian masalah optimasi. 
+    \item Sebagai alternatif penyelesaian masalah optimasi, khususnya untuk minimalisasi fungsi dan rekonstruksi citra. 
 \end{enumerate}
 

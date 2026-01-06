@@ -3,7 +3,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {Gambar 3.1}{\ignorespaces Blok Diagram Penelitian.}}{17}{figure.3.1}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {Gambar 4.1}{\ignorespaces Galat $d(x_n,x^*)$ vs iterasi}}{37}{figure.4.1}%
+\contentsline {figure}{\numberline {Gambar 4.1}{\ignorespaces Galat $d(x_n,x^*)$ (dalam log) vs iterasi}}{37}{figure.4.1}%
 \contentsline {figure}{\numberline {Gambar 4.2}{\ignorespaces Galat $d(x_n,x^*)$ (skala log) vs iterasi}}{46}{figure.4.2}%
 \contentsline {figure}{\numberline {Gambar 4.3}{\ignorespaces Hasil simulasi rekonstruksi citra}}{50}{figure.4.3}%
 \addvspace {10\p@ }

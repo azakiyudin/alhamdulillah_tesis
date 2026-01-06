@@ -54,14 +54,16 @@ Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} 
     \caption{Hasil numerik skema iterasi Sabri dan JK}
     \begin{tabular}{ccc}
 \hline
+\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_0$}} \\
+\hline
 \textbf{n} & \textbf{Sabri} & \textbf{JK} \\
 \hline
 0 & (2.000000, 3.000000, 0, 0, \dots) & (2.000000, 3.000000, 0, 0, \dots) \\
 1 & (1.007270, 1.021970, 0, 0, \dots) & (1.032859, 1.101850, 0, 0, \dots) \\
 2 & (1.000053, 1.000159, 0, 0, \dots) & (1.001080, 1.003243, 0, 0, \dots) \\
 3 & (1.000000, 1.000001, 0, 0, \dots) & (1.000035, 1.000106, 0, 0, \dots) \\
-4 & NaN & (1.000001, 1.000003, 0, 0, \dots) \\
-5 & NaN & (1.000000, 1.000000, 0, 0, \dots) \\
+4 & (1, 1, 0, 0, \dots) & (1.000001, 1.000003, 0, 0, \dots) \\
+5 & (1, 1, 0, 0, \dots) & (1.000000, 1.000000, 0, 0, \dots) \\
 \hline
 \end{tabular}
     \label{tab:sabjk}
@@ -72,42 +74,67 @@ Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} 
         \caption{Hasil numerik skema iterasi Sabri dan Thakur}
     \begin{tabular}{ccc}
 \hline
+\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_0$}} \\
+\hline
 \textbf{n} & \textbf{Sabri} & \textbf{Thakur} \\
 \hline
 0 & (2.000000, 3.000000, 0, 0, \dots) & (2.000000, 3.000000, 0, 0, \dots) \\
 1 & (1.007270, 1.021970, 0, 0, \dots) & (1.056397, 1.178912, 0, 0, \dots) \\
 2 & (1.000053, 1.000159, 0, 0, \dots) & (1.003181, 1.009572, 0, 0, \dots) \\
 3 & (1.000000, 1.000001, 0, 0, \dots) & (1.000179, 1.000538, 0, 0, \dots) \\
-4 & NaN & (1.000010, 1.000030, 0, 0, \dots) \\
-5 & NaN & (1.000001, 1.000002, 0, 0, \dots) \\
+4 & (1, 1, 0, 0, \dots) & (1.000010, 1.000030, 0, 0, \dots) \\
+5 & (1, 1, 0, 0, \dots) & (1.000001, 1.000002, 0, 0, \dots) \\
 \hline
 \end{tabular}
     \label{tab:sabthkur}
 \end{table}
-
-\begin{longtable}{ccc}
-\caption{\centering Hasil numerik skema iterasi Sabri dan Abbas}\\
+\begin{table}[H]
+    \centering
+        \caption{Hasil numerik skema iterasi Sabri dan Abbas}
+    \begin{tabular}{ccc}
 \hline
-\textbf{n} & \textbf{Sabri} & \textbf{Abbas} \\
+\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_0$}} \\
 \hline
-\endfirsthead 
-\multicolumn{3}{c}{ \thetable{} -- Lanjutan dari halaman sebelumnya} \\
-\hline
-\textbf{n} & \textbf{Sabri} & \textbf{Abbas} \\
-\hline
-\endhead 
+\textbf{n} & \textbf{Sabri} & \textbf{Thakur} \\
 \hline
 0 & (2.000000, 3.000000, 0, 0, \dots) & (2.000000, 3.000000, 0, 0, \dots) \\
 1 & (1.007270, 1.021970, 0, 0, \dots) & (1.109842, 1.367048, 0, 0, \dots) \\
 2 & (1.000053, 1.000159, 0, 0, \dots) & (1.012065, 1.036634, 0, 0, \dots) \\
 3 & (1.000000, 1.000001, 0, 0, \dots) & (1.001325, 1.003981, 0, 0, \dots) \\
-4 & NaN & (1.000146, 1.000437, 0, 0, \dots) \\
-5 & NaN & (1.000016, 1.000048, 0, 0, \dots) \\
-6 & NaN & (1.000002, 1.000005, 0, 0, \dots) \\
-7 & NaN & (1.000000, 1.000001, 0, 0, \dots) \\
+4 & (1, 1, 0, 0, \dots) & (1.000146, 1.000437, 0, 0, \dots) \\
+5 & (1, 1, 0, 0, \dots) & (1.000016, 1.000048, 0, 0, \dots) \\
+6 & (1, 1, 0, 0, \dots) & (1.000002, 1.000005, 0, 0, \dots) \\
+7 & (1, 1, 0, 0, \dots) & (1.000000, 1.000001, 0, 0, \dots) \\
 \hline
-\label{tab:sababb}
-\end{longtable}
+\end{tabular}
+    \label{tab:sababb}
+\end{table}
+
+% \begin{longtable}{ccc}
+% \caption{\centering Hasil numerik skema iterasi Sabri dan Abbas}\\
+% \hline
+% \textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_0$}} \\
+% \hline
+% \textbf{n} & \textbf{Sabri} & \textbf{Abbas} \\
+% \hline
+% \endfirsthead 
+% \multicolumn{3}{c}{ \thetable{} -- Lanjutan dari halaman sebelumnya} \\
+% \hline
+% \textbf{n} & \textbf{Sabri} & \textbf{Abbas} \\
+% \hline
+% \endhead 
+% \hline
+% 0 & (2.000000, 3.000000, 0, 0, \dots) & (2.000000, 3.000000, 0, 0, \dots) \\
+% 1 & (1.007270, 1.021970, 0, 0, \dots) & (1.109842, 1.367048, 0, 0, \dots) \\
+% 2 & (1.000053, 1.000159, 0, 0, \dots) & (1.012065, 1.036634, 0, 0, \dots) \\
+% 3 & (1.000000, 1.000001, 0, 0, \dots) & (1.001325, 1.003981, 0, 0, \dots) \\
+% 4 & (1, 1, 0, 0, \dots) & (1.000146, 1.000437, 0, 0, \dots) \\
+% 5 & (1, 1, 0, 0, \dots) & (1.000016, 1.000048, 0, 0, \dots) \\
+% 6 & (1, 1, 0, 0, \dots) & (1.000002, 1.000005, 0, 0, \dots) \\
+% 7 & (1, 1, 0, 0, \dots) & (1.000000, 1.000001, 0, 0, \dots) \\
+% \hline
+% \label{tab:sababb}
+% \end{longtable}
 
 
 \begin{table}[H]
@@ -115,19 +142,21 @@ Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} 
         \caption{Hasil numerik skema iterasi Sabri dan Agarwal}
     \begin{tabular}{ccc}
 \hline
+\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_0$}} \\
+\hline
 \textbf{n} & \textbf{Sabri} & \textbf{Agarwal} \\
 \hline
 0 & (2.000000, 3.000000, 0, 0, \dots) & (2.000000, 3.000000, 0, 0, \dots) \\
 1 & (1.007270, 1.021970, 0, 0, \dots) & (1.225588, 1.840912, 0, 0, \dots) \\
 2 & (1.000053, 1.000159, 0, 0, \dots) & (1.050890, 1.160570, 0, 0, \dots) \\
 3 & (1.000000, 1.000001, 0, 0, \dots) & (1.011480, 1.034837, 0, 0, \dots) \\
-4 & NaN & (1.002590, 1.007789, 0, 0, \dots) \\
-5 & NaN & (1.000584, 1.001754, 0, 0, \dots) \\
-6 & NaN & (1.000132, 1.000395, 0, 0, \dots) \\
-7 & NaN & (1.000030, 1.000089, 0, 0, \dots) \\
-8 & NaN & (1.000007, 1.000020, 0, 0, \dots) \\
-9 & NaN & (1.000002, 1.000005, 0, 0, \dots) \\
-10 & NaN & (1.000000, 1.000001, 0, 0, \dots) \\
+4 & (1, 1, 0, 0, \dots) & (1.002590, 1.007789, 0, 0, \dots) \\
+5 & (1, 1, 0, 0, \dots) & (1.000584, 1.001754, 0, 0, \dots) \\
+6 & (1, 1, 0, 0, \dots) & (1.000132, 1.000395, 0, 0, \dots) \\
+7 & (1, 1, 0, 0, \dots) & (1.000030, 1.000089, 0, 0, \dots) \\
+8 & (1, 1, 0, 0, \dots) & (1.000007, 1.000020, 0, 0, \dots) \\
+9 & (1, 1, 0, 0, \dots) & (1.000002, 1.000005, 0, 0, \dots) \\
+10 & (1, 1, 0, 0, \dots) & (1.000000, 1.000001, 0, 0, \dots) \\
 \hline
 \end{tabular}
     \label{tab:sabag}
@@ -137,6 +166,8 @@ Dengan galat kurang dari $10^{-6}$, skema iterasi Sabri hanya membutuhkan 3 iter
 \begin{longtable}{cccccc}
 \caption{\centering Galat $d(x_n, x^*)$}\label{tab:galat}\\
 \hline
+% \textbf{Iterasi} & \multicolumn{5}{c}{\textbf{Nilai Galat $d(x_n, x^*)$}} \\
+% \hline
 $\mathbf{n}$ & \textbf{Sabri} & \textbf{JK} & \textbf{Thakur} & \textbf{Abbas} & \textbf{Agarwal} \\
 \hline
 \endfirsthead 
@@ -151,16 +182,16 @@ $\mathbf{n}$ & \textbf{Sabri} & \textbf{JK} & \textbf{Thakur} & \textbf{Abbas} &
 \hline
 \endlastfoot
 \hline
-1 & 0.007270 & 0.032859 & 0.056397 & 0.109842 & 0.225588 \\
-    2& 0.000053 & 0.001080 & 0.003181 & 0.012065 & 0.050890 \\
-3 & 0.000000 & 0.000035 & 0.000179 & 0.001325 & 0.011480 \\
-4 & NaN & 0.000001 & 0.000010 & 0.000146 & 0.002590 \\
-5 & NaN & 0.000000 & 0.000001 & 0.000016 & 0.000584 \\
-6 & NaN & NaN & NaN & 0.000002 & 0.000132 \\
-7 & NaN & NaN & NaN & 0.000000 & 0.000030 \\
-8 & NaN & NaN & NaN & NaN & 0.000007 \\
-9 & NaN & NaN & NaN & NaN & 0.000002 \\
-10 & NaN & NaN & NaN & NaN & 0.000000 \\
+1 & $7.2\times10^{-3}$ & $3.2\times10^{-2}$ & $5.6\times10^{-2}$ & $1.0\times10^{-1}$ & $2.2\times10^{-1}$ \\
+2 & $5.2\times10^{-5}$ & $1.0\times10^{-3}$ & $3.1\times10^{-3}$ & $1.2\times10^{-2}$ & $5.0\times10^{-2}$ \\
+3 & $3.8\times10^{-7}$ & $3.5\times10^{-5}$ & $1.7\times10^{-4}$ & $1.3\times10^{-3}$ & $1.1\times10^{-2}$ \\
+4 & $2.7\times10^{-9}$ & $1.1\times10^{-6}$ & $1.0\times10^{-5}$ & $1.4\times10^{-4}$ & $2.5\times10^{-3}$ \\
+5 & $2.0\times10^{-11}$ & $3.8\times10^{-8}$ & $5.7\times10^{-7}$ & $1.5\times10^{-5}$ & $5.8\times10^{-4}$ \\
+6 & $1.4\times10^{-13}$ & $1.2\times10^{-9}$ & $3.2\times10^{-8}$ & $1.7\times10^{-6}$ & $1.3\times10^{-4}$ \\
+7 & $1.1\times10^{-15}$ & $4.1\times10^{-11}$ & $1.8\times10^{-9}$ & $1.9\times10^{-7}$ & $2.9\times10^{-5}$ \\
+8 & 0 & $1.3\times10^{-12}$ & $1.0\times10^{-10}$ & $2.1\times10^{-8}$ & $6.7\times10^{-6}$ \\
+9 & 0 & $4.4\times10^{-14}$ & $5.7\times10^{-12}$ & $2.3\times10^{-9}$ & $1.5\times10^{-6}$ \\
+10 & 0 & $1.3\times10^{-15}$ & $3.2\times10^{-13}$ & $2.5\times10^{-10}$ & $3.4\times10^{-7}$ \\
 \hline
 \end{longtable}
 % \begin{table}[H]
@@ -186,8 +217,8 @@ $\mathbf{n}$ & \textbf{Sabri} & \textbf{JK} & \textbf{Thakur} & \textbf{Abbas} &
 % \end{table}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\linewidth]{Bab_4/galatpercobaan.png}
-    \caption{Galat $d(x_n,x^*)$ vs iterasi}
+    \includegraphics[width=0.78\linewidth]{Bab_4/galatpercobaan.png}
+    \caption{Galat $d(x_n,x^*)$ (dalam log) vs iterasi}
     \label{fig:galatperc}
 \end{figure}
 
@@ -219,6 +250,8 @@ Selanjutnya, pada \ref{tab:paramkonstan}, \ref{tab:paramturun}, \ref{tab:paramna
     \centering
     \begin{tabular}{cccccc}
 \hline
+\textbf{Nilai Awal} & \multicolumn{5}{c}{\textbf{Jumlah Iterasi}} \\
+\hline
 $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \hline
 (2.0, 3.0, 0, 0, \dots) & 9 & 12 & 14 & 18 & 26 \\
@@ -236,6 +269,8 @@ $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \caption{Iterasi dengan parameter $a_n =\frac{n^2}{n^3+1}, b_n=\frac{2}{n+3},c_n=\frac{4n+2}{{7n+4}}.$}
     \centering
     \begin{tabular}{cccccc}
+\hline
+\textbf{Nilai Awal} & \multicolumn{5}{c}{\textbf{Jumlah Iterasi}} \\
 \hline
 $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \hline
@@ -255,6 +290,8 @@ $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
     \centering
     \begin{tabular}{cccccc}
 \hline
+\textbf{Nilai Awal} & \multicolumn{5}{c}{\textbf{Jumlah Iterasi}} \\
+\hline
 $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \hline
 (2.0, 3.0, 0, 0, \dots) & 7 & 9 & 12 & 15 & 18 \\
@@ -273,6 +310,8 @@ $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
     \centering
     \begin{tabular}{cccccc}
 \hline
+% \textbf{Nilai Awal} & \multicolumn{5}{c}{\textbf{Jumlah Iterasi}} \\
+% \hline
 $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \hline
 (2.0, 3.0, 0, 0, \dots) & 7 & 10 & 14 & 24 & 26 \\
@@ -291,6 +330,8 @@ $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
     \centering
     \begin{tabular}{cccccc}
 \hline
+% \textbf{Nilai Awal} & \multicolumn{5}{c}{\textbf{Jumlah Iterasi}} \\
+% \hline
 $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \hline
 (2.0, 3.0, 0, 0, \dots) & 8 & 10 & 15 & 12 & 28 \\

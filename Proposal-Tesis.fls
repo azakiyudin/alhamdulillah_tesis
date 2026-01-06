@@ -506,10 +506,6 @@ INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy1
 INPUT C:\Users\Jekiyudin\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb7t.vf
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
-INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7v.vf
-INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.tfm
 INPUT .\Bab_1\Bab1.tex
 INPUT .\Bab_1\Bab1.tex
 INPUT .\Bab_1\Bab1.tex
@@ -542,6 +538,10 @@ INPUT Bab_2\2_5_Titik_Tetap_Pemetaan_Nonekspansif.tex
 INPUT .\Bab_2\2_6_Aproksimasi_Titik_Tetap.tex
 INPUT .\Bab_2\2_6_Aproksimasi_Titik_Tetap.tex
 INPUT Bab_2\2_6_Aproksimasi_Titik_Tetap.tex
+INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7v.vf
+INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.tfm
 INPUT .\Bab_3\Bab3.tex
 INPUT .\Bab_3\Bab3.tex
 INPUT .\Bab_3\Bab3.tex

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.21)  6 JAN 2026 14:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.21)  6 JAN 2026 17:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1165,7 +1165,7 @@ Overfull \hbox (45.24788pt too wide) in alignment at lines 121--122
  []
 
 
-Overfull \hbox (45.24788pt too wide) in alignment at lines 122--175
+Overfull \hbox (45.24788pt too wide) in alignment at lines 122--162
  [] [] [] 
  []
 
@@ -1361,54 +1361,62 @@ LaTeX Warning: Reference `Lema:asimtotik' on page 32 undefined on input line 102
 [33]
 
 [34]
+Underfull \vbox (badness 6268) has occurred while \output is active []
+
+
 
 [35
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.110 \end{longtable}
-                     
+l.112 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.110 \end{longtable}
-                     ]
+l.112 
+      ]
 
 [36
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.196 \end{longtable}
+                     
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.165 \end{longtable}
+l.196 \end{longtable}
                      ]
-<Bab_4/galatpercobaan.png, id=630, 751.608pt x 612.8496pt>
+<Bab_4/galatpercobaan.png, id=630, 759.5577pt x 616.4631pt>
 File: Bab_4/galatpercobaan.png Graphic file (type png)
 <use Bab_4/galatpercobaan.png>
-Package pdftex.def Info: Bab_4/galatpercobaan.png  used on input line 189.
-(pdftex.def)             Requested size: 358.50229pt x 292.3129pt.
+Package pdftex.def Info: Bab_4/galatpercobaan.png  used on input line 220.
+(pdftex.def)             Requested size: 310.70361pt x 252.1683pt.
 
 
 [37
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.234 \end{table}
+l.287 \end{table}
                   <./Bab_4/galatpercobaan.png>]
 
 [38
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.306 \end{table}
+l.347 \end{table}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.306 \end{table}
+l.347 \end{table}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.306 \end{table}
+l.347 \end{table}
                  ]) (Bab_4/4_4_1_Masalah_Minimalisasi.tex
 
 [39
@@ -1583,7 +1591,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 \foto=\box95
-<foto.jpg, id=1392, 1484.54625pt x 2227.32124pt>
+<foto.jpg, id=1396, 1484.54625pt x 2227.32124pt>
 File: foto.jpg Graphic file (type jpg)
 <use foto.jpg>
 Package pdftex.def Info: foto.jpg  used on input line 1.
@@ -1600,20 +1608,20 @@ L3 programming layer <2025-07-20>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Proposal-Tesis.out' has not changed.
-(rerunfilecheck)             Checksum: 612CEA22E392E4C77FF6E0006B59DD22;5457.
+(rerunfilecheck)             Checksum: AFCE78C5641CB6B130EBAA0C4466A87C;5457.
  ) 
 Here is how much of TeX's memory you used:
- 35947 strings out of 468134
- 720635 string characters out of 5428804
- 1582750 words of memory out of 5000000
- 63070 multiletter control sequences out of 15000+600000
+ 35950 strings out of 468134
+ 720658 string characters out of 5428804
+ 1582756 words of memory out of 5000000
+ 63069 multiletter control sequences out of 15000+600000
  672591 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,18n,121p,1605b,2769s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Proposal-Tesis.pdf (97 pages, 1453814 bytes).
+Output written on Proposal-Tesis.pdf (97 pages, 1480775 bytes).
 PDF statistics:
- 1640 PDF objects out of 1728 (max. 8388607)
- 811 named destinations out of 1000 (max. 500000)
+ 1644 PDF objects out of 1728 (max. 8388607)
+ 815 named destinations out of 1000 (max. 500000)
  334 words of extra memory for PDF output out of 10000 (max. 10000000)
 

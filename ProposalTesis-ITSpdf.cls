@@ -209,7 +209,7 @@
     		\@pbbsatu\\ \@pbbdua\mbox{}\\ \@pbbtiga\mbox{}\\
         \vspace{1cm}
     		\textbf{Departemen~ {\@jur}}\\
-    		\textbf{Fakultas~}{\@fak}\\
+    		\textbf{Fakultas~ {\@fak}}\\
     		\textbf{Institut Teknologi Sepuluh Nopember}\\
     		\textbf{Surabaya}\\
     		\@thn}		
@@ -231,10 +231,10 @@
     		\@pbbsatu\\ \@pbbdua\mbox{}\\ \@pbbtiga\mbox{}\\
         \vspace{1cm}
     		\textbf{Departemen~ {\@jur}}\\
-    		\textbf{Fakultas~}{\@fak}\\
+    		\textbf{Fakultas~ {\@fak}}\\
     		\textbf{Institut Teknologi Sepuluh Nopember}\\
     		\textbf{Surabaya}\\
-    		\@thn}		
+    		\textbf{\@thn}}		
     \end{flushleft}
     \addcontentsline{toc}{chapter}{HALAMAN JUDUL}
     
@@ -253,10 +253,10 @@
         \\
         \vspace{1cm}
     		\textbf{Department of~{\@dept}}\\
-    		\textbf{Faculty of~}{\@fac}\\
+    		\textbf{Faculty of~ {\@fac}}\\
     		\textbf{Institut Teknologi Sepuluh Nopember}\\
     		\textbf{Surabaya}\\
-    		\@thn}	
+    		\textbf{\@thn}	}
     \end{flushleft}
 }
 
@@ -284,7 +284,7 @@ Oleh:\\
         \textbf{\@nama}\\
         \textbf{NRP:~\@NRP}\vspace{0.5cm}\\
       	Tanggal Ujian: \@tglsetuju\\
-      	Periode Wisuda: September 2025\vspace{0.5cm}\\
+      	Periode Wisuda: April 2026\vspace{0.5cm}\\
        Disetujui oleh:\vspace{0.2cm}\\
       \ifthenelse{\equal{\@pbbdua}{}\OR\equal{\@pbbdua}{}}
         {
