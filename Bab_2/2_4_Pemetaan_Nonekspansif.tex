@@ -1,19 +1,42 @@
 \section{Pemetaan Nonekspansif}
 Pemetaan nonekspansif merupakan salah satu jenis pemetaan yang memiliki banyak aplikasi di berbagai bidang. Pemetaan ini merupakan perluasan dari kontraktif yang dikenalkan oleh Banach. 
-Berikut ini diberikan definisi dari pemetaan nonekspansif. 
+Berikut ini diberikan definisi dan contoh dari pemetaan nonekspansif. 
 \begin{defn}\cite{Browder1965}
     Diberikan $(B,\|\cdot\|)$ adalah ruang Banach dan $W$ adalah himpunan bagian tak kosong dari $B$. Pemetaan $T:W\to W$ disebut pemetaan nonekspansif jika untuk setiap $x,y\in W$ berlaku 
     \begin{equation}
         \|Tx-Ty\|\leq \|x-y\|.
     \end{equation}
 \end{defn}
-Pemetaan nonekspansif ini juga mengalami perluasan, salah satu perluasannya adalah pemetaan nonekspansif kuasi. Berikut adalah definisi dari pemetaan nonekspansif kuasi.
+\begin{exam}
+    Diberikan $(\mathbb{R},|\cdot|)$ adalah ruang Banach dan $W=[0,\infty)$. Pemetaan $T:W\to W$ yang didefinisikan sebagai $Tx=|x|$ untuk setiap $x\in W$ adalah pemetaan nonekspansif karena untuk setiap $x,y\in W$ diperoleh
+    \begin{align*}
+        |Tx-Ty| &= \qty||x|-|y|| \leq |x-y|.
+    \end{align*}
+\end{exam}
+Pemetaan nonekspansif ini juga mengalami perluasan, salah satu perluasannya adalah pemetaan nonekspansif kuasi. Berikut adalah definisi dan contoh dari pemetaan nonekspansif kuasi.
 \begin{defn}
     Diberikan $(B,\|\cdot\|)$ adalah ruang Banach dan $W$ adalah himpunan bagian tak kosong dari $B$. Pemetaan $T:W\to W$ disebut pemetaan nonekspansif kuasi jika untuk setiap titik tetap dari $T$ yaitu $y$ dan $x\in W$ berlaku 
     \begin{equation}
         \|Tx-y\|\leq \|x-y\|.
     \end{equation}
 \end{defn}
+\begin{exam}
+    Diberikan $(\mathbb{R},|\cdot|)$ adalah ruang Banach dan $W=[0,3]$. Pemetaan $T:W\to W$ yang didefinisikan sebagai $$Tx=\begin{cases}
+    \frac{x}{3}, & \text{jika } x\in [0,1],\\
+    1, & \text{jika } x\in (1,3],
+    \end{cases}$$ merupakan pemetaan nonekspansif kuasi, karena titik tetap dari $T$ adalah $y=0$ dan untuk setiap $x\in [0,1]$ diperoleh
+    \begin{align*}
+        |Tx-y| &= \qty|\frac{x}{3}-0| = \frac{x}{3} \leq x = |x-0| = |x-y|, 
+    \end{align*}
+    serta untuk setiap $x\in (1,3]$ diperoleh
+    \begin{align*}
+        |Tx-y| &= |1-0| = 1 \leq x = |x-0| = |x-y|.
+    \end{align*}
+    Pemetaan ini bukan merupakan pemetaan nonekspansif karena untuk $x=0$ dan $y=2$ diperoleh
+    \begin{align*}  
+        |Tx-Ty| &= |0-1| = 1 > 2 = |0-2| = |x-y|.
+    \end{align*}
+\end{exam}
 
 Pada tahun 2008, Suzuki juga mengenalkan bentuk lain pemetaan nonekspansif, yaitu pemetaan Suzuki nonekspansif atau pemetaan yang memenuhi kondisi $(C)$ yang didefinisikan sebagai berikut
 \begin{defn}\cite{Suzuki2008}
@@ -23,43 +46,223 @@ Pada tahun 2008, Suzuki juga mengenalkan bentuk lain pemetaan nonekspansif, yait
     \end{equation}
 \end{defn}
 
-Pemetaan ini merupakan kondisi lemah dari pemetaan nonekspansif karena ketaksamaan nonekspansif hanya berlaku untuk dua titik yang memenuhi kondisi $\frac{1}{2}\|x-Tx\|\leq \|x-y\|$.
+Pemetaan ini merupakan kondisi lemah dari pemetaan nonekspansif karena ketaksamaan nonekspansif wajib terpenuhi hanya untuk dua titik yang memenuhi kondisi $\frac{1}{2}\|x-Tx\|\leq \|x-y\|$.
+\begin{exam}\label{con:pemetaankondisi C}\cite{Suzuki2008}
+    Diberikan $(\mathbb{R},|\cdot|)$ adalah ruang Banach dan $W=[0,3]$. Pemetaan $T:W\to W$ yang didefinisikan sebagai 
+    \begin{align*}
+        Tx=\begin{cases}
+        0, & \text{jika } x\neq 3,\\
+        1, & \text{jika } x=3,
+        \end{cases}
+    \end{align*}
+    merupakan pemetaan yang memenuhi kondisi $(C)$, tetapi bukan pemetaan nonekspansif.
+\end{exam}
+Penjelasan dari Contoh \ref{con:pemetaankondisi C} adalah sebagai berikut. 
 
-García-Falset dkk. memperumum pemetaan Suzuki nonekspansif dengan mengganti konstanta $\frac{1}{2}$ menjadi konstanta $\mu\in (0,1)$. Pemetaan tersebut didefinisikan sebagai berikut. 
+Diketahui bahwa untuk setiap $x,y\in W$ dengan $x,y\neq 3$ diperoleh
+\begin{align*}
+    |Tx-Ty| &= |0-0| = 0 \leq |x-y|,
+\end{align*}
+dan untuk $x=y=3$ diperoleh
+\begin{align*}
+    |Tx-Ty| &= |1-1| = 0 = |x-y|,
+\end{align*}
+sehingga ketaksamaan nonekspansif terpenuhi. Selanjutnya, tanpa mengurangi keumuman, untuk $x\neq 3$ dan $y=3$ dibagi dua kasus, yaitu
+\begin{itemize} 
+    \item untuk $x\in [0,2]$, diperoleh
+    \begin{align*}
+        |Tx-Ty| &= |0-1| = 1 \leq |x-3|, 
+    \end{align*}
+    sehingga ketaksamaan nonekspansif terpenuhi dan
+    \item untuk $x\in (2,3)$, diperoleh
+    \begin{align*}
+        \frac{1}{2}|x-Tx| &= \frac{1}{2}|x-0| = \frac{x}{2} > 1> |x-3|=|x-y|,
+    \end{align*}
+    dan 
+    \begin{align*}
+        \frac{1}{2}|y-Ty| &= \frac{1}{2}|3-1| = 1 > |x-3|=|x-y|,
+    \end{align*}
+    sehingga premis pada kondisi $(C)$ tidak terpenuhi.
+\end{itemize}
+Hal ini menunjukkan bahwa pemetaan tersebut memenuhi kondisi $(C)$. Akan tetapi, pemetaan tersebut bukan merupakan pemetaan nonekspansif karena untuk $x=2.5$ dan $y=3$ diperoleh
+\begin{align*}  
+    |Tx-Ty| &= |0-1| = 1 > 0.5 = |2.5-3| = |x-y|.
+\end{align*}
+
+Kemudian, García-Falset dkk. memperumum pemetaan Suzuki nonekspansif dengan mengganti konstanta $\frac{1}{2}$ menjadi konstanta $\mu\in (0,1)$. Pemetaan tersebut didefinisikan sebagai berikut. 
 \begin{defn}\cite{GARCIAFALSET2011185}
-    Diberikan $(B,\|\cdot\|)$ adalah ruang Banach dan $W$ adalah himpunan bagian tak kosong dari $B$. Pemetaan $T:W\to W$ disebut pemetaan yang memenuhi kondisi $(C_{\mu})$ jika untuk setiap $x,y\in W$ berlaku 
+    Diberikan $(B,\|\cdot\|)$ adalah ruang Banach dan $W$ adalah himpunan bagian tak kosong dari $B$. Pemetaan $T:W\to W$ disebut pemetaan yang memenuhi kondisi $(C_{\mu})$ jika terdapat $\mu\in (0,1)$ sehingga untuk setiap $x,y\in W$ berlaku 
     \begin{equation}
         \mu \|x-Tx\|\leq \|x-y\| \qquad \Longrightarrow \qquad \|Tx-Ty\|\leq \|x-y\|
     \end{equation}
 \end{defn}
+\begin{exam}\cite{GARCIAFALSET2011185}\label{con:muC}
+    Diberikan $(\mathbb{R},|\cdot|)$ adalah ruang Banach dan $W=[0,1]$. Pemetaan $T:W\to W$ yang didefinisikan sebagai 
+    \begin{align*}
+        Tx=\begin{cases}
+        \frac{x}{2}, & \text{jika } x\neq 1,\\
+        \frac{7}{11}, & \text{jika } x=1,
+        \end{cases}
+    \end{align*}
+    merupakan pemetaan yang memenuhi kondisi $(C_{\mu})$ dengan $\mu=\frac{3}{4}$, tetapi bukan pemetaan nonekspansif.
+\end{exam}
+Penjelasan dari Contoh \ref{con:muC} adalah sebagai berikut. 
 
-Di sisi lain, Aoyama dan Kohsaka juga mengembangkan pemetaan nonekspansif menjadi pemetaan $\alpha$-nonekspansif. Berikut adalah definisi dari pemetaan $\alpha$-nonekspansif.
+Diketahui bahwa untuk setiap $x,y\in W$ dengan $x,y\neq 1$ diperoleh
+\begin{align*}
+    |Tx-Ty| &= \qty|\frac{x}{2}-\frac{y}{2}| = \frac{|x-y|}{2} \leq |x-y|,
+\end{align*}
+dan untuk $x=y=1$ diperoleh
+\begin{align*}
+    |Tx-Ty| &= \qty|\frac{7}{11}-\frac{7}{11}| = 0 = |x-y|, 
+\end{align*}
+sehingga ketaksamaan nonekspansif terpenuhi. Selanjutnya, tanpa mengurangi keumuman, untuk $x\neq 1$ dan $y=1$ dibagi dua kasus, yaitu
+\begin{itemize}
+    \item untuk $x\in \qty[0,\frac{8}{11}]$, diperoleh
+    \begin{align*}
+        |Tx-Ty| &= \qty|\frac{x}{2}-\frac{7}{11}| = \qty|\frac{11x-14}{22}| \leq |x-1|=|x-y|,
+    \end{align*}
+    sehingga ketaksamaan nonekspansif terpenuhi dan 
+    \item untuk $x\in \qty(\frac{8}{11},1)$, diperoleh
+    \begin{align*}
+        \mu |x-Tx| &= \frac{3}{4}\qty|x-\frac{x}{2}| = \frac{3x}{8} > \frac{3}{11} > |x-1|=|x-y|, 
+    \end{align*}
+    sehingga premis pada kondisi $(C_{\mu})$ tidak terpenuhi.
+\end{itemize}
+Hal ini menunjukkan bahwa pemetaan tersebut memenuhi kondisi $(C_{\mu})$ dengan $\mu=\frac{3}{4}$. Akan tetapi, pemetaan tersebut bukan merupakan pemetaan nonekspansif karena untuk $x=1$ dan $y=\frac{9}{11}$ diperoleh   
+\begin{align*}  
+    |Tx-Ty| &= \qty|\frac{7}{11}-\frac{9}{22}| = \frac{5}{22} > \frac{2}{11} = \qty|1-\frac{9}{11}| = |x-y|.
+\end{align*}
+Pemetaan tersebut juga bukan merupakan pemetaan yang memenuhi kondisi $(C)$ karena untuk $x=\frac{81}{110}$ dan $y=1$ diperoleh
+\begin{align*}
+    \frac{1}{2}|x-Tx| &= \frac{1}{2}\qty|\frac{81}{110}-\frac{81}{220}| = \frac{81}{440} < \frac{29}{110} = |x-1|=|x-y|,    
+\end{align*}
+tetapi
+\begin{align*}
+    |Tx-Ty| &= \qty|\frac{81}{220}-\frac{7}{11}| = \frac{59}{220} > \frac{29}{110} = |x-y|.
+\end{align*}
+
+Di sisi lain, Aoyama dan Kohsaka juga mengembangkan pemetaan nonekspansif menjadi pemetaan $\alpha$-nonekspansif. Berikut adalah definisi dan contoh dari pemetaan $\alpha$-nonekspansif.
 
 \begin{defn}\cite{Aoyama2011}
-    Diberikan $(B,\|\cdot\|)$ adalah ruang Banach dan $W$ adalah himpunan bagian tak kosong dari $B$. Pemetaan $T:W\to W$ disebut pemetaan $\alpha$-nonekspansif jika untuk setiap $x,y\in W$ terdapat bilangan real $\alpha<1$ sedemikian hingga
-    \begin{equation}
+    Diberikan $(B,\|\cdot\|)$ adalah ruang Banach dan $W$ adalah himpunan bagian tak kosong dari $B$. Pemetaan $T:W\to W$ disebut pemetaan $\alpha$-nonekspansif jika terdapat bilangan real $\alpha<1$ sehingga untuk setiap $x,y\in W$  berlaku
+    \begin{equation}\label{eq:anonban}
         \|Tx-Ty\|^2\leq \alpha \|x-Ty\|^2+\alpha \|y-Tx\|^2 +(1-2\alpha) \|x-y\|^2.
     \end{equation}
 \end{defn}
+\begin{exam}\label{con:alphanon}
+    Diberikan $(\mathbb{R},|\cdot|)$ adalah ruang Banach dan $W=[0,2]$. Pemetaan $T:W\to W$ yang didefinisikan sebagai 
+    \begin{align*}
+        Tx=\begin{cases}
+        0, & \text{jika } x\neq 2,\\
+        1, & \text{jika } x=2,
+        \end{cases}
+    \end{align*}
+    merupakan pemetaan $\alpha$-nonekspansif dengan $\alpha=\frac{1}{2}$, tetapi bukan pemetaan nonekspansif.
+\end{exam}
+Penjelasan dari Contoh \ref{con:alphanon} adalah sebagai berikut.
 
-Pant dan Pandey di tahun 2019 mengenalkan pemetaan pemetaan tipe Reich-Suzuki nonekspansif yang didefinisikan sebagai berikut. 
+Diketahui bahwa untuk setiap $x,y\in W$ dengan $x,y\neq 2$ diperoleh
+\begin{align*}
+    |Tx-Ty|^2 &= |0-0|^2 = 0 \leq \frac{1}{2}|x-Ty|^2 + \frac{1}{2}|y-Tx|^2 + 0\cdot |x-y|^2,
+\end{align*}
+dan untuk $x=y=2$ diperoleh
+\begin{align*}
+    |Tx-Ty|^2 &= |1-1|^2 = 0 \leq \frac{1}{2}|x-Ty|^2 + \frac{1}{2}|y-Tx|^2 + 0\cdot |x-y|^2,
+\end{align*}
+sehingga Ketaksamaan \eqref{eq:anonban} terpenuhi. Selanjutnya, tanpa mengurangi keumuman, untuk $x\neq 2$ dan $y=2$ diperoleh
+\begin{align*}
+    |Tx-Ty|^2 = |0-1|^2 = 1 &\leq 2 + \frac{1}{2}|x-1|^2 \\
+    &= \frac{1}{2}|x-1|^2 + \frac{1}{2}|2-0|^2 + 0\cdot |x-2|^2\\
+    &= \frac{1}{2}|x-Ty|^2 + \frac{1}{2}|y-Tx|^2 + 0\cdot |x-y|^2,
+\end{align*}
+sehingga Ketaksamaan \eqref{eq:anonban} terpenuhi. Jadi, pemetaan tersebut merupakan pemetaan $\alpha$-nonekspansif. Akan tetapi, pemetaan tersebut bukan merupakan pemetaan nonekspansif karena untuk $x=0$ dan $y=2$ diperoleh   
+\begin{align*}  
+    |Tx-Ty| &= |0-1| = 1 > 2 = |0-2| = |x-y|.   
+\end{align*}
+
+Pant dan Pandey di tahun 2019 mengenalkan pemetaan tipe Reich-Suzuki nonekspansif yang didefinisikan sebagai berikut. 
 
 \begin{defn}\cite{Pant2019}
-    Diberikan $(B,\|\cdot\|)$ adalah ruang Banach dan $W$ adalah himpunan bagian tak kosong dari $B$. Pemetaan $T:W\to W$ disebut pemetaan tipe Reich-Suzuki nonekspansif jika untuk setiap $x,y\in W$ terdapat bilangan real $\alpha\in[0,1)$ sedemikian hingga
-    \begin{equation}
+    Diberikan $(B,\|\cdot\|)$ adalah ruang Banach dan $W$ adalah himpunan bagian tak kosong dari $B$. Pemetaan $T:W\to W$ disebut pemetaan tipe Reich-Suzuki nonekspansif jika terdapat bilangan real $\alpha\in[0,1)$ sehingga untuk setiap $x,y\in W$ berlaku
+    \begin{equation}\label{eq:rsn}
         \|Tx-Ty\|\leq \alpha \|x-Tx\|+\alpha \|y-Ty\| +(1-2\alpha) \|x-y\|.
     \end{equation}
 \end{defn}
+\begin{exam}\label{con:rsn}
+    Diberikan $(\mathbb{R},|\cdot|)$ adalah ruang Banach dan $W=[0,4]$. Pemetaan $T:W\to W$ yang didefinisikan sebagai 
+    \begin{align*}
+        Tx=\begin{cases}
+        0, & \text{jika } x\neq 4,\\
+        1, & \text{jika } x=4,
+        \end{cases}
+    \end{align*}
+    merupakan pemetaan tipe Reich-Suzuki nonekspansif dengan $\alpha=\frac{1}{2}$, tetapi bukan pemetaan nonekspansif.
+\end{exam}
+Penjelasan dari Contoh \ref{con:rsn} adalah sebagai berikut.
 
-Yang terbaru, pada tahun 2023 Ullah dkk. mengenalkan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. 
+Diketahui bahwa untuk setiap $x,y\in W$ dengan $x,y\neq 4$ diperoleh
+\begin{align*}
+    |Tx-Ty| &= |0-0| = 0 \leq \frac{1}{2}|x-Tx| + \frac{1}{2}|y-Ty| + 0\cdot |x-y|,  
+\end{align*}
+dan untuk $x=y=4$ diperoleh
+\begin{align*}
+    |Tx-Ty| &= |1-1| = 0 \leq \frac{1}{2}|x-Tx| + \frac{1}{2}|y-Ty| + 0\cdot |x-y|,
+\end{align*}
+sehingga Ketaksamaan \eqref{eq:rsn} terpenuhi. Selanjutnya, tanpa mengurangi keumuman, untuk $x\neq 4$ dan $y=4$ diperoleh
+\begin{align*}
+    |Tx-Ty| = |0-1| = 1 &\leq \frac{3}{2} + \frac{1}{2}|x-0| \\
+    &= \frac{1}{2}|x-0| + \frac{1}{2}|4-1| + 0\cdot |x-4|\\
+    &= \frac{1}{2}|x-Tx| + \frac{1}{2}|y-Ty| + 0\cdot |x-y|,
+\end{align*}
+sehingga Ketaksamaan \eqref{eq:rsn} terpenuhi. Jadi, pemetaan tersebut merupakan pemetaan tipe Reich-Suzuki nonekspansif. Akan tetapi, pemetaan tersebut bukan merupakan pemetaan nonekspansif karena untuk $x=0$ dan $y=4$ diperoleh   
+\begin{align*}  
+    |Tx-Ty| &= |0-1| = 1 > 4 = |0-4| = |x-y|.
+\end{align*}
+
+Hasil terbaru, tahun 2023 Ullah dkk. mengenalkan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. 
 
 \begin{defn}\cite{Ullah2023}
-    Diberikan $(B,\|\cdot\|)$ adalah ruang Banach dan $W$ adalah himpunan bagian tak kosong dari $B$. Pemetaan $T:W\to W$ disebut pemetaan $(\alpha,\beta,\gamma)$-nonekspansif jika untuk setiap $x,y\in W$ terdapat bilangan real $\alpha,\beta,\gamma\in \mathbb{R}^+$ dengan $\gamma\in[0,1)$ dan $\alpha+\gamma\leq 1$ sedemikian hingga
-    \begin{equation}
-        \|Tx-Ty\|\leq \alpha \|x-y\|+\beta \|x-Tx\| +\gamma \|y-Tx\|.
+    Diberikan $(B,\|\cdot\|)$ adalah ruang Banach dan $W$ adalah himpunan bagian tak kosong dari $B$. Pemetaan $T:W\to W$ disebut pemetaan $(\alpha,\beta,\gamma)$-nonekspansif jika terdapat bilangan real $\alpha,\beta,\gamma\in \mathbb{R}^+$ dengan $\gamma\in[0,1)$ dan $\alpha+\gamma\leq 1$ sehingga untuk setiap $x,y\in W$ berlaku 
+    \begin{equation}\label{eq:abcnonban}
+        \|Tx-Ty\|\leq \alpha \|x-y\|+\beta \|x-Tx\| +\gamma \|x-Ty\|.
     \end{equation}
 \end{defn}
-% Berikut ini diberikan contoh dari pemetaan tersebut. 
-% \begin{exam}
-    
-% \end{exam}
+Berikut ini diberikan contoh dari pemetaan tersebut. 
+\begin{exam}\label{con:abcnonban}
+    Diberikan $(\mathbb{R},|\cdot|)$ adalah ruang Banach dan $W=[0,2]$. Pemetaan $T:W\to W$ yang didefinisikan sebagai 
+    \begin{align*}
+        Tx=\begin{cases}
+        0, & \text{jika } x\neq 2,\\
+        1, & \text{jika } x=2,
+        \end{cases}
+    \end{align*}
+    merupakan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $\alpha=\beta=\gamma=\frac{1}{2}$, tetapi bukan pemetaan nonekspansif.
+\end{exam}
+Penjelasan dari Contoh \ref{con:abcnonban} adalah sebagai berikut.
+
+Diketahui bahwa untuk setiap $x,y\in W$ dengan $x,y\neq 2$ diperoleh
+\begin{align*}
+    |Tx-Ty| &= |0-0| = 0 \leq \frac{1}{2}|x-y| + \frac{1}{2}|x-Tx| + \frac{1}{2}|x-Ty|,
+\end{align*}
+dan untuk $x=y=2$ diperoleh
+\begin{align*}
+    |Tx-Ty| &= |1-1| = 0 \leq \frac{1}{2}|x-y| + \frac{1}{2}|x-Tx| + \frac{1}{2}|x-Ty|,
+\end{align*}
+sehingga Ketaksamaan \eqref{eq:abcnonban} terpenuhi. Selanjutnya, untuk $x\neq 2$ dan $y=2$ diperoleh
+\begin{align*}
+    |Tx-Ty| = |0-1| = 1 &\leq \qty|\frac{y}{2}| \\
+    &\leq \qty|\frac{x-y}{2}|+\qty|\frac{x}{2}|\\
+    &= \frac{1}{2}|x-y| + \frac{1}{2}|x-Tx| + \frac{1}{2}|x-Ty|,
+\end{align*}
+serta untuk $x=2$ dan $y\neq 2$ diperoleh
+\begin{align*}
+    |Tx-Ty| = |1-0| = 1 \leq \frac{3}{2} &= \qty|x-\frac{1}{2}| \\
+    &\leq \qty|\frac{x-1}{2}|+\qty|\frac{x}{2}|\\
+    &= \frac{1}{2}|x-y| + \frac{1}{2}|x-Tx| + \frac{1}{2}|x-Ty|,
+\end{align*}
+sehingga Ketaksamaan \eqref{eq:abcnonban} terpenuhi. Jadi, pemetaan tersebut merupakan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Akan tetapi, pemetaan tersebut bukan merupakan pemetaan nonekspansif karena untuk $x=0$ dan $y=2$ diperoleh   
+\begin{align*}
+    |Tx-Ty| &= |0-1| = 1 > 2 = |0-2| = |x-y|.
+\end{align*}
+

@@ -1,12 +1,34 @@
 \section{Ruang $CAT_p(0)$}
-Sebelum membahas mengenai ruang $CAT_p(0)$, terlebih dahulu akan dikenalkan apa itu ruang $CAT(0)$ karena ruang $CAT_p(0)$ adalah perumuman dari ruang $CAT(0)$. Ruang $CAT(0)$ sejatinya adalah ruang geodesik, tetapi dengan syarat tambahan bahwa segitiga di ruang geodesik setipis seperti pada segitiga di $\mathbb{R}^2$. Untuk itu berikut diberikan konsep dari segitiga komparasi. 
+Sebelum membahas mengenai ruang $CAT_p(0)$, terlebih dahulu dikenalkan ruang $CAT(0)$, sebab ruang $CAT_p(0)$ adalah perumuman dari ruang $CAT(0)$. Ruang $CAT(0)$ sejatinya adalah ruang geodesik, tetapi dengan syarat tambahan bahwa setiap segitiga geodesik di ruang tersebut memenuhi ketaksamaan $CAT(0)$. Untuk itu, berikut diberikan konsep dari segitiga komparasi. 
+
+% segitiga geodesik lebih ramping daripada segitiga pembanding di $\mathbb{R}^2$. Untuk itu berikut diberikan konsep dari segitiga komparasi. 
 \begin{defn}\cite{Bridson1999}
-    Diberikan suatu segitiga geodesik $\triangle (p,q,r)$. Suatu segitiga komparasi $\overline{\triangle}(\overline{p},\overline{q},\overline{r})$ adalah suatu segitiga di ruang bernorma $(\mathbb{E},\|\cdot\|)$ yang memenuhi $d(p,q)=\|\overline{p}-\overline{q}\|, d(p,r)=\|\overline{p}-\overline{r}\|$, dan $d(q,r)=\|\overline{q}-\overline{r}\|$.
+    Diberikan segitiga geodesik $\triangle (p,q,r)$ pada ruang metrik geodesik $(X,d)$. Suatu segitiga komparasi $\overline{\triangle}(\overline{p},\overline{q},\overline{r})$ adalah suatu segitiga di ruang bernorma $(\mathbb{E},\|\cdot\|)$ yang memenuhi $d(p,q)=\|\overline{p}-\overline{q}\|, d(p,r)=\|\overline{p}-\overline{r}\|$, dan $d(q,r)=\|\overline{q}-\overline{r}\|$.
 \end{defn}
+\begin{exam}\label{con:segkom}
+    Diberikan ruang metrik $(\mathbb{R}^2,\tilde{d})$ dengan metrik $\tilde{d}$ yang didefinisikan untuk setiap $x=(x_1,x_2), y=(y_1,y_2)\in \mathbb{R}^2$ sebagai 
+    \begin{align*}
+        \tilde{d}(x,y) = \sqrt{(x_1 - y_1)^2 + \qty(x_1^2-x_2 + y_2-y_1^2)^2}.
+    \end{align*}
+    Ruang metrik tersebut adalah ruang metrik geodesik dengan geodesik yang menghubungkan $x$ dan $y$ didefinisikan sebagai
+    \begin{align*}
+        G(t) = \left((1-t)x_1 + ty_1, \qty((1-t)x_1 + ty_1)^2-(1-t)(x_1^2-x_2)-t(y_1^2-y_2)\right),
+    \end{align*}
+    untuk setiap $t\in [0,1]$ \cite{Eskandani2018}.
+    Untuk setiap segitiga geodesik $\triangle(p,q,r)$ dengan $p=(p_1,p_2)$, $q=(q_1,q_2)$, dan $r=(r_1,r_2)\in(\mathbb{R}^2,\tilde{d})$, segitiga komparasi $\overline{\triangle}(\overline{p},\overline{q},\overline{r})$ di ruang Euclid $(\mathbb{R}^2,\|\cdot\|_2)$ dapat dibentuk dengan memilih titik $\overline{p}=(p_1,p_1^2-p_2)$, $\overline{q}=(q_1,q_1^2-q_2)$, $\overline{r}=(r_1,r_1^2-r_2)\in \mathbb{R}^2$ sehingga berlaku  
+    \begin{align*}
+        \tilde{d}(p,q) &= \sqrt{(p_1 - q_1)^2 + \qty(p_1^2-p_2 + q_2-q_1^2)^2} = \|\overline{p}-\overline{q}\|_2,\\
+        \tilde{d}(p,r) &= \sqrt{(p_1 - r_1)^2 + \qty(p_1^2-p_2 + r_2-r_1^2)^2} = \|\overline{p}-\overline{r}\|_2,\\
+        \tilde{d}(q,r) &= \sqrt{(q_1 - r_1)^2 + \qty(q_1^2-q_2 + r_2-r_1^2)^2} = \|\overline{q}-\overline{r}\|_2.
+    \end{align*}
+\end{exam}
 Selanjutnya, berikut ini diberikan definisi ruang $CAT(0)$.
 \begin{defn}\cite{Bridson1999}
-    Diberikan ruang metrik geodesik $(X,d)$ dan ruang Euclid $(\mathbb{R}^2,\|\cdot\|_2)$. Ruang $(X,d)$ disebut sebagai ruang $CAT(0)$ jika untuk setiap segitiga geodesik $\triangle\in X$ dan $x,y\in \triangle$, terdapat segitiga komparasi $\overline{\triangle}\in \mathbb{R}^2$ sehingga untuk setiap $\overline{x},\overline{y}\in\overline{\triangle}$ berlaku $d(x,y)\leq \|\overline{x}-\overline{y}\|_2$.
+    Diberikan ruang metrik geodesik $(X,d)$ dan ruang Euclid $(\mathbb{R}^2,\|\cdot\|_2)$. Ruang $(X,d)$ disebut sebagai ruang $CAT(0)$ jika untuk setiap segitiga geodesik $\triangle(p,q,r)\in X$ dan $x,y\in \triangle(p,q,r)$, terdapat segitiga komparasi $\overline{\triangle}(\overline{p},\overline{q},\overline{r})\in \mathbb{R}^2$ sehingga untuk setiap $\overline{x},\overline{y}\in\overline{\triangle}$ berlaku $d(x,y)\leq \|\overline{x}-\overline{y}\|_2$.
 \end{defn}
+\begin{exam}
+    Sebagaimana Contoh \ref{con:segkom}, ruang metrik geodesik $(\mathbb{R}^2,\tilde{d})$ adalah ruang $CAT(0)$ karena untuk setiap segitiga geodesik $\triangle(p,q,r)$ di $(\mathbb{R}^2,\tilde{d})$ dan $x,y\in \triangle(p,q,r)$, terdapat segitiga komparasi $\overline{\triangle}(\overline{p},\overline{q},\overline{r})$ di ruang Euclid $(\mathbb{R}^2,\|\cdot\|_2)$ sehingga untuk setiap $\overline{x},\overline{y}\in \overline{\triangle}(\overline{p},\overline{q},\overline{r})$ berlaku $d(x,y)\leq \|\overline{x}-\overline{y}\|_2$.
+\end{exam}
 % \begin{figure}
 %     \centering
 %     \input{Bab_2/gambarcat(0)}
@@ -155,20 +177,45 @@ Selanjutnya, berikut ini diberikan definisi ruang $CAT(0)$.
 
 Khamsi mengembangkan ruang yang lebih umum, yaitu ruang $CAT_p(0)$, dengan $p\geq 2$, dengan mengganti segitiga komparasi pada ruang $CAT(0)$ dari yang awalnya segitiga di $\mathbb{R}^2$ menjadi segitiga di $\ell_p$. Berikut ini definisi dari ruang $CAT_p(0)$. 
 \begin{defn}\cite{Khamsi2017}\label{defn:catp0}
-    Diberikan ruang metrik geodesik $(X,d)$ dan ruang $(\ell_p,\|\cdot\|_p)$ untuk $p\geq 2$. Ruang $(X,d)$ disebut sebagai ruang $CAT_p(0)$, untuk $p\geq 2$, jika untuk setiap segitiga geodesik $\triangle\in X$ dan $x,y\in\triangle$, terdapat segitiga komparasi $\overline{\triangle}\in \ell_p$ sehingga untuk setiap $\overline{x},\overline{y}\in \overline{\triangle}$ berlaku $d(x,y)\leq \|\overline{x}-\overline{y}\|_p$.
+    Diberikan ruang metrik geodesik $(X,d)$ dan ruang $(\ell_p,\|\cdot\|_p)$ untuk $p\geq 2$. Ruang $(X,d)$ disebut sebagai ruang $CAT_p(0)$, untuk $p\geq 2$, jika untuk setiap segitiga geodesik $\triangle(p,q,r) \in X$ dan $x,y\in\triangle(p,q,r)$, terdapat segitiga komparasi $\overline{\triangle}(\overline{p},\overline{q},\overline{r})\in \ell_p$ sehingga untuk setiap $\overline{x},\overline{y}\in \overline{\triangle}$ berlaku $d(x,y)\leq \|\overline{x}-\overline{y}\|_p$.
 \end{defn}
 \begin{exam}\cite{Khamsi2017}\label{con:lpcatp}
 Setiap ruang $(\ell_p, \|\cdot\|_p)$ dengan $p\geq 2$ adalah ruang $CAT_p(0)$. 
 \end{exam}
+Penjelasan dari Contoh \ref{con:lpcatp} adalah sebagai berikut.
+
+Diketahui bahwa setiap ruang $(\ell_p, \|\cdot\|_p)$ dengan $p\geq 2$ adalah ruang metrik geodesik. Misalkan $\triangle(p,q,r)$ adalah segitiga geodesik di $(\ell_p, \|\cdot\|_p)$ dengan $p,q,r\in \ell_p$ dan $x,y\in \triangle(p,q,r)$. Dapat dipilih segitiga komparasi $\overline{\triangle}(\overline{p},\overline{q},\overline{r})\in (\ell_p, \|\cdot\|_p)$ dengan $\overline{p}=p$, $\overline{q}=q$, dan $\overline{r}=r$ sehingga untuk setiap $\overline{x},\overline{y}\in \overline{\triangle}$ berlaku $\overline{x}=x$ dan $\overline{y}=y$. Dengan demikian, diperoleh
+\begin{align*}  
+    d(x,y) &= \|x-y\|_p = \|\overline{x}-\overline{y}\|_p,
+\end{align*}
+yang menunjukkan bahwa ruang $(\ell_p, \|\cdot\|_p)$ dengan $p\geq 2$ adalah ruang $CAT_p(0)$.
+
+Selanjutnya, berikut ini diberikan sebuah lema yang menyatakan bahwa ruang $CAT_p(0)$ dengan $p>2$ bukan merupakan ruang $CAT(0)$.
 \begin{lemma}\cite{Khamsi2017}\label{lema:p=2}
 Untuk $p>2$ ruang $CAT_p(0)$ bukan merupakan ruang $CAT(0)$.
 \end{lemma}
 
-Untuk selanjutnya, pada suatu segitiga geodesik $\triangle(x_1,x_2,x_3)$, setiap titik $z\in [x_i,x_j]$ dengan $i,j\in \{1,2,3\}$ dan $i\neq j$, dinotasikan sebagai $z=(1-t)x_i\oplus tx_j$ dengan $t=\frac{d(x_i,z)}{d(x_i,x_j)}$.  
+ 
 Berikut ini diberikan beberapa konsep yang berlaku pada ruang $CAT_p(0)$ dengan $p\geq 2$.
 \begin{defn}\cite{Khamsi2017} \label{defn:konveks}
-    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$. Suatu himpunan bagian $C\subseteq X$ disebut konveks jika $[x,y]\subset C$ untuk setiap $x,y\in C$.
+    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$. Suatu himpunan bagian $\mathcal{M}\subseteq X$ disebut konveks jika $[x\sim y]\subseteq \mathcal{M}$ untuk setiap $x,y\in \mathcal{M}$.
 \end{defn}
+\begin{exam}
+    Dipilih ruang $CAT_p(0)$, yaitu ruang $CAT(0)$ $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan himpunan bagian $\mathcal{M}=\{(0,b)\in \mathbb{R}^2\mid b\in \mathbb{R}\}\subset \mathbb{R}^2$. Diperhatikan bahwa untuk setiap $x=(0,x_2), y=(0,y_2)\in \mathcal{M}$, geodesik yang menghubungkan $x$ dan $y$ adalah $[x\sim y] = \{G(t)\mid t\in[0,1], G(0)=x, G(1)=y\}$ dengan
+    \begin{align*}
+         G(t) &= \left((1-t)0 + t0, \qty((1-t)0 + t0)^2-(1-t)(0^2 - x_2)-t(0^2 - y_2)\right)\\
+         &=\left(0, (1-t)x_2 + ty_2\right).
+    \end{align*}
+    Karena $x_2,y_2\in \mathbb{R}$, maka $(1-t)x_2 + ty_2\in \mathbb{R}$, sehingga $[x\sim y]=\{(0, (1-t)x_2 + ty_2)\mid t\in[0,1]\}\subseteq \mathcal{M}$. Dengan demikian, himpunan bagian $\mathcal{M}$ adalah himpunan konveks di ruang $(\mathbb{R}^2,\tilde{d})$.
+\end{exam}
+\begin{exam}
+    Dipilih ruang $CAT_p(0)$, yaitu ruang $CAT(0)$ $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan himpunan bagian $\mathcal{M}=\{(b,0)\in \mathbb{R}^2\mid b\in \mathbb{R}\}\subset \mathbb{R}^2$. Himpunan bagian tersebut tidak konveks karena terdapat $x=(1,0), y=(-1,0)\in \mathcal{M}$ sehingga 
+    \begin{align*}
+        G(t) &= \left((1-t)1 + t(-1), \qty((1-t)1 + t(-1))^2-(1-t)(1^2 - 0)-t((-1)^2 - 0)\right)\\
+        &=\left(1-2t, (1-2t)^2 - 1\right).
+    \end{align*}
+    Untuk $t=\dfrac{1}{2}$, diperoleh $G\left(\dfrac{1}{2}\right) = \left(0, -\dfrac{1}{2}\right)\notin \mathcal{M}$, sehingga himpunan bagian $\mathcal{M}$ tidak konveks di ruang $(\mathbb{R}^2,\tilde{d})$.
+\end{exam}
 % \todo{himpunan kompak}
 % \begin{defn}
 
@@ -179,15 +226,74 @@ Berikut ini diberikan beberapa konsep yang berlaku pada ruang $CAT_p(0)$ dengan 
         A(\{x_n\}) := \{x\in X:\limsup_{n\to\infty} d(x,x_n) = \inf_{y\in X} \limsup_{n\to \infty} d(y,x_n)\}
     \end{equation}
 \end{defn}
+\todo{cek}
+\begin{exam}
+    Diberikan ruang $CAT_p(0)$, yaitu ruang $CAT(0)$ $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan barisan $\{x_n\}\subseteq (\mathbb{R}^2,\tilde{d})$ dengan $x_n=(0,\dfrac{1}{n})$ untuk setiap $n\in \mathbb{N}$. Barisan tersebut adalah barisan terbatas karena untuk setiap $n,m\in \mathbb{N}$, diperoleh
+    \begin{align*}
+        \tilde{d}(x_n,x_m) &= \sqrt{(0-0)^2 + \qty(0^2 - \dfrac{1}{n} + \dfrac{1}{m} - 0^2)^2} = \left|\dfrac{1}{n} - \dfrac{1}{m}\right| \leq 1.
+    \end{align*}
+    Selanjutnya, ditentukan pusat asimtotik dari barisan $\{x_n\}$. Diketahui bahwa untuk setiap $x=(x_1,x_2)\in (\mathbb{R}^2,\tilde{d})$, berlaku
+    \begin{align*}
+        \limsup_{n\to\infty} \tilde{d}(x,x_n) &= \limsup_{n\to\infty} \sqrt{(x_1 - 0)^2 + \qty(x_1^2 - x_2 + \dfrac{1}{n} - 0^2)^2}\\
+        &= \sqrt{x_1^2 + (x_1^2 - x_2)^2}.
+    \end{align*}
+    Sehingga diperoleh
+    \begin{align*}
+        \inf_{y\in X} \limsup_{n\to\infty} \tilde{d}(y,x_n) &= \inf_{(y_1,y_2)\in \mathbb{R}^2} \sqrt{y_1^2 + (y_1^2 - y_2)^2}.
+    \end{align*}
+    Nilai minimum dari fungsi $f(y_1,y_2)=\sqrt{y_1^2 + (y_1^2 - y_2)^2}$ adalah $0$ yang terjadi pada titik $(0,0)$. Dengan demikian, diperoleh
+    \begin{align*}
+        A(\{x_n\}) &= \{(x_1,x_2)\in \mathbb{R}^2 : \limsup_{n\to\infty} \tilde{d}((x_1,x_2),x_n) = 0\}\\
+        &= \{(0,0)\}.
+    \end{align*}
+\end{exam}
 \begin{defn}\cite{Salisu2022}\label{defn:konvD}
     Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $\{x_n\}$ adalah barisan terbatas di $X$. Barisan $\{x_n\}$ disebut sebagai konvergen-$\Delta$ ke suatu titik $x$ di $X$ (dinotasikan $\Delta-\lim_{n\to\infty} x_n=x$) jika $\{x\}$ adalah pusat asimtotik dari setiap subbarisan $\{x_{n_k}\}$ dari $\{x_n\}$.
 \end{defn}
+\todo{cek}
+\begin{exam}
+    Diberikan ruang $CAT_p(0)$, yaitu ruang $CAT(0)$ $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan barisan $\{x_n\}\subseteq (\mathbb{R}^2,\tilde{d})$ dengan $x_n=(0,\dfrac{1}{n})$ untuk setiap $n\in \mathbb{N}$. Barisan tersebut adalah barisan terbatas karena untuk setiap $n,m\in \mathbb{N}$, diperoleh
+    \begin{align*}
+        \tilde{d}(x_n,x_m) &= \sqrt{(0-0)^2 + \qty(0^2 - \dfrac{1}{n} + \dfrac{1}{m} - 0^2)^2} = \left|\dfrac{1}{n} - \dfrac{1}{m}\right| \leq 1.
+    \end{align*}
+    Selanjutnya, ditentukan pusat asimtotik dari setiap subbarisan $\{x_{n_k}\}$ dari $\{x_n\}$. Diketahui bahwa untuk setiap $x=(x_1,x_2)\in (\mathbb{R}^2,\tilde{d})$, berlaku
+    \begin{align*}
+        \limsup_{k\to\infty} \tilde{d}(x,x_{n_k}) &= \limsup_{k\to\infty} \sqrt{(x_1 - 0)^2 + \qty(x_1^2 - x_2 + \dfrac{1}{n_k} - 0^2)^2}\\
+        &= \sqrt{x_1^2 + (x_1^2 - x_2)^2}.
+    \end{align*}
+    Sehingga diperoleh
+    \begin{align*}
+        \inf_{y\in X} \limsup_{k\to\infty} \tilde{d}(y,x_{n_k}) &= \inf_{(y_1,y_2)\in \mathbb{R}^2} \sqrt{y_1^2 + (y_1^2 - y_2)^2}.
+    \end{align*}
+    Nilai minimum dari fungsi $f(y_1,y_2)=\sqrt{y_1^2 + (y_1^2 - y_2)^2}$ adalah $0$ yang terjadi pada titik $(0,0)$. Dengan demikian, diperoleh
+    \begin{align*}
+        A(\{x_{n_k}\}) &= \{(x_1,x_2)\in \mathbb{R}^2 : \limsup_{k\to\infty} \tilde{d}((x_1,x_2),x_{n_k}) = 0\}\\
+        &= \{(0,0)\}.
+    \end{align*}
+    Karena pusat asimtotik dari setiap subbarisan $\{x_{n_k}\}$ adalah $\{(0,0)\}$, maka barisan $\{x_n\}$ konvergen-$\Delta$ ke titik $(0,0)$, yaitu $\Delta-\lim_{n\to\infty} x_n = (0,0)$.
+\end{exam}
 \begin{defn}\cite{Salisu2022}\label{defn:konvK}
-    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $\{x_n\}$ adalah barisan di $X$. Barisan $\{x_n\}$ disebut konvergen kuat ke suatu titik $x$ di $X$ (dinotasikan $\lim_{n\to\infty} d(x_n,x)=0$) jika untuk setiap $\varepsilon>0$, terdapat $n_0\in \mathbb{N}$ sedemikian sehingga untuk setiap $n\geq n_0$ berlaku $d(x_n,x)<\varepsilon$.
+    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $\{x_n\}$ adalah barisan di $X$. Barisan $\{x_n\}$ disebut konvergen kuat ke suatu titik $x$ di $X$ (dinotasikan $\lim_{n\to\infty} d(x_n,x)=0$) jika untuk setiap $\varepsilon>0$, terdapat $n_0\in \mathbb{N}$ sehingga untuk setiap $n\geq n_0$ berlaku $d(x_n,x)<\varepsilon$.
 \end{defn}
+\todo{cek}
+\begin{exam}
+    Diberikan ruang $CAT_p(0)$, yaitu ruang $CAT(0)$ $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan barisan $\{x_n\}\subseteq (\mathbb{R}^2,\tilde{d})$ dengan $x_n=(0,\dfrac{1}{n})$ untuk setiap $n\in \mathbb{N}$. Barisan tersebut konvergen kuat ke titik $x=(0,0)$ karena untuk setiap $\varepsilon>0$, dapat dipilih $n_0\in \mathbb{N}$ sehingga untuk setiap $n\geq n_0$ berlaku
+    \begin{align*}
+        \tilde{d}(x_n,x) &= \sqrt{(0-0)^2 + \qty(0^2 - \dfrac{1}{n} - 0^2)^2} = \dfrac{1}{n} < \varepsilon.
+    \end{align*}
+\end{exam}
 \begin{defn}\cite{Salisu2022}\label{defn:demi}
     Diberikan $(X,d)$ adalah suatu ruang $CAT_p(0)$. Pemetaan $T:X\to X$ disebut memiliki sifat \textbf{demiclosedness} jika untuk setiap barisan $\{x_n\}\subseteq X$ yang konvergen-$\Delta$ dan memenuhi $\lim_{n\to \infty} d(x_n,Tx_n)=0$, maka berlaku $x=Tx$. 
 \end{defn}
+\todo{cek}
+\begin{exam}
+    Diberikan ruang $CAT_p(0)$, yaitu ruang $CAT(0)$ $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan pemetaan $T:(\mathbb{R}^2,\tilde{d})\to (\mathbb{R}^2,\tilde{d})$ yang didefinisikan sebagai $T(x_1,x_2) = \left(\dfrac{x_1}{2}, \dfrac{x_2}{2}\right)$ untuk setiap $(x_1,x_2)\in \mathbb{R}^2$. Diketahui bahwa titik tetap dari $T$ adalah $(0,0)$. Misalkan $\{x_n\}\subseteq (\mathbb{R}^2,\tilde{d})$ adalah barisan dengan $x_n=\left(\dfrac{1}{n}, \dfrac{1}{n}\right)$ untuk setiap $n\in \mathbb{N}$. Barisan tersebut konvergen-$\Delta$ ke titik $(0,0)$ karena pusat asimtotik dari setiap subbarisan $\{x_{n_k}\}$ dari $\{x_n\}$ adalah $\{(0,0)\}$. Selain itu, diperoleh
+    \begin{align*}
+        \lim_{n\to\infty} \tilde{d}(x_n,Tx_n) &= \lim_{n\to\infty} \sqrt{\left(\dfrac{1}{n} - \dfrac{1}{2n}\right)^2 + \qty(\dfrac{1}{n^2} - \dfrac{1}{n} + \dfrac{1}{2n} - \dfrac{1}{4n})^2}\\
+        &= \lim_{n\to\infty} \sqrt{\left(\dfrac{1}{2n}\right)^2 + \left(-\dfrac{3}{4n} + \dfrac{1}{n^2}\right)^2} = 0.
+    \end{align*}
+    Dengan demikian, karena $\Delta-\lim_{n\to\infty} x_n = (0,0)$ dan $\lim_{n\to\infty} \tilde{d}(x_n,Tx_n)=0$, maka diperoleh $x=Tx$, yaitu $(0,0)=T(0,0)$. Oleh karena itu, pemetaan $T$ memiliki sifat demiclosedness.
+\end{exam}
 
 Selanjutnya, berikut ini diberikan ketaksamaan penting yang berlaku pada ruang $CAT_p(0)$. Dalam tesis ini dinotasikan $d^p(x,y)=[d(x,y)]^p$.
 \begin{lemma}\cite{CALDERN2021}\label{lema:d,d^p}
@@ -204,7 +310,7 @@ Selanjutnya, berikut ini diberikan ketaksamaan penting yang berlaku pada ruang $
     Pusat asimtotik dari suatu barisan terbatas di ruang $CAT_p(0)$ memiliki tepat satu elemen. 
 \end{lemma}
 \begin{thm}\cite{Salisu2022}\label{thm:kondisikonvD}
-    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup dan konveks. Diberikan pula $T:W\to W$ adalah pemetaan yang memiliki titik tetap dan memenuhi sifat demiclosedness \ref{defn:demi}. Jika $\{x_n\}$ adalah barisan di $W$ sedemikian sehingga $\lim_{n\to\infty}d(x_n,Tx_n)=0$ dan barisan $\{d(x_n,x^*)\}$ konvergen di $\mathbb{R}$ untuk setiap $x^*$ titik tetap dari $T$, maka barisan $\{x_n\}$ konvergen-$\Delta$ ke titik tetap dari $T$.
+    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup dan konveks. Diberikan pula $T:W\to W$ adalah pemetaan yang memiliki titik tetap dan memenuhi sifat demiclosedness \ref{defn:demi}. Jika $\{x_n\}$ adalah barisan di $W$ yang memenuhi $\lim_{n\to\infty}d(x_n,Tx_n)=0$ dan barisan $\{d(x_n,x^*)\}$ konvergen di $\mathbb{R}$ untuk setiap $x^*$ titik tetap dari $T$, maka barisan $\{x_n\}$ konvergen-$\Delta$ ke titik tetap dari $T$.
 \end{thm}
 \begin{defn}
     Diberikan $(X,d)$ adalah ruang $CAT_p(0)$. Suatu fungsi $f:X\to \mathbb{R}\cup \{+\infty\}$ disebut konveks secara geodesik jika untuk setiap $t\in(0,1)$ dan $x,y\in X$, berlaku
@@ -218,3 +324,17 @@ Selanjutnya, berikut ini diberikan ketaksamaan penting yang berlaku pada ruang $
 \begin{defn}
     Diberikan $(X,d)$ adalah ruang $CAT_p(0)$. Suatu fungsi $f:X\to \mathbb{R}\cup \{+\infty\}$ disebut \textit{lower semi-continuous} pada suatu titik $x\in D(f)$ jika $f(x)\leq \liminf_{n\to\infty} f(x_n)$ untuk setiap barisan $\{x_n\}$ yang konvergen di $D(f)$ dengan limit $x\in X$. Jika $f$ \textit{lower semi-continuous} pada setiap titik di $D(f)$, maka $f$ disebut \textit{lower semi-continuous} pada $X$.
 \end{defn}
+\todo{cek}
+\begin{exam}
+    Diberikan ruang $CAT_p(0)$, yaitu ruang $CAT(0)$ $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan fungsi $f:(\mathbb{R}^2,\tilde{d})\to \mathbb{R}$ yang didefinisikan sebagai $f(x_1,x_2) = x_1^2 + x_2^2$ untuk setiap $(x_1,x_2)\in \mathbb{R}^2$. Fungsi tersebut adalah konveks secara geodesik karena untuk setiap $t\in(0,1)$ dan $(x_1,x_2),(y_1,y_2)\in \mathbb{R}^2$, diperoleh
+    \begin{align*}
+        f\left(t(x_1,x_2)\oplus (1-t)(y_1,y_2)\right) &= f\left(tx_1 + (1-t)y_1, (tx_1 + (1-t)y_1)^2 - t(x_1^2 - x_2) - (1-t)(y_1^2 - y_2)\right)\\
+        &= \left(tx_1 + (1-t)y_1\right)^2 + \left((tx_1 + (1-t)y_1)^2 - t(x_1^2 - x_2) - (1-t)(y_1^2 - y_2)\right)^2\\
+        &\leq t(x_1^2 + x_2^2) + (1-t)(y_1^2 + y_2^2)\\
+        &= tf(x_1,x_2) + (1-t)f(y_1,y_2).
+    \end{align*}
+    Selain itu, fungsi tersebut adalah \textit{proper} karena himpunan $D(f)=\{(x_1,x_2)\in \mathbb{R}^2\mid f(x_1,x_2)<+\infty\}=\mathbb{R}^2\neq \emptyset$. Fungsi tersebut juga adalah \textit{lower semi-continuous} pada setiap titik di $\mathbb{R}^2$ karena untuk setiap barisan $\{(x_{1n},x_{2n})\}\subseteq \mathbb{R}^2$ yang konvergen ke suatu titik $(x_1,x_2)\in \mathbb{R}^2$, diperoleh
+    \begin{align*}
+        f(x_1,x_2) &= x_1^2 + x_2^2 = \lim_{n\to\infty} (x_{1n}^2 + x_{2n}^2) = \lim_{n\to\infty} f(x_{1n},x_{2n}) \geq \liminf_{n\to\infty} f(x_{1n},x_{2n}).
+    \end{align*}
+\end{exam}

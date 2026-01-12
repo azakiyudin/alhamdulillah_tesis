@@ -212,7 +212,7 @@
     		\textbf{Fakultas~ {\@fak}}\\
     		\textbf{Institut Teknologi Sepuluh Nopember}\\
     		\textbf{Surabaya}\\
-    		\@thn}		
+    		\textbf{\@thn}}	
     \end{flushleft}
     \color{black}
     \restoregeometry

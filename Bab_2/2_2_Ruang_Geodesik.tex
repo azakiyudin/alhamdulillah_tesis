@@ -1,20 +1,59 @@
-\section{Ruang Geodesik}
+\section{Ruang Metrik Geodesik}
 % \subsection{Definisi dan Notasi Ruang $CAT_p(0)$}
-Pada bagian ini akan dikenalkan konsep terkait ruang geodesik. Secara intuisi, ruang geodesik adalah ruang metrik dengan sifat terdapat jalur terpendek di antara dua titik dari ruang metrik tersebut. Jalur terpendek di sini tidak selalu garis lurus seperti yang ada di $\mathbb{R}^2$, tetapi jalurnya bisa melengkung atau berkelok asalkan lintasannya memiliki panjang minimum terhadap metriknya. Berikut diberikan definisi ruang metrik geodesik secara formal. 
+Pada bagian ini dikenalkan konsep terkait ruang metrik geodesik. Secara intuisi, ruang metrik geodesik adalah ruang metrik dengan sifat terdapat jalur terpendek di antara dua titik dari ruang metrik tersebut. Jalur terpendek di sini tidak selalu garis lurus seperti yang ada di $\mathbb{R}^2$, tetapi jalurnya bisa melengkung atau berkelok asalkan lintasannya memiliki panjang minimum terhadap metriknya. Berikut diberikan definisi ruang metrik geodesik secara formal. 
 \begin{defn}\cite{Bridson1999}
-    Diberikan $(X,d)$ adalah ruang metrik dan $x,y\in X$. Pemetaan $\gamma: \qty[0, 1]\subset \mathbb{R} \to X$ disebut jalur geodesik yang menghubungkan $x$ dan $y$ jika memenuhi 
+    Diberikan $(X,d)$ adalah ruang metrik dan $x,y\in X$. Pemetaan kontinu $G: \qty[0, 1] \to X$ disebut geodesik yang menghubungkan $x$ dan $y$ jika memenuhi 
     \begin{enumerate}
-        \item[(a)] $\gamma(0)=x$,
-        \item[(b)] $\gamma(1)=y$
-        \item[(c)] $d(\gamma(t),\gamma(s))=|t-s|d(x,y)$ untuk setiap $t,s\in [0,1]$.
+        \item[(a)] $G(0)=x$,
+        \item[(b)] $G(1)=y$
+        \item[(c)] $d\qty(G(t),G(s))=|t-s|d(x,y)$ untuk setiap $t,s\in [0,1]$.
     \end{enumerate}
- Ruang metrik $(X,d)$ disebut sebagai ruang metrik geodesik jika setiap elemen $x,y\in X$ dihubungkan oleh suatu jalur geodesik. Dalam hal ini suatu geodesik dinotasikan sebagai $[x,y]$.
+ Ruang metrik $(X,d)$ disebut sebagai ruang metrik geodesik jika setiap elemen $x,y\in X$ dihubungkan oleh suatu geodesik. 
 \end{defn}
-Berikut ini adalah contoh dari ruang metrik geodesik.
-\begin{exam}\cite{Bridson1999}
-    Setiap ruang bernorma $(V,\norm{\cdot})$ yang dilengkapi dengan metrik $d(v,w)=\|v-w\|$ untuk setiap $v,w\in V$ adalah ruang metrik geodesik.  
+Pada ruang metrik geodesik, himpunan titik-titik pada geodesik yang menghubungkan $x$ dan $y$ dituliskan sebagai $[x\sim  y]$. Kemudian, berikut diberikan contoh ruang metrik geodesik dan bukan ruang metrik geodesik.
+\begin{exam}\cite{Bridson1999}\label{con:geodesik}
+    Setiap ruang bernorma $(V,\norm{\cdot})$ yang dilengkapi dengan metrik $d(v,w)=\|v-w\|$ untuk setiap $v,w\in V$ adalah ruang metrik geodesik dengan geodesik yang menghubungkan $v$ dan $w$ didefinisikan sebagai
+    \begin{align*}
+        G(t) = (1-t)v + tw, \quad \text{untuk setiap } t\in [0,1].
+    \end{align*}
+    
 \end{exam}
-Selanjutnya, diberikan definisi dari segitiga di ruang geodesik. 
+Penjelasan dari Contoh \ref{con:geodesik} adalah sebagai berikut.
+
+    Jelas bahwa $G(0)=v$, $G(1)=w$, dan
+    \begin{align*}
+        d(G(t),G(s)) &= \norm{(1-t)v + tw - (1-s)v - sw} \\
+        &= \norm{(t-s)(w-v)} \\
+        &= |t-s|\norm{w-v} \\
+        &= |t-s|d(v,w),
+    \end{align*}
+    untuk setiap $t,s\in [0,1]$. Dengan demikian, $G$ adalah geodesik yang menghubungkan $v$ dan $w$, sehingga setiap ruang bernorma adalah ruang metrik geodesik.
+\begin{exam}
+    Diberikan $X=[0,1]\subset \mathbb{R}$ dengan metrik 
+    \begin{align*}
+        d(x,y)=\begin{cases}
+            1 & \text{jika } x\neq y\\
+            0 & \text{jika } x=y.
+        \end{cases}
+    \end{align*}
+    Ruang metrik $(X,d)$ bukan ruang metrik geodesik karena untuk $x=0$ dan $y=1$, serta $t=\frac{1}{2}$, tidak ada $G(t)\in X$ sehingga $$d\qty(0,G(t))=d\qty(G(t),1)=\frac{1}{2}d(0,1)=\frac{1}{2}.$$
+\end{exam}
+Konsep segitiga geodesik merupakan konsep dasar yang digunakan dalam mendefinisikan ruang $CAT(0)$ dan ruang $CAT_p(0)$. Berikut ini diberikan definisi segitiga geodesik.
 \begin{defn}\cite{Bridson1999}
-    Diberikan $(X,d)$ ruang metrik geodesik. Suatu segitiga geodesik $\triangle(p, q,r)$ di ruang metrik geodesik berisi tiga titik $p, q,r\in X$ sebagai titik sudut dan jalur geodesik di antara dua titik tersebut yaitu $[p,q], [p,r], [q,r]$ disebut sebagai sisi dari segitiganya. 
+    Diberikan $(X,d)$ ruang metrik geodesik. Suatu segitiga geodesik $\triangle(p, q,r)$ di ruang metrik geodesik berisi tiga titik $p, q,r\in X$ sebagai titik sudut dan geodesik di antara dua titik tersebut, yaitu $[p\sim  q], [p\sim r], [q\sim  r]$, disebut sebagai sisi dari segitiganya. 
 \end{defn}
+Untuk selanjutnya, titik yang terletak pada suatu segitiga geodesik $\triangle(x_1,x_2,x_3)$ dituliskan sebagai $z\in \triangle(x_1,x_2,x_3)$ jika $z\in [x_i,x_j]$ untuk suatu $i,j\in \{1,2,3\}$ dengan $i\neq j$. Titik $z\in[x_i,x_j]$ direpresentasikan oleh $z=(1-t)x_i\oplus tx_j$ dengan $t=\frac{d(x_i,z)}{d(x_i,x_j)}$ dan $\oplus$ adalah operasi geodesik.
+% \begin{defn}\cite{Bridson1999}
+%     Diberikan ruang metrik geodesik $(X,d)$ dengan segitiga geodesik $\triangle(x_1,x_2,x_3)$. Titik yang terletak pada suatu sisi segitiga geodesik tersebut disebut sebagai titik pada segitiga geodesik, yang dituliskan sebagai $z\in \triangle(x_1,x_2,x_3)$ jika $z\in [x_i,x_j]$ untuk suatu $i,j\in \{1,2,3\}$ dengan $i\neq j$. Titik tersebut dapat dituliskan sebagai $z=(1-t)x_i\oplus tx_j$ dengan $t=\frac{d(x_i,z)}{d(x_i,x_j)}$ dan $\oplus$ adalah operasi geodesik.
+%     \end{defn}
+Contoh dari segitiga geodesik di ruang metrik geodesik diberikan sebagai berikut.
+\begin{exam}
+    Sebagaimana pada Contoh \ref{con:geodesik}, setiap ruang bernorma $(V,\norm{\cdot})$ adalah ruang metrik geodesik. Misalkan dipilih $V=\mathbb{R}^2$ dan $p=(0,0), q=(1,0), r=(0,1)\in \mathbb{R}^2$, maka segitiga geodesik $\triangle(p,q,r)$ di ruang tersebut memiliki titik sudut $p,q,r$ dan sisi-sisi segitiga geodesik yang didefinisikan sebagai
+    \begin{align*}
+        [p\sim  q] &= \{(1-t)p + tq \mid t\in [0,1]\} = \{(t,0) \mid t\in [0,1]\},\\
+        [p\sim r] &= \{(1-t)p + tr \mid t\in [0,1]\} = \{(0,t) \mid t\in [0,1]\},\\
+        [q\sim  r] &= \{(1-t)q + tr \mid t\in [0,1]\} = \{(1-t,t) \mid t\in [0,1]\}.
+    \end{align*}
+    Titik $z=(0.5,0)$ terletak pada sisi $[p\sim  q]$ dari segitiga geodesik tersebut dan dapat dituliskan sebagai $z=(1-t)p \oplus tq$ dengan $t=0.5$ dan operasi geodesik $\oplus$ sama dengan operasi penjumlahan vektor.
+\end{exam}
+Untuk selanjutnya, pada suatu segitiga geodesik $\triangle(x_1,x_2,x_3)$, setiap titik $z\in [x_i\sim  x_j]$ dengan $i,j\in \{1,2,3\}$ dan $i\neq j$, dinotasikan sebagai $z=(1-t)x_i\oplus tx_j$ dengan $t=\frac{d(x_i,z)}{d(x_i,x_j)}$. 

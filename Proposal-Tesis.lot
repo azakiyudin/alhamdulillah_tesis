@@ -2,18 +2,18 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {Tabel 4.1}{\ignorespaces Hasil numerik skema iterasi Sabri dan JK}}{35}{table.4.1}%
-\contentsline {table}{\numberline {Tabel 4.2}{\ignorespaces Hasil numerik skema iterasi Sabri dan Thakur}}{35}{table.4.2}%
-\contentsline {table}{\numberline {Tabel 4.3}{\ignorespaces Hasil numerik skema iterasi Sabri dan Abbas}}{36}{table.4.3}%
-\contentsline {table}{\numberline {Tabel 4.4}{\ignorespaces Hasil numerik skema iterasi Sabri dan Agarwal}}{36}{table.4.4}%
-\contentsline {table}{\numberline {Tabel 4.5}{\centering Galat $d(x_n, x^*)$}}{37}{table.4.5}%
-\contentsline {table}{\numberline {Tabel 4.6}{\ignorespaces Iterasi dengan parameter $a_n = 0.42, b_n=0.83, c_n=0.31$}}{38}{table.4.6}%
-\contentsline {table}{\numberline {Tabel 4.7}{\ignorespaces Iterasi dengan parameter $a_n =\frac {n^2}{n^3+1}, b_n=\frac {2}{n+3},c_n=\frac {4n+2}{{7n+4}}.$}}{38}{table.4.7}%
-\contentsline {table}{\numberline {Tabel 4.8}{\ignorespaces Iterasi dengan parameter $a_n =1- \frac {\sqrt {4n+9}}{2n+13}, b_n=0.8,c_n=1-\frac {n^2}{\sqrt {n^7+3}}.$}}{38}{table.4.8}%
-\contentsline {table}{\numberline {Tabel 4.9}{\ignorespaces Iterasi dengan parameter $a_n = 1-\frac {n^3}{n^5+1}, b_n=\frac {1}{n+1},c_n=\frac {3n+4}{5n^2+4}.$}}{39}{table.4.9}%
-\contentsline {table}{\numberline {Tabel 4.10}{\ignorespaces Iterasi dengan parameter $a_n = \frac {n^5+1}{5n^7+9}, b_n=1-\frac {3}{n+5},c_n=1-\frac {\sqrt {n^3+8}}{5n^5+9}.$}}{39}{table.4.10}%
-\contentsline {table}{\numberline {Tabel 4.11}{\centering Hasil simulasi sebanyak 55 iterasi untuk Contoh \ref {con:fkonvk} dengan skema iterasi Sabri dan JK}}{43}{table.4.11}%
-\contentsline {table}{\numberline {Tabel 4.12}{\centering Galat simulasi $d(x_n,x^*)$ untuk Contoh \ref {con:fkonvk} dengan skema iterasi Sabri dan JK}}{44}{table.4.12}%
-\contentsline {table}{\numberline {Tabel 4.13}{\ignorespaces Parameter simulasi rekonstruksi citra}}{49}{table.4.13}%
-\contentsline {table}{\numberline {Tabel 4.14}{\centering MSE dan PSNR Rekonstruksi Citra}}{51}{table.4.14}%
+\contentsline {table}{\numberline {Tabel 4.1}{\ignorespaces Hasil numerik skema iterasi Sabri dan JK}}{47}{table.4.1}%
+\contentsline {table}{\numberline {Tabel 4.2}{\ignorespaces Hasil numerik skema iterasi Sabri dan Thakur}}{47}{table.4.2}%
+\contentsline {table}{\numberline {Tabel 4.3}{\ignorespaces Hasil numerik skema iterasi Sabri dan Abbas}}{48}{table.4.3}%
+\contentsline {table}{\numberline {Tabel 4.4}{\ignorespaces Hasil numerik skema iterasi Sabri dan Agarwal}}{48}{table.4.4}%
+\contentsline {table}{\numberline {Tabel 4.5}{\centering Galat $d(x_n, x^*)$}}{49}{table.4.5}%
+\contentsline {table}{\numberline {Tabel 4.6}{\ignorespaces Iterasi dengan parameter $a_n = 0.42, b_n=0.83, c_n=0.31$}}{50}{table.4.6}%
+\contentsline {table}{\numberline {Tabel 4.7}{\ignorespaces Iterasi dengan parameter $a_n =\frac {n^2}{n^3+1}, b_n=\frac {2}{n+3},c_n=\frac {4n+2}{{7n+4}}.$}}{50}{table.4.7}%
+\contentsline {table}{\numberline {Tabel 4.8}{\ignorespaces Iterasi dengan parameter $a_n =1- \frac {\sqrt {4n+9}}{2n+13}, b_n=0.8,c_n=1-\frac {n^2}{\sqrt {n^7+3}}.$}}{50}{table.4.8}%
+\contentsline {table}{\numberline {Tabel 4.9}{\ignorespaces Iterasi dengan parameter $a_n = 1-\frac {n^3}{n^5+1}, b_n=\frac {1}{n+1},c_n=\frac {3n+4}{5n^2+4}.$}}{51}{table.4.9}%
+\contentsline {table}{\numberline {Tabel 4.10}{\ignorespaces Iterasi dengan parameter $a_n = \frac {n^5+1}{5n^7+9}, b_n=1-\frac {3}{n+5},c_n=1-\frac {\sqrt {n^3+8}}{5n^5+9}.$}}{51}{table.4.10}%
+\contentsline {table}{\numberline {Tabel 4.11}{\centering Hasil simulasi sebanyak 55 iterasi untuk Contoh \ref {con:fkonvk} dengan skema iterasi Sabri dan JK}}{55}{table.4.11}%
+\contentsline {table}{\numberline {Tabel 4.12}{\centering Galat simulasi $d(x_n,x^*)$ untuk Contoh \ref {con:fkonvk} dengan skema iterasi Sabri dan JK}}{56}{table.4.12}%
+\contentsline {table}{\numberline {Tabel 4.13}{\ignorespaces Parameter simulasi rekonstruksi citra}}{61}{table.4.13}%
+\contentsline {table}{\numberline {Tabel 4.14}{\centering MSE dan PSNR Rekonstruksi Citra}}{63}{table.4.14}%
 \addvspace {10\p@ }
