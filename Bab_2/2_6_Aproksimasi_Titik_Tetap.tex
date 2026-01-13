@@ -1,15 +1,14 @@
 \section{Aproksimasi Titik Tetap dari Pemetaan Nonekspansif}
 Salah satu cara untuk mendapatkan titik tetap dari suatu pemetaan $f$ adalah dengan mendapatkan nilai $x_0$ yang memenuhi persamaan titik tetap yaitu, $x_0=f(x_0)$. Akan tetapi, menyelesaikan persamaan tersebut tidak selalu mudah, khususnya untuk persamaan tak linier. Oleh karena itu, nilai pendekatan atau aproksimasi dari titik tetap diperlukan. 
 
-Untuk melakukan aproksimasi, tentunya diperlukan algoritma atau dalam hal ini adalah skema iterasi yang konvergen ke titik tetap dari pemetaan tersebut. Untuk pemetaan yang bersifat kontraktif, skema iterasi Picard adalah skema iterasi paling sederhana yang dapat digunakan. Berikut adalah skema iterasi Picard
-Diberikan $X$ adalah himpunan tak kosong dan $T:X\to X$ adalah suatu pemetaan, serta $x_1\in X$, maka $\{x_n\}$ yang didefinisikan sebagai $x_{n+1}=T(x_n)$ untuk setiap $n\in\mathbb{N}$ adalah barisan yang dihasilkan oleh skema iterasi Picard. 
-Namun, skema ini tidak selalu konvergen untuk pemetaan yang bersifat nonekspansif. Sebagai ilustrasi, diberikan contoh berikut 
+Untuk melakukan aproksimasi, tentunya diperlukan algoritma atau dalam hal ini adalah skema iterasi yang konvergen ke titik tetap dari pemetaan tersebut. Untuk pemetaan yang bersifat kontraktif, skema iterasi Picard adalah skema iterasi paling sederhana yang dapat digunakan. Diberikan $X$ adalah himpunan tak kosong dan $T:X\to X$ adalah suatu pemetaan, serta $x_1\in X$, maka $\{x_n\}$ yang didefinisikan sebagai $x_{n+1}=T(x_n)$ untuk setiap $n\in\mathbb{N}$ adalah barisan yang dihasilkan oleh skema iterasi Picard. 
+Namun, skema ini tidak selalu konvergen untuk pemetaan yang bersifat nonekspansif. Sebagai ilustrasi, diberikan contoh berikut.
 \begin{exam}
     Diberikan $f:\mathbb{R}\to\mathbb{R}$ dengan $f(x)=1-x$. Pemetaan ini adalah pemetaan nonekspansif dengan titik tetap adalah $x=\frac{1}{2}$, tetapi untuk setiap $x\in \mathbb{R}\backslash \{\frac{1}{2}\}$ iterasi Picard menghasilkan barisan 
     $\{x,1-x,x,1-x,x,\dots\}$ yang divergen.
 \end{exam}
 Misalkan $W$ adalah himpunan yang tertutup dan konveks dari suatu ruang Banach, $x_0\in W$ dan $\{a_k\},\{b_k\},\{c_k\}$ adalah barisan di $(0,1]$, serta $T:W\to W$ adalah suatu pemetaan nonekspansif. 
-Pada tahun 1953, Mann memperkenalkan skema iterasinya yang konvergen untuk pemetaan nonekspansif yang diberikan sebagai berikut \cite{mann1953}
+Pada tahun 1953, Mann memperkenalkan skema iterasinya yang konvergen untuk pemetaan nonekspansif yang diberikan sebagai berikut \cite{mann1953}.
 \begin{align}
         x_{k+1} &= (1-a_k)x_k +a_k Tx_k.
 \end{align}

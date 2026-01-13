@@ -13,12 +13,20 @@ Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kos
     \end{align}
     dengan $\{a_n\}\subseteq [0,1]$ dan $\{c_n\}\subseteq [0,1]$.
 \end{defn}
+Berikut ini adalah diagram alir dari skema iterasi Sabri pada ruang $CAT_p(0)$.
+\begin{figure}[H]
+    \centering
+    \input{Bab_4/sabri.tex}
+    \caption{Diagram Alir Skema Iterasi Sabri pada Ruang $CAT_p(0)$}
+    \label{fig:skemasabricat0}
+\end{figure}
+
 Untuk selanjutnya, dinotasikan $(X,d)$ sebagai ruang $CAT_p(0)$ dengan metrik $d$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks, serta $Fix(T)$ adalah himpunan yang berisi titik tetap dari pemetaan $T$.
 \begin{lemma}\label{Lema:dxnx*}
 Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$. Jika $\{ x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat}, maka $d(x_{n+1},x^*)\leq d(x_n,x^*)$ untuk setiap $x^*\in Fix(T)$.
 \end{lemma}
 \begin{bukti}
-    Diambil sebarang $x^*\in Fix(T)$, berdasarkan Lema \ref{Lema:d,d^p} dan \ref{lemma:tutx}, didapatkan bahwa 
+    Diambil sebarang $x^*\in Fix(T)$, berdasarkan Lema \ref{lema:d,d^p} dan \ref{lemma:tutx}, didapatkan bahwa 
     \begin{align*}
         d(q_n,x^*)&=d\left(T\qty((1-b_n)x_n\oplus b_nTx_n), Tx^*\right)\\
         &\leq d\qty((1-b_n)x_n\oplus b_nTx_n,x^*)\\
@@ -47,7 +55,7 @@ Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan
     Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$. Jika $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{b_n\}\subseteq [a,b]\subset (0,1)$, maka $\lim_{n\to\infty} d(x_n,Tx_n)=0$.
 \end{lemma}
 \begin{bukti}
-    Diambil sebarang $x^*\in Fix(T)$, berdasarkan Lema \ref{Lema:d,d^p} dan \ref{lemma:tutx}, didapatkan bahwa
+    Diambil sebarang $x^*\in Fix(T)$, berdasarkan Lema \ref{lema:d,d^p} dan \ref{lemma:tutx}, didapatkan bahwa
     \begin{align*}
         d^p(q_n,x^*) &= d^p\qty(T\qty((1-b_n)x_n\oplus b_n Tx_n),x^*)\\
         &\leq d^p\qty((1-b_n)x_n\oplus b_nTx_n,x^*)\\

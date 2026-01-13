@@ -7,7 +7,9 @@ dengan $C$ dan $Q$ berturut-turut adalah himpunan bagian tertutup dan konveks da
 \begin{align}
     x=P_C(I-\gamma A^*(I-P_Q)A)x,
 \end{align}
-dengan $P_C$ dan $P_Q$ adalah proyeksi titik terdekat pada $C$ dan $Q$, secara berturut-turut, $\gamma>0$, dan $A^*$ adalah transformasi adjoin dari $A$ \cite{feng2019}. Dari permasalahan tersebut, skema iterasi Sabri dapat digunakan sebagaimana Teorema berikut.
+dengan $P_C$ dan $P_Q$ adalah proyeksi titik terdekat pada $C$ dan $Q$, secara berturut-turut, $\gamma>0$, dan $A^*$ adalah transformasi adjoin dari $A$ \cite{feng2019}. Kemudian, berdasarkan Contoh \ref{con:hilbert}, diketahui bahwa ruang Hilbert merupakan ruang $CAT(0)$ yang juga merupakan ruang $CAT_p(0)$ dengan $p=2$. Selanjutnya, berdasarkan hasil dari Byrne \cite{Byrne2003}, pemetaan $T:C\to C$ yang didefinisikan sebagai $T(x)=P_C(I-\gamma A^*(I-P_Q)A)x$ adalah pemetaan nonekspansif. Oleh karena itu, pemetaan ini juga merupakan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif.
+
+Dari permasalahan tersebut, skema iterasi Sabri dapat digunakan sebagaimana Teorema berikut.
 \begin{thm}
     Diberikan ruang Hilbert $H$ yang kompak dan $C$ adalah himpunan bagian yang tertutup dan konveks dari $H$.
     Jika permasalahan \eqref{eq:sfp} konsisten dengan solusi yang tunggal dan $\gamma\in (0,\frac{2}{k})$ dengan $k$ adalah radius spektral dari $A^*A$, maka pemetaan $T:C\to C$ yang didefinisikan sebagai $T(x)=P_C(I-\gamma A^*(I-P_Q)A)x$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif, serta barisan $\{x_n\}$ yang didefinisikan sebagai
@@ -54,7 +56,7 @@ Berikut ini diberikan data parameter yang digunakan dalam simulasi ini.
     \label{tab:placeholder}
 \end{table}
 
-Hasil simulasi ini diberikan oleh \ref{fig:rekoncit}. Pada iterasi ke-5, terlihat bahwa derau dari citra tersebut masih cukup tinggi, yang juga tertera pada nilai (\textit{peak signal noise ratio}) PSNR, yaitu 22.03 dB. Pada iterasi ke-60, nilai PSNR citra tersebut adalah 35.61 dB, yang mengindikasikan semakin sedikit derau pada citra. Nilai galat, yaitu (\textit{mean squared error}) dari citra tersebut juga relatif kecil pada iterasi ke-60, yaitu $2.7\times 10^{-4}$. Hasil ini menunjukkan bahwa skema iterasi Sabri dapat digunakan dalam rekonstruksi citra tomografi. 
+Hasil simulasi ini diberikan oleh \ref{fig:rekoncit}. Pada iterasi ke-5, terlihat bahwa derau dari citra tersebut masih cukup tinggi, yang juga tertera pada nilai (\textit{peak signal noise ratio}) PSNR, yaitu 22.03 dB. Pada iterasi ke-60, nilai PSNR citra tersebut adalah 35.61 dB, yang mengindikasikan semakin sedikit derau pada citra. Nilai galat, yaitu (\textit{mean squared error}) dari citra tersebut juga relatif kecil pada iterasi ke-60, yaitu $2.7\times 10^{-4}$, dibandingkan dengan galat pada iterasi pertama, yaitu $2\times 10^{-2}$. Pada Tabel \ref{tab:msepsnr}, terlihat bahwa nilai metrik PSNR dan MSE tersebut turun pada tiap iterasinya, sejalan dengan peningkatan kualitas citra pada Gambar \ref{fig:rekoncit}, yang menunjukkan bahwa skema iterasi Sabri dapat digunakan dalam rekonstruksi citra tomografi. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.95\linewidth]{Bab_4/citrafix.png}

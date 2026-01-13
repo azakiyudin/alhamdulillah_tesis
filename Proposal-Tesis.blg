@@ -9,44 +9,44 @@ Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: itsbib.bst
 Reallocating 'name_of_file' (item size: 1) to 8 items.
 Database file #1: Bibitem.bib
-You've used 31 entries,
+You've used 32 entries,
             2907 wiz_defined-function locations,
-            867 strings with 10708 characters,
-and the built_in function-call counts, 139343 in all, are:
-= -- 22732
-> -- 1757
+            874 strings with 10829 characters,
+and the built_in function-call counts, 143828 in all, are:
+= -- 23478
+> -- 1804
 < -- 0
-+ -- 10878
-- -- 532
-* -- 12189
-:= -- 27757
-add.period$ -- 31
-call.type$ -- 31
-change.case$ -- 403
-chr.to.int$ -- 31
-cite$ -- 31
-duplicate$ -- 492
-empty$ -- 1093
-format.name$ -- 646
-if$ -- 25020
++ -- 11234
+- -- 546
+* -- 12572
+:= -- 28652
+add.period$ -- 32
+call.type$ -- 32
+change.case$ -- 416
+chr.to.int$ -- 32
+cite$ -- 32
+duplicate$ -- 508
+empty$ -- 1122
+format.name$ -- 666
+if$ -- 25827
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 31
-newline$ -- 96
-num.names$ -- 322
-pop$ -- 108
+missing$ -- 33
+newline$ -- 99
+num.names$ -- 332
+pop$ -- 116
 preamble$ -- 1
-purify$ -- 465
+purify$ -- 480
 quote$ -- 0
-skip$ -- 418
+skip$ -- 427
 stack$ -- 0
-substring$ -- 32555
-swap$ -- 92
-text.length$ -- 434
+substring$ -- 33612
+swap$ -- 93
+text.length$ -- 448
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 120
+type$ -- 122
 warning$ -- 0
-while$ -- 677
+while$ -- 698
 width$ -- 0
-write$ -- 396
+write$ -- 409

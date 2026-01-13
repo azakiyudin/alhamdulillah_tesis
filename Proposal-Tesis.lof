@@ -1,9 +1,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {Gambar 3.1}{\ignorespaces Blok Diagram Penelitian.}}{29}{figure.3.1}%
+\contentsline {figure}{\numberline {Gambar 3.1}{\ignorespaces Blok Diagram Penelitian.}}{31}{figure.3.1}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {Gambar 4.1}{\ignorespaces Galat $d(x_n,x^*)$ (dalam log) vs iterasi}}{49}{figure.4.1}%
-\contentsline {figure}{\numberline {Gambar 4.2}{\ignorespaces Galat $d(x_n,x^*)$ (skala log) vs iterasi}}{58}{figure.4.2}%
-\contentsline {figure}{\numberline {Gambar 4.3}{\ignorespaces Hasil simulasi rekonstruksi citra}}{62}{figure.4.3}%
+\contentsline {figure}{\numberline {Gambar 4.1}{\ignorespaces Diagram Alir Skema Iterasi Sabri pada Ruang $CAT_p(0)$}}{42}{figure.4.1}%
+\contentsline {figure}{\numberline {Gambar 4.2}{\ignorespaces Galat $d(x_n,x^*)$ (dalam log) vs iterasi}}{51}{figure.4.2}%
+\contentsline {figure}{\numberline {Gambar 4.3}{\ignorespaces Galat $d(x_n,x^*)$ (skala log) vs iterasi}}{61}{figure.4.3}%
+\contentsline {figure}{\numberline {Gambar 4.4}{\ignorespaces Hasil simulasi rekonstruksi citra}}{66}{figure.4.4}%
 \addvspace {10\p@ }
