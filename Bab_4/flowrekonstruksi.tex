@@ -1,0 +1,61 @@
+\tikzstyle{startstop} = [ellipse, 
+minimum width=3cm, 
+minimum height=0.5cm,
+text centered, 
+draw=black]
+
+\tikzstyle{io} = [trapezium, 
+trapezium stretches=true, % A later addition
+trapezium left angle=70, 
+trapezium right angle=110, 
+minimum width=6cm, 
+minimum height=0.5cm, text centered, 
+draw=black]
+
+\tikzstyle{process} = [rectangle, 
+minimum height=0.5cm, 
+text centered, 
+text width=4cm, 
+draw=black]
+
+\tikzstyle{decision} = [diamond, 
+minimum width=2cm, 
+minimum height=0.5cm, 
+text centered, 
+aspect=1.8,
+inner sep=2pt,
+draw=black]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\begin{tikzpicture}[node distance=1.8cm]
+
+\node (sino) [startstop]
+{Data Sinogram};
+
+\node (data2d) [process, below left of=sino, xshift=-2cm,yshift=-0.7cm]
+{Data 2D};
+
+\node (data3d) [process, below right of=sino, xshift=2cm]
+{Data 3D};
+
+% \node (vec2d) [process, below of=data2d]
+% {Vektorisasi\\
+% data 2D};
+
+\node (slice) [process, below of=data3d]
+{\textit{Slice} menjadi\\
+potongan 2D};
+
+\node (rn) [startstop, below of=sino, yshift=-3.5cm, align=center]
+{Vektor data $\mathbb{R}^n$\\
+(Ruang Euclid)};
+
+\draw [arrow] (sino) -- (data2d);
+\draw [arrow] (sino) -- (data3d);
+
+% \draw [arrow] (data2d) -- (vec2d);
+\draw [arrow] (data3d) -- (slice);
+
+\draw [arrow] (data2d.south) |- (rn.west);
+\draw [arrow] (slice.south) |- (rn.east);
+
+\end{tikzpicture}

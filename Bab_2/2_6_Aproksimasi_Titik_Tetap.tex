@@ -7,43 +7,69 @@ Namun, skema ini tidak selalu konvergen untuk pemetaan yang bersifat nonekspansi
     Diberikan $f:\mathbb{R}\to\mathbb{R}$ dengan $f(x)=1-x$. Pemetaan ini adalah pemetaan nonekspansif dengan titik tetap adalah $x=\frac{1}{2}$, tetapi untuk setiap $x\in \mathbb{R}\backslash \{\frac{1}{2}\}$ iterasi Picard menghasilkan barisan 
     $\{x,1-x,x,1-x,x,\dots\}$ yang divergen.
 \end{exam}
-Misalkan $W$ adalah himpunan yang tertutup dan konveks dari suatu ruang Banach, $x_0\in W$ dan $\{a_k\},\{b_k\},\{c_k\}$ adalah barisan di $(0,1]$, serta $T:W\to W$ adalah suatu pemetaan nonekspansif. 
+
 Pada tahun 1953, Mann memperkenalkan skema iterasinya yang konvergen untuk pemetaan nonekspansif yang diberikan sebagai berikut \cite{mann1953}.
+\begin{defn}
+    Misalkan $W$ adalah himpunan yang tertutup dan konveks dari suatu ruang Banach, $x_0\in W$, serta $T:W\to W$ adalah suatu pemetaan nonekspansif. Barisan $\{x_k\}$ yang dihasilkan oleh skema iterasi Mann didefinisikan sebagai
 \begin{align}
-        x_{k+1} &= (1-a_k)x_k +a_k Tx_k.
+        x_{k+1} &= (1-a_k)x_k +a_k Tx_k,
 \end{align}
-Berbagai perkembangan skema iterasi juga terus bermunculan hingga saat ini dengan salah satu tujuannya adalah mencari skema iterasi yang tercepat untuk aproksimasi titik tetap dari suatu pemetaan. Untuk selanjutnya, berikut ini diberikan skema iterasi yang konvergen ke titik tetap dari pemetaan nonekspansif diperumum oleh Agarwal, Abbas dan Nazir, Thakur, Ahmad dkk. serta Sabri dkk. secara berurutan \cite{agarwal,abbas,Thakur2016,Ahmad2021,sabri2025}. 
-\begin{align}\label{eq:itagarwal}
+dengan $\{a_k\}\subseteq (0,1]$.
+\end{defn}
+Berbagai perkembangan skema iterasi juga terus bermunculan hingga saat ini dengan salah satu tujuannya adalah mencari skema iterasi yang tercepat untuk aproksimasi titik tetap dari suatu pemetaan. Untuk selanjutnya, berikut ini diberikan skema iterasi yang konvergen ke titik tetap dari pemetaan nonekspansif diperumum di ruang Banach.
+\begin{defn}\cite{agarwal}
+    Misalkan $W$ adalah himpunan yang tertutup dan konveks dari suatu ruang Banach, $x_0\in W$, serta $T:W\to W$ adalah suatu pemetaan nonekspansif. Barisan $\{x_k\}$ yang dihasilkan oleh skema iterasi Agarwal didefinisikan sebagai
+    \begin{align}\label{eq:itagarwal}
     \begin{cases}
         y_k &= (1-b_k)x_k+b_kTx_k,\\
-        x_{k+1} &= (1-a_k)Tx_k +a_k Ty_k.
+        x_{k+1} &= (1-a_k)Tx_k +a_k Ty_k,
     \end{cases}
 \end{align}
-\begin{align}\label{eq:itabbas}
+dengan $\{a_k\},\{b_k\}\subseteq (0,1)$.
+\end{defn} 
+\begin{defn}\cite{abbas}
+    Misalkan $W$ adalah himpunan yang tertutup dan konveks dari suatu ruang Banach, $x_0\in W$, serta $T:W\to W$ adalah suatu pemetaan nonekspansif. Barisan $\{x_k\}$ yang dihasilkan oleh skema iterasi Abbas didefinisikan sebagai
+    \begin{align}\label{eq:itabbas}
     \begin{cases}
         q_k &= (1-c_k)x_k+c_kTx_k,\\
         y_k &= (1-b_k)Tx_k +b_kTq_k,\\
-        x_{k+1} &= (1-a_k)Ty_k+a_kTq_k.
+        x_{k+1} &= (1-a_k)Ty_k+a_kTq_k,
     \end{cases}
 \end{align}
-\begin{align}\label{eq:itthakur}
+dengan $\{a_k\},\{b_k\},\{c_k\}\subseteq (0,1)$.
+\end{defn}
+\begin{defn}\cite{Thakur2016}
+    Misalkan $W$ adalah himpunan yang tertutup dan konveks dari suatu ruang Banach, $x_0\in W$, serta $T:W\to W$ adalah suatu pemetaan nonekspansif yang memenuhi kondisi $(C)$. Barisan $\{x_k\}$ yang dihasilkan oleh skema iterasi Thakur didefinisikan sebagai
+    \begin{align}\label{eq:itthakur}
     \begin{cases}
         q_k &= (1-c_k)x_k+c_kTx_k,\\
         y_k &= T((1-b_k)x_k +b_k q_k),\\
-        x_{k+1} &= Ty_k.
+        x_{k+1} &= Ty_k,
     \end{cases}
 \end{align}
-\begin{align}\label{eq:itjk}
+dengan $\{a_k\},\{b_k\},\{c_k\}\subseteq (0,1)$.
+\end{defn}
+\begin{defn}\cite{Ahmad2021}
+    Misalkan $W$ adalah himpunan yang tertutup dan konveks dari suatu ruang Banach, $x_0\in W$, serta $T:W\to W$ adalah suatu pemetaan nonekspansif tipe Reich-Suzuki. Barisan $\{x_k\}$ yang dihasilkan oleh skema iterasi JK didefinisikan sebagai
+    \begin{align}\label{eq:itjk}
     \begin{cases}
         q_k &= (1-c_k)x_k+c_kTx_k,\\
         y_k &= Tq_k,\\
-        x_{k+1} &= T((1-a_k)Tq_k+a_kTy_k).
+        x_{k+1} &= T((1-a_k)Tq_k+a_kTy_k),
     \end{cases}
 \end{align}
-\begin{align}\label{eq:itSabri}
+dengan $\{a_k\},\{c_k\}\subseteq (0,1)$.
+\end{defn}
+\begin{defn}\cite{sabri2025}
+    Misalkan $W$ adalah himpunan yang tertutup dan konveks dari suatu ruang Banach, $x_0\in W$, serta $T:W\to W$ adalah suatu pemetaan nonekspansif tipe Reich-Suzuki. Barisan $\{x_k\}$ yang dihasilkan oleh skema iterasi Sabri didefinisikan sebagai
+    \begin{align}\label{eq:itSabri}
     \begin{cases}
         q_k &= T\qty(\qty(1-c_k)x_k+c_kTx_k),\\
         y_k &= T\qty(Tq_k),\\
-        x_{k+1} &= T\qty((1-a_k)Tq_k+a_kTy_k).
+        x_{k+1} &= T\qty((1-a_k)Tq_k+a_kTy_k),
     \end{cases}
 \end{align}
+dengan $\{a_k\},\{c_k\}\subseteq (0,1)$.
+\end{defn}
+
+

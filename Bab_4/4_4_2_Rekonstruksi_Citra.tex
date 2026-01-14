@@ -12,7 +12,8 @@ dengan $P_C$ dan $P_Q$ adalah proyeksi titik terdekat pada $C$ dan $Q$, secara b
 Dari permasalahan tersebut, skema iterasi Sabri dapat digunakan sebagaimana Teorema berikut.
 \begin{thm}
     Diberikan ruang Hilbert $H$ yang kompak dan $C$ adalah himpunan bagian yang tertutup dan konveks dari $H$.
-    Jika permasalahan \eqref{eq:sfp} konsisten dengan solusi yang tunggal dan $\gamma\in (0,\frac{2}{k})$ dengan $k$ adalah radius spektral dari $A^*A$, maka pemetaan $T:C\to C$ yang didefinisikan sebagai $T(x)=P_C(I-\gamma A^*(I-P_Q)A)x$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif, serta barisan $\{x_n\}$ yang didefinisikan sebagai
+    Jika permasalahan \eqref{eq:sfp} konsisten dengan solusi yang tunggal dan $\gamma\in (0,\frac{2}{k})$ dengan $k$ adalah radius spektral dari $A^*A$, maka pemetaan $T:C\to C$ yang didefinisikan sebagai $$T(x)=P_C(I-\gamma A^*(I-P_Q)A)x$$ 
+    merupakan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif, serta barisan $\{x_n\}$ yang didefinisikan sebagai
     \begin{align}
         \begin{cases}
             q_n &= T\qty((1-c_n)x_n\oplus c_n T(x_n))\\
@@ -26,14 +27,55 @@ Dari permasalahan tersebut, skema iterasi Sabri dapat digunakan sebagaimana Teor
     \end{bukti}
 \end{thm}
 
-Hasil ini dapat diterapkan pada permasalahan rekonstruksi citra tomografi. Permasalahan tersebut memiliki peranan penting dalam dunia medis, khususunya dalam rekonstruksi citra sinar-X, yang datanya berupa proyeksi yang dikenal sebagai sinogram. Pada umumnya, rekonstruksi citra organ tubuh dari data sinogram dilakukan menggunakan proyeksi mundur berfilter (\textit{filtered back projection}). Dari segi waktu komputasi, metode ini relatif cepat dalam menghasilkan citra. Namun, metode tersebut memiliki keterbatasan dalam kualitas citra yang dihasilkan, akibat tingginya tingkat derau. Untuk mereduksi derau pada citra hasil rekonstruksi, metode ini memerlukan dosis radiasi yang lebih tinggi pada pasien, yang berpotensi menimbulkan dampak negatif pada kesehatan pasien. Sebagai alternatif, rekonstruksi citra dapat dilakukan menggunakan proyeksi mundur tanpa filter yang dikombinasikan dengan algoritma skema iterasi. Pendekatan ini terbukti mampu mereduksi derau secara signifikan, yaitu sekitar 40\% sampai 70\% dibandingkan dengan metode proyeksi mundur berfilter \cite{Ramage2023}. 
+Hasil ini dapat diterapkan pada permasalahan rekonstruksi citra tomografi. Permasalahan tersebut memiliki peranan penting dalam dunia medis, khususnya dalam rekonstruksi citra sinar-X, yang datanya berupa proyeksi yang dikenal sebagai sinogram. Pada umumnya, rekonstruksi citra organ tubuh dari data sinogram dilakukan menggunakan proyeksi mundur berfilter (\textit{filtered back projection}). Dari segi waktu komputasi, metode ini relatif cepat dalam menghasilkan citra. Namun, metode tersebut memiliki keterbatasan dalam kualitas citra yang dihasilkan, akibat tingginya tingkat derau. Untuk mereduksi derau pada citra hasil rekonstruksi, metode ini memerlukan dosis radiasi yang lebih tinggi pada pasien, yang berpotensi menimbulkan dampak negatif pada kesehatan pasien. Sebagai alternatif, rekonstruksi citra dapat dilakukan menggunakan proyeksi mundur tanpa filter yang dikombinasikan dengan algoritma skema iterasi. Pendekatan ini terbukti mampu mereduksi derau secara signifikan, yaitu sekitar 40\% sampai 70\% dibandingkan dengan metode proyeksi mundur berfilter \cite{Ramage2023}. 
+
+Berikut ini diberikan gambaran bagaimana skema iterasi Sabri dapat diterapkan dalam rekonstruksi citra tomografi di ruang $CAT_p(0)$.
+\begin{figure}[H]
+    \centering
+    \input{Bab_4/flowrekonstruksi.tex}
+    \caption{\centering Diagram Data Sinogram ke Ruang Euclid dalam Rekonstruksi Citra}
+\end{figure}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1.1, every node/.style={transform shape}]
+
+
+\draw[thick,fill=yellow!10] (-6,-3.7) rectangle (6,3.7);
+\node at (0,-3.4) {Ruang Metrik Geodesik};
+
+\draw[thick,fill=green!10] (-5,-2.9) rectangle (5,2.9);
+\node at (0,-2.55) {Ruang $CAT_p(0)$};
+
+\draw[thick, fill=gray!10] (-4,-2.1) rectangle (4,2.1);
+\node at (0,-1.7) {Ruang $CAT(0)$};
+
+\draw[thick, fill=blue!20] (-3,-1.3) rectangle (3,1.3);
+\node at (0,-0.9) {Ruang Hilbert};
+
+\draw[thick,fill=red!20] (-2,-0.5) rectangle (2,0.5);
+\node at (0,0) {Ruang Euclid $\mathbb{R}^n$};
+
+
+\end{tikzpicture}
+\caption{\centering Hubungan ruang Euclid, Hilbert, $CAT(0)$, $CAT_p(0)$, dan ruang metrik geodesik}
+\end{figure}
+
 
 Pada bagian ini, dilakukan simulasi rekonstruksi citra tomografi berbasis skema iterasi Sabri. Transformasi maju $A$ yang digunakan adalah transformasi Radon, sedangkan himpunan batas $C$ dan $Q$ adalah himpunan bagian yang konveks dari suatu ruang Euclid, yang masing-masing merepresentasikan solusi \textit{feasible} untuk citra dan domain proyeksi. Pada simulasi ini, digunakan bahasa pemrograman Python dengan bantuan pustaka Scikit-image. Data citra yang digunakan adalah Shepp-Logan Phantom $x^*\in \mathbb{R}^n$ dengan resolusi $512\times 512$. Shepp-Logan Phantom dipilih karena merupakan model sintetik yang dirancang untuk menyerupai potongan gambar bagian dalam kepala manusia, sehingga sering digunakan dalam penelitian tomografi untuk menguji kemampuan algoritma rekonstruksi dalam membedakan struktur dengan tingkat kontras yang berbeda. Selanjutnya, data sinogram dibentuk sebagai $Q=Ax^*$ dengan menerapkan transformasi Radon pada sudut-sudut proyeksi yang terdistribusi merata pada interval $[0,180^{\circ})$. Tujuan simulasi ini adalah merekonstruksi citra $x^*$ berdasarkan data sinogram tersebut menggunakan skema iterasi Sabri. Untuk itu, digunakan pemetaan 
-\begin{align*}
+\begin{align}\label{eq:rekonoperator}
     T(x)=P_C(x-\gamma A^*(Ax-Q)),
-\end{align*}
+\end{align}
 dengan $A^*$ merupakan aproksimasi dari transformasi adjoin $A$ yang diperoleh menggunakan proyeksi mundur tanpa filter, serta $P_C$ menyatakan operator proyeksi ke himpunan batas $C=[0,1]^n$. 
-Berikut ini diberikan data parameter yang digunakan dalam simulasi ini.
+
+Berikut ini diberikan diagram alir dari skema iterasi Sabri yang digunakan dalam simulasi rekonstruksi citra tomografi.
+\begin{figure}[H]
+    \centering
+    \input{Bab_4/diagramrekons.tex}
+    \caption{\centering Diagram alir skema iterasi Sabri untuk rekonstruksi citra tomografi}
+    \label{fig:flowrekonstruksi}
+\end{figure}
+
+Selanjutnya, pada \ref{tab:parametersim} diberikan parameter-parameter yang digunakan dalam simulasi rekonstruksi citra tomografi tersebut.
 \begin{table}[H]
     \centering
     \caption{Parameter simulasi rekonstruksi citra}
@@ -53,17 +95,27 @@ Berikut ini diberikan data parameter yang digunakan dalam simulasi ini.
     Implementasi & Google Colab dengan scikit-image, matplotlib\\
     \hline
     \end{tabular}
-    \label{tab:placeholder}
+    \label{tab:parametersim}
 \end{table}
 
-Hasil simulasi ini diberikan oleh \ref{fig:rekoncit}. Pada iterasi ke-5, terlihat bahwa derau dari citra tersebut masih cukup tinggi, yang juga tertera pada nilai (\textit{peak signal noise ratio}) PSNR, yaitu 22.03 dB. Pada iterasi ke-60, nilai PSNR citra tersebut adalah 35.61 dB, yang mengindikasikan semakin sedikit derau pada citra. Nilai galat, yaitu (\textit{mean squared error}) dari citra tersebut juga relatif kecil pada iterasi ke-60, yaitu $2.7\times 10^{-4}$, dibandingkan dengan galat pada iterasi pertama, yaitu $2\times 10^{-2}$. Pada Tabel \ref{tab:msepsnr}, terlihat bahwa nilai metrik PSNR dan MSE tersebut turun pada tiap iterasinya, sejalan dengan peningkatan kualitas citra pada Gambar \ref{fig:rekoncit}, yang menunjukkan bahwa skema iterasi Sabri dapat digunakan dalam rekonstruksi citra tomografi. 
+
+
+
+
+Data awal dari simulasi tersebut disajikan pada \ref{fig:rekoncit}. Kemudian hasil simulasi dari rekonstruksi citra tersebut pada iterasi ke-5, 10, 30, dan 60 diberikan oleh \ref{fig:rekoncit2}. Pada iterasi ke-5, terlihat bahwa derau dari citra tersebut masih cukup tinggi, yang juga tertera pada nilai (\textit{peak signal noise ratio}) PSNR, yaitu 22.03 dB. Nilai PSNR dari citra tersebut juga makin membesar pada iterasi ke-10 dan 30, serta untuk iterasi ke-60, nilai PSNR citra tersebut adalah 35.61 dB, yang mengindikasikan semakin sedikit derau pada citra.  
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\linewidth]{Bab_4/citrafix.png}
-    \caption{Hasil simulasi rekonstruksi citra}
+    \includegraphics[width=\linewidth]{Bab_4/citrafix.png}
+    \caption{Data awal sinogram dan citra asli}
     \label{fig:rekoncit}
 \end{figure}
-Untuk lebih detailnya, tabel berikut ini memberikan hasil PSNR dan MSE dari tiap langkah iterasi.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{Bab_4/citrafix2.png}
+    \caption{Hasil rekonstruksi citra pada iterasi ke-5, 10, 30, dan 60}
+    \label{fig:rekoncit2}
+\end{figure}
+Pada \ref{tab:msepsnr}, diberikan nilai metrik PSNR dan MSE dari citra hasil rekonstruksi pada tiap iterasinya. Terlihat bahwa nilai galat, yaitu (\textit{mean squared error}) dari citra tersebut relatif kecil pada iterasi ke-60, yaitu $2.7\times 10^{-4}$, dibandingkan dengan galat pada iterasi pertama, yaitu $2\times 10^{-2}$. Terlihat pula bahwa nilai metrik PSNR dan MSE tersebut turun pada tiap iterasinya, sesuai dengan peningkatan kualitas citra pada \ref{fig:rekoncit2}, yang menunjukkan bahwa skema iterasi Sabri dapat digunakan dalam rekonstruksi citra tomografi.
 \begin{longtable}{|c|>{\centering\arraybackslash}p{4cm} | >{\centering\arraybackslash}p{4cm} |}
 \caption{\centering MSE dan PSNR Rekonstruksi Citra}\label{tab:msepsnr}\\
 \hline

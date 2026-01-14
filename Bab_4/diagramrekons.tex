@@ -27,40 +27,44 @@ inner sep=2pt,
 draw=black]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
-\begin{tikzpicture}[node distance=1.4cm]
+\begin{tikzpicture}[node distance=1.4cm,scale=1, every node/.style={transform shape}]
 
 % ===== Nodes =====
 \node (start) [startstop] 
 {Mulai};
 
 \node (input) [io, below of=start,align=center,yshift=-0.3cm] 
-    {Inisialisasi nilai awal $x_0\in W$, $n=0$, batas galat $\varepsilon>0$, \\
-    batas iterasi $N$, dan parameter iterasi $\{a_n\},\{c_n\}\subseteq (0,1)$};
+    {Inisialisasi data Sinogram $Q$, gambar awal $x_0\in \mathbb{R}^n$,\\
+     $k=0$, batas iterasi $K$, dan parameter $\gamma$, $\{a_k\},\{c_k\}\subseteq (0,1)$};
 
-\node (qn) [process, below of=input,yshift=-0.3cm] 
-{$q_n = T\big((1-c_n)x_n \oplus c_n T x_n\big)$};
+\node (hitung) [process, below of=input,yshift=-0.3cm] 
+{Definisikan $T(x)$ sesuai persamaan \eqref{eq:rekonoperator}};
+
+\node (qn) [process, below of=hitung] 
+{$q_k = T\big((1-c_k)x_k + c_k T x_k\big)$};
 
 \node (yn) [process, below of=qn] 
-{$y_n = T(Tq_n)$};
+{$y_k = T(Tq_k)$};
 
 \node (xn) [process, below of=yn] 
-{$x_{n+1} = T\big((1-a_n)Tq_n \oplus a_n Ty_n\big)$};
+{$x_{k+1} = T\big((1-a_k)Tq_k + a_k Ty_k\big)$};
 
-\node (decision) [decision, below of=xn, yshift=-1.4cm,align=center] 
-{Apakah\\$d(x_{n+1},x^*)<\varepsilon$?\\atau $n\geq N$?};
+\node (decision) [decision, below of=xn, yshift=-0.8cm,align=center] 
+{Apakah\\$k\geq K$?};
 
-\node (stop) [startstop, below of=decision, yshift=-1.4cm] 
+\node (stop) [startstop, below of=decision, yshift=-0.8cm] 
 {Selesai};
 
 % ===== Arrows =====
 \draw [arrow] (start) -- (input);
-\draw [arrow] (input) -- (qn);
+\draw [arrow] (input) -- (hitung);
+\draw [arrow] (hitung) -- (qn);
 \draw [arrow] (qn) -- (yn);
 \draw [arrow] (yn) -- (xn);
 \draw [arrow] (xn) -- (decision);
 \draw [arrow] (decision) -- node[anchor=east]{Ya} (stop);
 
-\draw [arrow] (decision.east) -- ++(3,0) 
+\draw [arrow] (decision.east) -- ++(4,0) 
 node[anchor=west]{Tidak}
 |- (qn.east);
 

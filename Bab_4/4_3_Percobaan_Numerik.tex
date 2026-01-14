@@ -45,16 +45,16 @@ Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kos
     dengan $\{a_n\}\subseteq [0,1]$ dan $\{c_n\}\subseteq [0,1]$.
 \end{defn}
 
-Percobaan numerik dilakukan dengan bahasa pemrograman Python dan perangkat lunak Google Colab. Digunakan beberapa variasi parameter, baik dari nilai awal $x_0$ maupun parameter di skema iterasinya, yaitu barisan $\{a_n\},\{b_n\},\{c_n\}$.
-Pemetaan dan ruang yang digunakan dalam percobaan ini diambil dari Contoh \ref{con:abcnon} yang memiliki titik tetap $x^*=(1,1,0,0,\dots)$. Untuk hasil numerik tiap iterasi, digunakan batas galat $d(x_{n+1},x^*)<10^{-6}$, sedangkan untuk jumlah iterasi yang diperlukan untuk konvergen dari masing-masing skema iterasi, digunakan batas galat $d(x_{n+1},x^*)<10^{-16}$. Dalam percobaan ini, laju konvergensi skema iterasi Sabri \eqref{eq:sabricat} dibandingkan dengan Skema iterasi JK \eqref{eq:jkcat}, Thakur \eqref{eq:thakurcat}, Abbas \ref{eq:abbascat}, dan Agarwal \eqref{eq:agarwalcat}. Kode dari percobaan ini dapat dilihat pada Lampiran A.1.
+Percobaan numerik dilakukan dengan perangkat lunak Google Colab yang menggunakan bahasa pemrograman Python. Digunakan beberapa variasi parameter, baik dari nilai awal $x_0$ maupun parameter di skema iterasinya, yaitu barisan $\{a_n\},\{b_n\},\{c_n\}$.
+Pemetaan dan ruang yang digunakan dalam percobaan ini diambil dari Contoh \ref{con:abcnon} yang memiliki titik tetap $x^*=(1,1,0,0,\dots)$. 
 
-Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} disajikan hasil numerik dari tiap iterasi dengan nilai awal $(2,3,0,0,\dots)$ dan parameter $a_n=0.42, b_n=0.83, c_n=0.31$ untuk setiap $n\in\mathbb{N}$.
+
 \begin{table}[H]
     \centering
     \caption{Hasil numerik skema iterasi Sabri dan JK}
     \begin{tabular}{ccc}
 \hline
-\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_0$}} \\
+\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_n$}} \\
 \hline
 \textbf{n} & \textbf{Sabri} & \textbf{JK} \\
 \hline
@@ -74,7 +74,7 @@ Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} 
         \caption{Hasil numerik skema iterasi Sabri dan Thakur}
     \begin{tabular}{ccc}
 \hline
-\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_0$}} \\
+\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_n$}} \\
 \hline
 \textbf{n} & \textbf{Sabri} & \textbf{Thakur} \\
 \hline
@@ -88,12 +88,16 @@ Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} 
 \end{tabular}
     \label{tab:sabthkur}
 \end{table}
+Untuk hasil numerik tiap iterasi, digunakan batas galat $d(x_{n+1},x^*)<10^{-6}$, sedangkan untuk jumlah iterasi yang diperlukan untuk konvergen dari masing-masing skema iterasi, digunakan batas galat $d(x_{n+1},x^*)<10^{-16}$. Dalam percobaan ini, laju konvergensi skema iterasi Sabri \eqref{eq:sabricat} dibandingkan dengan Skema iterasi JK \eqref{eq:jkcat}, Thakur \eqref{eq:thakurcat}, Abbas \ref{eq:abbascat}, dan Agarwal \eqref{eq:agarwalcat}. Kode dari percobaan ini dapat dilihat pada Lampiran A.1.
+
+Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} disajikan hasil numerik dari tiap iterasi dengan nilai awal $(2,3,0,0,\dots)$ dan parameter $a_n=0.42, b_n=0.83, c_n=0.31$ untuk setiap $n\in\mathbb{N}$.
+
 \begin{table}[H]
     \centering
         \caption{Hasil numerik skema iterasi Sabri dan Abbas}
     \begin{tabular}{ccc}
 \hline
-\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_0$}} \\
+\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_n$}} \\
 \hline
 \textbf{n} & \textbf{Sabri} & \textbf{Thakur} \\
 \hline
@@ -113,7 +117,7 @@ Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} 
 % \begin{longtable}{ccc}
 % \caption{\centering Hasil numerik skema iterasi Sabri dan Abbas}\\
 % \hline
-% \textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_0$}} \\
+% \textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_n$}} \\
 % \hline
 % \textbf{n} & \textbf{Sabri} & \textbf{Abbas} \\
 % \hline
@@ -142,7 +146,7 @@ Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} 
         \caption{Hasil numerik skema iterasi Sabri dan Agarwal}
     \begin{tabular}{ccc}
 \hline
-\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_0$}} \\
+\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_n$}} \\
 \hline
 \textbf{n} & \textbf{Sabri} & \textbf{Agarwal} \\
 \hline
@@ -161,7 +165,7 @@ Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} 
 \end{tabular}
     \label{tab:sabag}
 \end{table}
-
+\newpage
 Dengan galat kurang dari $10^{-6}$, skema iterasi Sabri hanya membutuhkan 3 iterasi dibanding dengan JK dan Thakur (5 iterasi), Abbas (7 iterasi), dan Agarwal (10 iterasi). Pada \ref{tab:galat}, diberikan pula nilai galat $d(x_n,x^*)$ dari tiap iterasi. \ref{fig:galatperc} juga memberikan gambaran mengenai penurunan galatnya. 
 \begin{longtable}{cccccc}
 \caption{\centering Galat $d(x_n, x^*)$}\label{tab:galat}\\
@@ -217,7 +221,7 @@ $\mathbf{n}$ & \textbf{Sabri} & \textbf{JK} & \textbf{Thakur} & \textbf{Abbas} &
 % \end{table}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.78\linewidth]{Bab_4/galatpercobaan.png}
+    \includegraphics[width=0.82\linewidth]{Bab_4/galatpercobaan.png}
     \caption{Galat $d(x_n,x^*)$ (dalam log) vs iterasi}
     \label{fig:galatperc}
 \end{figure}
@@ -310,8 +314,8 @@ $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
     \centering
     \begin{tabular}{cccccc}
 \hline
-% \textbf{Nilai Awal} & \multicolumn{5}{c}{\textbf{Jumlah Iterasi}} \\
-% \hline
+\textbf{Nilai Awal} & \multicolumn{5}{c}{\textbf{Jumlah Iterasi}} \\
+\hline
 $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \hline
 (2.0, 3.0, 0, 0, \dots) & 7 & 10 & 14 & 24 & 26 \\
@@ -330,8 +334,8 @@ $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
     \centering
     \begin{tabular}{cccccc}
 \hline
-% \textbf{Nilai Awal} & \multicolumn{5}{c}{\textbf{Jumlah Iterasi}} \\
-% \hline
+\textbf{Nilai Awal} & \multicolumn{5}{c}{\textbf{Jumlah Iterasi}} \\
+\hline
 $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \hline
 (2.0, 3.0, 0, 0, \dots) & 8 & 10 & 15 & 12 & 28 \\
@@ -345,5 +349,5 @@ $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \end{tabular}
     \label{tab:paramturunnaik}
 \end{table}
-
-Hasil tersebut menunjukkan bahwa skema iterasi Sabri memiliki laju konvergensi yang lebih baik daripada yang lainnya secara numerik. Dengan parameter tertentu, skema tersebut hanya membutuhkan 7 iterasi untuk konvergen ke titik tetapnya dengan galat kurang dari $10^{-16}$. 
+\newpage
+Hasil tersebut menunjukkan bahwa skema iterasi Sabri memiliki laju konvergensi yang lebih baik daripada yang lainnya secara numerik. Dengan parameter tertentu, skema tersebut hanya membutuhkan 7 iterasi untuk konvergen ke titik tetapnya dengan galat kurang dari $10^{-16}$. Hasil ini secara intuitif dapat dijelaskan dari struktur iterasi Sabri yang melibatkan komposisi pemetaan nonekspansif $T$ secara berlapis pada setiap langkah iterasi, sehingga jarak barisan iterasi terhadap titik tetap berkurang lebih signifikan pada setiap iterasi dibandingkan dengan skema iterasi lainnya.
