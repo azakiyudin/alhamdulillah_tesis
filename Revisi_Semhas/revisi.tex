@@ -1,0 +1,351 @@
+\documentclass[10pt,openany,a4paper]{article}
+\usepackage{tikz, pgfplots, tkz-euclide,calc}
+    \usetikzlibrary{patterns,snakes,shapes.arrows}
+\usepackage{fancyhdr}
+\usepackage{enumerate,hyperref,enumitem}
+\usepackage{cancel}
+\usepackage{varwidth}
+
+% TAMBAHKAN PACKAGE SENDIRI KALAU KURANG
+
+\usepackage{geometry}
+\geometry{
+	total = {210mm, 148.5mm},
+	left = 30mm,
+	right = 30mm,
+	top = 30mm,
+	bottom = 30mm,
+}
+
+% \fancyhead{}
+% \fancyfoot{}
+% \fancyhead[r]{}
+% \fancyhead[l]{\fbox{\large{\textbf{@ahmadzakiyudin\_}}}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{soul}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{afterpage}
+\usepackage{xcolor}
+\usepackage[nosectionbib]{apacite}
+\usepackage{lmodern}
+\usepackage{mathtools}
+\usepackage{upgreek}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{hyperref}
+\renewcommand{\baselinestretch}{1.25}
+\usepackage{multicol}
+\usepackage{ragged2e,scalerel,amsmath,multicol,gensymb,setspace,
+fancyhdr,amsfonts,tikz,pgfplots,nccmath,enumerate,verbatim,amsthm,physics}
+\usepgfplotslibrary{polar,fillbetween}
+\usepgflibrary{shapes.geometric}
+\usetikzlibrary{calc,patterns,arrows}
+\newcommand\mylog[1]{\mathop{{}^{#1}\mathrm{log}}}
+\pgfplotsset{compat=1.15}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+\usepackage{etoolbox}
+\makeatother
+\newtheorem{defn}{Definisi}[section]
+\newtheorem{teo}[defn]{Teorema}
+\newtheorem{thm}{Teorema}[section]
+\newtheorem{lemma}{Lemma}
+\newtheorem{lemmas}[defn]{Lemma}
+
+\newtheorem{cor}[defn]{Akibat}
+\newtheorem{asumsi}[defn]{Asumsi}
+\theoremstyle{definition}
+\newtheorem{con}{Contoh}[section]
+\theoremstyle{definition}
+\theoremstyle{plain}
+\newtheorem{prop}{Proposisi}[section]
+\newcommand{\longdiv}{\smash{\mkern-0.43mu\vstretch{1.31}{\hstretch{.7}{)}}\mkern-5.2mu\vstretch{1.31}{\hstretch{.7}{)}}}}
+
+% \pagestyle{fancy}
+% \fancyhf{}
+% \lhead{Halaman \thepage}
+% \rhead{Pembahasan Soal ETS 2023/2024 \\ (\href{https://instagram.com/ahmadzakiyudin_/}{@ahmadzakiyudin\_})}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+}
+\newenvironment{jawab}[2][tes]{
+\fbox{\begin{minipage}{14.65cm}
+\textbf{Kata kunci materi:} #1.\\
+\textbf{Pembahasan:}\\ #2
+\end{minipage}}}{}
+
+\newenvironment{jawab2}[2][tes]{
+\fbox{\begin{minipage}{14.65cm}
+ #2
+\end{minipage}}}{}
+
+\newenvironment{jawaban}[2][tes]{
+\colorlet{oldcolor}{.}
+        \color{red}
+        \setlength{\fboxrule}{1pt}\boxed{\color{oldcolor}#2}\color{oldcolor}.
+}{}
+
+\newenvironment{jawaban2}[2][tes]{
+\colorlet{oldcolor}{.}
+        \color{red}
+        \setlength{\fboxrule}{1pt}\fbox{\color{oldcolor}#2}\color{oldcolor}.
+}{}
+
+\newenvironment{penting}[2][tes]{
+\colorlet{oldcolor}{.}
+\color{blue}
+\fbox{\color{oldcolor}#2}\color{oldcolor}
+}{}
+\renewcommand{\proofname}{Bukti}
+\renewcommand{\thethm}{\arabic{chapter}.\arabic{thm}}
+
+\newcommand{\normlp}[1]{\left\|#1\right\|_{L^p_{\lambda}(0,T;H)}}% Fungsi norm (||x||)
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\natural}{\mathbb{N}}
+\newcommand{\Xpl}{X^R_{p,\lambda}}
+\newcommand{\Xpls}{X^R_{p,\lambda^*}}
+\newcommand{\qpl}{q^R_{p,\lambda}}
+\newcommand{\qpls}{q^R_{p,\lambda^*}}
+
+\begin{document}
+\section*{Revisi Seminar Hasil}
+Berikut adalah revisi dari beberapa masukan yang diperoleh pada seminar hasil:
+\begin{itemize}
+    \item Dr. Mahmud Yunus, S. Si, M. Si:
+    \begin{enumerate}
+        \item Perbaikan penulisan di seluruh buku tesis.\\
+        \textbf{Revisi:} Sudah diperbaiki di seluruh dokumen tesis, utamanya pada definisi ruang metrik geodesik yaitu Definisi 2.2.1.
+        \item Perlu dipertimbangkan untuk menyesuaikan judul dan pembahasan.\\
+        \textbf{Revisi:} Judul dan pembahasan sudah disesuaikan dengan masukan tersebut.
+        \item Apa jaminan kode yang dibuat sesuai dengan teori yang ada?\\
+        \textbf{Revisi:} Ditambahkan \textit{flowchart} yang menunjukkan alur kerja kode, yaitu pada Gambar 4.1.
+    \end{enumerate}
+    \item Dr. Sunarsini, S. Si, M. Si:
+    \begin{enumerate}
+        \item Jarak spasi pada abstrak bahasa Inggris.\\
+        \textbf{Revisi:} Sudah diperbaiki pada halaman v. 
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{1_abstrak.jpg}
+        \end{figure}
+        
+
+        \item Penjelasan simbol metrik pada daftar notasi.\\
+        \textbf{Revisi:} Sudah diperbaiki pada halaman xv.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{2_metrik.jpg}
+        \end{figure}
+        
+
+        \item Konstanta $C$ pada bagian latar belakang.\\
+        \textbf{Revisi:} Diganti menjadi $c$ pada pada halaman 1.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{3_konstanc.jpg}
+        \end{figure}
+        
+\newpage
+        \item Penamaan subbab 2.2 menjadi Ruang Metrik Geodesik.\\
+        \textbf{Revisi:} Diganti menjadi "Ruang Metrik Geodesik" pada halaman 7.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{4_metrik_geodesik.jpg}
+        \end{figure}
+        
+
+        \item Contoh ruang metrik geodesik dan bukan ruang metrik geodesik.\\
+        \textbf{Revisi:} Ditambahkan contoh dan penjelasannya pada halaman 8, yaitu Contoh 2.2.1 dan Contoh 2.2.2.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{5_contoh_geodesik.jpg}
+        \end{figure}
+        
+
+        \item Contoh segitiga geodesik.\\
+        \textbf{Revisi:} Ditambahkan contoh dan penjelasannya pada halaman 9, yaitu Contoh 2.2.3.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{6_contoh_segitiga_geodesik.jpg}
+        \end{figure}
+        
+
+        \item Contoh titik pada segitiga geodesik.\\
+        \textbf{Revisi:} Ditambahkan contoh dan penjelasannya pada halaman 9, yaitu Contoh 2.2.3.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{6.1_contoh_segitiga_geodesik.jpg}
+        \end{figure}
+        
+\newpage
+        \item Penulisan deskripsi ruang $CAT_p(0)$.\\
+        \textbf{Revisi:} Sudah diperbaiki pada halaman 9.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{7_ruang_catp.jpg}
+        \end{figure}
+        
+
+        \item Contoh segitiga komparasi.\\
+        \textbf{Revisi:} Ditambahkan contoh dan penjelasannya pada halaman 10, yaitu Contoh 2.3.1.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{8_contoh_segitiga_komparasi.jpg}
+        \end{figure}
+        
+
+        \item Contoh ruang $CAT(0)$.\\
+        \textbf{Revisi:} Ditambahkan contoh dan penjelasannya pada halaman 10, yaitu Contoh 2.3.2 dan Contoh 2.3.3.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{9_contoh_ruang_catp.jpg}
+        \end{figure}
+        
+
+        \item Penjelasan ruang $\ell^p$ adalah ruang geodesik.\\
+        \textbf{Revisi:} Ditambahkan penjelasannya pada halaman 11 Ditambahkan pula contoh ruang $CAT_p(0)$ yang bukan ruang Banach dan bukan ruang $CAT(0)$ pada Contoh 2.3.6.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{10_lp_geodesik.jpg}
+        \end{figure}
+        
+\newpage
+        \item Contoh barisan konvergen di ruang $CAT_p(0)$.\\
+        \textbf{Revisi:} Ditambahkan contoh barisan konvergen-$\Delta$, yaitu Contoh 2.3.10 pada halaman 16, dan tidak konvergen-$\Delta$, yaitu Contoh 2.3.11 pada halaman 17, serta contoh konvergen kuat pada Contoh 2.3.12 halaman 18.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{11_contoh_konvergen.jpg}
+        \end{figure}
+        
+
+        \item Contoh pemetaan yang memenuhi sifat demiclosedness.\\
+        \textbf{Revisi:} Ditambahkan contoh dan penjelasannya pada halaman 18, yaitu Contoh 2.3.13.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{12_contoh_demiclosedness.jpg}
+        \end{figure}
+        
+
+        \item Contoh fungsi yang memenuhi kondisi konveks secara geodesik serta proper lower semicontinuous.\\
+        \textbf{Revisi:} Definisi dipindahkan ke bab 4.4 dan ditambahkan contoh serta penjelasannya pada Contoh 4.4.2 halaman 57.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{14_contoh_fungsi.jpg}
+    \end{figure}
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{14.1_definisi_fungsi.jpg}
+        \end{figure}
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{23_definisi_konveks.jpg}
+        \end{figure}
+        
+
+        \item Contoh pemetaan nonekspansif dan perumumannya.\\
+        \textbf{Revisi:} Ditambahkan contoh dan penjelasannya, yaitu Contoh 2.4.1-2.4.7 pada halaman 20-27.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{15_contoh_pemetaan.jpg}
+        \end{figure}
+        
+
+        \item Definisi pemetaan $\alpha$-nonekspansif.\\
+        \textbf{Revisi:} Perbaikan Definisi 2.4.5 pada halaman 23.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{16_definisi_alpha.jpg}
+        \end{figure}
+        
+
+    \item Kalimat pengantar pemetaan $(\alpha,\beta,\gamma)$-nonekspansif.\\
+    \textbf{Revisi:} Perbaikan kalimat pengantar pada halaman 26.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{17_bahasa_pemetaan_abc.jpg}
+        \end{figure}
+        
+\newpage
+        \item Penulisan bagian aproksimasi titik tetap pemetaan nonekspansif.\\
+        \textbf{Revisi:} Sudah diperbaiki pada halaman 27-29.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{18_titik_picard.jpg}
+        \end{figure}
+        \begin{figure}[H]
+    \centering 
+    \includegraphics[width=0.85\textwidth]{19_susunan_paragraf.jpg}
+        \end{figure}
+        
+
+        \item Penjelasan titik tetap dari pemetaan yang digunakan.\\
+        \textbf{Revisi:} Ditambahkan penjelasannya pada Contoh 4.1.1 halaman 36-42.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{20_titap_pemetaan.jpg}
+        \end{figure}
+        
+
+        \item Contoh operator resolvent.\\
+        \textbf{Revisi:} Ditambahkan contoh dan penjelasannya pada halaman 55-56, yaitu Contoh 4.4.1.
+
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{21_contoh_resolvent.jpg}
+        \end{figure}
+
+        \item Pemilihan titik pada matriks hessian.\\
+        \textbf{Revisi:} Ditambahkan penjelasannya pada halaman 57.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{22_hessian.jpg}
+        \end{figure}
+        
+\newpage
+        \item Penjelasan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di ruang Hilbert.\\
+        \textbf{Revisi:} Ditambahkan penjelasannya dengan diagram venn pada Gambar 4.5 halaman 66.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{24_pemetaan_hilbert.jpg}
+        \end{figure}
+        
+
+        \item Poin 2 di bagian kesimpulan.\\
+        \textbf{Revisi:} Bagian yang ditandai dihapus.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{25_kesimpulan_p2.jpg}
+        \end{figure}
+        
+
+        \item Poin 3 di bagian kesimpulan.\\
+         \textbf{Revisi:} Sudah diperjelas pada halaman 74.
+        \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{26_kesimpulan_p3.jpg}
+        \end{figure}
+       
+
+    \end{enumerate}
+    \item Dr. Imam Mukhlash, S. Si, MT:
+    \begin{enumerate}
+        \item Mengapa Sabri lebih cepat konvergen, untuk semua kondisi?\\
+        \textbf{Revisi:} Ditambahkan penjelasannya pada halaman 55.
+        \item Geodesik $\to$ tomografi?\\
+        \textbf{Revisi:} Ditambahkan Gambar 4.4 dan 4.5 yang menjelaskan alur geodesik dalam rekonstruksi citra tomografi, yaitu pada halaman 65 dan 66.
+        \item Metrik rekonstruksi?\\
+        \textbf{Revisi:} Sudah ada pada halaman 69-71.
+        \item Flowchart/algoritma Sabri?\\
+        \textbf{Revisi:} Ditambahkan flowchart pada halaman 44, yaitu Gambar 4.1.
+    \end{enumerate}
+\end{itemize}
+
+\end{document}

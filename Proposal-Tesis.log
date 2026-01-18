@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.21)  15 JAN 2026 03:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.21)  17 JAN 2026 20:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1476,7 +1476,7 @@ l.352 \newpage
 [57]
 
 [58] [59] [60] [61] [62]
-<Bab_4/galatsim.png, id=849, 865.0719pt x 612.8496pt>
+<Bab_4/galatsim.png, id=850, 865.0719pt x 612.8496pt>
 File: Bab_4/galatsim.png Graphic file (type png)
 <use Bab_4/galatsim.png>
 Package pdftex.def Info: Bab_4/galatsim.png  used on input line 272.
@@ -1518,12 +1518,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) h
                                                   \__shipout_drop_firstpage_...
 l.100 
       ]
-<Bab_4/citrafix.png, id=888, 714.7503pt x 347.6187pt>
+<Bab_4/citrafix.png, id=889, 714.7503pt x 347.6187pt>
 File: Bab_4/citrafix.png Graphic file (type png)
 <use Bab_4/citrafix.png>
 Package pdftex.def Info: Bab_4/citrafix.png  used on input line 108.
 (pdftex.def)             Requested size: 398.3386pt x 193.7369pt.
-<Bab_4/citrafix2.png, id=889, 714.7503pt x 717.6411pt>
+<Bab_4/citrafix2.png, id=890, 714.7503pt x 717.6411pt>
 File: Bab_4/citrafix2.png Graphic file (type png)
 <use Bab_4/citrafix2.png>
 Package pdftex.def Info: Bab_4/citrafix2.png  used on input line 114.
@@ -1662,7 +1662,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 \foto=\box95
-<foto.jpg, id=1566, 1484.54625pt x 2227.32124pt>
+<foto.jpg, id=1567, 1484.54625pt x 2227.32124pt>
 File: foto.jpg Graphic file (type jpg)
 <use foto.jpg>
 Package pdftex.def Info: foto.jpg  used on input line 1.
@@ -1678,17 +1678,17 @@ Package rerunfilecheck Info: File `Proposal-Tesis.out' has not changed.
 (rerunfilecheck)             Checksum: 54758DB4332F9DD9B0FB20628F01BA1E;5495.
  ) 
 Here is how much of TeX's memory you used:
- 36287 strings out of 468134
- 725304 string characters out of 5428804
- 1583758 words of memory out of 5000000
- 63335 multiletter control sequences out of 15000+600000
+ 36289 strings out of 468134
+ 725345 string characters out of 5428804
+ 1582759 words of memory out of 5000000
+ 63337 multiletter control sequences out of 15000+600000
  673820 words of font info for 141 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,18n,121p,1585b,2769s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Proposal-Tesis.pdf (117 pages, 1562615 bytes).
+Output written on Proposal-Tesis.pdf (117 pages, 1562832 bytes).
 PDF statistics:
- 1831 PDF objects out of 2073 (max. 8388607)
+ 1832 PDF objects out of 2073 (max. 8388607)
  871 named destinations out of 1000 (max. 500000)
  339 words of extra memory for PDF output out of 10000 (max. 10000000)
 

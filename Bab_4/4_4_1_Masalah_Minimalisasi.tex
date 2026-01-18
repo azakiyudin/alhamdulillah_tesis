@@ -25,7 +25,7 @@ Permasalahan ini merupakan permasalahan penting dalam bidang optimasi dan analis
 
 Untuk fungsi yang memenuhi kondisi konveks dan \textit{proper lower semi-continuous}, himpunan solusi dari masalah \eqref{eq:minprob} sama dengan himpunan titik tetap dari operator resolvent $J^f_{\lambda}$ (lihat proposisi 6.5 pada \cite{ArizaRuiz2014}). Berikut ini diberikan definisi dari fungsi yang memenuhi kondisi tersebut dengan contoh yang diberikan pada Contoh \ref{con:fkonvk}.
 
-\begin{defn}\cite{Khamsi2017}
+\begin{defn}\cite{Khamsi2017}\label{def:konvgeodesik}
     Diberikan $(X,d)$ adalah ruang $CAT_p(0)$. Suatu fungsi $f:X\to \mathbb{R}\cup \{+\infty\}$ disebut konveks secara geodesik jika untuk setiap $t\in(0,1)$ dan $x,y\in X$, berlaku
     \begin{align*}
         f(tx\oplus (1-t)y)\leq tf(x)+(1-t)f(y).
@@ -98,7 +98,7 @@ Penjelasan dari Contoh \ref{con:fkonvk} diberikan sebagai berikut.
         \lambda_{1,2} = \frac{-810 \pm \sqrt{810^2-4(2692800)}}{2},
     \end{align*}
     yang jelas memiliki akar negatif. Jadi ada $x\in W$ sehingga matriks Hessian $H$ memiliki nilai eigen negatif, yang berarti $H$ bukan matriks semidefinit positif. Akibatnya $f$ bukanlah fungsi konveks dalam definisi klasik. 
-    \item Kedua, ditunjukkan bahwa $f$ adalah fungsi konveks secara geodesik. Sebelum itu, diperhatikan bahwa fungsi $f(x)=|x|^3$ adalah fungsi konveks, karena $f''(x)=\frac{6x^2}{|x|}\geq 0$ untuk setiap $x\in \mathbb{R}\backslash \{0\}$. Dengan fakta tersebut, didapatkan bahwa untuk setiap $t\in(0,1)$ dan $w,z\in X$ berlaku
+    \item Kedua, ditunjukkan bahwa $f$ memenuhi Definisi \ref{def:konvgeodesik}, yaitu fungsi konveks secara geodesik. Sebelum itu, diperhatikan bahwa fungsi $f(x)=|x|^3$ adalah fungsi konveks, karena $f''(x)=\frac{6x^2}{|x|}\geq 0$ untuk setiap $x\in \mathbb{R}\backslash \{0\}$. Dengan fakta tersebut, didapatkan bahwa untuk setiap $t\in(0,1)$ dan $w,z\in X$ berlaku
     \begin{align*}
         f\qty((1-t)w\oplus tz) =~& f\big((1-t)w_1+tz_1, \qty((1-t)w_1+tz_1)^3\\
         &\quad\,\,    -(1-t)(w_1^3-w_2)-t(z_1^3-z_2)\big)\\
