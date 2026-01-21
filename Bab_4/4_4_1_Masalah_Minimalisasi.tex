@@ -5,7 +5,7 @@ Diberikan suatu himpunan tak kosong $X$ dan $f:X\to\mathbb{R}\cup\{\infty\}$ ada
 \end{align}
 Permasalahan ini merupakan permasalahan penting dalam bidang optimasi dan analisis tak linier. Selanjutnya, diperkenalkan operator resolvent dari suatu fungsi.
 \begin{defn}
-    Diberikan $(X,d)$ adalah suatu ruang $CAT_p(0)$ dan $f:X\to \mathbb{R}\cup\{+\infty\}$ adalah suatu fungsi. Untuk $\lambda>0$, operator resolvent $\lambda$ dari $f$ didefinisikan sebagai
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $f:X\to \mathbb{R}\cup\{+\infty\}$ adalah suatu fungsi. Untuk $\lambda>0$, operator resolvent $\lambda$ dari $f$ didefinisikan sebagai
     \begin{align}
         J^f_{\lambda}(x) = \text{argmin}_{y\in X} \qty[f(y)+\frac{1}{2\lambda}d^2(x,y)].
     \end{align}
@@ -26,21 +26,21 @@ Permasalahan ini merupakan permasalahan penting dalam bidang optimasi dan analis
 Untuk fungsi yang memenuhi kondisi konveks dan \textit{proper lower semi-continuous}, himpunan solusi dari masalah \eqref{eq:minprob} sama dengan himpunan titik tetap dari operator resolvent $J^f_{\lambda}$ (lihat proposisi 6.5 pada \cite{ArizaRuiz2014}). Berikut ini diberikan definisi dari fungsi yang memenuhi kondisi tersebut dengan contoh yang diberikan pada Contoh \ref{con:fkonvk}.
 
 \begin{defn}\cite{Khamsi2017}\label{def:konvgeodesik}
-    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$. Suatu fungsi $f:X\to \mathbb{R}\cup \{+\infty\}$ disebut konveks secara geodesik jika untuk setiap $t\in(0,1)$ dan $x,y\in X$, berlaku
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Suatu fungsi $f:X\to \mathbb{R}\cup \{+\infty\}$ disebut konveks secara geodesik jika untuk setiap $t\in(0,1)$ dan $x,y\in X$, berlaku
     \begin{align*}
         f(tx\oplus (1-t)y)\leq tf(x)+(1-t)f(y).
     \end{align*}
 \end{defn}
 \begin{defn}\cite{Salisu2022}
-    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$. Suatu fungsi $f:X\to \mathbb{R}\cup \{+\infty\}$ disebut \textit{proper} jika himpunan $D(f):=\{x\in X\mid f(x)<+\infty\}\neq \emptyset$.
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Suatu fungsi $f:X\to \mathbb{R}\cup \{+\infty\}$ disebut \textit{proper} jika himpunan $D(f):=\{x\in X\mid f(x)<+\infty\}\neq \emptyset$.
 \end{defn}
 \begin{defn}\cite{Salisu2022}
-    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$. Suatu fungsi $f:X\to \mathbb{R}\cup \{+\infty\}$ disebut \textit{lower semi-continuous} pada suatu titik $x\in D(f)$ jika $f(x)\leq \liminf_{n\to\infty} f(x_n)$ untuk setiap barisan $\{x_n\}$ yang konvergen di $D(f)$ dengan limit $x\in X$. Jika $f$ \textit{lower semi-continuous} pada setiap titik di $D(f)$, maka $f$ disebut \textit{lower semi-continuous} pada $X$.
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Suatu fungsi $f:X\to \mathbb{R}\cup \{+\infty\}$ disebut \textit{lower semi-continuous} pada suatu titik $x\in D(f)$ jika $f(x)\leq \liminf_{n\to\infty} f(x_n)$ untuk setiap barisan $\{x_n\}$ yang konvergen di $D(f)$ dengan limit $x\in X$. Jika $f$ \textit{lower semi-continuous} pada setiap titik di $D(f)$, maka $f$ disebut \textit{lower semi-continuous} pada $X$.
 \end{defn}
 
 Berdasarkan hal tersebut, didapatkan Teorema berikut. 
 \begin{thm}\label{thm:apl1}
-    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $f:X\to\mathbb{R}\cup\{+\infty\}$ adalah fungsi yang memenuhi kondisi konveks dan \textit{proper lower semi-continuous}. Untuk $x\in X$, barisan $\{x_n\}$ yang didefinisikan sebagai 
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $f:X\to\mathbb{R}\cup\{+\infty\}$ adalah fungsi yang memenuhi kondisi konveks dan \textit{proper lower semi-continuous}. Untuk $x\in X$, barisan $\{x_n\}$ yang didefinisikan sebagai 
     \begin{align}
         \begin{cases}
             q_n &= J^f_{\lambda}\qty((1-c_n)x_n\oplus c_n J^f_{\lambda} (x_n))\\
@@ -56,7 +56,7 @@ Berdasarkan hal tersebut, didapatkan Teorema berikut.
 
 Sebagai gambaran, dilakukan simulasi untuk contoh berikut ini. 
 \begin{exam}\label{con:fkonvk}
-    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ sebagaimana Contoh \ref{con:Catp} dan $W=\{(x_1,x_2,0,0,\dots)\mid x_1,x_2\in X\}$. Suatu fungsi $f:W\to \mathbb{R}\cup\{+\infty\}$ yang didefinisikan sebagai 
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ sebagaimana Contoh \ref{con:Catp} dan $W=\{(x_1,x_2,0,0,\dots)\mid x_1,x_2\in X\}$. Suatu fungsi $f:W\to \mathbb{R}\cup\{+\infty\}$ yang didefinisikan sebagai 
     \begin{align}
         f\qty(x) = 20\qty|x_2-x_1^3|^3+|26-x_1|^3, \quad \text{untuk}\quad x=(x_1,x_2,0,0,\dots)\in W,
     \end{align}
@@ -98,7 +98,7 @@ Penjelasan dari Contoh \ref{con:fkonvk} diberikan sebagai berikut.
         \lambda_{1,2} = \frac{-810 \pm \sqrt{810^2-4(2692800)}}{2},
     \end{align*}
     yang jelas memiliki akar negatif. Jadi ada $x\in W$ sehingga matriks Hessian $H$ memiliki nilai eigen negatif, yang berarti $H$ bukan matriks semidefinit positif. Akibatnya $f$ bukanlah fungsi konveks dalam definisi klasik. 
-    \item Kedua, ditunjukkan bahwa $f$ memenuhi Definisi \ref{def:konvgeodesik}, yaitu fungsi konveks secara geodesik. Sebelum itu, diperhatikan bahwa fungsi $f(x)=|x|^3$ adalah fungsi konveks, karena $f''(x)=\frac{6x^2}{|x|}\geq 0$ untuk setiap $x\in \mathbb{R}\backslash \{0\}$. Dengan fakta tersebut, didapatkan bahwa untuk setiap $t\in(0,1)$ dan $w,z\in X$ berlaku
+    \item Kedua, ditunjukkan bahwa $f$ memenuhi Definisi \ref{def:konvgeodesik}, yaitu fungsi konveks secara geodesik. Sebelum itu, diperhatikan bahwa fungsi $p(x)=|x|^3$ adalah fungsi konveks, karena $f''(x)=\frac{6x^2}{|x|}\geq 0$ untuk setiap $x\in \mathbb{R}\backslash \{0\}$. Dengan fakta tersebut, didapatkan bahwa untuk setiap $t\in(0,1)$ dan $w,z\in X$ berlaku
     \begin{align*}
         f\qty((1-t)w\oplus tz) =~& f\big((1-t)w_1+tz_1, \qty((1-t)w_1+tz_1)^3\\
         &\quad\,\,    -(1-t)(w_1^3-w_2)-t(z_1^3-z_2)\big)\\

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.21)  18 JAN 2026 22:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.21)  20 JAN 2026 07:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1109,43 +1109,43 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 <1_abstrak.jpg, id=6, 1165.35374pt x 302.63063pt>
 File: 1_abstrak.jpg Graphic file (type jpg)
 <use 1_abstrak.jpg>
-Package pdftex.def Info: 1_abstrak.jpg  used on input line 137.
+Package pdftex.def Info: 1_abstrak.jpg  used on input line 139.
 (pdftex.def)             Requested size: 362.77525pt x 94.20703pt.
 <2_metrik.jpg, id=7, 1444.64719pt x 206.27063pt>
 File: 2_metrik.jpg Graphic file (type jpg)
 <use 2_metrik.jpg>
-Package pdftex.def Info: 2_metrik.jpg  used on input line 145.
+Package pdftex.def Info: 2_metrik.jpg  used on input line 147.
 (pdftex.def)             Requested size: 362.77525pt x 51.79729pt.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 149.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 151.
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 149.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 151.
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 149.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 151.
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 149.
+(Font)              <10> on input line 151.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 149.
+(Font)              <7> on input line 151.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 149.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 149.
+(Font)              <5> on input line 151.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 151.
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 149.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 151.
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 <3_konstanc.jpg, id=8, 1402.48969pt x 302.63063pt>
 File: 3_konstanc.jpg Graphic file (type jpg)
 <use 3_konstanc.jpg>
-Package pdftex.def Info: 3_konstanc.jpg  used on input line 153.
+Package pdftex.def Info: 3_konstanc.jpg  used on input line 155.
 (pdftex.def)             Requested size: 362.77525pt x 78.28035pt.
 
 
@@ -1155,22 +1155,22 @@ Package pdftex.def Info: 3_konstanc.jpg  used on input line 153.
 <4_metrik_geodesik.jpg, id=30, 1380.65813pt x 261.97874pt>
 File: 4_metrik_geodesik.jpg Graphic file (type jpg)
 <use 4_metrik_geodesik.jpg>
-Package pdftex.def Info: 4_metrik_geodesik.jpg  used on input line 161.
+Package pdftex.def Info: 4_metrik_geodesik.jpg  used on input line 163.
 (pdftex.def)             Requested size: 362.77525pt x 68.8364pt.
 <5_contoh_geodesik.jpg, id=31, 1436.36626pt x 405.76593pt>
 File: 5_contoh_geodesik.jpg Graphic file (type jpg)
 <use 5_contoh_geodesik.jpg>
-Package pdftex.def Info: 5_contoh_geodesik.jpg  used on input line 169.
+Package pdftex.def Info: 5_contoh_geodesik.jpg  used on input line 171.
 (pdftex.def)             Requested size: 362.77525pt x 102.4814pt.
 <6_contoh_segitiga_geodesik.jpg, id=32, 1397.22pt x 383.18156pt>
 File: 6_contoh_segitiga_geodesik.jpg Graphic file (type jpg)
 <use 6_contoh_segitiga_geodesik.jpg>
-Package pdftex.def Info: 6_contoh_segitiga_geodesik.jpg  used on input line 177.
+Package pdftex.def Info: 6_contoh_segitiga_geodesik.jpg  used on input line 179.
 (pdftex.def)             Requested size: 362.77525pt x 99.49037pt.
 <6.1_contoh_segitiga_geodesik.jpg, id=33, 1434.86063pt x 238.64156pt>
 File: 6.1_contoh_segitiga_geodesik.jpg Graphic file (type jpg)
 <use 6.1_contoh_segitiga_geodesik.jpg>
-Package pdftex.def Info: 6.1_contoh_segitiga_geodesik.jpg  used on input line 185.
+Package pdftex.def Info: 6.1_contoh_segitiga_geodesik.jpg  used on input line 187.
 (pdftex.def)             Requested size: 362.77525pt x 60.3339pt.
 
 
@@ -1178,22 +1178,22 @@ Package pdftex.def Info: 6.1_contoh_segitiga_geodesik.jpg  used on input line 18
 <7_ruang_catp.jpg, id=46, 1397.22pt x 332.74312pt>
 File: 7_ruang_catp.jpg Graphic file (type jpg)
 <use 7_ruang_catp.jpg>
-Package pdftex.def Info: 7_ruang_catp.jpg  used on input line 193.
+Package pdftex.def Info: 7_ruang_catp.jpg  used on input line 195.
 (pdftex.def)             Requested size: 362.77525pt x 86.39438pt.
 <8_contoh_segitiga_komparasi.jpg, id=47, 1391.1975pt x 248.42813pt>
 File: 8_contoh_segitiga_komparasi.jpg Graphic file (type jpg)
 <use 8_contoh_segitiga_komparasi.jpg>
-Package pdftex.def Info: 8_contoh_segitiga_komparasi.jpg  used on input line 201.
+Package pdftex.def Info: 8_contoh_segitiga_komparasi.jpg  used on input line 203.
 (pdftex.def)             Requested size: 362.77525pt x 64.77931pt.
 <9_contoh_ruang_catp.jpg, id=48, 1391.1975pt x 356.0803pt>
 File: 9_contoh_ruang_catp.jpg Graphic file (type jpg)
 <use 9_contoh_ruang_catp.jpg>
-Package pdftex.def Info: 9_contoh_ruang_catp.jpg  used on input line 209.
+Package pdftex.def Info: 9_contoh_ruang_catp.jpg  used on input line 211.
 (pdftex.def)             Requested size: 362.77525pt x 92.85036pt.
 <10_lp_geodesik.jpg, id=49, 1434.86063pt x 331.2375pt>
 File: 10_lp_geodesik.jpg Graphic file (type jpg)
 <use 10_lp_geodesik.jpg>
-Package pdftex.def Info: 10_lp_geodesik.jpg  used on input line 217.
+Package pdftex.def Info: 10_lp_geodesik.jpg  used on input line 219.
 (pdftex.def)             Requested size: 362.77525pt x 83.7442pt.
 
 
@@ -1201,95 +1201,102 @@ Package pdftex.def Info: 10_lp_geodesik.jpg  used on input line 217.
 <11_contoh_konvergen.jpg, id=63, 1397.22pt x 505.89pt>
 File: 11_contoh_konvergen.jpg Graphic file (type jpg)
 <use 11_contoh_konvergen.jpg>
-Package pdftex.def Info: 11_contoh_konvergen.jpg  used on input line 225.
+Package pdftex.def Info: 11_contoh_konvergen.jpg  used on input line 227.
 (pdftex.def)             Requested size: 362.77525pt x 131.35074pt.
 <12_contoh_demiclosedness.jpg, id=64, 1410.0178pt x 230.36063pt>
 File: 12_contoh_demiclosedness.jpg Graphic file (type jpg)
 <use 12_contoh_demiclosedness.jpg>
-Package pdftex.def Info: 12_contoh_demiclosedness.jpg  used on input line 233.
+Package pdftex.def Info: 12_contoh_demiclosedness.jpg  used on input line 235.
 (pdftex.def)             Requested size: 362.77525pt x 59.26666pt.
-<14_contoh_fungsi.jpg, id=65, 1411.52344pt x 573.64313pt>
-File: 14_contoh_fungsi.jpg Graphic file (type jpg)
-<use 14_contoh_fungsi.jpg>
-Package pdftex.def Info: 14_contoh_fungsi.jpg  used on input line 241.
-(pdftex.def)             Requested size: 362.77525pt x 147.42809pt.
-<14.1_definisi_fungsi.jpg, id=66, 1416.04031pt x 252.945pt>
-File: 14.1_definisi_fungsi.jpg Graphic file (type jpg)
-<use 14.1_definisi_fungsi.jpg>
-Package pdftex.def Info: 14.1_definisi_fungsi.jpg  used on input line 245.
-(pdftex.def)             Requested size: 362.77525pt x 64.79924pt.
-<23_definisi_konveks.jpg, id=67, 1428.08531pt x 434.37282pt>
-File: 23_definisi_konveks.jpg Graphic file (type jpg)
-<use 23_definisi_konveks.jpg>
-Package pdftex.def Info: 23_definisi_konveks.jpg  used on input line 249.
-(pdftex.def)             Requested size: 362.77525pt x 110.34271pt.
-
-
-[4 <./11_contoh_konvergen.jpg> <./12_contoh_demiclosedness.jpg> <./14_contoh_fungsi.jpg> <./14.1_definisi_fungsi.jpg>]
-<15_contoh_pemetaan.jpg, id=79, 1414.53468pt x 521.69907pt>
-File: 15_contoh_pemetaan.jpg Graphic file (type jpg)
-<use 15_contoh_pemetaan.jpg>
-Package pdftex.def Info: 15_contoh_pemetaan.jpg  used on input line 257.
-(pdftex.def)             Requested size: 362.77525pt x 133.79172pt.
-<16_definisi_alpha.jpg, id=80, 1239.12938pt x 364.36125pt>
+<13_penulisan_metrik.jpg, id=65, 1410.0178pt x 310.91156pt>
+File: 13_penulisan_metrik.jpg Graphic file (type jpg)
+<use 13_penulisan_metrik.jpg>
+Package pdftex.def Info: 13_penulisan_metrik.jpg  used on input line 242.
+(pdftex.def)             Requested size: 362.77525pt x 79.99063pt.
+<16_definisi_alpha.jpg, id=66, 1239.12938pt x 364.36125pt>
 File: 16_definisi_alpha.jpg Graphic file (type jpg)
 <use 16_definisi_alpha.jpg>
-Package pdftex.def Info: 16_definisi_alpha.jpg  used on input line 265.
+Package pdftex.def Info: 16_definisi_alpha.jpg  used on input line 249.
 (pdftex.def)             Requested size: 362.77525pt x 106.66835pt.
-<17_bahasa_pemetaan_abc.jpg, id=81, 1365.60187pt x 403.5075pt>
+
+
+[4 <./11_contoh_konvergen.jpg> <./12_contoh_demiclosedness.jpg> <./13_penulisan_metrik.jpg> <./16_definisi_alpha.jpg>]
+<14_contoh_fungsi.jpg, id=79, 1411.52344pt x 573.64313pt>
+File: 14_contoh_fungsi.jpg Graphic file (type jpg)
+<use 14_contoh_fungsi.jpg>
+Package pdftex.def Info: 14_contoh_fungsi.jpg  used on input line 256.
+(pdftex.def)             Requested size: 362.77525pt x 147.42809pt.
+<14.1_definisi_fungsi.jpg, id=80, 1416.04031pt x 252.945pt>
+File: 14.1_definisi_fungsi.jpg Graphic file (type jpg)
+<use 14.1_definisi_fungsi.jpg>
+Package pdftex.def Info: 14.1_definisi_fungsi.jpg  used on input line 260.
+(pdftex.def)             Requested size: 362.77525pt x 64.79924pt.
+<23_definisi_konveks.jpg, id=81, 1428.08531pt x 434.37282pt>
+File: 23_definisi_konveks.jpg Graphic file (type jpg)
+<use 23_definisi_konveks.jpg>
+Package pdftex.def Info: 23_definisi_konveks.jpg  used on input line 264.
+(pdftex.def)             Requested size: 362.77525pt x 110.34271pt.
+<15_contoh_pemetaan.jpg, id=82, 1414.53468pt x 521.69907pt>
+File: 15_contoh_pemetaan.jpg Graphic file (type jpg)
+<use 15_contoh_pemetaan.jpg>
+Package pdftex.def Info: 15_contoh_pemetaan.jpg  used on input line 272.
+(pdftex.def)             Requested size: 362.77525pt x 133.79172pt.
+
+
+[5 <./14_contoh_fungsi.jpg> <./14.1_definisi_fungsi.jpg> <./23_definisi_konveks.jpg> <./15_contoh_pemetaan.jpg>]
+<17_bahasa_pemetaan_abc.jpg, id=93, 1365.60187pt x 403.5075pt>
 File: 17_bahasa_pemetaan_abc.jpg Graphic file (type jpg)
 <use 17_bahasa_pemetaan_abc.jpg>
-Package pdftex.def Info: 17_bahasa_pemetaan_abc.jpg  used on input line 273.
+Package pdftex.def Info: 17_bahasa_pemetaan_abc.jpg  used on input line 283.
 (pdftex.def)             Requested size: 362.77525pt x 107.18756pt.
-
-
-[5 <./23_definisi_konveks.jpg> <./15_contoh_pemetaan.jpg> <./16_definisi_alpha.jpg> <./17_bahasa_pemetaan_abc.jpg>]
-<18_titik_picard.jpg, id=93, 1406.25375pt x 207.02344pt>
+<18_titik_picard.jpg, id=94, 1406.25375pt x 207.02344pt>
 File: 18_titik_picard.jpg Graphic file (type jpg)
 <use 18_titik_picard.jpg>
-Package pdftex.def Info: 18_titik_picard.jpg  used on input line 281.
+Package pdftex.def Info: 18_titik_picard.jpg  used on input line 291.
 (pdftex.def)             Requested size: 362.77525pt x 53.40468pt.
-<19_susunan_paragraf.jpg, id=94, 1401.73688pt x 308.65312pt>
+<19_susunan_paragraf.jpg, id=95, 1401.73688pt x 308.65312pt>
 File: 19_susunan_paragraf.jpg Graphic file (type jpg)
 <use 19_susunan_paragraf.jpg>
-Package pdftex.def Info: 19_susunan_paragraf.jpg  used on input line 285.
+Package pdftex.def Info: 19_susunan_paragraf.jpg  used on input line 295.
 (pdftex.def)             Requested size: 362.77525pt x 79.88055pt.
-<20_titap_pemetaan.jpg, id=95, 1403.2425pt x 422.32782pt>
+<20_titap_pemetaan.jpg, id=96, 1403.2425pt x 422.32782pt>
 File: 20_titap_pemetaan.jpg Graphic file (type jpg)
 <use 20_titap_pemetaan.jpg>
-Package pdftex.def Info: 20_titap_pemetaan.jpg  used on input line 293.
+Package pdftex.def Info: 20_titap_pemetaan.jpg  used on input line 303.
 (pdftex.def)             Requested size: 362.77525pt x 109.18399pt.
-<21_contoh_resolvent.jpg, id=96, 1416.04031pt x 330.48468pt>
+<21_contoh_resolvent.jpg, id=97, 1416.04031pt x 330.48468pt>
 File: 21_contoh_resolvent.jpg Graphic file (type jpg)
 <use 21_contoh_resolvent.jpg>
-Package pdftex.def Info: 21_contoh_resolvent.jpg  used on input line 302.
+Package pdftex.def Info: 21_contoh_resolvent.jpg  used on input line 312.
 (pdftex.def)             Requested size: 362.77525pt x 84.66328pt.
-<22_hessian.jpg, id=97, 1446.15282pt x 258.9675pt>
+<22_hessian.jpg, id=98, 1446.15282pt x 258.9675pt>
 File: 22_hessian.jpg Graphic file (type jpg)
 <use 22_hessian.jpg>
-Package pdftex.def Info: 22_hessian.jpg  used on input line 309.
+Package pdftex.def Info: 22_hessian.jpg  used on input line 319.
 (pdftex.def)             Requested size: 362.77525pt x 64.96298pt.
 
 
-[6 <./18_titik_picard.jpg> <./19_susunan_paragraf.jpg> <./20_titap_pemetaan.jpg> <./21_contoh_resolvent.jpg> <./22_hessian.jpg>]
-<24_pemetaan_hilbert.jpg, id=111, 1409.265pt x 455.45157pt>
+[6 <./17_bahasa_pemetaan_abc.jpg> <./18_titik_picard.jpg> <./19_susunan_paragraf.jpg> <./20_titap_pemetaan.jpg> <./21_contoh_resolvent.jpg>]
+<24_pemetaan_hilbert.jpg, id=112, 1409.265pt x 455.45157pt>
 File: 24_pemetaan_hilbert.jpg Graphic file (type jpg)
 <use 24_pemetaan_hilbert.jpg>
-Package pdftex.def Info: 24_pemetaan_hilbert.jpg  used on input line 317.
+Package pdftex.def Info: 24_pemetaan_hilbert.jpg  used on input line 326.
 (pdftex.def)             Requested size: 362.77525pt x 117.24013pt.
-<25_kesimpulan_p2.jpg, id=112, 1412.27625pt x 462.22687pt>
+<25_kesimpulan_p2.jpg, id=113, 1412.27625pt x 462.22687pt>
 File: 25_kesimpulan_p2.jpg Graphic file (type jpg)
 <use 25_kesimpulan_p2.jpg>
-Package pdftex.def Info: 25_kesimpulan_p2.jpg  used on input line 325.
+Package pdftex.def Info: 25_kesimpulan_p2.jpg  used on input line 334.
 (pdftex.def)             Requested size: 362.77525pt x 118.73029pt.
-<26_kesimpulan_p3.jpg, id=113, 1430.34375pt x 298.11375pt>
+<26_kesimpulan_p3.jpg, id=114, 1430.34375pt x 298.11375pt>
 File: 26_kesimpulan_p3.jpg Graphic file (type jpg)
 <use 26_kesimpulan_p3.jpg>
-Package pdftex.def Info: 26_kesimpulan_p3.jpg  used on input line 333.
+Package pdftex.def Info: 26_kesimpulan_p3.jpg  used on input line 342.
 (pdftex.def)             Requested size: 362.77525pt x 75.61087pt.
 
 
-[7{C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <./24_pemetaan_hilbert.jpg> <./25_kesimpulan_p2.jpg> <./26_kesimpulan_p3.jpg>] (revisi.aux)
+[7 <./22_hessian.jpg> <./24_pemetaan_hilbert.jpg> <./25_kesimpulan_p2.jpg> <./26_kesimpulan_p3.jpg>]
+
+[8{C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] (revisi.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1298,17 +1305,17 @@ Package rerunfilecheck Info: File `revisi.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 44897 strings out of 468134
- 1090226 string characters out of 5428804
- 1561375 words of memory out of 5000000
- 72620 multiletter control sequences out of 15000+600000
+ 44907 strings out of 468134
+ 1090465 string characters out of 5428804
+ 1561374 words of memory out of 5000000
+ 72627 multiletter control sequences out of 15000+600000
  653665 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,7n,107p,1246b,1269s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,7n,107p,1246b,1294s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on revisi.pdf (7 pages, 4359269 bytes).
+Output written on revisi.pdf (8 pages, 4474717 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 67 named destinations out of 1000 (max. 500000)
- 148 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 189 PDF objects out of 1000 (max. 8388607)
+ 70 named destinations out of 1000 (max. 500000)
+ 153 words of extra memory for PDF output out of 10000 (max. 10000000)
 

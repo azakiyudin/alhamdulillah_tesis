@@ -3,7 +3,7 @@ Sebelum membahas mengenai ruang $CAT_p(0)$, terlebih dahulu dikenalkan ruang $CA
 
 % segitiga geodesik lebih ramping daripada segitiga pembanding di $\mathbb{R}^2$. Untuk itu berikut diberikan konsep dari segitiga komparasi. 
 \begin{defn}\cite{Bridson1999}
-    Diberikan segitiga geodesik $\triangle (p,q,r)$ pada ruang metrik geodesik $(X,d)$. Suatu segitiga komparasi $\overline{\triangle}(\overline{p},\overline{q},\overline{r})$ adalah suatu segitiga di ruang bernorma $(\mathbb{E},\|\cdot\|)$ yang memenuhi $d(p,q)=\|\overline{p}-\overline{q}\|, d(p,r)=\|\overline{p}-\overline{r}\|$, dan $d(q,r)=\|\overline{q}-\overline{r}\|$.
+    Diberikan segitiga geodesik $\triangle (p,q,r)$ pada ruang metrik geodesik $(X,d,G)$. Suatu segitiga komparasi $\overline{\triangle}(\overline{p},\overline{q},\overline{r})$ adalah suatu segitiga di ruang bernorma $(\mathbb{E},\|\cdot\|)$ yang memenuhi $d(p,q)=\|\overline{p}-\overline{q}\|, d(p,r)=\|\overline{p}-\overline{r}\|$, dan $d(q,r)=\|\overline{q}-\overline{r}\|$.
 \end{defn}
 \begin{exam}\label{con:segkom}\cite{Eskandani2018}
     Diberikan ruang metrik $(\mathbb{R}^2,\tilde{d})$ dengan metrik $\tilde{d}$ yang didefinisikan untuk setiap $x=(x_1,x_2), y=(y_1,y_2)\in \mathbb{R}^2$ sebagai 
@@ -24,7 +24,7 @@ Sebelum membahas mengenai ruang $CAT_p(0)$, terlebih dahulu dikenalkan ruang $CA
 \end{exam}
 Selanjutnya, berikut ini diberikan definisi ruang $CAT(0)$.
 \begin{defn}\cite{Bridson1999}
-    Diberikan ruang metrik geodesik $(X,d)$ dan ruang Euclid $(\mathbb{R}^2,\|\cdot\|_2)$. Ruang $(X,d)$ disebut sebagai ruang $CAT(0)$ jika untuk setiap segitiga geodesik $\triangle(p,q,r)\in X$ dan $x,y\in \triangle(p,q,r)$, terdapat segitiga komparasi $\overline{\triangle}(\overline{p},\overline{q},\overline{r})\in \mathbb{R}^2$ sehingga untuk setiap $\overline{x},\overline{y}\in\overline{\triangle}$ berlaku $d(x,y)\leq \|\overline{x}-\overline{y}\|_2$.
+    Diberikan ruang metrik geodesik $(X,d,G)$ dan ruang Euclid $(\mathbb{R}^2,\|\cdot\|_2)$. Ruang $(X,d,G)$ disebut sebagai ruang $CAT(0)$ jika untuk setiap segitiga geodesik $\triangle(p,q,r)\in X$ dan $x,y\in \triangle(p,q,r)$, terdapat segitiga komparasi $\overline{\triangle}(\overline{p},\overline{q},\overline{r})\in \mathbb{R}^2$ sehingga untuk setiap $\overline{x},\overline{y}\in\overline{\triangle}$ berlaku $d(x,y)\leq \|\overline{x}-\overline{y}\|_2$.
 \end{defn}
 \begin{exam}
     Sebagaimana Contoh \ref{con:segkom}, ruang metrik geodesik $(\mathbb{R}^2,\tilde{d})$ adalah ruang $CAT(0)$ karena untuk setiap segitiga geodesik $\triangle(p,q,r)$ di $(\mathbb{R}^2,\tilde{d})$ dan $x,y\in \triangle(p,q,r)$, terdapat segitiga komparasi $\overline{\triangle}(\overline{p},\overline{q},\overline{r})$ di ruang Euclid $(\mathbb{R}^2,\|\cdot\|_2)$ sehingga untuk setiap $\overline{x},\overline{y}\in \overline{\triangle}(\overline{p},\overline{q},\overline{r})$ berlaku $d(x,y)\leq \|\overline{x}-\overline{y}\|_2$.
@@ -181,7 +181,7 @@ Selanjutnya, berikut ini diberikan definisi ruang $CAT(0)$.
 
 Khamsi mengembangkan ruang yang lebih umum, yaitu ruang $CAT_p(0)$, dengan $p\geq 2$, dengan mengganti segitiga komparasi pada ruang $CAT(0)$ dari yang awalnya segitiga di $\mathbb{R}^2$ menjadi segitiga di $\ell_p$. Berikut ini definisi dari ruang $CAT_p(0)$. 
 \begin{defn}\cite{Khamsi2017}\label{defn:catp0}
-    Diberikan ruang metrik geodesik $(X,d)$ dan ruang $(\ell_p,\|\cdot\|_p)$ untuk $p\geq 2$. Ruang $(X,d)$ disebut sebagai ruang $CAT_p(0)$, untuk $p\geq 2$, jika untuk setiap segitiga geodesik $\triangle(p,q,r) \in X$ dan $x,y\in\triangle(p,q,r)$, terdapat segitiga komparasi $\overline{\triangle}(\overline{p},\overline{q},\overline{r})\in \ell_p$ sehingga untuk setiap $\overline{x},\overline{y}\in \overline{\triangle}$ berlaku $d(x,y)\leq \|\overline{x}-\overline{y}\|_p$.
+    Diberikan ruang metrik geodesik $(X,d,G)$ dan ruang $(\ell_p,\|\cdot\|_p)$ untuk $p\geq 2$. Ruang $(X,d,G)$ disebut sebagai ruang $CAT_p(0)$, untuk $p\geq 2$, jika untuk setiap segitiga geodesik $\triangle(p,q,r) \in X$ dan $x,y\in\triangle(p,q,r)$, terdapat segitiga komparasi $\overline{\triangle}(\overline{p},\overline{q},\overline{r})\in \ell_p$ sehingga untuk setiap $\overline{x},\overline{y}\in \overline{\triangle}$ berlaku $d(x,y)\leq \|\overline{x}-\overline{y}\|_p$.
 \end{defn}
 \begin{exam}\cite{Khamsi2017}
     Ruang $CAT(0)$ adalah ruang $CAT_p(0)$ dengan $p=2$.
@@ -205,7 +205,7 @@ Untuk $p>2$ ruang $CAT_p(0)$ bukan merupakan ruang $CAT(0)$.
 Berikut ini diberikan sebuah contoh ruang $CAT_p(0)$ dengan $p=3$ yang bukan merupakan ruang Banach dan bukan pula ruang $CAT(0)$.
 
     \begin{exam}\label{con:Catp}
-    Diberikan $X=\{(x_1,x_2,\cdots)~|~x_i\in \mathbb{R}, \sum_{i=1}^{\infty} |x_i|^3<\infty\}$ dan untuk setiap $x=(x_1,x_2,x_3,\cdots),y=(y_1,y_2,y_3,\cdots)\in\ell_3$ didefinisikan metrik
+    Diberikan $X=\{(x_1,x_2,\cdots)~|~x_i\in \mathbb{R}, \sum_{i=1}^{\infty} |x_i|^3<\infty\}$ dan untuk setiap $x=(x_1,x_2,x_3,\cdots),y=(y_1,y_2,y_3,\cdots)\in X$ didefinisikan metrik
     \begin{align}\label{eq:conMetrik}
     d(x,y)=\left(|x_1-y_1|^3+|x_1^3-x_2-y_1^3+y_2|^3+\sum_{i=3}^{\infty}|x_i-y_i|^3\right)^{\frac{1}{3}}.
     \end{align}
@@ -214,7 +214,7 @@ Berikut ini diberikan sebuah contoh ruang $CAT_p(0)$ dengan $p=3$ yang bukan mer
     G(t)=\big(\alpha_1(t), \alpha_1(t)^3-(1-t)(w_1^3-w_2)-t(z_1^3-z_2),\alpha_3(t),\alpha_4(t),\cdots\big),
     \end{align}
     dengan $\alpha_i(t)=(1-t)w_i+tz_i$ untuk $i=1,3,4,5,\cdots$.\\
-    Ruang $(X,d)$ merupakan ruang $CAT_p(0)$, tetapi bukan ruang Banach dan bukan ruang $CAT(0)$.
+    Ruang $(X,d,G)$ merupakan ruang $CAT_p(0)$, tetapi bukan ruang Banach dan bukan ruang $CAT(0)$.
     \end{exam}
     Penjelasan dari Contoh \ref{con:Catp} dapat diuraikan sebagai berikut.\\
     Untuk setiap $x=(x_1,x_2,x_3,\dots)\in X$, didefinisikan pemetaan $M:X\to X$ sebagai $M(x)=(x_1,x_1^3-x_2,x_3,\dots)$. Pemetaan ini merupakan pemetaan bijektif yang memetakan setiap titik $x=(x_1,x_2,x_3,\dots)\in X$ ke titik lain $\overline{x}=(\overline{x_1},\overline{x_2},\overline{x_3},\dots)\in X$ dengan $\overline{x_i}=x_i$ untuk setiap $i=1,3,4,5,\dots$ dan $\overline{x_2}=x_1^3-x_2$. Diperhatikan bahwa untuk setiap $\overline{x}, \overline{y}\in X$, berlaku 
@@ -223,7 +223,7 @@ Berikut ini diberikan sebuah contoh ruang $CAT_p(0)$ dengan $p=3$ yang bukan mer
         &= \qty(\sum_{i=1}^{\infty} |\overline{x_i}-\overline{y_i}|^3)^{\frac{1}{3}}\\
         &= \| \overline{x}-\overline{y}\|_3.
     \end{align*}
-    Hal ini menunjukkan bahwa $(X,d)$ merupakan ruang metrik yang lengkap, selanjutnya diamati bahwa 
+    Hal ini menunjukkan bahwa $(X,d,G)$ merupakan ruang metrik yang lengkap, selanjutnya diamati bahwa 
     \begin{align*}
         G(0)=(w_1,w_2,w_3,\dots)=w \qquad \text{dan} \qquad G(1)=(z_1,z_2,z_3\dots)=z.
     \end{align*}
@@ -252,7 +252,7 @@ d(G(t),G(s))&=\left(\sum_{i=1}^{\infty}|\beta_i(t,s)|^3\right)^{\frac{1}{3}} = |
     \begin{align*}
         d(x,y)=\left(|x_1-y_1|^3+|x_1^3-x_2-y_1^3+y_2|^3+\sum_{i=3}^{\infty}|x_i-y_i|^3\right)^{\frac{1}{3}}=\norm{\overline{x}-\overline{y}}_3.
     \end{align*}
-    Jadi $(X,d)$ merupakan ruang $CAT_p(0)$ dengan $p=3$. Selanjutnya, diperhatikan bahwa 
+    Jadi $(X,d,G)$ merupakan ruang $CAT_p(0)$ dengan $p=3$. Selanjutnya, diperhatikan bahwa 
     \begin{align*}
         d(\alpha x,0)&=\left(|\alpha x_1|^3+|(\alpha x_1)^3-\alpha x_2|^3+\sum_{i=3}^{\infty}|\alpha x_i|^3\right)^{\frac{1}{3}}\\
         &=|\alpha| \left(|x_1|^3+|\alpha^2 x_1^3-x_2|^3+\sum_{i=3}^{\infty} |x_i|^3\right)^{\frac{1}{3}}\\
@@ -308,7 +308,7 @@ Diagram Venn pada Gambar \ref{fig:venncatp0} mengilustrasikan hubungan antara ru
  
 Berikut ini diberikan beberapa konsep yang berlaku pada ruang $CAT_p(0)$ dengan $p\geq 2$.
 \begin{defn}\cite{Khamsi2017} \label{defn:konveks}
-    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$. Suatu himpunan bagian $\mathcal{M}\subseteq X$ disebut konveks jika $[x\sim y]\subseteq \mathcal{M}$ untuk setiap $x,y\in \mathcal{M}$.
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Suatu himpunan bagian $\mathcal{M}\subseteq X$ disebut konveks jika $[x\sim y]\subseteq \mathcal{M}$ untuk setiap $x,y\in \mathcal{M}$.
 \end{defn}
 
 Dua contoh berikut ini mengilustrasikan konsep himpunan konveks dan bukan konveks pada ruang $CAT_p(0)$.
@@ -331,7 +331,7 @@ Dua contoh berikut ini mengilustrasikan konsep himpunan konveks dan bukan konvek
 % \todo{himpunan kompak}
 % Definisi berikut ini menyatakan konsep himpunan kompak di ruang $CAT_p(0)$ yang secara langsung diadaptasi dari konsep himpunan kompak di ruang metrik pada umumnya.
 % \begin{defn}
-%     Diberikan $(X,d)$ adalah ruang $CAT_p(0)$. Suatu himpunan bagian $\mathcal{M}\subseteq X$ disebut kompak jika setiap barisan di $\mathcal{M}$ memiliki subbarisan yang konvergen ke suatu titik di $\mathcal{M}$.
+%     Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Suatu himpunan bagian $\mathcal{M}\subseteq X$ disebut kompak jika setiap barisan di $\mathcal{M}$ memiliki subbarisan yang konvergen ke suatu titik di $\mathcal{M}$.
 % \end{defn}
 % \begin{exam}
 %     Diberikan ruang $CAT_p(0)$, yaitu $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan himpunan bagian $\mathcal{M}=\{(x_1,x_2)\in \mathbb{R}^2\mid x_1^2 + (x_1^2-x_2)^2 \leq 1\}\subset \mathbb{R}^2$. Himpunan bagian tersebut adalah himpunan kompak karena setiap barisan di $\mathcal{M}$ memiliki subbarisan yang konvergen ke suatu titik di $\mathcal{M}$.
@@ -341,12 +341,12 @@ Dua contoh berikut ini mengilustrasikan konsep himpunan konveks dan bukan konvek
 
 Definisi berikut ini menyatakan konsep barisan terbatas di ruang $CAT_p(0)$ yang secara langsung diadaptasi dari konsep barisan terbatas di ruang metrik pada umumnya.
 \begin{defn}
-    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$. Suatu barisan $\{x_n\}$ di $X$ disebut terbatas jika terdapat $B>0$ dan $M\in X$ sehingga $d(x_n,M)<B$ untuk setiap $n\in \mathbb{N}$.
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Suatu barisan $\{x_n\}$ di $X$ disebut terbatas jika terdapat $B>0$ dan $M\in X$ sehingga $d(x_n,M)<B$ untuk setiap $n\in \mathbb{N}$.
 \end{defn}
 
 Pada ruang ini, konvergensi lemah yang umum digunakan pada ruang Banach digantikan dengan konsep konvergensi-$\Delta$ (Delta-convergence). Berikut ini diberikan definisi pusat asimtotik dan konvergensi-$\Delta$ di ruang $CAT_p(0)$.
 \begin{defn}\cite{Salisu2022}\label{defn:asimtotik}
-    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $\{x_n\}$ adalah barisan terbatas di $X$. Pusat asimtotik dari barisan $\{x_n\}$ di suatu $CAT_p(0)$ didefinisikan sebagai 
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $\{x_n\}$ adalah barisan terbatas di $X$. Pusat asimtotik dari barisan $\{x_n\}$ di suatu $CAT_p(0)$ didefinisikan sebagai 
     \begin{equation}
         A(\{x_n\}) := \{x\in X\mid\limsup_{n\to\infty} d(x,x_n) = \inf_{y\in X} \limsup_{n\to \infty} d(y,x_n)\}
     \end{equation}
@@ -372,7 +372,7 @@ Pada ruang ini, konvergensi lemah yang umum digunakan pada ruang Banach digantik
     Dengan demikian, pusat asimtotik dari barisan $\{x_n\}$ adalah $\{(0,0)\}$.
 \end{exam}
 \begin{defn}\cite{Salisu2022}\label{defn:konvD}
-    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $\{x_n\}$ adalah barisan terbatas di $X$. Barisan $\{x_n\}$ disebut sebagai konvergen-$\Delta$ ke suatu titik $x\in X$ (dinotasikan $\Delta-\lim_{n\to\infty} x_n=x$) jika $\{x\}$ adalah pusat asimtotik dari setiap subbarisan $\{x_{n_k}\}$ dari $\{x_n\}$.
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $\{x_n\}$ adalah barisan terbatas di $X$. Barisan $\{x_n\}$ disebut sebagai konvergen-$\Delta$ ke suatu titik $x\in X$ (dinotasikan $\Delta-\lim_{n\to\infty} x_n=x$) jika $\{x\}$ adalah pusat asimtotik dari setiap subbarisan $\{x_{n_k}\}$ dari $\{x_n\}$.
 \end{defn}
 \begin{exam}
     Diberikan ruang $CAT_p(0)$, yaitu $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan barisan $\{x_n\}\subseteq \mathbb{R}^2$ dengan $x_n=\qty(0,\dfrac{1}{n})\in \mathbb{R}^2$ untuk setiap $n\in \mathbb{N}$. Barisan tersebut adalah barisan terbatas karena untuk setiap $n,m\in \mathbb{N}$, diperoleh
@@ -415,7 +415,7 @@ Pada ruang ini, konvergensi lemah yang umum digunakan pada ruang Banach digantik
 
 Untuk konvergensi kuat di ruang $CAT_p(0)$, konsepnya sama dengan konvergensi kuat di ruang metrik pada umumnya, yaitu sebagai berikut.
 \begin{defn}\cite{Salisu2022}\label{defn:konvK}
-    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $\{x_n\}$ adalah barisan di $X$. Barisan $\{x_n\}$ disebut konvergen kuat ke suatu titik $x\in X$ (dinotasikan $\lim_{n\to\infty} d(x_n,x)=0$) jika untuk setiap $\varepsilon>0$, terdapat $n_0\in \mathbb{N}$ sehingga untuk setiap $n\geq n_0$ berlaku $d(x_n,x)<\varepsilon$.
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $\{x_n\}$ adalah barisan di $X$. Barisan $\{x_n\}$ disebut konvergen kuat ke suatu titik $x\in X$ (dinotasikan $\lim_{n\to\infty} d(x_n,x)=0$) jika untuk setiap $\varepsilon>0$, terdapat $n_0\in \mathbb{N}$ sehingga untuk setiap $n\geq n_0$ berlaku $d(x_n,x)<\varepsilon$.
 \end{defn}
 \begin{exam}
     Diberikan ruang $CAT_p(0)$, yaitu ruang $CAT(0)$ $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan barisan $\{x_n\}\subseteq \mathbb{R}^2$ dengan $x_n=\qty(0,\dfrac{1}{n})\in\mathbb{R}^2$ untuk setiap $n\in \mathbb{N}$. Barisan tersebut konvergen kuat ke titik $x=(0,0)$ karena untuk setiap $\varepsilon>0$, dapat dipilih $n_0\in \mathbb{N}$ dengan $n_0> \frac{1}{\varepsilon}$ sehingga untuk setiap $n\geq n_0$ berlaku
@@ -426,7 +426,7 @@ Untuk konvergensi kuat di ruang $CAT_p(0)$, konsepnya sama dengan konvergensi ku
 
 Berikut ini diberikan definisi mengenai sifat demiclosedness pada pemetaan di ruang $CAT_p(0)$.
 \begin{defn}\cite{Salisu2022}\label{defn:demi}
-    Diberikan $(X,d)$ adalah suatu ruang $CAT_p(0)$. Pemetaan $T:X\to X$ disebut memiliki sifat \textbf{demiclosedness} jika untuk setiap barisan $\{x_n\}\subseteq X$ yang konvergen-$\Delta$ ke $x\in X$ dan memenuhi $\lim_{n\to \infty} d(x_n,Tx_n)=0$, maka berlaku $x=Tx$. 
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Pemetaan $T:X\to X$ disebut memiliki sifat \textbf{demiclosedness} jika untuk setiap barisan $\{x_n\}\subseteq X$ yang konvergen-$\Delta$ ke $x\in X$ dan memenuhi $\lim_{n\to \infty} d(x_n,Tx_n)=0$, maka berlaku $x=Tx$. 
 \end{defn}
 \begin{exam}
     Diberikan ruang $CAT_p(0)$, yaitu $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan pemetaan $T:\mathbb{R}^2\to\mathbb{R}^2$ yang didefinisikan sebagai $T\qty((x_1,x_2)) = \left(\dfrac{x_1}{2}, \dfrac{x_2}{2}\right)$ untuk setiap $(x_1,x_2)\in \mathbb{R}^2$. Diketahui bahwa titik tetap dari $T$ adalah $(0,0)$. Misalkan $\{x_n\}\subseteq \mathbb{R}^2$ adalah barisan yang konvergen-$\Delta$ ke titik $(0,0)$ dan $\lim_{n\to \infty} d(x_n,Tx_n)=0$. Dari sini didapatkan $A({x_n})={(0,0)}$. Selanjutnya, diperhatikan bahwa 
@@ -443,7 +443,7 @@ Berikut ini diberikan definisi mengenai sifat demiclosedness pada pemetaan di ru
    \end{align*}
    Selanjutnya, berikut ini diberikan ketaksamaan penting yang berlaku pada ruang $CAT_p(0)$. 
 \begin{lemma}\cite{CALDERN2021}\label{lema:d,d^p}
-    Diberikan $(X,d)$ adalah suatu ruang $CAT_p(0)$. Jika $x,y,z\in X$ dan $t\in[0,1]$, maka 
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Jika $x,y,z\in X$ dan $t\in[0,1]$, maka 
     \begin{enumerate}
         \item $d((1-t)x\oplus tz, y)\leq (1-t)d(x,y)+td(z,y)$. 
         \item $d^p((1-t)x\oplus tz, y)\leq (1-t)d^p(x,y)+td^p(z,y)-\dfrac{t(1-t)}{2^{p-1}}d^p(x,z)$.
@@ -458,5 +458,5 @@ Lema berikut ini menyatakan keunikan pusat asimtotik dari suatu barisan terbatas
 \end{lemma}
 Selain itu, berikut ini diberikan teorema yang menyatakan kondisi konvergensi-$\Delta$ dari suatu barisan di ruang $CAT_p(0)$.
 \begin{thm}\cite{Salisu2022}\label{thm:kondisikonvD}
-    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup dan konveks. Diberikan pula $T:W\to W$ adalah pemetaan yang memiliki titik tetap dan memenuhi sifat demiclosedness \ref{defn:demi}. Jika $\{x_n\}$ adalah barisan di $W$ yang memenuhi $\lim_{n\to\infty}d(x_n,Tx_n)=0$ dan barisan $\{d(x_n,x^*)\}$ konvergen di $\mathbb{R}$ untuk setiap $x^*$ titik tetap dari $T$, maka barisan $\{x_n\}$ konvergen-$\Delta$ ke titik tetap dari $T$.
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup dan konveks. Diberikan pula $T:W\to W$ adalah pemetaan yang memiliki titik tetap dan memenuhi sifat demiclosedness \ref{defn:demi}. Jika $\{x_n\}$ adalah barisan di $W$ yang memenuhi $\lim_{n\to\infty}d(x_n,Tx_n)=0$ dan barisan $\{d(x_n,x^*)\}$ konvergen di $\mathbb{R}$ untuk setiap $x^*$ titik tetap dari $T$, maka barisan $\{x_n\}$ konvergen-$\Delta$ ke titik tetap dari $T$.
 \end{thm}

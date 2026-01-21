@@ -8,11 +8,11 @@ Pada bagian ini dikenalkan konsep terkait ruang metrik geodesik. Secara intuisi,
         \item[(b)] $G(1)=y$
         \item[(c)] $d\qty(G(t),G(s))=|t-s|d(x,y)$ untuk setiap $t,s\in [0,1]$.
     \end{enumerate}
- Ruang metrik $(X,d)$ disebut sebagai ruang metrik geodesik jika setiap elemen $x,y\in X$ dihubungkan oleh suatu geodesik. 
+ Ruang metrik $(X,d)$ disebut sebagai ruang metrik geodesik jika setiap elemen $x,y\in X$ dihubungkan oleh suatu geodesik.
 \end{defn}
-Pada ruang metrik geodesik, himpunan titik-titik pada geodesik yang menghubungkan $x$ dan $y$ dituliskan sebagai $[x\sim  y]$. Kemudian, berikut diberikan contoh ruang metrik geodesik dan bukan ruang metrik geodesik.
+Untuk selanjutnya, ruang metrik geodesik dinotasikan sebagai $(X,d,G)$. Pada ruang metrik geodesik, himpunan titik-titik pada geodesik yang menghubungkan $x$ dan $y$ dituliskan sebagai $[x\sim  y]$. Kemudian, berikut diberikan contoh ruang metrik geodesik dan bukan ruang metrik geodesik.
 \begin{exam}\cite{Bridson1999}\label{con:geodesik}
-    Setiap ruang bernorma $(V,\norm{\cdot})$ yang dilengkapi dengan metrik $d(v,w)=\|v-w\|$ untuk setiap $v,w\in V$ adalah ruang metrik geodesik dengan geodesik yang menghubungkan $v$ dan $w$ didefinisikan sebagai
+    Setiap ruang bernorma $(V,\norm{\cdot})$ dengan metrik $d(v,w)=\|v-w\|$ untuk setiap $v,w\in V$ adalah ruang metrik geodesik dengan geodesik yang menghubungkan $v$ dan $w$ didefinisikan sebagai
     \begin{align*}
         G(t) = (1-t)v + tw, \quad \text{untuk setiap } t\in [0,1].
     \end{align*}
@@ -40,7 +40,7 @@ Penjelasan dari Contoh \ref{con:geodesik} adalah sebagai berikut.
 \end{exam}
 Konsep segitiga geodesik merupakan konsep dasar yang digunakan dalam mendefinisikan ruang $CAT(0)$ dan ruang $CAT_p(0)$. Berikut ini diberikan definisi segitiga geodesik.
 \begin{defn}\cite{Bridson1999}
-    Diberikan $(X,d)$ ruang metrik geodesik. Suatu segitiga geodesik $\triangle(p, q,r)$ di ruang metrik geodesik berisi tiga titik $p, q,r\in X$ sebagai titik sudut dan geodesik di antara dua titik tersebut, yaitu $[p\sim  q], [p\sim r], [q\sim  r]$, disebut sebagai sisi dari segitiganya. 
+    Diberikan $(X,d,G)$ ruang metrik geodesik. Suatu segitiga geodesik $\triangle(p, q,r)$ di ruang metrik geodesik berisi tiga titik $p, q,r\in X$ sebagai titik sudut dan geodesik di antara dua titik tersebut, yaitu $[p\sim  q], [p\sim r], [q\sim  r]$, disebut sebagai sisi dari segitiganya. 
 \end{defn}
 Untuk selanjutnya, titik yang terletak pada suatu segitiga geodesik $\triangle(x_1, x_2,x_3)$ dituliskan sebagai $z\in \triangle(x_1,x_2,x_3)$ jika $z\in [x_i\sim x_j]$ untuk suatu $i,j\in \{1,2,3\}$ dengan $i\neq j$. Titik $z\in[x_i\sim x_j]$ direpresentasikan oleh $z=(1-t)x_i\oplus tx_j$ dengan $t=\frac{d(x_i,z)}{d(x_i,x_j)}$ dan $\oplus$ adalah operasi geodesik.
 % \begin{defn}\cite{Bridson1999}

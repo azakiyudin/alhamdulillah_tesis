@@ -1,7 +1,8 @@
 \section{Percobaan Numerik}
 Pada bagian ini, dilakukan percobaan numerik untuk menguji laju konvergensi dari skema iterasi Sabri dibanding dengan skema iterasi lainnya. Untuk percobaan ini, terlebih dahulu dikenalkan skema iterasi JK yang dikembangkan pada ruang $CAT_p(0)$ oleh Salisu sebagai berikut. 
 \begin{defn}[\textbf{Skema Iterasi JK}]\cite{Salisu2022}\label{defn:jk}
-Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi JK pada ruang $CAT_p(0)$ sebagai berikut:
+% Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. 
+Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi JK pada ruang $CAT_p(0)$ sebagai berikut:
     \begin{align}\label{eq:jkcat}
        \begin{cases}
             q_n &= (1-c_n)x_n \oplus c_nTx_n,\\
@@ -13,7 +14,8 @@ Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kos
 \end{defn}
 Selain itu, berikut ini dikenalkan pula skema iterasi Thakur, Abbas, dan Agarwal pada ruang $CAT_p(0)$. 
 \begin{defn}[\textbf{Skema Iterasi Thakur}]\label{defn:thakur}
-Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi Thakur pada ruang $CAT_p(0)$ sebagai berikut:
+% Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. 
+Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi Thakur pada ruang $CAT_p(0)$ sebagai berikut:
     \begin{align}\label{eq:thakurcat}
        \begin{cases}
             q_n&= (1-c_n)x_n \oplus c_nTx_n,\\
@@ -24,7 +26,8 @@ Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kos
     dengan $\{a_n\}\subseteq [0,1]$ dan $\{c_n\}\subseteq [0,1]$.
 \end{defn}
 \begin{defn}[\textbf{Skema Iterasi Abbas}]\label{defn:abbas}
-Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi Abbas pada ruang $CAT_p(0)$ sebagai berikut:
+% Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. 
+Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi Abbas pada ruang $CAT_p(0)$ sebagai berikut:
     \begin{align}\label{eq:abbascat}
        \begin{cases}
             q_n&= (1-c_n)x_n \oplus c_nTx_n,\\
@@ -35,7 +38,8 @@ Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kos
     dengan $\{a_n\}\subseteq [0,1]$, $\{b_n\}\subseteq [0,1]$, dan $\{c_n\}\subseteq [0,1]$.
 \end{defn}
 \begin{defn}[\textbf{Skema Iterasi Agarwal}]\label{defn:agarwal}
-Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi Agarwal pada ruang $CAT_p(0)$ sebagai berikut:
+% Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. 
+Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi Agarwal pada ruang $CAT_p(0)$ sebagai berikut:
     \begin{align}\label{eq:agarwalcat}
        \begin{cases}
         y_n&= (1-c_n)x_n\oplus b_n Tx_n,\\

@@ -3,7 +3,7 @@ Pada bagian ini disajikan skema iterasi Sabri pada ruang $CAT_p(0)$ dan hasil te
 
 Berikut ini diberikan skema iterasi Sabri pada ruang $CAT_p(0)$.
 \begin{defn}[\textbf{Skema Iterasi Sabri}]\label{defn:sabri}
-Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi Sabri pada ruang $CAT_p(0)$ sebagai berikut:
+Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi Sabri pada ruang $CAT_p(0)$ sebagai berikut:
     \begin{align}\label{eq:sabricat}
        \begin{cases}
             q_n&= T\left((1-c_n)x_n \oplus c_nTx_n\right),\\
@@ -21,7 +21,7 @@ Berikut ini adalah diagram alir dari skema iterasi Sabri pada ruang $CAT_p(0)$.
     \label{fig:skemasabricat0}
 \end{figure}
 
-Untuk selanjutnya, dinotasikan $(X,d)$ sebagai ruang $CAT_p(0)$ dengan metrik $d$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks, serta $Fix(T)$ adalah himpunan yang berisi titik tetap dari pemetaan $T$.
+Untuk selanjutnya, dinotasikan $W$ sebagai himpunan bagian tak kosong yang konveks dari ruang $CAT_p(0)$ $(X,d,G)$, serta $Fix(T)$ adalah himpunan yang berisi titik tetap dari pemetaan $T$.
 \begin{lemma}\label{Lema:dxnx*}
 Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$. Jika $\{ x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat}, maka $d(x_{n+1},x^*)\leq d(x_n,x^*)$ untuk setiap $x^*\in Fix(T)$.
 \end{lemma}
@@ -111,7 +111,7 @@ Teorema berikut ini menyajikan syarat eksistensi titik tetap dari pemetaan $(\al
 \end{bukti}
 Selanjutnya, dua teorema berikut ini menyajikan hasil konvergensi dari skema Sabri, yakni konvergensi-$\Delta$ dan konvergensi kuat, untuk aproksimasi titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif
 \begin{thm}\label{thm:konvD}
-    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup dan konveks. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$ dan $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{b_n\}\subseteq [a,b]\subset (0,1)$, maka $\{x_n\}$ konvergen-$\Delta$ ke suatu titik tetap dari $T$.
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup dan konveks. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$ dan $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{b_n\}\subseteq [a,b]\subset (0,1)$, maka $\{x_n\}$ konvergen-$\Delta$ ke suatu titik tetap dari $T$.
 \end{thm}
 \begin{bukti}
     Diamati bahwa $T$ merupakan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Dari Lema \ref{Lema:dxnx*}, didapatkan bahwa $\{d(x_n,x^*)\}$ adalah barisan turun dan terbatas di bawah dengan batas bawah 0, sehingga 
@@ -126,7 +126,7 @@ Selanjutnya, dua teorema berikut ini menyajikan hasil konvergensi dari skema Sab
 \end{bukti}
 Untuk mendapatkan hasil konvergensi kuat, diperlukan syarat tambahan, yaitu himpunan $W$ haruslah merupakan himpunan kompak. 
 \begin{thm}\label{thm:konvK}
-     Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup, konveks, dan kompak. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$ dan $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{b_n\}\subseteq [a,b]\subset (0,1)$, maka $\{x_n\}$ konvergen kuat ke suatu titik tetap dari $T$.
+     Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup, konveks, dan kompak. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$ dan $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{b_n\}\subseteq [a,b]\subset (0,1)$, maka $\{x_n\}$ konvergen kuat ke suatu titik tetap dari $T$.
 \end{thm}
 \begin{bukti}
     Diperhatikan bahwa $W$ adalah himpunan kompak, ini berarti ada subbarisan $\{x_{n_k}\}$ dari $\{x_n\}$ yang konvergen kuat ke $x\in W$. Akibatnya $\{x_{n_k}\}$ juga konvergen$-\Delta$ ke $x\in W$.  Dengan menggunakan fakta bahwa $W$ himpunan kompak dan $Fix(T)\neq\emptyset$, maka berdasarkan Lema \ref{Lema:xntxn0}, diperoleh

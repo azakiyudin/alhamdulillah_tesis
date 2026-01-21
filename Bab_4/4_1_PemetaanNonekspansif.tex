@@ -4,7 +4,7 @@ Kemudian, pada Lema \ref{Lema:ineqabcnoneks} didapatkan ketaksamaan penting yang
 
 Berikut ini disajikan definisi dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di ruang $CAT_p(0)$.
 \begin{defn}\label{defn:abcnoncat}
-    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$, pemetaan $f:W\to W$ disebut sebagai pemetaan $(\alpha,\beta,\gamma)$-nonekspansif jika terdapat bilangan real $\alpha,\beta,\gamma\in \mathbb{R}^+\cup\{0\}$ dengan $\alpha+\gamma\leq 1,\gamma\in[0,1)$ sehingga untuk setiap $x,y\in W$ berlaku
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$, pemetaan $f:W\to W$ disebut sebagai pemetaan $(\alpha,\beta,\gamma)$-nonekspansif jika terdapat bilangan real $\alpha,\beta,\gamma\in \mathbb{R}^+\cup\{0\}$ dengan $\alpha+\gamma\leq 1,\gamma\in[0,1)$ sehingga untuk setiap $x,y\in W$ berlaku
     \begin{align}
         d(Tx,Ty)\leq \alpha d(x,y)+\beta d(x,Tx)+\gamma d(x, Ty). \label{eq:abcnoncat}
     \end{align}
@@ -14,7 +14,7 @@ Berikut ini disajikan definisi dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansi
     Contoh berikut ini merupakan contoh dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan ruang $CAT_p(0)$ yang diberikan pada Contoh \ref{con:Catp}.
 
     \begin{exam}\label{con:abcnon}
-        Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ sebagaimana dalam Contoh \ref{con:Catp}. Diberikan pula $W=\{(w_1,w_2,0,0,\cdots)\mid w_1\in[1,5], w_2\in[1,125]\}\subset X$. dan pemetaan $T:W\to W$ yang didefinisikan sebagai 
+        Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ sebagaimana dalam Contoh \ref{con:Catp}. Diberikan pula $W=\{(w_1,w_2,0,0,\cdots)\mid w_1\in[1,5], w_2\in[1,125]\}\subset X$. dan pemetaan $T:W\to W$ yang didefinisikan sebagai 
         \begin{align*}
             T((w_1,w_2,0,0,\cdots))=\begin{cases}
                 \qty(\frac{w_1+3}{4},\frac{(w_1+3)^3}{64},0,0,\cdots), \quad &\text{jika } w_1\in [1,3)\\
@@ -329,7 +329,7 @@ Berikut ini disajikan definisi dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansi
     % \end{exam}
     Selanjutnya, berikut ini diberikan tiga lema penting untuk pembuktian konvergensi skema iterasi Sabri. 
     \begin{lemma}\label{lemma:tutx}
-    Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$, serta $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Jika $u$ adalah titik tetap dari $T$, maka untuk setiap $x\in W$ berlaku $d(Tx,Tu)\leq d(x,u)$. 
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$, serta $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Jika $u$ adalah titik tetap dari $T$, maka untuk setiap $x\in W$ berlaku $d(Tx,Tu)\leq d(x,u)$. 
     \end{lemma}
     \begin{bukti}
         Diperhatikan bahwa $u$ titik tetap dari $T$ sehingga berlaku $u=Tu$, diperoleh 
@@ -348,7 +348,7 @@ Berikut ini disajikan definisi dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansi
         \end{align*}
     \end{bukti}
     \begin{lemma}\label{Lema:ineqabcnoneks}
-        Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$, serta $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Untuk setiap $x,y\in W$, ketaksamaan berikut ini berlaku:
+        Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$, serta $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Untuk setiap $x,y\in W$, ketaksamaan berikut ini berlaku:
         \begin{equation}\label{eq:ineqabcnoneks}
             d(x,Ty) \leq \frac{\alpha}{1-\gamma}d(x,y)+ \frac{1+\beta}{1-\gamma}d(x,Tx).
         \end{equation}
@@ -367,7 +367,7 @@ Berikut ini disajikan definisi dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansi
         \end{align*}
     \end{bukti}
     \begin{lemma}\label{Lema:demi}
-        Diberikan $(X,d)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif, maka $T$ memiliki sifat \textbf{demiclosedness}. 
+        Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif, maka $T$ memiliki sifat \textbf{demiclosedness}. 
     \end{lemma}
     \begin{bukti}
         Diambil sebarang barisan $\{x_n\}\subseteq W$ yang terbatas dan konvergen-$\Delta$ ke $u_0\in W$, serta memenuhi $\lim_{n\to\infty} d(x_n,Tx_n)=0$. Berdasarkan definisi \ref{defn:konvD}, diperoleh bahwa $u_0\in A(\{x_n\})$. Kemudian, menggunakan ketaksamaan \eqref{eq:ineqabcnoneks}, didapatkan 

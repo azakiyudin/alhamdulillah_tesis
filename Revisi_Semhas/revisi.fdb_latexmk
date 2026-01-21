@@ -1,8 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1768749370.20307 "d:/Tesis/alhamdulillah_tesis/Revisi_Semhas/revisi.tex" "revisi.pdf" "revisi" 1768749376.59362 0
+["pdflatex"] 1768869344.11945 "d:/Tesis/alhamdulillah_tesis/Revisi_Semhas/revisi.tex" "revisi.pdf" "revisi" 1768869348.65445 0
   "10_lp_geodesik.jpg" 1768672417 132724 33e5e9ce2c34648667319de81dec865b ""
   "11_contoh_konvergen.jpg" 1768672512 252340 dbd143d229b93e53ea6b8ecc5803dd05 ""
   "12_contoh_demiclosedness.jpg" 1768672555 94659 b530b386d1a468e265ceb5b0485d0ae3 ""
+  "13_penulisan_metrik.jpg" 1768748735 114410 f4532905120eb27de4d60778f4a0e105 ""
   "14.1_definisi_fungsi.jpg" 1768672855 106933 31ab595401fb456b463ef03583f9be37 ""
   "14_contoh_fungsi.jpg" 1768672608 260537 ef5f744ed3d8f04f0cc59aa9b508059d ""
   "15_contoh_pemetaan.jpg" 1768672636 251140 a4c5ee366dd8a8ef8ccb2428a2f7854f ""
@@ -333,10 +334,10 @@
   "C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/tex/latex/was/upgreek.sty" 1665850770 5794 9054e31be15d93f1e6bd28cca2b6643f ""
   "C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
-  "d:/Tesis/alhamdulillah_tesis/Revisi_Semhas/revisi.tex" 1768749318 12646 1c7282a3454f85f1931523730f6fb40e ""
-  "revisi.aux" 1768749375 162 1048d5a6ab834159417e60c8f895d4f4 "pdflatex"
-  "revisi.out" 1768749374 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "revisi.tex" 1768749318 12646 1c7282a3454f85f1931523730f6fb40e ""
+  "d:/Tesis/alhamdulillah_tesis/Revisi_Semhas/revisi.tex" 1768869342 13109 6a7cee7aa21a7cb473cc2ef42355b2d1 ""
+  "revisi.aux" 1768869347 162 8041607b76d73e3dcbdb7e912bad98fd "pdflatex"
+  "revisi.out" 1768869347 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "revisi.tex" 1768869342 13109 6a7cee7aa21a7cb473cc2ef42355b2d1 ""
   (generated)
   "revisi.aux"
   "revisi.log"
