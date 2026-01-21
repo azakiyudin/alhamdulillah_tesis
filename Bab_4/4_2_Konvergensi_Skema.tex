@@ -28,10 +28,10 @@ Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan
 \begin{bukti}
     Diambil sebarang $x^*\in Fix(T)$, berdasarkan Lema \ref{lema:d,d^p} dan \ref{lemma:tutx}, didapatkan bahwa 
     \begin{align*}
-        d(q_n,x^*)&=d\left(T\qty((1-b_n)x_n\oplus b_nTx_n), Tx^*\right)\\
-        &\leq d\qty((1-b_n)x_n\oplus b_nTx_n,x^*)\\
-        &\leq (1-b_n)d(x_n,x^*)+b_nd(Tx_n,x^*)\\
-        &\leq (1-b_n)d(x_n,x^*)+b_nd(x_n,x^*)\\
+        d(q_n,x^*)&=d\left(T\qty((1-c_n)x_n\oplus c_nTx_n), Tx^*\right)\\
+        &\leq d\qty((1-c_n)x_n\oplus c_nTx_n,x^*)\\
+        &\leq (1-c_n)d(x_n,x^*)+c_nd(Tx_n,x^*)\\
+        &\leq (1-c_n)d(x_n,x^*)+c_nd(x_n,x^*)\\
         &= d(x_n,x^*).
     \end{align*}
     Dengan cara yang sama, didapatkan pula
@@ -52,18 +52,18 @@ Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan
     \end{align*}
 \end{bukti}
 \begin{lemma}\label{Lema:xntxn0}
-    Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$. Jika $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{b_n\}\subseteq [a,b]\subset (0,1)$, maka $\lim_{n\to\infty} d(x_n,Tx_n)=0$.
+    Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$. Jika $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{c_n\}\subset (0,1)$, maka $\lim_{n\to\infty} d(x_n,Tx_n)=0$.
 \end{lemma}
 \begin{bukti}
     Diambil sebarang $x^*\in Fix(T)$, berdasarkan Lema \ref{lema:d,d^p} dan \ref{lemma:tutx}, didapatkan bahwa
     \begin{align*}
-        d^p(q_n,x^*) &= d^p\qty(T\qty((1-b_n)x_n\oplus b_n Tx_n),x^*)\\
-        &\leq d^p\qty((1-b_n)x_n\oplus b_nTx_n,x^*)\\
-        &\leq (1-b_n)d^p(x_n,x^*)+b_n d^p(Tx_n,x^*)-\frac{b_n(1-b_n)}{2^{p-1}}d^p(x_n,Tx_n).
+        d^p(q_n,x^*) &= d^p\qty(T\qty((1-c_n)x_n\oplus c_n Tx_n),x^*)\\
+        &\leq d^p\qty((1-c_n)x_n\oplus c_nTx_n,x^*)\\
+        &\leq (1-c_n)d^p(x_n,x^*)+c_n d^p(Tx_n,x^*)-\frac{c_n(1-c_n)}{2^{p-1}}d^p(x_n,Tx_n).
     \end{align*}
-    Karena $a\leq b_k\leq b$, diperoleh $-b_n(1-b_n)\leq a(1-b)$ sehingga 
+    Karena $a\leq c_k\leq b$, diperoleh $-c_n(1-c_n)\leq a(1-b)$ sehingga 
     \begin{align*}
-        d^p(q_n,x^*)&\leq (1-b_n)d^p(x_n,x^*)+b_n d^p(x_n,x^*)-\frac{a(1-b)}{2^{p-1}} d^p(x_n,Tx_n)\\
+        d^p(q_n,x^*)&\leq (1-c_n)d^p(x_n,x^*)+c_n d^p(x_n,x^*)-\frac{a(1-b)}{2^{p-1}} d^p(x_n,Tx_n)\\
         &= d^p(x_n,x^*)-\frac{a(1-b)}{2^{p-1}}d^p(x_n,Tx_n).
     \end{align*}
     Dengan cara yang sama, didapatkan pula
@@ -76,7 +76,7 @@ Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan
     \begin{align*}
         d^p(x_{n+1},x^*) =&~ d^p\qty(T\qty((1-a_n)Tq_n\oplus a_n Ty_n),x^*)\\
         \leq &~d^p\qty((1-a_n)Tq_n\oplus a_n Ty_n,x^*)\\
-        \leq&~ (1-a_n)d^p(Tq_n,x^*)+a_n d^p(Ty_n,x^*)-\frac{b_n(1-b_n)}{2^{p-1}}d^p(Tq_n,Ty_n)\\
+        \leq&~ (1-a_n)d^p(Tq_n,x^*)+a_n d^p(Ty_n,x^*)-\frac{c_n(1-c_n)}{2^{p-1}}d^p(Tq_n,Ty_n)\\
         \leq&~ (1-a_n)d^p(q_n,x^*)+a_n d^p(y_n,x^*)\\
         \leq&~ (1-a_n)\qty[d^p(x_n,x^*)-\frac{a(1-b)}{2^{p-1}}d^p(x_n,Tx_n)]\\
         &~+a_n \qty[d^p(x_n,x^*)-\frac{a(1-b)}{2^{p-1}}d^p(x_n,Tx_n)]\\
@@ -86,7 +86,7 @@ Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan
     \begin{align*}
      d^p(x_n,Tx_n)&\leq \frac{2^{p-1}}{a(1-b)}\qty[d^p(x_n,x^*)-d^p(x_{n+1},x^*)].     
     \end{align*}
-    Selanjutnya, berdasarkan Lema \ref{Lema:dxnx*}, diperoleh bahwa $u_n=d(x_n,x^*)$ adalah barisan turun dan terbatas di bawah, sehingga $\lim_{n\to\infty} u_n=\lim_{n\to\infty} \qty(d(x_n,x^*))=0$. Akibatnya diperoleh
+    Selanjutnya, berdasarkan Lema \ref{Lema:dxnx*}, diperoleh bahwa $\{d(x_n,x^*)\}$ adalah barisan turun dan terbatas di bawah dengan batas bawah 0, sehingga $\{d(x_n,x^*)\}$ konvergen. Hal ini berarti $u_n = d^p(x_n,x^*)$ juga konvergen dan diperoleh $\lim_{n\to\infty} (u_n-u_{n+1})=0$. Akibatnya, didapatkan 
     \begin{align*}
         0\leq \lim_{n\to \infty} d^p(x_n,Tx_n)&\leq \lim_{n\to \infty} \frac{2^{p-1}}{a(1-b)}\qty[d^p(x_n,x^*)-d^p(x_{n+1},x^*)] =0.
     \end{align*}
@@ -111,13 +111,13 @@ Teorema berikut ini menyajikan syarat eksistensi titik tetap dari pemetaan $(\al
 \end{bukti}
 Selanjutnya, dua teorema berikut ini menyajikan hasil konvergensi dari skema Sabri, yakni konvergensi-$\Delta$ dan konvergensi kuat, untuk aproksimasi titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif
 \begin{thm}\label{thm:konvD}
-    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup dan konveks. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$ dan $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{b_n\}\subseteq [a,b]\subset (0,1)$, maka $\{x_n\}$ konvergen-$\Delta$ ke suatu titik tetap dari $T$.
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup dan konveks. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$ dan $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{c_n\}\subset (0,1)$, maka $\{x_n\}$ konvergen-$\Delta$ ke suatu titik tetap dari $T$.
 \end{thm}
 \begin{bukti}
-    Diamati bahwa $T$ merupakan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Dari Lema \ref{Lema:dxnx*}, didapatkan bahwa $\{d(x_n,x^*)\}$ adalah barisan turun dan terbatas di bawah dengan batas bawah 0, sehingga 
-    \begin{align}
-        \lim_{n\to\infty} d(x_n,x^*)=0 \quad \quad \text{untuk setiap } x^*\in Fix(T).
-    \end{align}
+    Diamati bahwa $T$ merupakan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Dari Lema \ref{Lema:dxnx*}, didapatkan bahwa $\{d(x_n,x^*)\}$ adalah barisan turun dan terbatas di bawah dengan batas bawah 0, sehingga $\{d(x_n,x^*)\}$ konvergen untuk setiap $x^*\in Fix(T)$.
+    % \begin{align}
+    %     \lim_{n\to\infty} d(x_n,x^*)=0 \quad \quad \text{untuk setiap } x^*\in Fix(T).
+    % \end{align}
      Kemudian, karena $Fix(T)\neq \emptyset$, maka berdasarkan Lema \ref{Lema:xntxn0}, didapatkan 
      \begin{align}
          \lim_{n\to\infty} d(x_n,Tx_n)=0.
@@ -126,7 +126,7 @@ Selanjutnya, dua teorema berikut ini menyajikan hasil konvergensi dari skema Sab
 \end{bukti}
 Untuk mendapatkan hasil konvergensi kuat, diperlukan syarat tambahan, yaitu himpunan $W$ haruslah merupakan himpunan kompak. 
 \begin{thm}\label{thm:konvK}
-     Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup, konveks, dan kompak. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$ dan $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{b_n\}\subseteq [a,b]\subset (0,1)$, maka $\{x_n\}$ konvergen kuat ke suatu titik tetap dari $T$.
+     Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup, konveks, dan kompak. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$ dan $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{c_n\}\subset (0,1)$, maka $\{x_n\}$ konvergen kuat ke suatu titik tetap dari $T$.
 \end{thm}
 \begin{bukti}
     Diperhatikan bahwa $W$ adalah himpunan kompak, ini berarti ada subbarisan $\{x_{n_k}\}$ dari $\{x_n\}$ yang konvergen kuat ke $x\in W$. Akibatnya $\{x_{n_k}\}$ juga konvergen$-\Delta$ ke $x\in W$.  Dengan menggunakan fakta bahwa $W$ himpunan kompak dan $Fix(T)\neq\emptyset$, maka berdasarkan Lema \ref{Lema:xntxn0}, diperoleh
