@@ -98,7 +98,7 @@ Penjelasan dari Contoh \ref{con:fkonvk} diberikan sebagai berikut.
         \lambda_{1,2} = \frac{-810 \pm \sqrt{810^2-4(2692800)}}{2},
     \end{align*}
     yang jelas memiliki akar negatif. Jadi ada $x\in W$ sehingga matriks Hessian $H$ memiliki nilai eigen negatif, yang berarti $H$ bukan matriks semidefinit positif. Akibatnya $f$ bukanlah fungsi konveks dalam definisi klasik. 
-    \item Kedua, ditunjukkan bahwa $f$ memenuhi Definisi \ref{def:konvgeodesik}, yaitu fungsi konveks secara geodesik. Sebelum itu, diperhatikan bahwa fungsi $p(x)=|x|^3$ adalah fungsi konveks, karena $f''(x)=\frac{6x^2}{|x|}\geq 0$ untuk setiap $x\in \mathbb{R}\backslash \{0\}$. Dengan fakta tersebut, didapatkan bahwa untuk setiap $t\in(0,1)$ dan $w,z\in X$ berlaku
+    \item Kedua, ditunjukkan bahwa $f$ memenuhi Definisi \ref{def:konvgeodesik}, yaitu fungsi konveks secara geodesik. Sebelum itu, diperhatikan bahwa fungsi $p(x)=|x|^3$ adalah fungsi konveks, karena $p''(x)=\frac{6x^2}{|x|}\geq 0$ untuk setiap $x\in \mathbb{R}\backslash \{0\}$. Dengan fakta tersebut, didapatkan bahwa untuk setiap $t\in(0,1)$ dan $w,z\in X$ berlaku
     \begin{align*}
         f\qty((1-t)w\oplus tz) =~& f\big((1-t)w_1+tz_1, \qty((1-t)w_1+tz_1)^3\\
         &\quad\,\,    -(1-t)(w_1^3-w_2)-t(z_1^3-z_2)\big)\\
@@ -112,7 +112,7 @@ Penjelasan dari Contoh \ref{con:fkonvk} diberikan sebagai berikut.
     \end{align*}
     Jadi $f$ adalah fungsi konveks secara geodesik. 
 \end{enumerate}
-Selanjutnya, jelas bahwa $D(f)=\{x\in X\mid f(x)<+\infty\}\neq\emptyset$, sehingga $f$ adalah fungsi \textit{proper}. Jelas pula bahwa $f$ adalah fungsi kontinu, yang berarti juga memenuhi kondisi \textit{lower semicontinuous}. Dalam hal ini kondisi pada Teorema \ref{thm:konvK} terpenuhi. Diperhatikan bahwa 
+Selanjutnya, diperhatikan bahwa $(0,0,0,\dots)\in D(f)$ sehingga $D(f)=\{x\in X\mid f(x)<+\infty\}\neq\emptyset$, yang berarti $f$ adalah fungsi \textit{proper}. Diperhatikan pula bahwa $f$ adalah fungsi kontinu, yang berarti juga memenuhi kondisi \textit{lower semicontinuous}. Dalam hal ini kondisi pada Teorema \ref{thm:konvK} terpenuhi. Diperhatikan bahwa 
 nilai minimum dari fungsi $f$ pada Contoh \ref{con:fkonvk} adalah $0$, yang dicapai saat $x_2-x_1^3=0$ dan $26-x_1=0$, atau pada titik $x^*=(26, 17576, 0,0,\dots)$. Dengan demikian, berdasarkan Teorema \ref{thm:apl1}, barisan yang dihasilkan dari skema iterasi Sabri dan JK konvergen ke titik $x^*$. 
 
 Untuk ilustrasi, dilakukan simulasi numerik untuk Contoh \ref{con:fkonvk} dengan perangkat lunak Google Colab yang menggunakan bahasa pemrograman python. Kode dari program ini dapat dilihat pada Lampiran A.2. Pada simulasi ini digunakan parameter $\lambda=20$, $a_n=0.34$, dan $c_n=0.93$, serta nilai awal $x_0=(10, 10, 0, 0, \dots)$. Simulasi dilakukan sebanyak 55 iterasi yang hasilnya dapat dilihat pada \ref{tab:simulasimin} dan \ref{tab:errsimulasi}. Galat dari simulasi ini juga digambarkan sebagai grafik dengan koordinat-$y$ berskala log yang disajikan pada \ref{fig:galatsim}.
