@@ -328,16 +328,7 @@ Dua contoh berikut ini mengilustrasikan konsep himpunan konveks dan bukan konvek
     \end{align*}
     Untuk $t=\dfrac{1}{2}$, diperoleh $G\left(\dfrac{1}{2}\right) = \left(0, -\dfrac{1}{2}\right)\notin \mathcal{M}$, sehingga himpunan bagian $\mathcal{M}$ tidak konveks di ruang $(\mathbb{R}^2,\tilde{d})$.
 \end{exam}
-% \todo{himpunan kompak}
-% Definisi berikut ini menyatakan konsep himpunan kompak di ruang $CAT_p(0)$ yang secara langsung diadaptasi dari konsep himpunan kompak di ruang metrik pada umumnya.
-% \begin{defn}
-%     Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Suatu himpunan bagian $\mathcal{M}\subseteq X$ disebut kompak jika setiap barisan di $\mathcal{M}$ memiliki subbarisan yang konvergen ke suatu titik di $\mathcal{M}$.
-% \end{defn}
-% \begin{exam}
-%     Diberikan ruang $CAT_p(0)$, yaitu $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan himpunan bagian $\mathcal{M}=\{(x_1,x_2)\in \mathbb{R}^2\mid x_1^2 + (x_1^2-x_2)^2 \leq 1\}\subset \mathbb{R}^2$. Himpunan bagian tersebut adalah himpunan kompak karena setiap barisan di $\mathcal{M}$ memiliki subbarisan yang konvergen ke suatu titik di $\mathcal{M}$.
-% \end{exam}
-% Penjelasan dari contoh tersebut adalah sebagai berikut. 
-% Dimisalkan $\{x_n\}\subseteq \mathcal{M}$ adalah barisan di $\mathcal{M}$ dengan $x_n=(x_{n1},x_{n2})$ untuk setiap $n\in \mathbb{N}$. 
+
 
 Definisi berikut ini menyatakan konsep barisan terbatas di ruang $CAT_p(0)$ yang secara langsung diadaptasi dari konsep barisan terbatas di ruang metrik pada umumnya.
 \begin{defn}
@@ -371,6 +362,10 @@ Pada ruang ini, konvergensi lemah yang umum digunakan pada ruang Banach digantik
     \end{align*}
     Dengan demikian, pusat asimtotik dari barisan $\{x_n\}$ adalah $\{(0,0)\}$.
 \end{exam}
+Lema berikut ini menyatakan keunikan pusat asimtotik dari suatu barisan terbatas di ruang $CAT_p(0)$.
+\begin{lemma}\cite{Salisu2022}\label{Lema:asimtotik}
+    Pusat asimtotik dari suatu barisan terbatas di ruang $CAT_p(0)$ memiliki tepat satu elemen. 
+\end{lemma}
 \begin{defn}\cite{Salisu2022}\label{defn:konvD}
     Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $\{x_n\}$ adalah barisan terbatas di $X$. Barisan $\{x_n\}$ disebut sebagai konvergen-$\Delta$ ke suatu titik $x\in X$ (dinotasikan $\Delta-\lim_{n\to\infty} x_n=x$) jika $\{x\}$ adalah pusat asimtotik dari setiap subbarisan $\{x_{n_k}\}$ dari $\{x_n\}$.
 \end{defn}
@@ -423,6 +418,23 @@ Untuk konvergensi kuat di ruang $CAT_p(0)$, konsepnya sama dengan konvergensi ku
         \tilde{d}(x_n,x) &= \sqrt{(0-0)^2 + \qty(0^2 - \dfrac{1}{n} - 0^2)^2} = \dfrac{1}{n} < \varepsilon.
     \end{align*}
 \end{exam}
+\begin{thm}
+    Diberikan ruang $CAT_p(0)$ $(X,d,G)$. Jika $\{x_n\}$ adalah barisan di $X$ yang konvergen kuat, maka $\{x_n\}$ konvergen-$\Delta$ dan  terbatas.
+\end{thm}
+% \todo{himpunan kompak}
+\begin{defn}
+    Ruang $CAT_p(0)$ $(X,d,G)$ disebut lengkap jika setiap barisan Cauchy di $X$ konvergen kuat ke titik $x\in X$.
+\end{defn}
+Definisi berikut ini menyatakan konsep himpunan kompak di ruang $CAT_p(0)$ yang secara langsung diadaptasi dari konsep himpunan kompak di ruang metrik pada umumnya.
+\begin{defn}
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Suatu himpunan bagian $\mathcal{M}\subseteq X$ disebut kompak jika setiap barisan di $\mathcal{M}$ memiliki subbarisan yang konvergen kuat ke suatu titik di $\mathcal{M}$.
+\end{defn}
+% \begin{exam}
+%     Diberikan ruang $CAT_p(0)$, yaitu $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan himpunan bagian $\mathcal{M}=\{(x_1,x_2)\in \mathbb{R}^2\mid x_1^2 + (x_1^2-x_2)^2 \leq 1\}\subset \mathbb{R}^2$. Himpunan bagian tersebut adalah himpunan kompak karena setiap barisan di $\mathcal{M}$ memiliki subbarisan yang konvergen ke suatu titik di $\mathcal{M}$.
+% \end{exam}
+% Penjelasan dari contoh tersebut adalah sebagai berikut. 
+% Dimisalkan $\{x_n\}\subseteq \mathcal{M}$ adalah barisan di $\mathcal{M}$ dengan $x_n=(x_{n1},x_{n2})$ untuk setiap $n\in \mathbb{N}$. 
+
 
 Berikut ini diberikan definisi mengenai sifat demiclosedness pada pemetaan di ruang $CAT_p(0)$.
 \begin{defn}\cite{Salisu2022}\label{defn:demi}
@@ -437,25 +449,22 @@ Berikut ini diberikan definisi mengenai sifat demiclosedness pada pemetaan di ru
     Hal ini berarti, $T\qty((0,0)) \in A(\{x_n\})$ sehingga $T\qty((0,0)) = (0,0)$. Dengan demikian, pemetaan $T$ memiliki sifat demiclosedness.
    \end{exam}
 
-   Dalam tesis ini dinotasikan $d^p(x,y)$ sebagai perkalian dari $d(x,y)$ dengan $d(x,y)$ sebanyak $p$ kali yaitu 
+   Dalam tesis ini dinotasikan $\qty(d(x,y))^p$ sebagai perkalian dari $d(x,y)$ dengan $d(x,y)$ sebanyak $p$ kali yaitu 
    \begin{align*}
-    d^p(x,y) = \underbrace{d(x,y)\cdot d(x,y)\cdots d(x,y)}_{p\text{ kali}}.
+    \qty(d(x,y))^p = \underbrace{d(x,y)\cdot d(x,y)\cdots d(x,y)}_{p\text{ kali}}.
    \end{align*}
    Selanjutnya, berikut ini diberikan ketaksamaan penting yang berlaku pada ruang $CAT_p(0)$. 
 \begin{lemma}\cite{CALDERN2021}\label{lema:d,d^p}
     Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Jika $x,y,z\in X$ dan $t\in[0,1]$, maka 
     \begin{enumerate}
         \item $d((1-t)x\oplus tz, y)\leq (1-t)d(x,y)+td(z,y)$. 
-        \item $d^p((1-t)x\oplus tz, y)\leq (1-t)d^p(x,y)+td^p(z,y)-\dfrac{t(1-t)}{2^{p-1}}d^p(x,z)$.
+        \item $\qty(d((1-t)x\oplus tz, y))^p\leq (1-t)\qty(d(x,y))^p+t\qty(d(z,y))^p-\dfrac{t(1-t)}{2^{p-1}}\qty(d(x,z))^p$.
     \end{enumerate}
 \end{lemma}
 % \begin{remark}\cite{CALDERN2021}
 %     Suatu ruang metrik geodesik merupakan ruang $CAT_p(0)$ jika dan hanya jika memenuhi 
 % \end{remark}
-Lema berikut ini menyatakan keunikan pusat asimtotik dari suatu barisan terbatas di ruang $CAT_p(0)$.
-\begin{lemma}\cite{Salisu2022}\label{Lema:asimtotik}
-    Pusat asimtotik dari suatu barisan terbatas di ruang $CAT_p(0)$ memiliki tepat satu elemen. 
-\end{lemma}
+
 Selain itu, berikut ini diberikan teorema yang menyatakan kondisi konvergensi-$\Delta$ dari suatu barisan di ruang $CAT_p(0)$.
 \begin{thm}\cite{Salisu2022}\label{thm:kondisikonvD}
     Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup dan konveks. Diberikan pula $T:W\to W$ adalah pemetaan yang memiliki titik tetap dan memenuhi sifat demiclosedness \ref{defn:demi}. Jika $\{x_n\}$ adalah barisan di $W$ yang memenuhi $\lim_{n\to\infty}d(x_n,Tx_n)=0$ dan barisan $\{d(x_n,x^*)\}$ konvergen di $\mathbb{R}$ untuk setiap $x^*$ titik tetap dari $T$, maka barisan $\{x_n\}$ konvergen-$\Delta$ ke titik tetap dari $T$.

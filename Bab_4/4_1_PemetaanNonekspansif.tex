@@ -343,9 +343,19 @@ Berikut ini disajikan definisi dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansi
             \frac{\alpha}{1-\gamma}\leq 1.
         \end{align*}
         Akibatnya
+        \begin{align}
+           d(Tx,Tu)= d(Tu,Tx)= d(u, Tx) \leq \frac{\alpha}{1-\gamma} d(x,u) \leq d(x,u).\label{ineq:titap}
+        \end{align}
+    \end{bukti}
+    \begin{thm}
+        Diberikan $(X,d,G)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$, serta $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Jika $\alpha+\gamma\neq 1$ dan $T$ memiliki titik tetap, maka titik tetap dari $T$ tunggal.
+    \end{thm}
+    \begin{bukti}
+        Misalkan $u$ dan $v$ adalah titik tetap dari $T$, maka berdasarkan Ketaksamaan \eqref{ineq:titap} diperoleh 
         \begin{align*}
-           d(Tx,Tu)= d(Tu,Tx)= d(u, Tx) \leq \frac{\alpha}{1-\gamma} d(x,u) \leq d(x,u).
-        \end{align*}
+            d(u,v)=d(Tu,Tv) \leq \frac{\alpha}{1-\gamma} d(u,v) 
+        \end{align*} 
+        Karena $\alpha,\gamma\in [0,1]$, $\gamma\neq 1$, dan $\alpha+\gamma\neq 1$, didapatkan bahwa $0\leq \frac{\alpha}{1-\gamma}<1$ sehingga $d(u,v)=0$. Dengan demikian $u=v$, yang berarti bahwa titik tetap dari $T$ tunggal. 
     \end{bukti}
     \begin{lemma}\label{Lema:ineqabcnoneks}
         Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$, serta $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Untuk setiap $x,y\in W$, ketaksamaan berikut ini berlaku:

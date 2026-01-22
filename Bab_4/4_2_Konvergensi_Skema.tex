@@ -1,5 +1,5 @@
 \section{Konvergensi Skema Iterasi Sabri untuk Pemetaan $(\alpha,\beta,\gamma)$-nonekspansif}
-Pada bagian ini disajikan skema iterasi Sabri pada ruang $CAT_p(0)$ dan hasil terkait konvergensi dari skema iterasi Sabri untuk pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di ruang tersebut. Terdapat dua lema penting yang digunakan untuk membuktikan konvergensi skema tersebut, yaitu pada Lema \ref{Lema:dxnx*} yang menunjukkan bahwa barisan $d(x_{n},x^*)$ adalah barisan turun, dengan $x^*$ adalah titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif, serta pada Lema \ref{Lema:xntxn0} yang menunjukkan bahwa barisan limit dari barisan $d(x_n,Tx_n)$ adalah 0. Kemudian, disajikan syarat eksistensi titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif pada Teorema \ref{thm:fixtnonemp}. Hasil konvergensi dari skema ini diberikan pada Teorema \ref{thm:konvD} yang memberikan hasil konvergensi$-\Delta$, sedangkan untuk konvergensi kuat diberikan oleh Teorema \ref{thm:konvK}. 
+Pada bagian ini disajikan skema iterasi Sabri pada ruang $CAT_p(0)$ dan hasil terkait konvergensi dari skema iterasi Sabri untuk pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di ruang tersebut. Terdapat dua lema penting yang digunakan untuk membuktikan konvergensi skema tersebut, yaitu pada Lema \ref{Lema:dxnx*} yang menunjukkan bahwa barisan $d(x_{n},x^*)$ adalah barisan turun, dengan $x^*$ adalah titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif, serta pada Lema \ref{Lema:xntxn0} yang menunjukkan bahwa barisan limit dari barisan $d(x_n,Tx_n)$ adalah 0. Kemudian, disajikan syarat eksistensi titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif pada Teorema \ref{thm:fixtnonemp}. Hasil konvergensi dari skema ini diberikan pada Teorema \ref{thm:konvD} yang memberikan syarat cukup untuk konvergensi$-\Delta$, sedangkan syarat cukup untuk konvergensi kuat diberikan oleh Teorema \ref{thm:konvK}. 
 
 Berikut ini diberikan skema iterasi Sabri pada ruang $CAT_p(0)$.
 \begin{defn}[\textbf{Skema Iterasi Sabri}]\label{defn:sabri}
@@ -21,7 +21,7 @@ Berikut ini adalah diagram alir dari skema iterasi Sabri pada ruang $CAT_p(0)$.
     \label{fig:skemasabricat0}
 \end{figure}
 
-Untuk selanjutnya, dinotasikan $W$ sebagai himpunan bagian tak kosong yang konveks dari ruang $CAT_p(0)$ $(X,d,G)$, serta $Fix(T)$ adalah himpunan yang berisi titik tetap dari pemetaan $T$.
+Untuk selanjutnya, dinotasikan $W$ sebagai himpunan bagian tak kosong yang konveks dari ruang $CAT_p(0)$ $(X,d,G)$, serta $Fix(T)$ adalah himpunan semua titik tetap dari pemetaan $T$.
 \begin{lemma}\label{Lema:dxnx*}
 Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$. Jika $\{ x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat}, maka $d(x_{n+1},x^*)\leq d(x_n,x^*)$ untuk setiap $x^*\in Fix(T)$.
 \end{lemma}
@@ -57,38 +57,38 @@ Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan
 \begin{bukti}
     Diambil sebarang $x^*\in Fix(T)$, berdasarkan Lema \ref{lema:d,d^p} dan \ref{lemma:tutx}, didapatkan bahwa
     \begin{align*}
-        d^p(q_n,x^*) &= d^p\qty(T\qty((1-c_n)x_n\oplus c_n Tx_n),x^*)\\
-        &\leq d^p\qty((1-c_n)x_n\oplus c_nTx_n,x^*)\\
-        &\leq (1-c_n)d^p(x_n,x^*)+c_n d^p(Tx_n,x^*)-\frac{c_n(1-c_n)}{2^{p-1}}d^p(x_n,Tx_n).
+        \qty(d(q_n,x^*))^p &= \qty(d\qty(T\qty((1-c_n)x_n\oplus c_n Tx_n),x^*))^p\\
+        &\leq \qty(d\qty((1-c_n)x_n\oplus c_nTx_n,x^*))^p\\
+        &\leq (1-c_n)\qty(d(x_n,x^*))^p+c_n \qty(d(Tx_n,x^*))^p-\frac{c_n(1-c_n)}{2^{p-1}}\qty(d(x_n,Tx_n))^p.
     \end{align*}
     Karena $a\leq c_k\leq b$, diperoleh $-c_n(1-c_n)\leq a(1-b)$ sehingga 
     \begin{align*}
-        d^p(q_n,x^*)&\leq (1-c_n)d^p(x_n,x^*)+c_n d^p(x_n,x^*)-\frac{a(1-b)}{2^{p-1}} d^p(x_n,Tx_n)\\
-        &= d^p(x_n,x^*)-\frac{a(1-b)}{2^{p-1}}d^p(x_n,Tx_n).
+        \qty(d(q_n,x^*))^p&\leq (1-c_n)\qty(d(x_n,x^*))^p+c_n \qty(d(x_n,x^*))^p-\frac{a(1-b)}{2^{p-1}} \qty(d(x_n,Tx_n))^p\\
+        &= \qty(d(x_n,x^*))^p-\frac{a(1-b)}{2^{p-1}}\qty(d(x_n,Tx_n))^p.
     \end{align*}
     Dengan cara yang sama, didapatkan pula
     \begin{align*}
-        d^p(y_n,x^*)&=d^p\qty(T(Tq_n),x^*)\\
-        &\leq d^p(q_n,x^*)\\
-        &\leq d^p(x_n,x^*)-\frac{a(1-b)}{2^{p-1}}d^p(x_n,Tx_n),
+        \qty(d(y_n,x^*))^p&=\qty(d\qty(T(Tq_n),x^*))^p\\
+        &\leq \qty(d(q_n,x^*))^p\\
+        &\leq \qty(d(x_n,x^*))^p-\frac{a(1-b)}{2^{p-1}}\qty(d(x_n,Tx_n))^p,
     \end{align*}
     serta
     \begin{align*}
-        d^p(x_{n+1},x^*) =&~ d^p\qty(T\qty((1-a_n)Tq_n\oplus a_n Ty_n),x^*)\\
-        \leq &~d^p\qty((1-a_n)Tq_n\oplus a_n Ty_n,x^*)\\
-        \leq&~ (1-a_n)d^p(Tq_n,x^*)+a_n d^p(Ty_n,x^*)-\frac{c_n(1-c_n)}{2^{p-1}}d^p(Tq_n,Ty_n)\\
-        \leq&~ (1-a_n)d^p(q_n,x^*)+a_n d^p(y_n,x^*)\\
-        \leq&~ (1-a_n)\qty[d^p(x_n,x^*)-\frac{a(1-b)}{2^{p-1}}d^p(x_n,Tx_n)]\\
-        &~+a_n \qty[d^p(x_n,x^*)-\frac{a(1-b)}{2^{p-1}}d^p(x_n,Tx_n)]\\
-        =&~d^p(x_n,x^*)-\frac{a(1-b)}{2^{p-1}}d^p(x_n,Tx_n).
+        \qty(d(x_{n+1},x^*))^p =&~ \qty(d\qty(T\qty((1-a_n)Tq_n\oplus a_n Ty_n),x^*))^p\\
+        \leq &~\qty(d\qty((1-a_n)Tq_n\oplus a_n Ty_n,x^*))^p\\
+        \leq&~ (1-a_n)\qty(d(Tq_n,x^*))^p+a_n \qty(d(Ty_n,x^*))^p-\frac{c_n(1-c_n)}{2^{p-1}}\qty(d(Tq_n,Ty_n))^p\\
+        \leq&~ (1-a_n)\qty(d(q_n,x^*))^p+a_n \qty(d(y_n,x^*))^p\\
+        \leq&~ (1-a_n)\qty[\qty(d(x_n,x^*))^p-\frac{a(1-b)}{2^{p-1}}\qty(d(x_n,Tx_n))^p]\\
+        &~+a_n \qty[\qty(d(x_n,x^*))^p-\frac{a(1-b)}{2^{p-1}}\qty(d(x_n,Tx_n))^p]\\
+        =&~\qty(d(x_n,x^*))^p-\frac{a(1-b)}{2^{p-1}}\qty(d(x_n,Tx_n))^p.
     \end{align*}
     Akibatnya 
     \begin{align*}
-     d^p(x_n,Tx_n)&\leq \frac{2^{p-1}}{a(1-b)}\qty[d^p(x_n,x^*)-d^p(x_{n+1},x^*)].     
+     \qty(d(x_n,Tx_n))^p&\leq \frac{2^{p-1}}{a(1-b)}\qty[\qty(d(x_n,x^*))^p-\qty(d(x_{n+1},x^*))^p].     
     \end{align*}
-    Selanjutnya, berdasarkan Lema \ref{Lema:dxnx*}, diperoleh bahwa $\{d(x_n,x^*)\}$ adalah barisan turun dan terbatas di bawah dengan batas bawah 0, sehingga $\{d(x_n,x^*)\}$ konvergen. Hal ini berarti $u_n = d^p(x_n,x^*)$ juga konvergen dan diperoleh $\lim_{n\to\infty} (u_n-u_{n+1})=0$. Akibatnya, didapatkan 
+    Selanjutnya, berdasarkan Lema \ref{Lema:dxnx*}, diperoleh bahwa $\{d(x_n,x^*)\}$ adalah barisan turun dan terbatas di bawah dengan batas bawah 0, sehingga $\{d(x_n,x^*)\}$ konvergen. Hal ini berarti $u_n = \qty(d(x_n,x^*))^p$ juga konvergen dan diperoleh $\lim_{n\to\infty} (u_n-u_{n+1})=0$. Akibatnya, didapatkan 
     \begin{align*}
-        0\leq \lim_{n\to \infty} d^p(x_n,Tx_n)&\leq \lim_{n\to \infty} \frac{2^{p-1}}{a(1-b)}\qty[d^p(x_n,x^*)-d^p(x_{n+1},x^*)] =0.
+        0\leq \lim_{n\to \infty} \qty(d(x_n,Tx_n))^p&\leq \lim_{n\to \infty} \frac{2^{p-1}}{a(1-b)}\qty[\qty(d(x_n,x^*))^p-\qty(d(x_{n+1},x^*))^p] =0.
     \end{align*}
     Jadi $\lim_{n\to\infty}d(x_n,Tx_n)=0$.
 \end{bukti}

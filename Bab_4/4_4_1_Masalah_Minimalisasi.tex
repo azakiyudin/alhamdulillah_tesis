@@ -7,13 +7,13 @@ Permasalahan ini merupakan permasalahan penting dalam bidang optimasi dan analis
 \begin{defn}
     Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $f:X\to \mathbb{R}\cup\{+\infty\}$ adalah suatu fungsi. Untuk $\lambda>0$, operator resolvent $\lambda$ dari $f$ didefinisikan sebagai
     \begin{align}
-        J^f_{\lambda}(x) = \text{argmin}_{y\in X} \qty[f(y)+\frac{1}{2\lambda}d^2(x,y)].
+        J^f_{\lambda}(x) = \text{argmin}_{y\in X} \qty[f(y)+\frac{1}{2\lambda}\qty(d(x,y))^2].
     \end{align}
 \end{defn}
 \begin{exam}
-    Diberikan $(\mathbb{R}^2,\|\cdot\|_2)$ adalah ruang Banach yang juga merupakan $CAT_p(0)$. Misalkan $f:\mathbb{R}^2\to \mathbb{R}$ adalah fungsi yang didefinisikan sebagai $f(x_1,x_2) = |x_1| + |x_2|$ untuk setiap $(x_1,x_2)\in \mathbb{R}^2$. Untuk $\lambda>0$ dan $x=(x_1,x_2)\in \mathbb{R}^2$, operator resolvent $J^f_{\lambda}$ dari $f$ adalah sebagai berikut.
+    Diberikan $(\mathbb{R}^2,\|\cdot\|_2)$ adalah ruang Banach yang juga merupakan $CAT_p(0)$. Misalkan $f:\mathbb{R}^2\to \mathbb{R}\cup\{+\infty\}$ adalah fungsi yang didefinisikan sebagai $f(x_1,x_2) = |x_1| + |x_2|$ untuk setiap $(x_1,x_2)\in \mathbb{R}^2$. Untuk $\lambda>0$ dan $x=(x_1,x_2)\in \mathbb{R}^2$, operator resolvent $J^f_{\lambda}$ dari $f$ adalah sebagai berikut.
     \begin{align*}
-        J^f_{\lambda}(x) &= \text{argmin}_{y\in \mathbb{R}^2} \qty[|y_1| + |y_2| + \frac{1}{2\lambda}\norm{(x_1,y_2)-(y_1,y_2)}_2^2]\\
+        J^f_{\lambda}(x) &= \text{argmin}_{y\in \mathbb{R}^2} \qty[|y_1| + |y_2| + \frac{1}{2\lambda}\qty(\norm{(x_1,y_2)-(y_1,y_2)}_2)^2]\\
         &= \text{argmin}_{y\in \mathbb{R}^2} \qty[|y_1| + |y_2| + \frac{1}{2\lambda}\qty((x_1 - y_1)^2 + (x_2 - y_2)^2)].
     \end{align*}
     % Dengan memisahkan variabel $y_1$ dan $y_2$, diperoleh

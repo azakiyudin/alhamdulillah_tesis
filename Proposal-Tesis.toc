@@ -17,22 +17,22 @@
 \contentsline {section}{\numberline {2.1}Penelitian Terdahulu}{5}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Ruang Metrik Geodesik}{7}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Ruang $CAT_p(0)$}{9}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Pemetaan Nonekspansif}{19}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Aproksimasi Titik Tetap dari Pemetaan Nonekspansif}{27}{section.2.5}%
+\contentsline {section}{\numberline {2.4}Pemetaan Nonekspansif}{20}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Aproksimasi Titik Tetap dari Pemetaan Nonekspansif}{28}{section.2.5}%
 \contentsline {chapter}{\numberline {BAB 3}METODE PENELITIAN}{31}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Tahapan Penelitian}{31}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Diagram Alir Penelitian}{33}{section.3.2}%
 \contentsline {chapter}{\numberline {BAB 4}HASIL DAN PEMBAHASAN}{35}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Pemetaan $(\alpha ,\beta ,\gamma )$-nonekspansif di Ruang $CAT_p(0)$}{35}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Konvergensi Skema Iterasi Sabri untuk Pemetaan $(\alpha ,\beta ,\gamma )$-nonekspansif}{43}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Percobaan Numerik}{48}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Aplikasi pada Masalah Optimasi}{55}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Masalah Minimalisasi}{55}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Rekonstruksi Citra}{63}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.2}Konvergensi Skema Iterasi Sabri untuk Pemetaan $(\alpha ,\beta ,\gamma )$-nonekspansif}{44}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Percobaan Numerik}{49}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Aplikasi pada Masalah Optimasi}{56}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Masalah Minimalisasi}{56}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Rekonstruksi Citra}{64}{subsection.4.4.2}%
 \contentsline {chapter}{\numberline {BAB 5}KESIMPULAN DAN SARAN}{73}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Kesimpulan}{73}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Saran}{74}{section.5.2}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{75}{Item.42}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{75}{Item.38}%
 \addvspace {1ex}
-\contentsline {chapter}{LAMPIRAN}{79}{Item.42}%
+\contentsline {chapter}{LAMPIRAN}{79}{Item.38}%
 \contentsline {chapter}{BIODATA PENULIS}{95}{lstnumber.1.3.153}%
