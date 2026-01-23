@@ -52,6 +52,9 @@ Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ did
 Percobaan numerik dilakukan dengan perangkat lunak Google Colab yang menggunakan bahasa pemrograman Python. Digunakan beberapa variasi parameter, baik dari nilai awal $x_0$ maupun parameter di skema iterasinya, yaitu barisan $\{a_n\},\{b_n\},\{c_n\}$.
 Pemetaan dan ruang yang digunakan dalam percobaan ini diambil dari Contoh \ref{con:abcnon} yang memiliki titik tetap $x^*=(1,1,0,0,\dots)$. 
 
+Untuk hasil numerik tiap iterasi, digunakan batas galat $d(x_{n+1},x_n)<10^{-6}$, sedangkan untuk jumlah iterasi yang diperlukan untuk konvergen dari masing-masing skema iterasi, digunakan batas galat $d(x_{n+1},x_n)<10^{-16}$. Dalam percobaan ini, laju konvergensi skema iterasi Sabri \eqref{eq:sabricat} dibandingkan dengan Skema iterasi JK \eqref{eq:jkcat}, Thakur \eqref{eq:thakurcat}, Abbas \ref{eq:abbascat}, dan Agarwal \eqref{eq:agarwalcat}. Kode dari percobaan ini dapat dilihat pada Lampiran A.1.
+
+Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} disajikan hasil numerik dari tiap iterasi dengan nilai awal $(2,3,0,0,\dots)$ dan parameter $a_n=0.92, b_n=0.83, c_n=0.81$ untuk setiap $n\in\mathbb{N}$ hingga batas galat $d(x_{n+1},x_n)<10^{-6}$.
 
 \begin{table}[H]
     \centering
@@ -91,9 +94,6 @@ Pemetaan dan ruang yang digunakan dalam percobaan ini diambil dari Contoh \ref{c
 \end{tabular}
     \label{tab:sabthkur}
 \end{table}
-Untuk hasil numerik tiap iterasi, digunakan batas galat $d(x_{n+1},x_n)<10^{-6}$, sedangkan untuk jumlah iterasi yang diperlukan untuk konvergen dari masing-masing skema iterasi, digunakan batas galat $d(x_{n+1},x_n)<10^{-16}$. Dalam percobaan ini, laju konvergensi skema iterasi Sabri \eqref{eq:sabricat} dibandingkan dengan Skema iterasi JK \eqref{eq:jkcat}, Thakur \eqref{eq:thakurcat}, Abbas \ref{eq:abbascat}, dan Agarwal \eqref{eq:agarwalcat}. Kode dari percobaan ini dapat dilihat pada Lampiran A.1.
-
-Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} disajikan hasil numerik dari tiap iterasi dengan nilai awal $(2,3,0,0,\dots)$ dan parameter $a_n=0.92, b_n=0.83, c_n=0.81$ untuk setiap $n\in\mathbb{N}$ hingga batas galat $d(x_{n+1},x_n)<10^{-6}$.
 
 \begin{table}[H]
     \centering
@@ -102,7 +102,7 @@ Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} 
 \hline
 \textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_n$ hingga $d(x_{n+1},x_n)<10^{-6}$}} \\
 \hline
-\textbf{n} & \textbf{Sabri} & \textbf{Thakur} \\
+\textbf{n} & \textbf{Sabri} & \textbf{Abbas} \\
 \hline
 0 & (2.000000, 3.000000, 0, 0, \dots) & (2.000000, 3.000000, 0, 0, \dots) \\
 1 & (1.000843, 1.002532, 0, 0, \dots) & (1.092754, 1.304869, 0, 0, \dots) \\
@@ -166,7 +166,7 @@ Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} 
 \end{tabular}
     \label{tab:sabag}
 \end{table}
-Dengan galat kurang dari $10^{-6}$, skema iterasi Sabri hanya membutuhkan 3 iterasi dibanding dengan JK dan Thakur (5 iterasi), Abbas (7 iterasi), dan Agarwal (10 iterasi). Pada \ref{tab:galat}, diberikan pula nilai galat $d(x_n,x^*)$ dari tiap iterasi. \ref{fig:galatperc} juga memberikan gambaran mengenai penurunan galatnya. 
+
 \begin{longtable}{cccccc}
 \caption{\centering Galat $d(x_n, x^*)$}\label{tab:galat}\\
 \hline
@@ -226,10 +226,11 @@ $\mathbf{n}$ & \textbf{Sabri} & \textbf{JK} & \textbf{Thakur} & \textbf{Abbas} &
 % \hline
 %     \end{tabular}
 % \end{table}
+Dengan galat kurang dari $10^{-6}$, skema iterasi Sabri hanya membutuhkan 3 iterasi dibanding dengan JK (4 iterasi), Thakur (5 iterasi), Abbas (7 iterasi), dan Agarwal (8 iterasi). Pada \ref{tab:galat}, diberikan pula nilai galat $d(x_n,x^*)$ dari tiap iterasi. \ref{fig:galatperc} juga memberikan gambaran mengenai penurunan galatnya. 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.82\linewidth]{Bab_4/galatpercobaan.png}
-    \caption{Galat $d(x_n,x^*)$ (dalam log) vs iterasi}
+    \includegraphics[width=0.95\linewidth]{Bab_4/galatpercobaan.png}
+    \caption{Galat $d(x_{n+1},x_n)$ (dalam log) vs iterasi}
     \label{fig:galatperc}
 \end{figure}
 
@@ -257,7 +258,7 @@ Selanjutnya, pada \ref{tab:paramkonstan}, \ref{tab:paramturun}, \ref{tab:paramna
 % \label{tab:paramkonstan}
 % \end{longtable}
 \begin{table}[H]
-\caption{Iterasi dengan parameter $a_n = 0.42, b_n=0.83, c_n=0.31$}
+\caption{Iterasi dengan parameter $a_n = 0.92, b_n=0.83, c_n=0.81$}
     \centering
     \begin{tabular}{cccccc}
 \hline
@@ -265,13 +266,13 @@ Selanjutnya, pada \ref{tab:paramkonstan}, \ref{tab:paramturun}, \ref{tab:paramna
 \hline
 $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \hline
-(2.0, 3.0, 0, 0, \dots) & 9 & 12 & 14 & 18 & 26 \\
-(3.0, 4.0, 0, 0, \dots) & 9 & 12 & 14 & 19 & 26 \\
-(4.0, 1.0, 0, 0, \dots) & 9 & 12 & 14 & 19 & 26 \\
-(1.5, 4.0, 0, 0, \dots) & 9 & 12 & 14 & 18 & 26 \\
-(2.7, 4.2, 0, 0, \dots) & 9 & 12 & 14 & 19 & 26 \\
-(5.0, 1.8, 0, 0, \dots) & 9 & 12 & 15 & 19 & 27 \\
-(3.1, 3.5, 0, 0, \dots) & 9 & 12 & 14 & 19 & 26 \\
+(2.0, 3.0, 0, 0, \dots) & 8 & 10 & 13 & 18 & 19 \\
+(3.0, 4.0, 0, 0, \dots) & 8 & 10 & 13 & 18 & 19 \\
+(4.0, 1.0, 0, 0, \dots) & 8 & 10 & 13 & 18 & 19 \\
+(1.5, 4.0, 0, 0, \dots) & 8 & 10 & 12 & 18 & 19 \\
+(2.7, 4.2, 0, 0, \dots) & 8 & 10 & 13 & 18 & 19 \\
+(5.0, 1.8, 0, 0, \dots) & 8 & 10 & 13 & 19 & 20 \\
+(3.1, 3.5, 0, 0, \dots) & 8 & 10 & 13 & 18 & 19 \\
 \hline
 \end{tabular}
     \label{tab:paramkonstan}
@@ -285,13 +286,13 @@ $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \hline
 $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \hline
-(2.0, 3.0, 0, 0, \dots) & 9 & 12 & 14 & 15 & 27 \\
-(3.0, 4.0, 0, 0, \dots) & 9 & 12 & 14 & 15 & 27 \\
-(4.0, 1.0, 0, 0, \dots) & 9 & 12 & 15 & 16 & 27 \\
-(1.5, 4.0, 0, 0, \dots) & 9 & 12 & 14 & 15 & 26 \\
-(2.7, 4.2, 0, 0, \dots) & 9 & 12 & 14 & 16 & 27 \\
-(5.0, 1.8, 0, 0, \dots) & 9 & 12 & 15 & 16 & 28 \\
-(3.1, 3.5, 0, 0, \dots) & 9 & 12 & 14 & 15 & 27 \\
+(2.0, 3.0, 0, 0, \dots) & 10 & 13 & 15 & 16 & 28 \\
+(3.0, 4.0, 0, 0, \dots) & 10 & 13 & 15 & 16 & 28 \\
+(4.0, 1.0, 0, 0, \dots) & 10 & 13 & 16 & 17 & 28 \\
+(1.5, 4.0, 0, 0, \dots) & 10 & 13 & 15 & 16 & 27 \\
+(2.7, 4.2, 0, 0, \dots) & 10 & 13 & 15 & 17 & 28 \\
+(5.0, 1.8, 0, 0, \dots) & 10 & 13 & 16 & 17 & 29 \\
+(3.1, 3.5, 0, 0, \dots) & 10 & 13 & 15 & 16 & 28 \\
 \hline
 \end{tabular}
     \label{tab:paramturun}
@@ -305,13 +306,13 @@ $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \hline
 $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \hline
-(2.0, 3.0, 0, 0, \dots) & 7 & 9 & 12 & 15 & 18 \\
-(3.0, 4.0, 0, 0, \dots) & 7 & 9 & 12 & 15 & 18 \\
-(4.0, 1.0, 0, 0, \dots) & 7 & 10 & 12 & 15 & 18 \\
-(1.5, 4.0, 0, 0, \dots) & 7 & 9 & 12 & 15 & 18 \\
-(2.7, 4.2, 0, 0, \dots) & 7 & 10 & 12 & 15 & 18 \\
-(5.0, 1.8, 0, 0, \dots) & 7 & 10 & 12 & 16 & 19 \\
-(3.1, 3.5, 0, 0, \dots) & 7 & 9 & 12 & 15 & 18 \\
+(2.0, 3.0, 0, 0, \dots) & 8 & 10 & 13 & 16 & 19 \\
+(3.0, 4.0, 0, 0, \dots) & 8 & 10 & 13 & 16 & 19 \\
+(4.0, 1.0, 0, 0, \dots) & 8 & 11 & 13 & 16 & 19 \\
+(1.5, 4.0, 0, 0, \dots) & 8 & 10 & 13 & 16 & 19 \\
+(2.7, 4.2, 0, 0, \dots) & 8 & 11 & 13 & 16 & 19 \\
+(5.0, 1.8, 0, 0, \dots) & 8 & 11 & 13 & 17 & 20 \\
+(3.1, 3.5, 0, 0, \dots) & 8 & 10 & 13 & 16 & 19 \\
 \hline
 \end{tabular}
     \label{tab:paramnaik}
@@ -325,13 +326,13 @@ $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \hline
 $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \hline
-(2.0, 3.0, 0, 0, \dots) & 7 & 10 & 14 & 24 & 26 \\
-(3.0, 4.0, 0, 0, \dots) & 7 & 10 & 14 & 24 & 26 \\
-(4.0, 1.0, 0, 0, \dots) & 7 & 10 & 14 & 25 & 26 \\
-(1.5, 4.0, 0, 0, \dots) & 7 & 10 & 13 & 24 & 25 \\
-(2.7, 4.2, 0, 0, \dots) & 7 & 10 & 14 & 25 & 26 \\
-(5.0, 1.8, 0, 0, \dots) & 7 & 10 & 14 & 25 & 26 \\
-(3.1, 3.5, 0, 0, \dots) & 7 & 10 & 14 & 25 & 26 \\
+(2.0, 3.0, 0, 0, \dots) & 8 & 11 & 15 & 25 & 27 \\
+(3.0, 4.0, 0, 0, \dots) & 8 & 11 & 15 & 25 & 27 \\
+(4.0, 1.0, 0, 0, \dots) & 8 & 11 & 15 & 26 & 27 \\
+(1.5, 4.0, 0, 0, \dots) & 8 & 11 & 14 & 25 & 26 \\
+(2.7, 4.2, 0, 0, \dots) & 8 & 11 & 15 & 26 & 27 \\
+(5.0, 1.8, 0, 0, \dots) & 8 & 11 & 15 & 26 & 27 \\
+(3.1, 3.5, 0, 0, \dots) & 8 & 11 & 15 & 26 & 27 \\
 \hline
 \end{tabular}
     \label{tab:paramnaikturun}
@@ -345,16 +346,15 @@ $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \hline
 $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \hline
-(2.0, 3.0, 0, 0, \dots) & 8 & 10 & 15 & 12 & 28 \\
-(3.0, 4.0, 0, 0, \dots) & 8 & 11 & 15 & 12 & 28 \\
-(4.0, 1.0, 0, 0, \dots) & 8 & 11 & 15 & 13 & 28 \\
-(1.5, 4.0, 0, 0, \dots) & 8 & 10 & 14 & 12 & 27 \\
-(2.7, 4.2, 0, 0, \dots) & 8 & 11 & 15 & 12 & 28 \\
-(5.0, 1.8, 0, 0, \dots) & 8 & 11 & 15 & 13 & 28 \\
-(3.1, 3.5, 0, 0, \dots) & 8 & 11 & 15 & 12 & 28 \\
+(2.0, 3.0, 0, 0, \dots) & 9 & 11 & 16 & 13 & 29 \\
+(3.0, 4.0, 0, 0, \dots) & 9 & 12 & 16 & 13 & 29 \\
+(4.0, 1.0, 0, 0, \dots) & 9 & 12 & 16 & 14 & 29 \\
+(1.5, 4.0, 0, 0, \dots) & 9 & 11 & 15 & 13 & 28 \\
+(2.7, 4.2, 0, 0, \dots) & 9 & 12 & 16 & 13 & 29 \\
+(5.0, 1.8, 0, 0, \dots) & 9 & 12 & 16 & 14 & 29 \\
+(3.1, 3.5, 0, 0, \dots) & 9 & 12 & 16 & 13 & 29 \\
 \hline
 \end{tabular}
     \label{tab:paramturunnaik}
 \end{table}
-\newpage
-Hasil tersebut menunjukkan bahwa skema iterasi Sabri memiliki laju konvergensi yang lebih baik daripada yang lainnya secara numerik. Dengan parameter tertentu, skema tersebut hanya membutuhkan 7 iterasi untuk konvergen ke titik tetapnya dengan galat kurang dari $10^{-16}$. Hasil ini secara intuitif dapat dijelaskan dari struktur iterasi Sabri yang melibatkan komposisi pemetaan nonekspansif $T$ secara berlapis pada setiap langkah iterasi, sehingga jarak barisan iterasi terhadap titik tetap berkurang lebih signifikan pada setiap iterasi dibandingkan dengan skema iterasi lainnya.
+Hasil tersebut menunjukkan bahwa skema iterasi Sabri memiliki laju konvergensi yang lebih baik daripada yang lainnya secara numerik. Dengan parameter tertentu, skema tersebut hanya membutuhkan 8 iterasi untuk konvergen ke titik tetapnya dengan galat kurang dari $10^{-16}$. Hasil ini secara intuitif dapat dijelaskan dari struktur iterasi Sabri yang melibatkan komposisi pemetaan nonekspansif $T$ secara berlapis pada setiap langkah iterasi, sehingga jarak barisan iterasi terhadap titik tetap berkurang lebih signifikan pada setiap iterasi dibandingkan dengan skema iterasi lainnya.
