@@ -19,7 +19,7 @@ Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ did
     \begin{align}\label{eq:thakurcat}
        \begin{cases}
             q_n&= (1-c_n)x_n \oplus c_nTx_n,\\
-        y_n&= T((1-a_n)x_n\oplus b_nq_n),\\
+        y_n&= T((1-a_n)x_n\oplus a_nq_n),\\
         x_{n+1} &= Ty_n,
        \end{cases}
     \end{align}
@@ -42,7 +42,7 @@ Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ did
 Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi Agarwal pada ruang $CAT_p(0)$ sebagai berikut:
     \begin{align}\label{eq:agarwalcat}
        \begin{cases}
-        y_n&= (1-c_n)x_n\oplus b_n Tx_n,\\
+        y_n&= (1-c_n)x_n\oplus a_n Tx_n,\\
         x_{n+1} &= (1-a_n)Tx_n\oplus a_n Ty_n,
        \end{cases}
     \end{align}
@@ -58,16 +58,15 @@ Pemetaan dan ruang yang digunakan dalam percobaan ini diambil dari Contoh \ref{c
     \caption{Hasil numerik skema iterasi Sabri dan JK}
     \begin{tabular}{ccc}
 \hline
-\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_n$}} \\
+\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_n$ hingga $d(x_{n+1},x_n)<10^{-6}$}} \\
 \hline
 \textbf{n} & \textbf{Sabri} & \textbf{JK} \\
 \hline
 0 & (2.000000, 3.000000, 0, 0, \dots) & (2.000000, 3.000000, 0, 0, \dots) \\
-1 & (1.007270, 1.021970, 0, 0, \dots) & (1.032859, 1.101850, 0, 0, \dots) \\
-2 & (1.000053, 1.000159, 0, 0, \dots) & (1.001080, 1.003243, 0, 0, \dots) \\
-3 & (1.000000, 1.000001, 0, 0, \dots) & (1.000035, 1.000106, 0, 0, \dots) \\
-4 & (1, 1, 0, 0, \dots) & (1.000001, 1.000003, 0, 0, \dots) \\
-5 & (1, 1, 0, 0, \dots) & (1.000000, 1.000000, 0, 0, \dots) \\
+1 & (1.000843, 1.002532, 0, 0, \dots) & (1.007605, 1.022988, 0, 0, \dots) \\
+2 & (1.000001, 1.000002, 0, 0, \dots) & (1.000058, 1.000174, 0, 0, \dots) \\
+3 & (1.000000, 1.000000, 0, 0, \dots) & (1.000000, 1.000001, 0, 0, \dots) \\
+4 & (1, 1, 0, 0, \dots) & (1.000000, 1.000000, 0, 0, \dots) \\
 \hline
 \end{tabular}
     \label{tab:sabjk}
@@ -78,41 +77,41 @@ Pemetaan dan ruang yang digunakan dalam percobaan ini diambil dari Contoh \ref{c
         \caption{Hasil numerik skema iterasi Sabri dan Thakur}
     \begin{tabular}{ccc}
 \hline
-\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_n$}} \\
+\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_n$ hingga $d(x_{n+1},x_n)<10^{-6}$}} \\
 \hline
 \textbf{n} & \textbf{Sabri} & \textbf{Thakur} \\
 \hline
 0 & (2.000000, 3.000000, 0, 0, \dots) & (2.000000, 3.000000, 0, 0, \dots) \\
-1 & (1.007270, 1.021970, 0, 0, \dots) & (1.056397, 1.178912, 0, 0, \dots) \\
-2 & (1.000053, 1.000159, 0, 0, \dots) & (1.003181, 1.009572, 0, 0, \dots) \\
-3 & (1.000000, 1.000001, 0, 0, \dots) & (1.000179, 1.000538, 0, 0, \dots) \\
-4 & (1, 1, 0, 0, \dots) & (1.000010, 1.000030, 0, 0, \dots) \\
-5 & (1, 1, 0, 0, \dots) & (1.000001, 1.000002, 0, 0, \dots) \\
+1 & (1.000843, 1.002532, 0, 0, \dots) & (1.027569, 1.085007, 0, 0, \dots) \\
+2 & (1.000001, 1.000002, 0, 0, \dots) & (1.000760, 1.002282, 0, 0, \dots) \\
+3 & (1.000000, 1.000000, 0, 0, \dots) & (1.000021, 1.000063, 0, 0, \dots) \\
+4 & (1, 1, 0, 0, \dots) & (1.000001, 1.000002, 0, 0, \dots) \\
+5 & (1, 1, 0, 0, \dots) & (1.000000, 1.000000, 0, 0, \dots) \\
 \hline
 \end{tabular}
     \label{tab:sabthkur}
 \end{table}
-Untuk hasil numerik tiap iterasi, digunakan batas galat $d(x_{n+1},x^*)<10^{-6}$, sedangkan untuk jumlah iterasi yang diperlukan untuk konvergen dari masing-masing skema iterasi, digunakan batas galat $d(x_{n+1},x^*)<10^{-16}$. Dalam percobaan ini, laju konvergensi skema iterasi Sabri \eqref{eq:sabricat} dibandingkan dengan Skema iterasi JK \eqref{eq:jkcat}, Thakur \eqref{eq:thakurcat}, Abbas \ref{eq:abbascat}, dan Agarwal \eqref{eq:agarwalcat}. Kode dari percobaan ini dapat dilihat pada Lampiran A.1.
+Untuk hasil numerik tiap iterasi, digunakan batas galat $d(x_{n+1},x_n)<10^{-6}$, sedangkan untuk jumlah iterasi yang diperlukan untuk konvergen dari masing-masing skema iterasi, digunakan batas galat $d(x_{n+1},x_n)<10^{-16}$. Dalam percobaan ini, laju konvergensi skema iterasi Sabri \eqref{eq:sabricat} dibandingkan dengan Skema iterasi JK \eqref{eq:jkcat}, Thakur \eqref{eq:thakurcat}, Abbas \ref{eq:abbascat}, dan Agarwal \eqref{eq:agarwalcat}. Kode dari percobaan ini dapat dilihat pada Lampiran A.1.
 
-Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} disajikan hasil numerik dari tiap iterasi dengan nilai awal $(2,3,0,0,\dots)$ dan parameter $a_n=0.42, b_n=0.83, c_n=0.31$ untuk setiap $n\in\mathbb{N}$.
+Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} disajikan hasil numerik dari tiap iterasi dengan nilai awal $(2,3,0,0,\dots)$ dan parameter $a_n=0.92, b_n=0.83, c_n=0.81$ untuk setiap $n\in\mathbb{N}$ hingga batas galat $d(x_{n+1},x_n)<10^{-6}$.
 
 \begin{table}[H]
     \centering
         \caption{Hasil numerik skema iterasi Sabri dan Abbas}
     \begin{tabular}{ccc}
 \hline
-\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_n$}} \\
+\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_n$ hingga $d(x_{n+1},x_n)<10^{-6}$}} \\
 \hline
 \textbf{n} & \textbf{Sabri} & \textbf{Thakur} \\
 \hline
 0 & (2.000000, 3.000000, 0, 0, \dots) & (2.000000, 3.000000, 0, 0, \dots) \\
-1 & (1.007270, 1.021970, 0, 0, \dots) & (1.109842, 1.367048, 0, 0, \dots) \\
-2 & (1.000053, 1.000159, 0, 0, \dots) & (1.012065, 1.036634, 0, 0, \dots) \\
-3 & (1.000000, 1.000001, 0, 0, \dots) & (1.001325, 1.003981, 0, 0, \dots) \\
-4 & (1, 1, 0, 0, \dots) & (1.000146, 1.000437, 0, 0, \dots) \\
-5 & (1, 1, 0, 0, \dots) & (1.000016, 1.000048, 0, 0, \dots) \\
-6 & (1, 1, 0, 0, \dots) & (1.000002, 1.000005, 0, 0, \dots) \\
-7 & (1, 1, 0, 0, \dots) & (1.000000, 1.000001, 0, 0, \dots) \\
+1 & (1.000843, 1.002532, 0, 0, \dots) & (1.092754, 1.304869, 0, 0, \dots) \\
+2 & (1.000001, 1.000002, 0, 0, \dots) & (1.008603, 1.026033, 0, 0, \dots) \\
+3 & (1.000000, 1.000000, 0, 0, \dots) & (1.000798, 1.002396, 0, 0, \dots) \\
+4 & (1, 1, 0, 0, \dots) & (1.000074, 1.000222, 0, 0, \dots) \\
+5 & (1, 1, 0, 0, \dots) & (1.000007, 1.000021, 0, 0, \dots) \\
+6 & (1, 1, 0, 0, \dots) & (1.000001, 1.000002, 0, 0, \dots) \\
+7 & (1, 1, 0, 0, \dots) & (1.000000, 1.000000, 0, 0, \dots) \\
 \hline
 \end{tabular}
     \label{tab:sababb}
@@ -121,7 +120,7 @@ Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} 
 % \begin{longtable}{ccc}
 % \caption{\centering Hasil numerik skema iterasi Sabri dan Abbas}\\
 % \hline
-% \textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_n$}} \\
+% \textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_n$ hingga $d(x_{n+1},x_n)<10^{-6}$}} \\
 % \hline
 % \textbf{n} & \textbf{Sabri} & \textbf{Abbas} \\
 % \hline
@@ -150,26 +149,23 @@ Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} 
         \caption{Hasil numerik skema iterasi Sabri dan Agarwal}
     \begin{tabular}{ccc}
 \hline
-\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_n$}} \\
+\textbf{Iterasi} & \multicolumn{2}{c}{\textbf{Nilai $x_n$ hingga $d(x_{n+1},x_n)<10^{-6}$}} \\
 \hline
 \textbf{n} & \textbf{Sabri} & \textbf{Agarwal} \\
 \hline
 0 & (2.000000, 3.000000, 0, 0, \dots) & (2.000000, 3.000000, 0, 0, \dots) \\
-1 & (1.007270, 1.021970, 0, 0, \dots) & (1.225588, 1.840912, 0, 0, \dots) \\
-2 & (1.000053, 1.000159, 0, 0, \dots) & (1.050890, 1.160570, 0, 0, \dots) \\
-3 & (1.000000, 1.000001, 0, 0, \dots) & (1.011480, 1.034837, 0, 0, \dots) \\
-4 & (1, 1, 0, 0, \dots) & (1.002590, 1.007789, 0, 0, \dots) \\
-5 & (1, 1, 0, 0, \dots) & (1.000584, 1.001754, 0, 0, \dots) \\
-6 & (1, 1, 0, 0, \dots) & (1.000132, 1.000395, 0, 0, \dots) \\
-7 & (1, 1, 0, 0, \dots) & (1.000030, 1.000089, 0, 0, \dots) \\
-8 & (1, 1, 0, 0, \dots) & (1.000007, 1.000020, 0, 0, \dots) \\
-9 & (1, 1, 0, 0, \dots) & (1.000002, 1.000005, 0, 0, \dots) \\
-10 & (1, 1, 0, 0, \dots) & (1.000000, 1.000001, 0, 0, \dots) \\
+1 & (1.000843, 1.002532, 0, 0, \dots) & (1.110275, 1.368648, 0, 0, \dots) \\
+2 & (1.000001, 1.000002, 0, 0, \dots) & (1.012161, 1.036927, 0, 0, \dots) \\
+3 & (1.000000, 1.000000, 0, 0, \dots) & (1.001341, 1.004028, 0, 0, \dots) \\
+4 & (1, 1, 0, 0, \dots) & (1.000148, 1.000444, 0, 0, \dots) \\
+5 & (1, 1, 0, 0, \dots) & (1.000016, 1.000049, 0, 0, \dots) \\
+6 & (1, 1, 0, 0, \dots) & (1.000002, 1.000005, 0, 0, \dots) \\
+7 & (1, 1, 0, 0, \dots) & (1.000000, 1.000001, 0, 0, \dots) \\
+8 & (1, 1, 0, 0, \dots) & (1.000000, 1.000000, 0, 0, \dots) \\
 \hline
 \end{tabular}
     \label{tab:sabag}
 \end{table}
-\newpage
 Dengan galat kurang dari $10^{-6}$, skema iterasi Sabri hanya membutuhkan 3 iterasi dibanding dengan JK dan Thakur (5 iterasi), Abbas (7 iterasi), dan Agarwal (10 iterasi). Pada \ref{tab:galat}, diberikan pula nilai galat $d(x_n,x^*)$ dari tiap iterasi. \ref{fig:galatperc} juga memberikan gambaran mengenai penurunan galatnya. 
 \begin{longtable}{cccccc}
 \caption{\centering Galat $d(x_n, x^*)$}\label{tab:galat}\\
@@ -190,16 +186,23 @@ $\mathbf{n}$ & \textbf{Sabri} & \textbf{JK} & \textbf{Thakur} & \textbf{Abbas} &
 \hline
 \endlastfoot
 \hline
-1 & $7.2\times10^{-3}$ & $3.2\times10^{-2}$ & $5.6\times10^{-2}$ & $1.0\times10^{-1}$ & $2.2\times10^{-1}$ \\
-2 & $5.2\times10^{-5}$ & $1.0\times10^{-3}$ & $3.1\times10^{-3}$ & $1.2\times10^{-2}$ & $5.0\times10^{-2}$ \\
-3 & $3.8\times10^{-7}$ & $3.5\times10^{-5}$ & $1.7\times10^{-4}$ & $1.3\times10^{-3}$ & $1.1\times10^{-2}$ \\
-4 & $2.7\times10^{-9}$ & $1.1\times10^{-6}$ & $1.0\times10^{-5}$ & $1.4\times10^{-4}$ & $2.5\times10^{-3}$ \\
-5 & $2.0\times10^{-11}$ & $3.8\times10^{-8}$ & $5.7\times10^{-7}$ & $1.5\times10^{-5}$ & $5.8\times10^{-4}$ \\
-6 & $1.4\times10^{-13}$ & $1.2\times10^{-9}$ & $3.2\times10^{-8}$ & $1.7\times10^{-6}$ & $1.3\times10^{-4}$ \\
-7 & $1.1\times10^{-15}$ & $4.1\times10^{-11}$ & $1.8\times10^{-9}$ & $1.9\times10^{-7}$ & $2.9\times10^{-5}$ \\
-8 & 0 & $1.3\times10^{-12}$ & $1.0\times10^{-10}$ & $2.1\times10^{-8}$ & $6.7\times10^{-6}$ \\
-9 & 0 & $4.4\times10^{-14}$ & $5.7\times10^{-12}$ & $2.3\times10^{-9}$ & $1.5\times10^{-6}$ \\
-10 & 0 & $1.3\times10^{-15}$ & $3.2\times10^{-13}$ & $2.5\times10^{-10}$ & $3.4\times10^{-7}$ \\
+1 & $5.0\times10^{0}$ & $5.0\times10^{0}$ & $5.0\times10^{0}$ & $5.0\times10^{0}$ & $5.0\times10^{0}$ \\
+2 & $8.4\times10^{-4}$ & $7.5\times10^{-3}$ & $2.6\times10^{-2}$ & $8.4\times10^{-2}$ & $9.8\times10^{-2}$ \\
+3 & $7.1\times10^{-7}$ & $5.7\times10^{-5}$ & $7.3\times10^{-4}$ & $7.8\times10^{-3}$ & $1.0\times10^{-2}$ \\
+4 & $5.9\times10^{-10}$ & $4.3\times10^{-7}$ & $2.0\times10^{-5}$ & $7.2\times10^{-4}$ & $1.1\times10^{-3}$ \\
+5 & $5.0\times10^{-13}$ & $3.3\times10^{-9}$ & $5.6\times10^{-7}$ & $6.7\times10^{-5}$ & $1.3\times10^{-4}$ \\
+6 & $4.4\times10^{-16}$ & $2.5\times10^{-11}$ & $1.5\times10^{-8}$ & $6.2\times10^{-6}$ & $1.4\times10^{-5}$ \\
+7 & 0 & $1.9\times10^{-13}$ & $4.2\times10^{-10}$ & $5.7\times10^{-7}$ & $1.5\times10^{-6}$ \\
+8 & 0 & $1.5\times10^{-15}$ & $1.1\times10^{-11}$ & $5.3\times10^{-8}$ & $1.7\times10^{-7}$ \\
+9 & 0 & 0 & $3.2\times10^{-13}$ & $4.9\times10^{-9}$ & $1.9\times10^{-8}$ \\
+10 & 0 & 0 & $9.1\times10^{-15}$ & $4.6\times10^{-10}$ & $2.1\times10^{-9}$ \\
+11 & 0 & 0 & $2.2\times10^{-16}$ & $4.2\times10^{-11}$ & $2.3\times10^{-10}$ \\
+12 & 0 & 0 & 0 & $3.9\times10^{-12}$ & $2.6\times10^{-11}$ \\
+13 & 0 & 0 & 0 & $3.6\times10^{-13}$ & $2.8\times10^{-12}$ \\
+14 & 0 & 0 & 0 & $3.4\times10^{-14}$ & $3.1\times10^{-13}$ \\
+15 & 0 & 0 & 0 & $2.8\times10^{-15}$ & $3.5\times10^{-14}$ \\
+16 & 0 & 0 & 0 & $4.4\times10^{-16}$ & $3.7\times10^{-15}$ \\
+17 & 0 & 0 & 0 & 0 & $4.4\times10^{-16}$ \\
 \hline
 \end{longtable}
 % \begin{table}[H]

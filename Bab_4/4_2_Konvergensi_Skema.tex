@@ -143,3 +143,68 @@ Untuk mendapatkan hasil konvergensi kuat, diperlukan syarat tambahan, yaitu himp
     \end{align*}
     Dengan demikian, barisan $\{x_n\}$ konvergen kuat ke titik tetap dari $T$.
 \end{bukti}
+
+\begin{thm}
+    Laju
+\end{thm}
+\begin{bukti}
+    Diperhatikan bahwa untuk setiap $x^*\in Fix(T)$ berlaku
+    \begin{align*}
+        d(q_n,x^*) &= d\qty(T\qty((1-c_n)x_n\oplus c_n Tx_n),Tx^*)\\
+        &\leq \frac{\alpha}{1-\gamma}d\qty((1-c_n)x_n\oplus c_n Tx_n, x^* )\\
+        &\leq \frac{\alpha}{1-\gamma}\qty[(1-c_n)d(x_n,x^*)+c_n d(Tx_n,x^*)]\\
+        &\leq \frac{\alpha}{1-\gamma}\qty[(1-c_n)d(x_n,x^*)+\frac{\alpha c_n}{1-\gamma}d(x_n,x^*)]\\
+        &= \frac{\alpha(1-\gamma)(1-c_n)+\alpha^2 c_n}{(1-\gamma)^2}d(x_n,x^*).
+    \end{align*}
+    \begin{align*}
+        d(y_n,x^*) &= d\qty(T(Tq_n),x^*)\\
+        &\leq \frac{\alpha}{1-\gamma}d(Tq_n,x^*)\\
+        &\leq \qty(\frac{\alpha}{1-\gamma})^2 d(q_n,x^*).
+    \end{align*}
+    \begin{align*}
+        d(x_{n+1},x^*) &= d\qty(T\qty((1-a_n)Tq_n\oplus a_n Ty_n),Tx^*)\\
+        &\leq \frac{\alpha}{1-\gamma}d\qty((1-a_n)Tq_n\oplus a_n Ty_n,x^*)\\
+        &\leq \frac{\alpha}{1-\gamma}\qty[(1-a_n)d(Tq_n,x^*)+a_n d(Ty_n,x^*)]\\
+        &\leq \qty(\frac{\alpha}{1-\gamma})^2\qty[(1-a_n)d(q_n,x^*)+a_n d(y_n,x^*)]\\
+        &\leq \qty(\frac{\alpha}{1-\gamma})^2\qty[(1-a_n)d(q_n,x^*)+a_n \qty(\frac{\alpha}{1-\gamma})^2d(q_n,x^*)]\\
+        &= \qty(\frac{\alpha}{1-\gamma})^2\qty[\frac{(1-a_n)(1-\gamma)^2+a_n\alpha^2}{(1-\gamma)^2}d(q_n,x^*)]\\
+        &\leq \frac{\alpha^2}{(1-\gamma)^4} \qty((1-a_n)(1-\gamma)^2+a_n\alpha^2)\times \frac{\alpha(1-\gamma)(1-c_n)+\alpha^2 c_n}{(1-\gamma)^2}d(x_n,x^*)\\
+        &= \frac{\alpha^3}{(1-\gamma)^6}\qty((1-a_n)(1-\gamma)^2+a_n\alpha^2)\qty((1-c_n)(1-\gamma)+c_n \alpha)d(x_n,x^*).
+    \end{align*}
+    Karena $\alpha\leq 1-\gamma$, didapat 
+    \begin{align*}
+        d(x_{n+1},x^*) &\leq \frac{\alpha^3}{(1-\gamma)^6}\qty(1-\gamma)^2\qty(1-\gamma)d(x_n,x^*) = \frac{\alpha^3}{(1-\gamma)^3}d(x_n,x^*),
+    \end{align*}
+    sehingga 
+    \begin{align*}
+        d(x_{n+1},x^*) &\leq \qty(\frac{\alpha}{1-\gamma})^3 d(x_n,x^*)\\
+        &\leq  \qty(\frac{\alpha}{1-\gamma})^6 d(x_{n-1},x^*)\\
+        &~~\vdots\\
+        &\leq  \qty(\frac{\alpha}{1-\gamma})^{3(n+1)} d(x_0,x^*).
+    \end{align*}
+    Jika terdapat $\alpha+\gamma\neq 1$, didapatkan $\lim_{n\to\infty} d(x_n,x^*)=0$.
+\end{bukti}
+\begin{bukti}
+    \begin{align*}
+        d(q_n,x^*) &=d\qty(T\qty((1-c_n)x_n\oplus c_n Tx_n),Tx^*)\\
+        &\leq bd\qty((1-c_n)x_n\oplus c_n Tx_n, x^* )\\
+        &\leq bm\qty[(1-c_n)d(x_n,x^*)+c_n d(Tx_n,x^*)]\\
+        &\leq bm\qty[(1-c_n)d(x_n,x^*)+bc_nd(x_n,x^*)]\\
+        &= bm\qty(1-c_n(1-b))d(x_n,x^*).
+    \end{align*}
+    \begin{align*}
+        d(y_n,x^*) &= d\qty(T(Tq_n),x^*)\\
+        &\leq bd(Tq_n,x^*)\\
+        &\leq b^2 d(q_n,x^*).
+    \end{align*}
+    \begin{align*}
+        d(x_{n+1},x^*) &= d\qty(T\qty((1-a_n)Tq_n\oplus a_n Ty_n),Tx^*)\\
+        &\leq bd\qty((1-a_n)Tq_n\oplus a_n Ty_n,x^*)\\
+        &\leq bm\qty[(1-a_n)d(Tq_n,x^*)+a_n d(Ty_n,x^*)]\\
+        &\leq b^2m\qty[(1-a_n)d(q_n,x^*)+a_n d(y_n,x^*)]\\
+        &\leq b^2m\qty[(1-a_n)d(q_n,x^*)+a_n b^2d(q_n,x^*)]\\
+        &= b^2m\qty[(1-a_n(1-b^2))d(q_n,x^*)]\\
+        &\leq b^2m (1-a_n(1-b^2))(bm(1-c_n(1-b)))d(x_n,x^*)\\
+        &= b^3m^2 (1-a_n(1-b^2))(1-c_n(1-b))d(x_n,x^*).
+    \end{align*}
+\end{bukti}

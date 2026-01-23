@@ -25,14 +25,14 @@
 \contentsline {chapter}{\numberline {BAB 4}HASIL DAN PEMBAHASAN}{35}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Pemetaan $(\alpha ,\beta ,\gamma )$-nonekspansif di Ruang $CAT_p(0)$}{35}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Konvergensi Skema Iterasi Sabri untuk Pemetaan $(\alpha ,\beta ,\gamma )$-nonekspansif}{44}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Percobaan Numerik}{49}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Aplikasi pada Masalah Optimasi}{56}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Masalah Minimalisasi}{56}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Rekonstruksi Citra}{64}{subsection.4.4.2}%
-\contentsline {chapter}{\numberline {BAB 5}KESIMPULAN DAN SARAN}{73}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Kesimpulan}{73}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Saran}{74}{section.5.2}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{75}{Item.38}%
+\contentsline {section}{\numberline {4.3}Percobaan Numerik}{51}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Aplikasi pada Masalah Optimasi}{58}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Masalah Minimalisasi}{58}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Rekonstruksi Citra}{66}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {BAB 5}KESIMPULAN DAN SARAN}{75}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Kesimpulan}{75}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Saran}{76}{section.5.2}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{77}{Item.38}%
 \addvspace {1ex}
-\contentsline {chapter}{LAMPIRAN}{79}{Item.38}%
-\contentsline {chapter}{BIODATA PENULIS}{95}{lstnumber.1.3.153}%
+\contentsline {chapter}{LAMPIRAN}{81}{Item.38}%
+\contentsline {chapter}{BIODATA PENULIS}{97}{lstnumber.1.3.153}%
