@@ -4,12 +4,12 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {Gambar 3.1}{\ignorespaces Blok Diagram Penelitian.}}{33}{figure.3.1}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {Gambar 4.1}{\ignorespaces Diagram Alir Skema Iterasi Sabri pada Ruang $CAT_p(0)$}}{45}{figure.4.1}%
-\contentsline {figure}{\numberline {Gambar 4.2}{\ignorespaces Galat $d(x_{n+1},x_n)$ (dalam log) vs iterasi}}{55}{figure.4.2}%
-\contentsline {figure}{\numberline {Gambar 4.3}{\ignorespaces Galat $d(x_n,x^*)$ (skala log) vs iterasi}}{67}{figure.4.3}%
-\contentsline {figure}{\numberline {Gambar 4.4}{\ignorespaces \centering Diagram Data Sinogram ke Ruang Euclid dalam Rekonstruksi Citra}}{69}{figure.4.4}%
-\contentsline {figure}{\numberline {Gambar 4.5}{\ignorespaces \centering Hubungan ruang Euclid, Hilbert, $CAT(0)$, $CAT_p(0)$, dan ruang metrik geodesik}}{70}{figure.4.5}%
-\contentsline {figure}{\numberline {Gambar 4.6}{\ignorespaces \centering Diagram alir skema iterasi Sabri untuk rekonstruksi citra tomografi}}{71}{figure.4.6}%
-\contentsline {figure}{\numberline {Gambar 4.7}{\ignorespaces Data awal sinogram dan citra asli}}{72}{figure.4.7}%
-\contentsline {figure}{\numberline {Gambar 4.8}{\ignorespaces Hasil rekonstruksi citra pada iterasi ke-5, 10, 30, dan 60}}{73}{figure.4.8}%
+\contentsline {figure}{\numberline {Gambar 4.1}{\ignorespaces Diagram Alir Skema Iterasi Sabri pada Ruang $CAT_p(0)$}}{43}{figure.4.1}%
+\contentsline {figure}{\numberline {Gambar 4.2}{\ignorespaces Galat $d(x_{n+1},x_n)$ (dalam log) vs iterasi}}{54}{figure.4.2}%
+\contentsline {figure}{\numberline {Gambar 4.3}{\ignorespaces Galat $d(x_n,x^*)$ (skala log) vs iterasi}}{66}{figure.4.3}%
+\contentsline {figure}{\numberline {Gambar 4.4}{\ignorespaces \centering Diagram Data Sinogram ke Ruang Euclid dalam Rekonstruksi Citra}}{68}{figure.4.4}%
+\contentsline {figure}{\numberline {Gambar 4.5}{\ignorespaces \centering Hubungan ruang Euclid, Hilbert, $CAT(0)$, $CAT_p(0)$, dan ruang metrik geodesik}}{69}{figure.4.5}%
+\contentsline {figure}{\numberline {Gambar 4.6}{\ignorespaces \centering Diagram alir skema iterasi Sabri untuk rekonstruksi citra tomografi}}{70}{figure.4.6}%
+\contentsline {figure}{\numberline {Gambar 4.7}{\ignorespaces Data awal sinogram dan citra asli}}{71}{figure.4.7}%
+\contentsline {figure}{\numberline {Gambar 4.8}{\ignorespaces Hasil rekonstruksi citra pada iterasi ke-5, 10, 30, dan 60}}{72}{figure.4.8}%
 \addvspace {10\p@ }

@@ -269,7 +269,7 @@ Diagram Venn pada Gambar \ref{fig:venncatp0} mengilustrasikan hubungan antara ru
 % ===== Geodesic =====
 \draw[thick, fill=gray!30, fill opacity=0.12] 
     (-4,-4) rectangle (7.5,4.3);
-\node at (-1.6,-3.6) {Ruang Metrik Geodesik};
+\node at (5, 4.4) {Ruang Metrik Geodesik};
 %Banach
 \draw[thin, fill=red!50, fill opacity=0.15] 
     (-3,-2.5) rectangle (5,3.6);
@@ -292,10 +292,10 @@ Diagram Venn pada Gambar \ref{fig:venncatp0} mengilustrasikan hubungan antara ru
 % ===== Euclid =====
 \draw[thick, fill=yellow!30, fill opacity=0.55] 
     (0,-0.5) rectangle (4,0.5);
-\node at (3.2,0.9) {Ruang Hilbert};
-\node at (5.1,-2.8) {Ruang $CAT_p(0)$};
-\node at (4.3,1.7) {Ruang $CAT(0)$};
-\node at (-1.5,3.2) {Ruang Banach};
+\node at (3.2,1.36) {Ruang Hilbert};
+\node at (5.15,2.97) {Ruang $CAT_p(0)$};
+\node at (4.3,2.18) {Ruang $CAT(0)$};
+\node at (3.5,3.75) {Ruang Banach};
 \node at (2,0) {Ruang Euclid $\mathbb{R}^n$};
 
 \end{tikzpicture}
@@ -418,14 +418,16 @@ Untuk konvergensi kuat di ruang $CAT_p(0)$, konsepnya sama dengan konvergensi ku
         \tilde{d}(x_n,x) &= \sqrt{(0-0)^2 + \qty(0^2 - \dfrac{1}{n} - 0^2)^2} = \dfrac{1}{n} < \varepsilon.
     \end{align*}
 \end{exam}
-\begin{thm}
+Teorema berikut ini menyatakan hubungan antara konvergensi kuat, konvergensi $\Delta$, dan barisan terbatas.
+\begin{thm}\cite{Salisu2022}
     Diberikan ruang $CAT_p(0)$ $(X,d,G)$. Jika $\{x_n\}$ adalah barisan di $X$ yang konvergen kuat, maka $\{x_n\}$ konvergen-$\Delta$ dan  terbatas.
 \end{thm}
 % \todo{himpunan kompak}
+Definisi berikut ini menyatakan konsep kelengkapak ruang dan himpunan kompak di ruang $CAT_p(0)$ yang secara langsung diadaptasi dari konsep di ruang metrik pada umumnya.
 \begin{defn}
     Ruang $CAT_p(0)$ $(X,d,G)$ disebut lengkap jika setiap barisan Cauchy di $X$ konvergen kuat ke titik $x\in X$.
 \end{defn}
-Definisi berikut ini menyatakan konsep himpunan kompak di ruang $CAT_p(0)$ yang secara langsung diadaptasi dari konsep himpunan kompak di ruang metrik pada umumnya.
+
 \begin{defn}
     Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Suatu himpunan bagian $\mathcal{M}\subseteq X$ disebut kompak jika setiap barisan di $\mathcal{M}$ memiliki subbarisan yang konvergen kuat ke suatu titik di $\mathcal{M}$.
 \end{defn}

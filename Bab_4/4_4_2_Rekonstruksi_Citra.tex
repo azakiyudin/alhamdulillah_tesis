@@ -14,13 +14,13 @@ Dari permasalahan tersebut, skema iterasi Sabri dapat digunakan sebagaimana Teor
     Diberikan ruang Hilbert $H$ yang kompak dan $C$ adalah himpunan bagian yang tertutup dan konveks dari $H$.
     Jika permasalahan \eqref{eq:sfp} konsisten dengan solusi yang tunggal dan $\gamma\in (0,\frac{2}{k})$ dengan $k$ adalah radius spektral dari $A^*A$, maka pemetaan $T:C\to C$ yang didefinisikan sebagai $$T(x)=P_C(I-\gamma A^*(I-P_Q)A)x$$ 
     merupakan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif, serta barisan $\{x_n\}$ yang didefinisikan sebagai
-    \begin{align}
+    \begin{flalign}
         \begin{cases}
-            q_n &= T\qty((1-c_n)x_n\oplus c_n T(x_n))\\
-            y_n &= T(T(q_n))\\
-            x_{n+1} &= T\qty((1-a_n)T(q_n)\oplus a_n T(y_n))
-        \end{cases},
-    \end{align}
+            q_n &= T\qty((1-c_n)x_n\oplus c_n T(x_n)) \\
+            y_n &= T(T(q_n)) \\
+            x_{n+1} &= T\qty((1-a_n)T(q_n)\oplus a_n T(y_n)) 
+        \end{cases}, 
+    \end{flalign}
     dengan $\{a_n\},\{c_n\}\subseteq [a,b]\subset (0,1)$ konvergen kuat ke solusi tunggal $x^*\in C$ dari permasalahan \eqref{eq:sfp} untuk setiap nilai awal $x_0\in C$.
     \begin{bukti}
         Berdasarkan hasil dari Byrne (lihat \cite{Byrne2003}), diperoleh bahwa pemetaan $T$ yang memenuhi kondisi tersebut adalah pemetaan nonekspansif sehingga juga merupakan $(\alpha,\beta,\gamma)$-nonekpansif. Kemudian, berdasarkan Contoh \ref{con:lpcatp}, didapatkan bahwa $H$ adalah ruang $CAT(0)$ yang juga merupakan ruang $CAT_p(0)$ dengan $p=2$. Akibatnya, dengan Teorema \ref{thm:konvK}, diperoleh bahwa $\{x_n\}$ konvergen kuat ke titik tetap dari $T$, yang berarti $\{x_n\}$ konvergen kuat ke solusi tunggal dari $x^*\in C$.

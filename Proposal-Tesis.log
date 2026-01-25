@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.21)  23 JAN 2026 21:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.21)  25 JAN 2026 22:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1049,40 +1049,39 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.105 \include{Abstrak_Ind/AbstrakInd}
-                                       %%  menampilkan Abstrak Bhs.Indonesia [1]
-\openout2 = `Abstrak_Ind/AbstrakInd.aux'.
-
- (Abstrak_Ind/AbstrakInd.tex
+l.104 \LembarOrisinalitas
+                          [1]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2 \begin{Abstrak}
-                    [2
+l.104 \LembarOrisinalitas
+                          [2
+
+]
+Overfull \hbox (52.45273pt too wide) in paragraph at lines 104--104
+[]  
+ []
 
 
-])
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.iii}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.105 \include{Abstrak_Ind/AbstrakInd}
+l.106 \include{Abstrak_Ind/AbstrakInd}
                                        %%  menampilkan Abstrak Bhs.Indonesia [3]
-\openout2 = `Abstract_Eng/AbstrakEnglish.aux'.
+\openout2 = `Abstrak_Ind/AbstrakInd.aux'.
 
- (Abstract_Eng/AbstrakEnglish.tex
+ (Abstrak_Ind/AbstrakInd.tex
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.iv}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \begin{Abstract}
-                     [4
-
-
+l.2 \begin{Abstrak}
+                    [4
 
 
 ])
@@ -1091,27 +1090,39 @@ l.1 \begin{Abstract}
 pdfTeX warning (ext4): destination with the same identifier (name{page.v}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.107 \include{Abstract_Eng/AbstrakEnglish}
-                                            %%  menampilkan Abstrak Bhs.Inggris [5] (katapengantar.tex
+l.106 \include{Abstrak_Ind/AbstrakInd}
+                                       %%  menampilkan Abstrak Bhs.Indonesia [5]
+\openout2 = `Abstract_Eng/AbstrakEnglish.aux'.
+
+ (Abstract_Eng/AbstrakEnglish.tex
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.vi}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \KataPengantar
-                   [6
+l.1 \begin{Abstract}
+                     [6
+
 
 
 
 ])
 
-[7]
+[7] (katapengantar.tex
 
 [8
 
+
+
+])
+
+[9]
+
+[10
+
 ] (Proposal-Tesis.toc
 
-[9
+[11
 
 ])
 \tf@toc=\write6
@@ -1119,18 +1130,18 @@ l.1 \KataPengantar
 
 
 
-[10] (Proposal-Tesis.lof)
+[12] (Proposal-Tesis.lof)
 \tf@lof=\write7
 \openout7 = `Proposal-Tesis.lof'.
 
 
 
-[11
+[13
 
 
 ]
 
-[12
+[14
 
 ] (Proposal-Tesis.lot)
 \tf@lot=\write8
@@ -1138,18 +1149,13 @@ l.1 \KataPengantar
 
 
 
-[13
+[15
 
 ]
 
-[14
+[16
 
 ]
-Overfull \hbox (45.24788pt too wide) in alignment at lines 118--119
- [] [] [] 
- []
-
-
 Overfull \hbox (45.24788pt too wide) in alignment at lines 119--120
  [] [] [] 
  []
@@ -1165,13 +1171,18 @@ Overfull \hbox (45.24788pt too wide) in alignment at lines 121--122
  []
 
 
-Overfull \hbox (45.24788pt too wide) in alignment at lines 122--163
+Overfull \hbox (45.24788pt too wide) in alignment at lines 122--123
  [] [] [] 
  []
 
-[15]
 
-[16] (Bab_1/Bab1.tex
+Overfull \hbox (45.24788pt too wide) in alignment at lines 123--164
+ [] [] [] 
+ []
+
+[17]
+
+[18] (Bab_1/Bab1.tex
 BAB 1.
 
 
@@ -1181,6 +1192,9 @@ BAB 1.
 
 
 ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [2]
 
@@ -1193,7 +1207,8 @@ BAB 2.
 [5
 
 ]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 14.
+Underfull \vbox (badness 4036) has occurred while \output is active []
+
 
 
 [6]) (Bab_2/2_2_Ruang_Geodesik.tex
@@ -1241,7 +1256,7 @@ l.312 \end{defn}
 [15]
 
 [16]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 6842) has occurred while \output is active []
 
 
 
@@ -1264,7 +1279,7 @@ File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 [23]
 
 [24]
-Underfull \vbox (badness 2285) has occurred while \output is active []
+Underfull \vbox (badness 1701) has occurred while \output is active []
 
 
 
@@ -1344,20 +1359,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [37]
 
 [38]
-Underfull \vbox (badness 2635) has occurred while \output is active []
+Underfull \vbox (badness 2922) has occurred while \output is active []
 
 
 
 [39]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [40]
 
-[41]
-
-[42]) (Bab_4/4_2_Konvergensi_Skema.tex
+[41]) (Bab_4/4_2_Konvergensi_Skema.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -1378,30 +1388,31 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
+(Bab_4/sabri.tex)
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[42]
 
-
-
-[43] (Bab_4/sabri.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[44]
-
-[45
+[43
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.36     \end{align*}
                      ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1354) has occurred while \output is active []
 
 
+
+[44]
+Overfull \hbox (11.85292pt too wide) detected at line 84
+[]
+ []
+
+
+
+[45]
 
 [46]
-Overfull \hbox (11.85292pt too wide) detected at line 84
+Overfull \hbox (10.13138pt too wide) detected at line 173
 []
  []
 
@@ -1409,65 +1420,59 @@ Overfull \hbox (11.85292pt too wide) detected at line 84
 
 [47]
 
-[48]
-Overfull \hbox (10.13138pt too wide) detected at line 173
-[]
- []
-
-
+[48]) (Bab_4/4_3_Percobaan_Numerik.tex
 
 [49]
 
-[50]) (Bab_4/4_3_Percobaan_Numerik.tex
-Underfull \vbox (badness 3930) has occurred while \output is active []
+[50]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[51]
-
-[52]
-
-[53
+[51
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.169 
+l.119 
       
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.169 
-      
+l.119 
+      ] [52
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.169 
-      ]
-<Bab_4/galatpercobaan.png, id=780, 765.3393pt x 612.8496pt>
+l.207 \end{longtable}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.207 \end{longtable}
+                     ]
+<Bab_4/galatpercobaan.png, id=777, 765.3393pt x 612.8496pt>
 File: Bab_4/galatpercobaan.png Graphic file (type png)
 <use Bab_4/galatpercobaan.png>
 Package pdftex.def Info: Bab_4/galatpercobaan.png  used on input line 232.
 (pdftex.def)             Requested size: 378.42044pt x 303.02951pt.
 
-
-[54
-pdfTeX warning (ext4): destination with the same identifier (name{table.4.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.235 \end{figure}
-                  ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[55
+[53]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[54
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.299 \end{table}
                   <./Bab_4/galatpercobaan.png>]
 
-[56
+[55
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1484,26 +1489,26 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.4.8}) ha
 l.359 \end{table}
                  ]) (Bab_4/4_4_1_Masalah_Minimalisasi.tex
 
-[57
+[56
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.3 \begin{align}
-                 \label{eq:minprob}
+l.1 \subsection
+               {Masalah Minimalisasi}
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.3 \begin{align}
-                 \label{eq:minprob}]
+l.1 \subsection
+               {Masalah Minimalisasi}]
+
+[57]
 
 [58]
 
 [59]
 
-[60]
-
-[61] [62] [63] [64] [65]
-<Bab_4/galatsim.png, id=874, 862.1811pt x 612.8496pt>
+[60] [61] [62] [63] [64]
+<Bab_4/galatsim.png, id=871, 862.1811pt x 612.8496pt>
 File: Bab_4/galatsim.png Graphic file (type png)
 <use Bab_4/galatsim.png>
 Package pdftex.def Info: Bab_4/galatsim.png  used on input line 306.
@@ -1513,31 +1518,31 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[66]
+[65]
 
-[67
+[66
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.11 
       <./Bab_4/galatsim.png>]
 
-[68] (Bab_4/flowrekonstruksi.tex)
+[67] (Bab_4/flowrekonstruksi.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[69
+[68
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.62 
      ]
-Underfull \vbox (badness 5345) has occurred while \output is active []
+Underfull \vbox (badness 3333) has occurred while \output is active []
 
 
 
-[70
+[69
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1547,28 +1552,25 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[71
+[70
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.100 
       ]
-<Bab_4/citrafix.png, id=917, 714.7503pt x 347.6187pt>
+<Bab_4/citrafix.png, id=914, 714.7503pt x 347.6187pt>
 File: Bab_4/citrafix.png Graphic file (type png)
 <use Bab_4/citrafix.png>
 Package pdftex.def Info: Bab_4/citrafix.png  used on input line 108.
 (pdftex.def)             Requested size: 398.3386pt x 193.7369pt.
-<Bab_4/citrafix2.png, id=918, 714.7503pt x 717.6411pt>
+<Bab_4/citrafix2.png, id=915, 714.7503pt x 717.6411pt>
 File: Bab_4/citrafix2.png Graphic file (type png)
 <use Bab_4/citrafix2.png>
 Package pdftex.def Info: Bab_4/citrafix2.png  used on input line 114.
 (pdftex.def)             Requested size: 398.3386pt x 399.95998pt.
 
-Underfull \vbox (badness 1377) has occurred while \output is active []
 
-
-
-[72
+[71
 pdfTeX warning (ext4): destination with the same identifier (name{table.4.13}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1580,35 +1582,33 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.7}) h
 l.118 P
        ada \ref{tab:msepsnr}, diberikan nilai metrik PSNR dan MSE dari citra... <./Bab_4/citrafix.png>]
 
-[73
+[72
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.197 \end{longtable}
-                      <./Bab_4/citrafix2.png>] [74])) (Bab_5/Bab5.tex
+                      <./Bab_4/citrafix2.png>] [73])) (Bab_5/Bab5.tex
 
-[75]
-
-[76
-
-]
+[74]
 BAB 5.
 
 
-[77])
+[75
 
-[78] (Proposal-Tesis.bbl
+])
 
-[79
+[76] (Proposal-Tesis.bbl
+
+[77
 
 
 ]
 
-[80])
+[78])
 
-[81]
+[79]
 
-[82
+[80
 
 ] (lampiran1.tex
 pdfTeX warning (ext4): destination with the same identifier (name{chapter.1}) has been already used, duplicate ignored
@@ -1621,9 +1621,19 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 2.
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 
-[83
+[81
 
 ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[82]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[83]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1639,16 +1649,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [86]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[87]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[88]
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 234.
  (C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
@@ -1657,12 +1657,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[89]
+[87]
 
-[90]
+[88]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
+
+[89]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[90]
 
 [91]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1670,60 +1677,53 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [92]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [93]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[94]
+[94])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[95]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[95] (biodata.tex
 
-
-
-[96])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[97] (biodata.tex
-
-[98
+[96
 
 ]
 \foto=\box95
-<foto.jpg, id=1590, 1484.54625pt x 2227.32124pt>
+<foto.jpg, id=1583, 1484.54625pt x 2227.32124pt>
 File: foto.jpg Graphic file (type jpg)
 <use foto.jpg>
 Package pdftex.def Info: foto.jpg  used on input line 1.
 (pdftex.def)             Requested size: 113.80527pt x 170.71239pt.
 )
 
-[99 <./foto.jpg>] (Proposal-Tesis.aux (Abstrak_Ind/AbstrakInd.aux) (Abstract_Eng/AbstrakEnglish.aux))
+[97 <./foto.jpg>] (Proposal-Tesis.aux (Abstrak_Ind/AbstrakInd.aux) (Abstract_Eng/AbstrakEnglish.aux))
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
 Package rerunfilecheck Info: File `Proposal-Tesis.out' has not changed.
-(rerunfilecheck)             Checksum: 93CFB4479D9FBA76AAE26673660ECFAD;5495.
+(rerunfilecheck)             Checksum: A9304DD5B0766441EA037429CC1F5D33;5591.
  ) 
 Here is how much of TeX's memory you used:
- 36357 strings out of 468134
- 726683 string characters out of 5428804
- 1583759 words of memory out of 5000000
- 63396 multiletter control sequences out of 15000+600000
- 673820 words of font info for 141 fonts, out of 8000000 for 9000
+ 36290 strings out of 468134
+ 725415 string characters out of 5428804
+ 1577707 words of memory out of 5000000
+ 63338 multiletter control sequences out of 15000+600000
+ 673398 words of font info for 139 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,18n,121p,1585b,2769s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Proposal-Tesis.pdf (121 pages, 1577217 bytes).
+Output written on Proposal-Tesis.pdf (121 pages, 1574881 bytes).
 PDF statistics:
- 1857 PDF objects out of 2073 (max. 8388607)
- 880 named destinations out of 1000 (max. 500000)
+ 1849 PDF objects out of 2073 (max. 8388607)
+ 873 named destinations out of 1000 (max. 500000)
  339 words of extra memory for PDF output out of 10000 (max. 10000000)
 

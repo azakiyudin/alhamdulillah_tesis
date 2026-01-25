@@ -437,12 +437,12 @@ INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptm
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
-INPUT .\Abstrak_Ind\AbstrakInd.tex
-INPUT .\Abstrak_Ind\AbstrakInd.tex
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplb7t.vf
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplb7t.vf
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
+INPUT .\Abstrak_Ind\AbstrakInd.tex
+INPUT .\Abstrak_Ind\AbstrakInd.tex
 OUTPUT Abstrak_Ind\AbstrakInd.aux
 INPUT .\Abstrak_Ind\AbstrakInd.tex
 INPUT .\Abstrak_Ind\AbstrakInd.tex
@@ -572,9 +572,6 @@ INPUT Bab_4\Bab4.tex
 INPUT .\Bab_4\4_1_PemetaanNonekspansif.tex
 INPUT .\Bab_4\4_1_PemetaanNonekspansif.tex
 INPUT Bab_4\4_1_PemetaanNonekspansif.tex
-INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7y.vf
-INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\Jekiyudin\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT .\Bab_4\4_2_Konvergensi_Skema.tex
 INPUT .\Bab_4\4_2_Konvergensi_Skema.tex
 INPUT Bab_4\4_2_Konvergensi_Skema.tex

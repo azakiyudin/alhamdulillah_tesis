@@ -236,7 +236,7 @@
     		\textbf{Surabaya}\\
     		\textbf{\@thn}}		
     \end{flushleft}
-    \addcontentsline{toc}{chapter}{HALAMAN JUDUL}
+    % \addcontentsline{toc}{chapter}{HALAMAN JUDUL}
     
 }
 \newcommand\TitlePage{%
@@ -289,10 +289,10 @@ Oleh:\\
       \ifthenelse{\equal{\@pbbdua}{}\OR\equal{\@pbbdua}{}}
         {
 \begin{tabular}{ll}
-\multicolumn{2}{c}{\textbf{Pembimbing:}}\vspace{0.5cm}\\
+\multicolumn{2}{c}{\textbf{Pembimbing:}}\vspace{1cm}\\
 1. \@pbbsatu & \hspace{1cm}(\dots\dots\dots\dots\dots\dots) \\
 \hspace{0.5cm}NIP. \@NIPpbbsatu & \vspace{0.5cm}\\
-\multicolumn{2}{c}{\textbf{Penguji:}}\vspace{0.5cm}\\
+\multicolumn{2}{c}{\textbf{Penguji:}}\vspace{1cm}\\
 1. \@pujsatu & \hspace{1cm}(\dots\dots\dots\dots\dots\dots) \\
 \hspace{0.5cm}NIP. \@NIPpujsatu & \vspace{0.75cm}\\
 2. \@pujdua & \hspace{1cm}(\dots\dots\dots\dots\dots\dots) \\
@@ -303,12 +303,12 @@ Oleh:\\
         }
         {
 \begin{tabular}{ll}
-\multicolumn{2}{c}{\textbf{Pembimbing:}}\vspace{0.5cm}\\
+\multicolumn{2}{c}{\textbf{Pembimbing:}}\vspace{1cm}\\
 1. \@pbbsatu & \hspace{1cm}(\dots\dots\dots\dots\dots\dots) \\
 \hspace{0.5cm}NIP. \@NIPpbbsatu & \vspace{0.5cm}\\
 2. \@pbbdua & \hspace{1cm}(\dots\dots\dots\dots\dots\dots) \\
 \hspace{0.5cm}NIP. \@NIPpbbdua & \vspace{0.5cm}\\
-\multicolumn{2}{c}{\textbf{Penguji:}}\vspace{0.5cm}\\
+\multicolumn{2}{c}{\textbf{Penguji:}}\vspace{1cm}\\
 1. \@pujsatu & \hspace{1cm}(\dots\dots\dots\dots\dots\dots) \\
 \hspace{0.5cm}NIP. \@NIPpujsatu & \vspace{0.5cm}\\
 2. \@pujdua & \hspace{1cm}(\dots\dots\dots\dots\dots\dots) \\
@@ -326,6 +326,52 @@ Oleh:\\
 \end{center}
 \addcontentsline{toc}{chapter}{LEMBAR PENGESAHAN}
 }
+\newcommand\LembarOrisinalitas{
+\cleardoublepage
+\setstretch{1.25}
+    \begin{center}
+        {\fontsize{14}{2}\selectfont{\textbf{SURAT PERNYATAAN KEASLIAN TESIS}}}
+    \end{center}\vspace{1.5cm}
+    \noindent
+    Saya yang bertanda tangan di bawah ini:\vspace{0.15cm}\\
+    \begin{tabular}{lcl}
+        Nama &:& \@nama~ \vspace{0.15cm}\\
+        NRP &:& \@NRP\vspace{0.15cm}\\
+        Program Studi &:& S2 Matematika
+    \end{tabular}\vspace{1cm}\\
+ Dengan ini menyatakan bahwa isi sebagian maupun keseluruhan tesis saya yang berjudul:\\
+%  {\hfill
+% \textbf{"\@judul"}\hfill
+% }\\
+%  \begin{center}
+% {\textbf{"KONVERGENSI SKEMA ITERASI SABRI UNTUK KELAS\\
+% PEMETAAN NONEKSPANSIF DIPERUMUM DI RUANG GEODESIK\\
+% BESERTA APLIKASINYA"}}
+% \end{center}
+\begin{center}
+  \vspace{-1cm}
+  \MakeUppercase{\textbf{"\@judul"}}
+  \vspace{-0.3cm}
+\end{center}
+ adalah benar-benar hasil karya intelektual mandiri, diselesaikan tanpa menggunakan bahan-bahan yang tidak diizinkan dan bahan karya pihak lain yang saya akui sebagai karya mandiri.  \\ 
+
+
+Semua referensi yang dikutip maupun dirujuk telah ditulis secara lengkap pada daftar pustaka. Apabila di kemudian hari diketahui terjadi penyimpangan dari pernyataan yang saya buat, maka saya bersedia menerima sanksi sesuai peraturan yang berlaku.\\
+      {\begin{flushleft}
+        \begin{tabular}{C{8cm}L{7cm}}
+    		&Surabaya, \@tglsetuju\\
+    		&Mahasiswa,\\
+    		&\\
+    		&\\
+    		&\\
+    		&\underline{\@nama}\\
+    		&NRP. \@NRP
+    	\end{tabular}
+        \end{flushleft}}
+	\vspace{2cm}
+\addcontentsline{toc}{chapter}{SURAT PERNYATAAN KEASLIAN TESIS}
+}
+
 \newcommand\@NIPkadep{19710513 199702 1 001}
 \DeclareRobustCommand\NIPKadep[1]{%
    \renewcommand\@NIPkadep{#1}
@@ -510,6 +556,11 @@ Oleh:\\
                     \global\@topnum\z@
                     \@afterindentfalse
                     \secdef\@chapter\@schapter}
+% \renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+%                     \thispagestyle{fancy}%
+%                     \global\@topnum\z@
+%                     \@afterindentfalse
+%                     \secdef\@chapter\@schapter}
 \gdef\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
                        \if@mainmatter
                          \refstepcounter{chapter}%
