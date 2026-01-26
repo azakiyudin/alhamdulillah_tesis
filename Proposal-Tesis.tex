@@ -95,7 +95,11 @@
 \NIPKadep{19730930 199702 1 001}
 \TanggalDisetujui{20 Januari 2026} %  Isi dengan tanggal seminar
 \allowdisplaybreaks
-
+% \fancypagestyle{plain}{%
+%   \fancyhf{}%
+%   \fancyfoot[LE,RO]{\thepage}%
+%   \renewcommand{\headrulewidth}{0pt}%
+% }
 \BagianAwal
 \Cover
 \LembarJudul
@@ -165,7 +169,19 @@ $\displaystyle argmin_{y\in X} f(y)$ &:& Nilai $y\in X$ sehingga $f(y)$ minimum\
 \end{flushleft}
 \cleardoublepage
 
+\pagestyle{fancy}
+\fancyhf{} % Clear all header/footer fields
+% \fancyhead[RE,LO]{Chapter \thechapter} % Even pages right, odd pages left
+\fancyfoot[LE,RO]{\thepage} % Even pages left, odd pages right
+\renewcommand{\headrulewidth}{0pt}
 
+% --- Chapter Page Style Overwrite ---
+% This forces the first page of a chapter to be center-bottom
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[R]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
 
 \BagianInti %%% menampilkan bagian inti proposal tesis yang berisi:
 

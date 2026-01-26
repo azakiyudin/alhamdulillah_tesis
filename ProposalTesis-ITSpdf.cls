@@ -220,6 +220,7 @@
 }
 \newcommand\LembarJudul{%
     \cleardoublepage\thispagestyle{empty}
+    \setcounter{page}{1}
     \enlargethispage{1cm}
     \begin{flushleft}
     	\includegraphics[width=35mm]{lambang-its}\\[10mm]{\color{mygreen}\makebox[\textwidth]{\rule{200cm}{0.8cm}}}\\
@@ -236,7 +237,7 @@
     		\textbf{Surabaya}\\
     		\textbf{\@thn}}		
     \end{flushleft}
-    % \addcontentsline{toc}{chapter}{HALAMAN JUDUL}
+    \addcontentsline{toc}{chapter}{HALAMAN JUDUL}
     
 }
 \newcommand\TitlePage{%
@@ -272,7 +273,7 @@
 
 \newcommand\LembarPengesahan{%
 \cleardoublepage
-\setcounter{page}{1} 
+% \setcounter{page}{1} 
 \begin{center}
   \setstretch{1}
 {\fontsize{14}{2}\selectfont{\textbf{LEMBAR PENGESAHAN TESIS}}}\vspace{1.5cm}\\
@@ -284,7 +285,7 @@ Oleh:\\
         \textbf{\@nama}\\
         \textbf{NRP:~\@NRP}\vspace{0.5cm}\\
       	Tanggal Ujian: \@tglsetuju\\
-      	Periode Wisuda: April 2026\vspace{0.5cm}\\
+      	Periode Wisuda: September 2026\vspace{0.5cm}\\
        Disetujui oleh:\vspace{0.2cm}\\
       \ifthenelse{\equal{\@pbbdua}{}\OR\equal{\@pbbdua}{}}
         {
@@ -544,11 +545,11 @@ Semua referensi yang dikutip maupun dirujuk telah ditulis secara lengkap pada da
 \newcommand\BagianInti{%--------------------
     \cleardoublepage
     \mainmatter
-    \pagestyle{fancy}
-    \fancyhf{}
-    \renewcommand{\headrulewidth}{0pt}
-    \fancyfoot[R]{\ifthenelse{\isodd{\value{page}}}{\thepage}{}}
-    \fancyfoot[L]{\ifthenelse{\isodd{\value{page}}}{}{\thepage}}
+    % \pagestyle{fancy}
+    % \fancyhf{}
+    % \renewcommand{\headrulewidth}{0pt}
+    % \fancyfoot[R]{\ifthenelse{\isodd{\value{page}}}{\thepage}{}}
+    % \fancyfoot[L]{\ifthenelse{\isodd{\value{page}}}{}{\thepage}}
     %\pagestyle{myheadings}
 }
 \renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi

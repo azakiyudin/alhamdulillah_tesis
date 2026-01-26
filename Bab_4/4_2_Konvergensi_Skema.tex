@@ -1,5 +1,5 @@
 \section{Konvergensi Skema Iterasi Sabri untuk Pemetaan $(\alpha,\beta,\gamma)$-nonekspansif}
-Pada bagian ini disajikan skema iterasi Sabri pada ruang $CAT_p(0)$ dan hasil terkait konvergensi dari skema iterasi Sabri untuk pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di ruang tersebut. Terdapat dua lema penting yang digunakan untuk membuktikan konvergensi skema tersebut, yaitu pada Lema \ref{Lema:dxnx*} yang menunjukkan bahwa barisan $d(x_{n},x^*)$ adalah barisan turun, dengan $x^*$ adalah titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif, serta pada Lema \ref{Lema:xntxn0} yang menunjukkan bahwa barisan limit dari barisan $d(x_n,Tx_n)$ adalah 0. Kemudian, disajikan syarat eksistensi titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif pada Teorema \ref{thm:fixtnonemp}. Hasil konvergensi dari skema ini diberikan pada Teorema \ref{thm:konvD} yang memberikan syarat cukup untuk konvergensi$-\Delta$, sedangkan syarat cukup untuk konvergensi kuat diberikan oleh Teorema \ref{thm:konvK}. 
+Pada bagian ini disajikan skema iterasi Sabri pada ruang $CAT_p(0)$ dan hasil terkait konvergensi dari skema iterasi Sabri untuk pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di ruang tersebut. Terdapat dua lema penting yang digunakan untuk membuktikan konvergensi skema tersebut, yaitu pada Lema \ref{Lema:dxnx*} yang menunjukkan bahwa barisan $d(x_{n},x^*)$ konvergen ke 0, dengan $x^*$ adalah titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif, serta Lema \ref{Lema:xntxn0} yang menunjukkan bahwa barisan $d(x_n,Tx_n)$ konvergen ke 0. Kemudian, disajikan syarat eksistensi titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif pada Teorema \ref{thm:fixtnonemp}. Hasil konvergensi dari skema ini diberikan pada Teorema \ref{thm:konvD} yang memberikan syarat cukup untuk konvergensi$-\Delta$, sedangkan syarat cukup untuk konvergensi kuat diberikan oleh Teorema \ref{thm:konvK}. Lebih lanjut, diberikan laju konvergensi dari skema iterasi Sabri pada Teorema \ref{thm:laju}
 
 Berikut ini diberikan skema iterasi Sabri pada ruang $CAT_p(0)$.
 \begin{defn}[\textbf{Skema Iterasi Sabri}]\label{defn:sabri}
@@ -23,33 +23,48 @@ Berikut ini adalah diagram alir dari skema iterasi Sabri pada ruang $CAT_p(0)$.
 
 Untuk selanjutnya, dinotasikan $W$ sebagai himpunan bagian tak kosong yang konveks dari ruang $CAT_p(0)$ $(X,d,G)$, serta $Fix(T)$ adalah himpunan semua titik tetap dari pemetaan $T$.
 \begin{lemma}\label{Lema:dxnx*}
-Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$. Jika $\{ x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat}, maka $d(x_{n+1},x^*)\leq d(x_n,x^*)$ untuk setiap $x^*\in Fix(T)$.
+Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$. Jika $\{ x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat}, maka $\lim_{n\to\infty} d(x_n,x^*)$ ada untuk setiap $x^*\in Fix(T)$ dan bernilai 0 jika $\alpha+\gamma\neq 1$.
 \end{lemma}
 \begin{bukti}
-    Diambil sebarang $x^*\in Fix(T)$, berdasarkan Lema \ref{lema:d,d^p} dan \ref{lemma:tutx}, didapatkan bahwa 
+    Berdasarkan Lema \ref{lema:d,d^p} dan Lema \ref{lemma:tutx}, diperoleh bahwa untuk setiap $x^*\in Fix(T)$ berlaku
     \begin{align*}
-        d(q_n,x^*)&=d\left(T\qty((1-c_n)x_n\oplus c_nTx_n), Tx^*\right)\\
-        &\leq d\qty((1-c_n)x_n\oplus c_nTx_n,x^*)\\
-        &\leq (1-c_n)d(x_n,x^*)+c_nd(Tx_n,x^*)\\
-        &\leq (1-c_n)d(x_n,x^*)+c_nd(x_n,x^*)\\
-        &= d(x_n,x^*).
+        d(q_n,x^*) &= d\qty(T\qty((1-c_n)x_n\oplus c_n Tx_n),Tx^*)\\
+        &\leq \frac{\alpha}{1-\gamma}d\qty((1-c_n)x_n\oplus c_n Tx_n, x^* )\\
+        &\leq \frac{\alpha}{1-\gamma}\qty[(1-c_n)d(x_n,x^*)+c_n d(Tx_n,x^*)]\\
+        &\leq \frac{\alpha}{1-\gamma}\qty[(1-c_n)d(x_n,x^*)+\frac{\alpha c_n}{1-\gamma}d(x_n,x^*)]\\
+        &= \frac{\alpha(1-\gamma)(1-c_n)+\alpha^2 c_n}{(1-\gamma)^2}d(x_n,x^*),\\
+        d(y_n,x^*) &= d\qty(T(Tq_n),x^*)\\
+        &\leq \frac{\alpha}{1-\gamma}d(Tq_n,x^*)\\
+        &\leq \qty(\frac{\alpha}{1-\gamma})^2 d(q_n,x^*),\\
+        d(x_{n+1},x^*) &= d\qty(T\qty((1-a_n)Tq_n\oplus a_n Ty_n),Tx^*)\\
+        &\leq \frac{\alpha}{1-\gamma}d\qty((1-a_n)Tq_n\oplus a_n Ty_n,x^*)\\
+        &\leq \frac{\alpha}{1-\gamma}\qty[(1-a_n)d(Tq_n,x^*)+a_n d(Ty_n,x^*)]\\
+        &\leq \qty(\frac{\alpha}{1-\gamma})^2\qty[(1-a_n)d(q_n,x^*)+a_n d(y_n,x^*)]\\
+        &\leq \qty(\frac{\alpha}{1-\gamma})^2\qty[(1-a_n)d(q_n,x^*)+a_n \qty(\frac{\alpha}{1-\gamma})^2d(q_n,x^*)]\\
+        &= \qty(\frac{\alpha}{1-\gamma})^2\qty[\frac{(1-a_n)(1-\gamma)^2+a_n\alpha^2}{(1-\gamma)^2}d(q_n,x^*)]\\
+        &\leq \frac{\alpha^2}{(1-\gamma)^4} \qty((1-a_n)(1-\gamma)^2+a_n\alpha^2)\times \frac{\alpha(1-\gamma)(1-c_n)+\alpha^2 c_n}{(1-\gamma)^2}d(x_n,x^*)\\
+        &= \frac{\alpha^3}{(1-\gamma)^6}\qty((1-a_n)(1-\gamma)^2+a_n\alpha^2)\qty((1-c_n)(1-\gamma)+c_n \alpha)d(x_n,x^*).
     \end{align*}
-    Dengan cara yang sama, didapatkan pula
+    Karena $\alpha\leq 1-\gamma$, didapat 
+    \begin{align}\label{eq:ineqdxnx*}
+        d(x_{n+1},x^*) &\leq \frac{\alpha^3}{(1-\gamma)^6}\qty(1-\gamma)^2\qty(1-\gamma)d(x_n,x^*) = \frac{\alpha^3}{(1-\gamma)^3}d(x_n,x^*),
+    \end{align}
+    sehingga
     \begin{align*}
-        d(y_n,x^*)&=d\qty(T(Tq_n),x^*)\\
-        &\leq d(Tq_n,x^*)\\
-        &\leq d(q_n,x^*)\\
-        &\leq d(x_n,x^*),
+        d(x_{n+1},x^*) \leq d(x_n,x^*),
     \end{align*}
-    serta 
+    yang berarti bahwa $\{d(x_n,x^*)\}$ merupakan barisan turun dan terbatas di bawah. Akibatnya $\lim_{n\to\infty} d(x_n,x^*)$ ada. Selanjutnya, untuk $\alpha+\gamma\neq 1$, diperoleh 
     \begin{align*}
-        d(x_{n+1},x^*)&= d\qty(T\qty((1-a_n)Tq_n\oplus a_n Ty_n), Tx^*)\\
-        &\leq d\qty((1-a_n)Tq_n\oplus a_n Ty_n,x^*)\\
-        &\leq (1-a_n)d(Tq_n,x^*)+a_n d(Ty_n,x^*)\\
-        &\leq (1-a_n)d(q_n,x^*)+a_nd(y_n,x^*)\\
-        &\leq (1-a_n)d(x_n,x^*)+a_n d(x_n,x^*)\\
-        &= d(x_n,x^*).
+        d(x_{n+1},x^*) &\leq \qty(\frac{\alpha}{1-\gamma})^3 d(x_n,x^*)\nonumber\\
+        &\leq  \qty(\frac{\alpha}{1-\gamma})^6 d(x_{n-1},x^*)\nonumber\\
+        &~~\vdots\nonumber\\
+        &\leq  \qty(\frac{\alpha}{1-\gamma})^{3(n+1)} d(x_0,x^*),
+    \end{align*} 
+    sehingga 
+    \begin{align*}
+        0\leq \lim_{n\to\infty} d(x_n,x^*) \leq \lim_{n\to\infty} \qty(\frac{\alpha}{1-\gamma})^{3n} d(x_0,x^*) = 0.
     \end{align*}
+    Dengan demikian $\lim_{n\to\infty} d(x_n,x^*) = 0$.
 \end{bukti}
 \begin{lemma}\label{Lema:xntxn0}
     Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$. Jika $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{c_n\}\subset (0,1)$, maka $\lim_{n\to\infty} d(x_n,Tx_n)=0$.
@@ -86,7 +101,7 @@ Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan
     \begin{align*}
      \qty(d(x_n,Tx_n))^p&\leq \frac{2^{p-1}}{a(1-b)}\qty[\qty(d(x_n,x^*))^p-\qty(d(x_{n+1},x^*))^p].     
     \end{align*}
-    Selanjutnya, berdasarkan Lema \ref{Lema:dxnx*}, diperoleh bahwa $\{d(x_n,x^*)\}$ adalah barisan turun dan terbatas di bawah dengan batas bawah 0, sehingga $\{d(x_n,x^*)\}$ konvergen. Hal ini berarti $u_n = \qty(d(x_n,x^*))^p$ juga konvergen dan diperoleh $\lim_{n\to\infty} (u_n-u_{n+1})=0$. Akibatnya, didapatkan 
+    Selanjutnya, berdasarkan Lema \ref{Lema:dxnx*}, diperoleh bahwa $\{d(x_n,x^*)\}$ konvergen. Hal ini berarti $u_n = \qty(d(x_n,x^*))^p$ juga konvergen dan diperoleh $\lim_{n\to\infty} (u_n-u_{n+1})=0$. Akibatnya, didapatkan 
     \begin{align*}
         0\leq \lim_{n\to \infty} \qty(d(x_n,Tx_n))^p&\leq \lim_{n\to \infty} \frac{2^{p-1}}{a(1-b)}\qty[\qty(d(x_n,x^*))^p-\qty(d(x_{n+1},x^*))^p] =0.
     \end{align*}
@@ -114,7 +129,7 @@ Selanjutnya, dua teorema berikut ini menyajikan hasil konvergensi dari skema Sab
     Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup dan konveks. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$ dan $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{c_n\}\subset (0,1)$, maka $\{x_n\}$ konvergen-$\Delta$ ke suatu titik tetap dari $T$.
 \end{thm}
 \begin{bukti}
-    Diamati bahwa $T$ merupakan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Dari Lema \ref{Lema:dxnx*}, didapatkan bahwa $\{d(x_n,x^*)\}$ adalah barisan turun dan terbatas di bawah dengan batas bawah 0, sehingga $\{d(x_n,x^*)\}$ konvergen untuk setiap $x^*\in Fix(T)$.
+    Diamati bahwa $T$ merupakan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Dari Lema \ref{Lema:dxnx*}, didapatkan bahwa $\{d(x_n,x^*)\}$ konvergen untuk setiap $x^*\in Fix(T)$.
     % \begin{align}
     %     \lim_{n\to\infty} d(x_n,x^*)=0 \quad \quad \text{untuk setiap } x^*\in Fix(T).
     % \end{align}
@@ -129,82 +144,63 @@ Untuk mendapatkan hasil konvergensi kuat, diperlukan syarat tambahan, yaitu himp
      Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup, konveks, dan kompak. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$ dan $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{c_n\}\subset (0,1)$, maka $\{x_n\}$ konvergen kuat ke suatu titik tetap dari $T$.
 \end{thm}
 \begin{bukti}
-    Diperhatikan bahwa $W$ adalah himpunan kompak, ini berarti ada subbarisan $\{x_{n_k}\}$ dari $\{x_n\}$ yang konvergen kuat ke $x\in W$. Akibatnya $\{x_{n_k}\}$ juga konvergen$-\Delta$ ke $x\in W$.  Dengan menggunakan fakta bahwa $W$ himpunan kompak dan $Fix(T)\neq\emptyset$, maka berdasarkan Lema \ref{Lema:xntxn0}, diperoleh
+    Diperhatikan bahwa $W$ adalah himpunan kompak, ini berarti ada subbarisan $\{x_{n_k}\}$ dari $\{x_n\}$ yang konvergen kuat ke $x\in W$ atau $\lim_{k\to\infty} d(x_{n_k},x)=0$. Akibatnya $\{x_{n_k}\}$ juga konvergen$-\Delta$ ke $x\in W$.  Dengan menggunakan fakta bahwa $W$ himpunan kompak dan $Fix(T)\neq\emptyset$, maka berdasarkan Lema \ref{Lema:xntxn0}, diperoleh
     \begin{align*}
         \lim_{k\to\infty} d(x_{n_k},Tx_{n_k})=\lim_{k\to\infty} d(x_n,Tx_n)=0.
     \end{align*}
-    Kemudian dengan menggunakan sifat demiclosedness dari $T$, didapat bahwa $x\in Fix(T)$. Selanjutnya dari Lema \ref{Lema:dxnx*} didapatkan
+    Kemudian dengan menggunakan sifat demiclosedness dari $T$, didapat bahwa $x\in Fix(T)$. Selanjutnya dari Lema \ref{Lema:dxnx*} didapatkan bahwa $\lim_{n\to\infty} d(x_n,x)$ ada. Karena limit dari subbarisannya 0, diperoleh
     % \begin{align*}
     %     \lim_{k\to\infty} d(x_{n_k},x)=0.
     % \end{align*}
     % Dengan menggunakan fakta bahwa $W$ himpunan kompak, didapatkan
     \begin{align*}
-        \lim_{k\to\infty} d(x_{n},x)=0.
+        \lim_{n\to\infty} d(x_{n},x) =\lim_{k\to\infty} d(x_{n_k},x)=0.
     \end{align*}
     Dengan demikian, barisan $\{x_n\}$ konvergen kuat ke titik tetap dari $T$.
 \end{bukti}
-
-\begin{thm}
-    Laju
+Selanjutnya, diberikan laju konvergensi dari barisan yang dikonstruksi dari skema iterasi Sabri. Berikut ini, terlebih dahulu diberikan definisi dari laju konvergensi dari suatu barisan.
+\begin{defn}\label{defn:lajukonv}\cite{Berinde2015}
+    Diberikan ruang $CAT_p(0)$ $(X,d,G)$. $\{x_n\}$ adalah barisan yang konvergen ke $x\in X$. Jika terdapat $r\in [1,2]$ yang memenuhi 
+    \begin{align*}
+        \lim_{n\to\infty} \dfrac{d(x_{n+1},x^*)}{\qty[d(x_n,x^*)]^r}=\lambda <+\infty,
+    \end{align*}
+    maka $r$ disebut sebagai laju konvergensi dari $\{x_n\}$ dengan $\lambda$ sebagai galat asimtotik. Jika $r=1$, laju konvergensinya linear, jika $r=2$, laju konvergensinya kuadratik, dan jika $1<r<2$, laju konvergensinya superlinear.
+\end{defn}
+\begin{thm}\label{thm:laju}
+Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup, konveks, dan kompak. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $\alpha+\gamma<1$, $Fix(T)\neq \emptyset$, serta $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{c_n\}\subset (0,1)$, maka $\{x_n\}$ memiliki laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^3}{(1-\gamma)^3}$.
 \end{thm}
 \begin{bukti}
-    Diperhatikan bahwa untuk setiap $x^*\in Fix(T)$ berlaku
+    Berdasarkan ketaksamaan \eqref{eq:ineqdxnx*}, didapatkan bahwa untuk setiap $n\in\N$ berlaku 
     \begin{align*}
-        d(q_n,x^*) &= d\qty(T\qty((1-c_n)x_n\oplus c_n Tx_n),Tx^*)\\
-        &\leq \frac{\alpha}{1-\gamma}d\qty((1-c_n)x_n\oplus c_n Tx_n, x^* )\\
-        &\leq \frac{\alpha}{1-\gamma}\qty[(1-c_n)d(x_n,x^*)+c_n d(Tx_n,x^*)]\\
-        &\leq \frac{\alpha}{1-\gamma}\qty[(1-c_n)d(x_n,x^*)+\frac{\alpha c_n}{1-\gamma}d(x_n,x^*)]\\
-        &= \frac{\alpha(1-\gamma)(1-c_n)+\alpha^2 c_n}{(1-\gamma)^2}d(x_n,x^*).
-    \end{align*}
-    \begin{align*}
-        d(y_n,x^*) &= d\qty(T(Tq_n),x^*)\\
-        &\leq \frac{\alpha}{1-\gamma}d(Tq_n,x^*)\\
-        &\leq \qty(\frac{\alpha}{1-\gamma})^2 d(q_n,x^*).
-    \end{align*}
-    \begin{align*}
-        d(x_{n+1},x^*) &= d\qty(T\qty((1-a_n)Tq_n\oplus a_n Ty_n),Tx^*)\\
-        &\leq \frac{\alpha}{1-\gamma}d\qty((1-a_n)Tq_n\oplus a_n Ty_n,x^*)\\
-        &\leq \frac{\alpha}{1-\gamma}\qty[(1-a_n)d(Tq_n,x^*)+a_n d(Ty_n,x^*)]\\
-        &\leq \qty(\frac{\alpha}{1-\gamma})^2\qty[(1-a_n)d(q_n,x^*)+a_n d(y_n,x^*)]\\
-        &\leq \qty(\frac{\alpha}{1-\gamma})^2\qty[(1-a_n)d(q_n,x^*)+a_n \qty(\frac{\alpha}{1-\gamma})^2d(q_n,x^*)]\\
-        &= \qty(\frac{\alpha}{1-\gamma})^2\qty[\frac{(1-a_n)(1-\gamma)^2+a_n\alpha^2}{(1-\gamma)^2}d(q_n,x^*)]\\
-        &\leq \frac{\alpha^2}{(1-\gamma)^4} \qty((1-a_n)(1-\gamma)^2+a_n\alpha^2)\times \frac{\alpha(1-\gamma)(1-c_n)+\alpha^2 c_n}{(1-\gamma)^2}d(x_n,x^*)\\
-        &= \frac{\alpha^3}{(1-\gamma)^6}\qty((1-a_n)(1-\gamma)^2+a_n\alpha^2)\qty((1-c_n)(1-\gamma)+c_n \alpha)d(x_n,x^*).
-    \end{align*}
-    Karena $\alpha\leq 1-\gamma$, didapat 
-    \begin{align*}
-        d(x_{n+1},x^*) &\leq \frac{\alpha^3}{(1-\gamma)^6}\qty(1-\gamma)^2\qty(1-\gamma)d(x_n,x^*) = \frac{\alpha^3}{(1-\gamma)^3}d(x_n,x^*),
+        d(x_{n+1},x^*)\leq \frac{\alpha^3}{(1-\gamma)^3} d(x_n,x^*),
     \end{align*}
     sehingga 
     \begin{align*}
-        d(x_{n+1},x^*) &\leq \qty(\frac{\alpha}{1-\gamma})^3 d(x_n,x^*)\\
-        &\leq  \qty(\frac{\alpha}{1-\gamma})^6 d(x_{n-1},x^*)\\
-        &~~\vdots\\
-        &\leq  \qty(\frac{\alpha}{1-\gamma})^{3(n+1)} d(x_0,x^*).
+        \lim_{n\to\infty} \frac{d(x_{n+1},x^*)}{d(x_n,x^*)}\leq \frac{\alpha^3}{(1-\gamma)^3}<+\infty.
     \end{align*}
-    Jika terdapat $\alpha+\gamma\neq 1$, didapatkan $\lim_{n\to\infty} d(x_n,x^*)=0$.
+    Hal ini berarti $\{x_n\}$ memiliki laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^3}{(1-\gamma)^3}$.
 \end{bukti}
-\begin{bukti}
-    \begin{align*}
-        d(q_n,x^*) &=d\qty(T\qty((1-c_n)x_n\oplus c_n Tx_n),Tx^*)\\
-        &\leq bd\qty((1-c_n)x_n\oplus c_n Tx_n, x^* )\\
-        &\leq bm\qty[(1-c_n)d(x_n,x^*)+c_n d(Tx_n,x^*)]\\
-        &\leq bm\qty[(1-c_n)d(x_n,x^*)+bc_nd(x_n,x^*)]\\
-        &= bm\qty(1-c_n(1-b))d(x_n,x^*).
-    \end{align*}
-    \begin{align*}
-        d(y_n,x^*) &= d\qty(T(Tq_n),x^*)\\
-        &\leq bd(Tq_n,x^*)\\
-        &\leq b^2 d(q_n,x^*).
-    \end{align*}
-    \begin{align*}
-        d(x_{n+1},x^*) &= d\qty(T\qty((1-a_n)Tq_n\oplus a_n Ty_n),Tx^*)\\
-        &\leq bd\qty((1-a_n)Tq_n\oplus a_n Ty_n,x^*)\\
-        &\leq bm\qty[(1-a_n)d(Tq_n,x^*)+a_n d(Ty_n,x^*)]\\
-        &\leq b^2m\qty[(1-a_n)d(q_n,x^*)+a_n d(y_n,x^*)]\\
-        &\leq b^2m\qty[(1-a_n)d(q_n,x^*)+a_n b^2d(q_n,x^*)]\\
-        &= b^2m\qty[(1-a_n(1-b^2))d(q_n,x^*)]\\
-        &\leq b^2m (1-a_n(1-b^2))(bm(1-c_n(1-b)))d(x_n,x^*)\\
-        &= b^3m^2 (1-a_n(1-b^2))(1-c_n(1-b))d(x_n,x^*).
-    \end{align*}
-\end{bukti}
+% \begin{bukti}
+%     \begin{align*}
+%         d(q_n,x^*) &=d\qty(T\qty((1-c_n)x_n\oplus c_n Tx_n),Tx^*)\\
+%         &\leq bd\qty((1-c_n)x_n\oplus c_n Tx_n, x^* )\\
+%         &\leq bm\qty[(1-c_n)d(x_n,x^*)+c_n d(Tx_n,x^*)]\\
+%         &\leq bm\qty[(1-c_n)d(x_n,x^*)+bc_nd(x_n,x^*)]\\
+%         &= bm\qty(1-c_n(1-b))d(x_n,x^*).
+%     \end{align*}
+%     \begin{align*}
+%         d(y_n,x^*) &= d\qty(T(Tq_n),x^*)\\
+%         &\leq bd(Tq_n,x^*)\\
+%         &\leq b^2 d(q_n,x^*).
+%     \end{align*}
+%     \begin{align*}
+%         d(x_{n+1},x^*) &= d\qty(T\qty((1-a_n)Tq_n\oplus a_n Ty_n),Tx^*)\\
+%         &\leq bd\qty((1-a_n)Tq_n\oplus a_n Ty_n,x^*)\\
+%         &\leq bm\qty[(1-a_n)d(Tq_n,x^*)+a_n d(Ty_n,x^*)]\\
+%         &\leq b^2m\qty[(1-a_n)d(q_n,x^*)+a_n d(y_n,x^*)]\\
+%         &\leq b^2m\qty[(1-a_n)d(q_n,x^*)+a_n b^2d(q_n,x^*)]\\
+%         &= b^2m\qty[(1-a_n(1-b^2))d(q_n,x^*)]\\
+%         &\leq b^2m (1-a_n(1-b^2))(bm(1-c_n(1-b)))d(x_n,x^*)\\
+%         &= b^3m^2 (1-a_n(1-b^2))(1-c_n(1-b))d(x_n,x^*).
+%     \end{align*}
+% \end{bukti}

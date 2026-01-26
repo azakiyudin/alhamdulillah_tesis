@@ -1,6 +1,6 @@
 \section{Pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di Ruang $CAT_p(0)$}
-Pada bagian ini, disajikan definisi, contoh, dan sifat-sifat dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di ruang $CAT_p(0)$. Sifat yang didapatkan dari pemetaan ini disajikan dalam Lema \ref{Lema:dxnx*}, yang menunjukkan bahwa pemetaan ini memenuhi kondisi nonekspansif kuasi. 
-Kemudian, pada Lema \ref{Lema:ineqabcnoneks} didapatkan ketaksamaan penting yang melibatkan pemetaan tersebut. Selain itu, didapatkan pula bahwa pemetaan ini memenuhi sifat \textit{demiclosedness} yang ditunjukkan oleh Lema \ref{Lema:demi}. Tiga Lema tersebut berperan penting untuk pembuktian konvergensi skema iterasi Sabri untuk aproksimasi titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif.
+Pada bagian ini, disajikan definisi, contoh, dan sifat-sifat dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di ruang $CAT_p(0)$. Sifat yang didapatkan dari pemetaan ini disajikan dalam Lema \ref{lemma:tutx}, yang menunjukkan bahwa pemetaan ini memenuhi kondisi nonekspansif kuasi. 
+Kemudian, pada Lema \ref{Lema:ineqabcnoneks} didapatkan ketaksamaan penting yang melibatkan pemetaan tersebut. Selain itu, didapatkan pula bahwa pemetaan ini memenuhi sifat \textit{demiclosedness} yang ditunjukkan oleh Lema \ref{Lema:demi}. Tiga Lema tersebut berperan penting untuk pembuktian konvergensi skema iterasi Sabri untuk aproksimasi titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Pada bagian ini diberikan pula Teorema \ref{thm:titaptunggal} yang menyatakan syarat dari ketunggalan titik tetap dari pemetaan tersebut jika eksistensinya ada.
 
 Berikut ini disajikan definisi dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di ruang $CAT_p(0)$.
 \begin{defn}\label{defn:abcnoncat}
@@ -9,6 +9,7 @@ Berikut ini disajikan definisi dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansi
         d(Tx,Ty)\leq \alpha d(x,y)+\beta d(x,Tx)+\gamma d(x, Ty). \label{eq:abcnoncat}
     \end{align}
 \end{defn}
+% Diperhatikan bahwa dalam Definisi \ref{defn:abcnoncat} di ruang $CAT_p(0)$, nilai $\alpha+\gamma<1$, sehingga pemetaan nonekspansif klasik tidak termasuk ke dalam kelas pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Hal ini bertujuan untuk menjamin hasil konvergensi 
     Selanjutnya, diberikan contoh dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif di ruang $CAT_p(0)$. Namun, sebelum itu diberikan dulu contoh ruang yang digunakan sebagai berikut.
 
     Contoh berikut ini merupakan contoh dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan ruang $CAT_p(0)$ yang diberikan pada Contoh \ref{con:Catp}.
@@ -292,16 +293,7 @@ Berikut ini disajikan definisi dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansi
            d(Tx,Tu)= d(Tu,Tx)= d(u, Tx) \leq \frac{\alpha}{1-\gamma} d(x,u) \leq d(x,u).\label{ineq:titap}
         \end{align}
     \end{bukti}
-    \begin{thm}
-        Diberikan $(X,d,G)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$, serta $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Jika $\alpha+\gamma\neq 1$ dan $T$ memiliki titik tetap, maka titik tetap dari $T$ tunggal.
-    \end{thm}
-    \begin{bukti}
-        Misalkan $u$ dan $v$ adalah titik tetap dari $T$, maka berdasarkan Ketaksamaan \eqref{ineq:titap} diperoleh 
-        \begin{align*}
-            d(u,v)=d(Tu,Tv) \leq \frac{\alpha}{1-\gamma} d(u,v) 
-        \end{align*} 
-        Karena $\alpha,\gamma\in [0,1]$, $\gamma\neq 1$, dan $\alpha+\gamma\neq 1$, didapatkan bahwa $0\leq \frac{\alpha}{1-\gamma}<1$ sehingga $d(u,v)=0$. Dengan demikian $u=v$, yang berarti bahwa titik tetap dari $T$ tunggal. 
-    \end{bukti}
+    
     \begin{lemma}\label{Lema:ineqabcnoneks}
         Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$, serta $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Untuk setiap $x,y\in W$, ketaksamaan berikut ini berlaku:
         \begin{equation}\label{eq:ineqabcnoneks}
@@ -334,4 +326,16 @@ Berikut ini disajikan definisi dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansi
             \limsup_{n\to \infty} d(x_n, Tu_0)\leq \limsup_{n\to \infty} \dfrac{\alpha}{1-\gamma} d(x_n, u_0) \leq \limsup_{n\to \infty} d(x_n, u_0).
         \end{align*}
         Hal ini berarti $Tu_0\in A(\{x_n\})$. Kemudian, berdasarkan Lema \ref{Lema:asimtotik}, dipunyai bahwa $A(\{x_n\})$ tepat memiliki satu elemen, yang berarti $u_0=Tu_0$. Jadi $T$ memiliki sifat \textbf{demiclosedness}. 
+    \end{bukti}
+
+Teorema berikut ini menyatakan ketunggalan titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif.
+    \begin{thm}\label{thm:titaptunggal}
+        Diberikan $(X,d,G)$ adalah ruang $CAT_p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$. Jika  $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $\alpha+\gamma\neq 1$ dan $T$ memiliki titik tetap, maka titik tetap dari $T$ tunggal.
+    \end{thm}
+    \begin{bukti}
+        Misalkan $u$ dan $v$ adalah titik tetap dari $T$, maka berdasarkan Ketaksamaan \eqref{ineq:titap} diperoleh 
+        \begin{align*}
+            d(u,v)=d(Tu,Tv) \leq \frac{\alpha}{1-\gamma} d(u,v) 
+        \end{align*} 
+        Karena $\alpha,\gamma\in [0,1]$, $\gamma\neq 1$, dan $\alpha+\gamma\neq 1$, didapatkan bahwa $0\leq \frac{\alpha}{1-\gamma}<1$ sehingga $d(u,v)=0$. Dengan demikian $u=v$, yang berarti bahwa titik tetap dari $T$ tunggal. 
     \end{bukti}

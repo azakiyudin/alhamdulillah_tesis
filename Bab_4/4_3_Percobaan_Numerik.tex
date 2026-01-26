@@ -226,13 +226,14 @@ $\mathbf{n}$ & \textbf{Sabri} & \textbf{JK} & \textbf{Thakur} & \textbf{Abbas} &
 % \hline
 %     \end{tabular}
 % \end{table}
-Dengan galat kurang dari $10^{-6}$, skema iterasi Sabri hanya membutuhkan 3 iterasi dibanding dengan JK (4 iterasi), Thakur (5 iterasi), Abbas (7 iterasi), dan Agarwal (8 iterasi). Pada \ref{tab:galat}, diberikan pula nilai galat $d(x_n,x^*)$ dari tiap iterasi. \ref{fig:galatperc} juga memberikan gambaran mengenai penurunan galatnya. 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\linewidth]{Bab_4/galatpercobaan.png}
+    \includegraphics[width=\linewidth]{Bab_4/galatpercobaan.png}
     \caption{Galat $d(x_{n+1},x_n)$ (dalam log) vs iterasi}
     \label{fig:galatperc}
 \end{figure}
+Dengan galat kurang dari $10^{-6}$, skema iterasi Sabri hanya membutuhkan 3 iterasi dibanding dengan JK (4 iterasi), Thakur (5 iterasi), Abbas (7 iterasi), dan Agarwal (8 iterasi). Pada \ref{tab:galat}, diberikan pula nilai galat $d(x_n,x^*)$ dari tiap iterasi. \ref{fig:galatperc} juga memberikan gambaran mengenai penurunan galatnya. 
+
 
 Selanjutnya, pada \ref{tab:paramkonstan}, \ref{tab:paramturun}, \ref{tab:paramnaik}, \ref{tab:paramnaikturun}, dan \ref{tab:paramturunnaik}, disajikan jumlah iterasi yang diperlukan sampai batas galat $d(x_{n+1},x^*)<10^{-16}$ dari masing-masing skema iterasi dengan nilai awal dan parameter yang berbeda. Nilai awal dipilih secara acak dengan batasan nilainya berada pada domain pemetaan yang digunakan. Pada tabel-tabel tersebut parameter barisan $\{a_n\}$ dan $\{c_n\}$ berturut-turut dipilih dengan kondisi konstan-konstan, turun-turun, naik-naik, naik-turun, dan turun-naik. 
 % \begin{longtable}{cccccc}
@@ -357,4 +358,64 @@ $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \end{tabular}
     \label{tab:paramturunnaik}
 \end{table}
-Hasil tersebut menunjukkan bahwa skema iterasi Sabri memiliki laju konvergensi yang lebih baik daripada yang lainnya secara numerik. Dengan parameter tertentu, skema tersebut hanya membutuhkan 8 iterasi untuk konvergen ke titik tetapnya dengan galat kurang dari $10^{-16}$. Hasil ini secara intuitif dapat dijelaskan dari struktur iterasi Sabri yang melibatkan komposisi pemetaan nonekspansif $T$ secara berlapis pada setiap langkah iterasi, sehingga jarak barisan iterasi terhadap titik tetap berkurang lebih signifikan pada setiap iterasi dibandingkan dengan skema iterasi lainnya.
+Hasil tersebut menunjukkan bahwa skema iterasi Sabri memiliki laju konvergensi yang lebih baik daripada yang lainnya secara numerik. Dengan parameter tertentu, skema tersebut hanya membutuhkan 8 iterasi untuk konvergen ke titik tetapnya dengan galat kurang dari $10^{-16}$. Secara analitik, skema iterasi Sabri lebih cepat karena nilai galat asimtotiknya, yaitu $\lambda\leq \frac{\alpha^3}{(1-\gamma)^3}$, sedangkan untuk JK dan Thakur adalah $\lambda\leq \frac{\alpha^2}{(1-\gamma)^2}$ yang ditunjukkan dalam teorema berikut ini. 
+\begin{thm}
+Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup, konveks, dan kompak. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $\alpha+\gamma<1$, $Fix(T)\neq \emptyset$, serta $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi JK \eqref{eq:jkcat} dengan $\{a_n\},\{c_n\}\subset (0,1)$, maka $\{x_n\}$ memiliki laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^2}{(1-\gamma)^2}$.
+\end{thm}
+\begin{bukti}
+    Berdasarkan Lema \ref{lema:d,d^p} dan Lema \ref{lemma:tutx}, diperoleh bahwa untuk setiap $x^*\in Fix(T)$ berlaku
+    \begin{align*}
+        d(q_n,x^*) &= d\qty((1-c_n)x_n\oplus c_n Tx_n,Tx^*)\\
+        &\leq (1-c_n)d(x_n,x^*)+c_n d(Tx_n,x^*)\\
+        &\leq (1-c_n)d(x_n,x^*)+\frac{\alpha c_n}{1-\gamma}d(x_n,x^*)\\
+        &= \frac{(1-\gamma)(1-c_n)+\alpha c_n}{(1-\gamma)}d(x_n,x^*),\\
+        d(y_n,x^*) &= d\qty(Tq_n,x^*)\\
+        &\leq \frac{\alpha}{1-\gamma}d(q_n,x^*),\\
+        d(x_{n+1},x^*) &= d\qty(T\qty((1-a_n)Tq_n\oplus a_n Ty_n),Tx^*)\\
+        &\leq \frac{\alpha}{1-\gamma}d\qty((1-a_n)Tq_n\oplus a_n Ty_n,x^*)\\
+        &\leq \frac{\alpha}{1-\gamma}\qty[(1-a_n)d(Tq_n,x^*)+a_n d(Ty_n,x^*)]\\
+        &\leq \qty(\frac{\alpha}{1-\gamma})^2\qty[(1-a_n)d(q_n,x^*)+a_n d(y_n,x^*)]\\
+        &\leq \qty(\frac{\alpha}{1-\gamma})^2\qty[(1-a_n)d(q_n,x^*)+a_n \frac{\alpha}{1-\gamma}d(q_n,x^*)]\\
+        &= \qty(\frac{\alpha}{1-\gamma})^2\qty[\frac{(1-a_n)(1-\gamma)+a_n\alpha}{(1-\gamma)}d(q_n,x^*)]\\
+        &\leq \frac{\alpha^2}{(1-\gamma)^3} \qty((1-a_n)(1-\gamma)+a_n\alpha)\times \frac{(1-\gamma)(1-c_n)+\alpha c_n}{(1-\gamma)}d(x_n,x^*)\\
+        &= \frac{\alpha^2}{(1-\gamma)^4}\qty((1-a_n)(1-\gamma)+a_n\alpha)\qty((1-c_n)(1-\gamma)+c_n \alpha)d(x_n,x^*).
+    \end{align*}
+    Karena $\alpha< 1-\gamma$, didapat 
+    \begin{align}
+        d(x_{n+1},x^*) &\leq \frac{\alpha^2}{(1-\gamma)^4}\qty(1-\gamma)\qty(1-\gamma)d(x_n,x^*) = \frac{\alpha^2}{(1-\gamma)^2}d(x_n,x^*),
+    \end{align}
+    sehingga 
+    \begin{align*}
+        \lim_{n\to\infty} \dfrac{d(x_{n+1},x^*)}{d(x_n,x^*)} \leq \frac{\alpha^2}{(1-\gamma)^2}<+\infty
+    \end{align*}
+    Hal ini berarti $\{x_n\}$ memiliki laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^2}{(1-\gamma)^2}$.
+\end{bukti}
+\begin{thm}
+Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup, konveks, dan kompak. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $\alpha+\gamma<1$, $Fix(T)\neq \emptyset$, serta $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Thakur \eqref{eq:thakurcat} dengan $\{a_n\},\{c_n\}\subset (0,1)$, maka $\{x_n\}$ memiliki laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^2}{(1-\gamma)^2}$.
+\end{thm}
+\begin{bukti}
+    Berdasarkan Lema \ref{lema:d,d^p} dan Lema \ref{lemma:tutx}, diperoleh bahwa untuk setiap $x^*\in Fix(T)$ berlaku
+    \begin{align*}
+        d(q_n,x^*) &= d\qty((1-c_n)x_n\oplus c_n Tx_n,Tx^*)\\
+        &\leq (1-c_n)d(x_n,x^*)+c_n d(Tx_n,x^*)\\
+        &\leq (1-c_n)d(x_n,x^*)+\frac{\alpha c_n}{1-\gamma}d(x_n,x^*)\\
+        &= \frac{(1-\gamma)(1-c_n)+\alpha c_n}{(1-\gamma)}d(x_n,x^*),\\
+        d(y_n,x^*) &= d\qty(T\qty((1-a_n)x_n\oplus a_nq_n),x^*)\\
+        &\leq \frac{\alpha}{1-\gamma}d\qty((1-a_n)x_n\oplus a_n q_n,x^*)\\
+        &\leq \frac{\alpha}{1-\gamma} \qty[(1-a_n)d(x_n,x^*)+a_n d(q_n,x^*)],\\
+        d(x_{n+1},x^*) &= d(Ty_n,Tx^*)\\
+        &\leq \frac{\alpha}{(1-\gamma)}d(y_n,x^*)\\
+        &\leq \frac{\alpha^2}{(1-\gamma)^2} \qty[(1-a_n)d(x_n,x^*)+a_n d(q_n,x^*)]\\
+        &\leq \frac{\alpha^2}{(1-\gamma)^2} \qty[(1-a_n)d(x_n,x^*)+a_n \frac{(1-\gamma)(1-c_n)+\alpha c_n}{(1-\gamma)}d(x_n,x^*)]
+    \end{align*}
+    Karena $\alpha< 1-\gamma$, didapat 
+    \begin{align}
+        d(x_{n+1},x^*) &\leq \frac{\alpha^2}{(1-\gamma)^2}d(x_n,x^*),
+    \end{align}
+    sehingga 
+    \begin{align*}
+        \lim_{n\to\infty} \dfrac{d(x_{n+1},x^*)}{d(x_n,x^*)} \leq \frac{\alpha^2}{(1-\gamma)^2}<+\infty
+    \end{align*}
+    Hal ini berarti $\{x_n\}$ memiliki laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^2}{(1-\gamma)^2}$.
+\end{bukti}
+% Hasil ini secara intuitif dapat dijelaskan dari struktur iterasi Sabri yang melibatkan komposisi pemetaan nonekspansif $T$ secara berlapis pada setiap langkah iterasi, sehingga jarak barisan iterasi terhadap titik tetap berkurang lebih signifikan pada setiap iterasi dibandingkan dengan skema iterasi lainnya.
