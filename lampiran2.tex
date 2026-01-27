@@ -48,7 +48,7 @@ def iterSabri(x0, tol, max_iter):
     y_n = res(res(q_n))
     x_next = res(geodesik(a_n,res(q_n),res(y_n)))
     data_x.append(x_next)
-    error = d(x_next,[26,26**3])
+    error = d(x_next,x_n)
     data_error.append(error)
     if error < tol:
       break
@@ -66,7 +66,7 @@ def iterJK(x0, tol, max_iter):
     y_n = res(q_n)
     x_next = res(geodesik(a_n,res(q_n),res(y_n)))
     data_x.append(x_next)
-    error = d(x_next,[26,26**3])
+    error = d(x_next,x_n)
     data_error.append(error)
     if error < tol:
       break

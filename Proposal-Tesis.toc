@@ -36,4 +36,4 @@
 \contentsline {chapter}{DAFTAR PUSTAKA}{77}{Item.35}%
 \addvspace {1ex}
 \contentsline {chapter}{LAMPIRAN}{81}{Item.35}%
-\contentsline {chapter}{BIODATA PENULIS}{99}{table.1.1}%
+\contentsline {chapter}{BIODATA PENULIS}{113}{table.2.1}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.21)  26 JAN 2026 12:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.21)  27 JAN 2026 10:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1428,7 +1428,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.4.3}) ha
                                                   \__shipout_drop_firstpage_...
 l.169 
       ]
-<Bab_4/galatpercobaan.png, id=791, 765.3393pt x 612.8496pt>
+<Bab_4/galatpercobaan.png, id=789, 765.3393pt x 612.8496pt>
 File: Bab_4/galatpercobaan.png Graphic file (type png)
 <use Bab_4/galatpercobaan.png>
 Package pdftex.def Info: Bab_4/galatpercobaan.png  used on input line 231.
@@ -1495,7 +1495,7 @@ l.364 \end{thm}
 [60]
 
 [61] [62] [63] [64] [65]
-<Bab_4/galatsim.png, id=907, 862.1811pt x 612.8496pt>
+<Bab_4/galatsim.png, id=905, 862.1811pt x 612.8496pt>
 File: Bab_4/galatsim.png Graphic file (type png)
 <use Bab_4/galatsim.png>
 Package pdftex.def Info: Bab_4/galatsim.png  used on input line 306.
@@ -1532,7 +1532,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) h
                                                   \__shipout_drop_firstpage_...
 l.89 
      ]
-<Bab_4/citrafix.png, id=948, 722.7pt x 347.6187pt>
+<Bab_4/citrafix.png, id=946, 722.7pt x 347.6187pt>
 File: Bab_4/citrafix.png Graphic file (type png)
 <use Bab_4/citrafix.png>
 Package pdftex.def Info: Bab_4/citrafix.png  used on input line 116.
@@ -1550,7 +1550,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.4.13}) h
                                                   \__shipout_drop_firstpage_...
 l.119 \end{figure}
                   ]
-<Bab_4/citrafixx2.png, id=953, 722.7pt x 356.7729pt>
+<Bab_4/citrafixx2.png, id=951, 722.7pt x 356.7729pt>
 File: Bab_4/citrafixx2.png Graphic file (type png)
 <use Bab_4/citrafixx2.png>
 Package pdftex.def Info: Bab_4/citrafixx2.png  used on input line 122.
@@ -1568,7 +1568,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.8}) h
                                                   \__shipout_drop_firstpage_...
 l.126 \newpage
                <./Bab_4/citrafix.png> <./Bab_4/citrafixx2.png>]
-<Bab_4/citrafixx3.png, id=960, 722.7pt x 1092.7224pt>
+<Bab_4/citrafixx3.png, id=958, 722.7pt x 1092.7224pt>
 File: Bab_4/citrafixx3.png Graphic file (type png)
 <use Bab_4/citrafixx3.png>
 Package pdftex.def Info: Bab_4/citrafixx3.png  used on input line 129.
@@ -1581,7 +1581,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.9}) h
                                                   \__shipout_drop_firstpage_...
 l.133 \newpage
                <./Bab_4/citrafixx3.png>]
-<Bab_4/galatrek.png, id=970, 722.7pt x 578.16pt>
+<Bab_4/galatrek.png, id=969, 722.7pt x 578.16pt>
 File: Bab_4/galatrek.png Graphic file (type png)
 <use Bab_4/galatrek.png>
 Package pdftex.def Info: Bab_4/galatrek.png  used on input line 137.
@@ -1692,44 +1692,55 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[94] [95] [96])
+[94]
+pdfTeX warning (ext4): destination with the same identifier (name{chapter.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.553 ...ata MSE dan PSNR dari Rekonstruksi Citra}
+                                                  \label{lamp:mse}
+
+[95]
+
+[96
+
+] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[97] (biodata.tex
+[111] (biodata.tex
 
-[98
+[112
 
 ]
 \foto=\box95
-<foto.jpg, id=1633, 1484.54625pt x 2227.32124pt>
+<foto.jpg, id=1690, 1484.54625pt x 2227.32124pt>
 File: foto.jpg Graphic file (type jpg)
 <use foto.jpg>
 Package pdftex.def Info: foto.jpg  used on input line 1.
 (pdftex.def)             Requested size: 113.80527pt x 170.71239pt.
 )
 
-[99 <./foto.jpg>] (Proposal-Tesis.aux (Abstrak_Ind/AbstrakInd.aux) (Abstract_Eng/AbstrakEnglish.aux))
+[113 <./foto.jpg>] (Proposal-Tesis.aux (Abstrak_Ind/AbstrakInd.aux) (Abstract_Eng/AbstrakEnglish.aux))
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
 Package rerunfilecheck Info: File `Proposal-Tesis.out' has not changed.
-(rerunfilecheck)             Checksum: 9E4796443A4FCB633769249896687B3C;5695.
+(rerunfilecheck)             Checksum: F35B9052F14498A2BB21C5613FE75EB2;5695.
  ) 
 Here is how much of TeX's memory you used:
- 36343 strings out of 468134
- 726301 string characters out of 5428804
- 1577669 words of memory out of 5000000
+ 36357 strings out of 468134
+ 726407 string characters out of 5428804
+ 1577667 words of memory out of 5000000
  63373 multiletter control sequences out of 15000+600000
  673398 words of font info for 139 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,18n,121p,1585b,2769s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Jekiyudin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Proposal-Tesis.pdf (123 pages, 5022839 bytes).
+Output written on Proposal-Tesis.pdf (137 pages, 5051630 bytes).
 PDF statistics:
- 1901 PDF objects out of 2073 (max. 8388607)
- 891 named destinations out of 1000 (max. 500000)
+ 1961 PDF objects out of 2073 (max. 8388607)
+ 905 named destinations out of 1000 (max. 500000)
  357 words of extra memory for PDF output out of 10000 (max. 10000000)
 

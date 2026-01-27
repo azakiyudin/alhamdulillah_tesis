@@ -102,7 +102,7 @@ Pada \ref{fig:flowrekonstruksi} diberikan diagram alir dari skema iterasi Sabri 
     Himpunan batas $C$ & $[0,1]^n$\\
     Nilai awal $x_0$ & $x_0=\mathbf{0}$\\
     Jumlah iterasi & 480\\
-    Parameter $\gamma$ & Konstan: 0.00245\\
+    Parameter $\gamma$ & Konstan: 0.002447\\
     Parameter $a_n,c_n$ & Konstan: $a_n=0.42, c_n=0.31$\\
     Implementasi & Google Colab dengan scikit-image, matplotlib\\
     \hline
@@ -110,7 +110,7 @@ Pada \ref{fig:flowrekonstruksi} diberikan diagram alir dari skema iterasi Sabri 
     \label{tab:parametersim}
 \end{table}
 
-Data awal dari simulasi tersebut disajikan pada \ref{fig:rekoncit}. Kemudian hasil simulasi dari rekonstruksi citra tersebut pada iterasi ke-5, 10, 30, 60, 90, 120, 240, dan 480 diberikan oleh \ref{fig:rekoncit2} dan \ref{fig:rekoncit3}. Pada iterasi ke-5, terlihat bahwa derau dari citra tersebut masih cukup tinggi, yang juga tertera pada nilai (\textit{peak signal noise ratio}) PSNR, yaitu 22.55 dB. Nilai PSNR dari citra tersebut juga makin membesar pada iterasi ke-10 dan 30, hingga iterasi ke-480, dengan nilai PSNR citra tersebut adalah 40.73 dB, yang mengindikasikan semakin sedikit derau pada citra.  
+Data awal dari simulasi tersebut disajikan pada \ref{fig:rekoncit}. Kemudian hasil simulasi dari rekonstruksi citra tersebut pada iterasi ke-5, 10, 30, 60, 90, 120, 240, dan 480 diberikan oleh \ref{fig:rekoncit2} dan \ref{fig:rekoncit3}. Pada iterasi ke-5, terlihat bahwa derau dari citra tersebut masih cukup tinggi, yang juga tertera pada nilai (\textit{peak signal noise ratio}) PSNR, yaitu 22.55 dB. Nilai PSNR dari citra tersebut juga makin membesar pada iterasi ke-10 dan 30, hingga iterasi ke-480, dengan nilai PSNR citra tersebut adalah 40.73 dB, yang mengindikasikan semakin sedikit derau pada citra. Waktu yang diperlukan dalam simulasi rekonstruksi citra ini adalah 11024.39 detik.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.95\linewidth]{Bab_4/citrafix.png}
@@ -131,7 +131,7 @@ Data awal dari simulasi tersebut disajikan pada \ref{fig:rekoncit}. Kemudian has
     \label{fig:rekoncit3}
 \end{figure}
 \newpage
-Pada \ref{fig:galatrek}, diberikan grafik dari metrik PSNR dan MSE dari citra hasil rekonstruksi pada tiap iterasinya. Terlihat bahwa nilai galat, yaitu (\textit{mean squared error}) dari citra tersebut relatif kecil pada iterasi ke-480, yaitu $8\times 10^{-5}$, dibandingkan dengan galat pada iterasi pertama, yaitu $2\times 10^{-2}$. Terlihat pula bahwa nilai metrik PSNR dan MSE tersebut berturut-turut naik dan turun pada tiap iterasinya, sesuai dengan peningkatan kualitas citra pada \ref{fig:rekoncit2} dan \ref{fig:rekoncit2}, yang menunjukkan bahwa skema iterasi Sabri dapat digunakan dalam rekonstruksi citra tomografi.
+Pada \ref{fig:galatrek} dan Lampiran \ref{lamp:mse}, diberikan grafik dan tabel nilai dari metrik PSNR dan MSE dari citra hasil rekonstruksi pada tiap iterasinya. Terlihat bahwa nilai galat, yaitu (\textit{mean squared error}) dari citra tersebut relatif kecil pada iterasi ke-480, yaitu $8\times 10^{-5}$, dibandingkan dengan galat pada iterasi pertama, yaitu $2\times 10^{-2}$. Terlihat pula bahwa nilai metrik PSNR dan MSE tersebut berturut-turut naik dan turun pada tiap iterasinya, sesuai dengan peningkatan kualitas citra pada \ref{fig:rekoncit2} dan \ref{fig:rekoncit3}, yang menunjukkan bahwa skema iterasi Sabri dapat digunakan dalam rekonstruksi citra tomografi.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{Bab_4/galatrek.png}

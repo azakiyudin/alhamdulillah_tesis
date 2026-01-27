@@ -722,7 +722,7 @@ Semua referensi yang dikutip maupun dirujuk telah ditulis secara lengkap pada da
 \newcommand{\UcapanTerimaKasih}{%-----------------
 	\cleardoublepage
 	\centerline{\large\bfseries UCAPAN TERIMA KASIH}
-	\addcontentsline{toc}{chapter}{UCAPAN TERIMA KASIH}\vspace{1.5cm}
+	\addcontentsline{toc}{chapter}{UCAPAN TERIMA KASIH}\vspace{2cm}
 }
 %%%------------- PENYESUAIAN ISTILAH ---------------------------
 \renewcommand\contentsname{DAFTAR ISI}
