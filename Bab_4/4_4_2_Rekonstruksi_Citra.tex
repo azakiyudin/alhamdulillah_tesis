@@ -1,10 +1,10 @@
 \subsection{Rekonstruksi Citra}
-% Selain dapat digunakan dalam minimalisasi fungsi, skema iterasi Sabri juga dapat digunakan dalam permasalahan \textit{split feasibility}, yang memiliki aplikasi nyata dalam rekonstruksi citra.
+% Selain dapat digunakan dalam minimalisasi fungsi, skema iterasi Sabri juga dapat digunakan dalam permasalahan \textit{split feasibility}, yang mempunyai aplikasi nyata dalam rekonstruksi citra.
 Dalam rekonstruksi citra, skema iterasi dapat dipandang sebagai alat untuk menyelesaikan permasalahan \textit{split feasibility}. Permasalahan \textit{split feasibility} ini dikenalkan oleh Censor dan Elfving pada tahun 1994, yang diformulasikan sebagai 
 \begin{align}\label{eq:sfp}
     \text{Cari titik } x^*\in C \quad \text{yang memenuhi}\quad Ax^*\in Q,
 \end{align}
-dengan $C$ dan $Q$ berturut-turut adalah himpunan bagian tertutup dan konveks dari ruang Hilbert $H_1$ dan $H_2$, serta $A:H_1\to H_2$ adalah transformasi linier terbatas \cite{Censor1994}. Permasalahan \eqref{eq:sfp} disebut konsisten jika setidaknya memiliki satu solusi. Suatu titik $x^*\in C$ merupakan solusi dari permasalahan tersebut jika dan hanya jika $x^*$ memenuhi persamaan titik tetap 
+dengan $C$ dan $Q$ berturut-turut adalah himpunan bagian tertutup dan konveks dari ruang Hilbert $H_1$ dan $H_2$, serta $A:H_1\to H_2$ adalah transformasi linier terbatas \cite{Censor1994}. Permasalahan \eqref{eq:sfp} disebut konsisten jika setidaknya mempunyai satu solusi. Suatu titik $x^*\in C$ merupakan solusi dari permasalahan tersebut jika dan hanya jika $x^*$ memenuhi persamaan titik tetap 
 \begin{align}
     x=P_C(I-\gamma A^*(I-P_Q)A)x,
 \end{align}
@@ -16,7 +16,7 @@ Dari permasalahan tersebut, skema iterasi Sabri dapat digunakan sebagaimana Teor
 \begin{thm}
     Diberikan ruang Hilbert $H$ yang kompak dan $C$ adalah himpunan bagian yang tertutup dan konveks dari $H$.
     Jika permasalahan \eqref{eq:sfp} konsisten dengan solusi yang tunggal dan $\gamma\in (0,\frac{2}{k})$ dengan $k$ adalah radius spektral dari $A^*A$, maka pemetaan $T:C\to C$ yang didefinisikan sebagai $$T(x)=P_C(I-\gamma A^*(I-P_Q)A)x$$ 
-    merupakan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif, serta barisan $\{x_n\}$ yang didefinisikan sebagai
+    merupakan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif, serta barisan $\{x_n\}_{n=1}^{\infty}$ yang didefinisikan sebagai
     \begin{flalign}
         \begin{cases}
             q_n &= T\qty((1-c_n)x_n\oplus c_n T(x_n)) \\
@@ -24,13 +24,13 @@ Dari permasalahan tersebut, skema iterasi Sabri dapat digunakan sebagaimana Teor
             x_{n+1} &= T\qty((1-a_n)T(q_n)\oplus a_n T(y_n)) 
         \end{cases}, 
     \end{flalign}
-    dengan $\{a_n\},\{c_n\}\subseteq [a,b]\subset (0,1)$ konvergen kuat ke solusi tunggal $x^*\in C$ dari permasalahan \eqref{eq:sfp} untuk setiap nilai awal $x_0\in C$.
+    dengan $\{a_n\}_{n=1}^{\infty},\{c_n\}_{n=1}^{\infty}\subseteq [a,b]\subset (0,1)$ konvergen kuat ke solusi tunggal $x^*\in C$ dari permasalahan \eqref{eq:sfp} untuk setiap nilai awal $x_0\in C$.
     \begin{bukti}
-        Berdasarkan hasil dari Byrne (lihat \cite{Byrne2003}), diperoleh bahwa pemetaan $T$ yang memenuhi kondisi tersebut adalah pemetaan nonekspansif sehingga juga merupakan $(\alpha,\beta,\gamma)$-nonekpansif. Kemudian, berdasarkan Contoh \ref{con:lpcatp}, didapatkan bahwa $H$ adalah ruang $CAT(0)$ yang juga merupakan ruang $CAT_p(0)$ dengan $p=2$. Akibatnya, dengan Teorema \ref{thm:konvK}, diperoleh bahwa $\{x_n\}$ konvergen kuat ke titik tetap dari $T$, yang berarti $\{x_n\}$ konvergen kuat ke solusi tunggal dari $x^*\in C$.
+        Berdasarkan hasil dari Byrne (lihat \cite{Byrne2003}), diperoleh bahwa pemetaan $T$ yang memenuhi kondisi tersebut adalah pemetaan nonekspansif sehingga juga merupakan $(\alpha,\beta,\gamma)$-nonekpansif. Kemudian, berdasarkan Contoh \ref{con:lpcatp}, didapatkan bahwa $H$ adalah ruang $CAT(0)$ yang juga merupakan ruang $CAT_p(0)$ dengan $p=2$. Akibatnya, dengan Teorema \ref{thm:konvK}, diperoleh bahwa $\{x_n\}_{n=1}^{\infty}$ konvergen kuat ke titik tetap dari $T$, yang berarti $\{x_n\}_{n=1}^{\infty}$ konvergen kuat ke solusi tunggal dari $x^*\in C$.
     \end{bukti}
 \end{thm}
 
-Hasil ini dapat diterapkan pada permasalahan rekonstruksi citra tomografi. Permasalahan tersebut memiliki peranan penting dalam dunia medis, khususnya dalam rekonstruksi citra dari \textit{CT-Scan}, yang datanya berupa proyeksi yang dikenal sebagai sinogram. Pada umumnya, rekonstruksi citra organ tubuh dari data sinogram dilakukan menggunakan proyeksi mundur berfilter (\textit{filtered back projection}). Dari segi waktu komputasi, metode ini relatif cepat dalam menghasilkan citra. Namun, metode tersebut memiliki keterbatasan dalam kualitas citra yang dihasilkan, akibat tingginya tingkat derau. Untuk mereduksi derau pada citra hasil rekonstruksi, metode ini memerlukan dosis radiasi yang lebih tinggi pada pasien, yang berpotensi menimbulkan dampak negatif pada kesehatan pasien. Sebagai alternatif, rekonstruksi citra dapat dilakukan menggunakan proyeksi mundur tanpa filter yang dikombinasikan dengan algoritma skema iterasi. Pendekatan ini terbukti mampu mereduksi derau secara signifikan, yaitu sekitar 40\% sampai 70\% dibandingkan dengan metode proyeksi mundur berfilter \cite{Ramage2023}. 
+Hasil ini dapat diterapkan pada permasalahan rekonstruksi citra tomografi. Permasalahan tersebut mempunyai peranan penting dalam dunia medis, khususnya dalam rekonstruksi citra dari \textit{CT-Scan}, yang datanya berupa proyeksi yang dikenal sebagai sinogram. Pada umumnya, rekonstruksi citra organ tubuh dari data sinogram dilakukan menggunakan proyeksi mundur berfilter (\textit{filtered back projection}). Dari segi waktu komputasi, metode ini relatif cepat dalam menghasilkan citra. Namun, metode tersebut mempunyai keterbatasan dalam kualitas citra yang dihasilkan, akibat tingginya tingkat derau. Untuk mereduksi derau pada citra hasil rekonstruksi, metode ini memerlukan dosis radiasi yang lebih tinggi pada pasien, yang berpotensi menimbulkan dampak negatif pada kesehatan pasien. Sebagai alternatif, rekonstruksi citra dapat dilakukan menggunakan proyeksi mundur tanpa filter yang dikombinasikan dengan algoritma skema iterasi. Pendekatan ini terbukti mampu mereduksi derau secara signifikan, yaitu sekitar 40\% sampai 70\% dibandingkan dengan metode proyeksi mundur berfilter \cite{Ramage2023}. 
 
 
 Pada bagian ini, dilakukan simulasi rekonstruksi citra tomografi berbasis skema iterasi Sabri. Transformasi maju $A$ yang digunakan adalah transformasi Radon, sedangkan himpunan batas $C$ dan $Q$ adalah himpunan bagian yang konveks dari suatu ruang Euclid $\mathbb{R}^n$, yang masing-masing merepresentasikan solusi \textit{feasible} untuk citra dan domain proyeksi. 
@@ -109,8 +109,19 @@ Pada \ref{fig:flowrekonstruksi} diberikan diagram alir dari skema iterasi Sabri 
     \end{tabular}
     \label{tab:parametersim}
 \end{table}
+Untuk mengukur kualitas citra hasil rekonstruksi, digunakan metrik Mean Squared Error (MSE) dan Peak Signal-to-Noise Ratio (PSNR). MSE digunakan untuk mengukur galat antara citra asli $I$ dan citra hasil rekonstruksi $K$, yang didefinisikan sebagai
+\[
+\mathrm{MSE}(I,K)
+= \frac{1}{MN}\sum_{i=1}^{M}\sum_{j=1}^{N} \left( I_{ij}-K_{ij} \right)^2,
+\]
+dengan $M$ dan $N$ masing-masing menyatakan jumlah baris dan kolom citra. Selanjutnya, PSNR digunakan untuk mengukur kualitas citra hasil rekonstruksi dan didefinisikan sebagai
+\[
+\mathrm{PSNR}(I,K)
+= 10 \log_{10}\!\left( \frac{(\mathrm{MAX}_I)^2}{\mathrm{MSE}(I,K)} \right),
+\]
+dengan $\mathrm{MAX}_I$ menyatakan nilai intensitas maksimum dari citra.
 
-Data awal dari simulasi tersebut disajikan pada \ref{fig:rekoncit}. Kemudian hasil simulasi dari rekonstruksi citra tersebut pada iterasi ke-5, 10, 30, 60, 90, 120, 240, dan 480 diberikan oleh \ref{fig:rekoncit2} dan \ref{fig:rekoncit3}. Pada iterasi ke-5, terlihat bahwa derau dari citra tersebut masih cukup tinggi, yang juga tertera pada nilai (\textit{peak signal noise ratio}) PSNR, yaitu 22.55 dB. Nilai PSNR dari citra tersebut juga makin membesar pada iterasi ke-10 dan 30, hingga iterasi ke-480, dengan nilai PSNR citra tersebut adalah 40.73 dB, yang mengindikasikan semakin sedikit derau pada citra. Waktu yang diperlukan dalam simulasi rekonstruksi citra ini adalah 11024.39 detik.
+Data awal dari simulasi tersebut disajikan pada \ref{fig:rekoncit}. Kemudian hasil simulasi dari rekonstruksi citra tersebut pada iterasi ke-5, 10, 30, 60, 120, 240, 360, dan 480 diberikan oleh \ref{fig:rekoncit2} dan \ref{fig:rekoncit3}. Pada iterasi ke-5, terlihat bahwa derau dari citra tersebut masih cukup tinggi, yang juga tertera pada nilai PSNR yang rendah, yaitu 22.55 dB. Nilai PSNR dari citra tersebut juga meningkat pada tiap iterasinya, hingga pada iterasi ke-120 sampai 480 peningkatannya sudah tidak begitu signifikan. Waktu yang diperlukan dalam simulasi rekonstruksi citra ini adalah 11024.39 detik. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.95\linewidth]{Bab_4/citrafix.png}
@@ -119,22 +130,21 @@ Data awal dari simulasi tersebut disajikan pada \ref{fig:rekoncit}. Kemudian has
 \end{figure}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\linewidth]{Bab_4/citrafixx2.png}
-    \caption{Hasil rekonstruksi citra pada iterasi ke-5 dan 10}
+    \includegraphics[width=\linewidth]{Bab_4/citrafixx2.png}
+    \caption{Hasil rekonstruksi citra pada iterasi ke-5, 10, 30, 60, dan 120}
     \label{fig:rekoncit2}
 \end{figure}
 \newpage
 \begin{figure}[H]
         \centering
-    \includegraphics[width=0.95\linewidth]{Bab_4/citrafixx3.png}
-    \caption{Hasil rekonstruksi citra pada iterasi ke-30, 60, 90, 120, 240, dan 480}
+    \includegraphics[width=\linewidth]{Bab_4/citrafixx3.png}
+    \caption{Hasil rekonstruksi citra pada iterasi ke-360 dan 480}
     \label{fig:rekoncit3}
 \end{figure}
-\newpage
-Pada \ref{fig:galatrek} dan Lampiran \ref{lamp:mse}, diberikan grafik dan tabel nilai dari metrik PSNR dan MSE dari citra hasil rekonstruksi pada tiap iterasinya. Terlihat bahwa nilai galat, yaitu (\textit{mean squared error}) dari citra tersebut relatif kecil pada iterasi ke-480, yaitu $8\times 10^{-5}$, dibandingkan dengan galat pada iterasi pertama, yaitu $2\times 10^{-2}$. Terlihat pula bahwa nilai metrik PSNR dan MSE tersebut berturut-turut naik dan turun pada tiap iterasinya, sesuai dengan peningkatan kualitas citra pada \ref{fig:rekoncit2} dan \ref{fig:rekoncit3}, yang menunjukkan bahwa skema iterasi Sabri dapat digunakan dalam rekonstruksi citra tomografi.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{Bab_4/galatrek.png}
     \caption{Metrik PSNR dan MSE dari rekonstruksi citra}
     \label{fig:galatrek}
 \end{figure}
+Pada \ref{fig:galatrek} dan Lampiran \ref{lamp:mse}, disajikan grafik dan tabel nilai dari metrik PSNR dan MSE dari citra hasil rekonstruksi pada tiap iterasinya. Terlihat bahwa nilai galat, yaitu (\textit{mean squared error}) dari citra tersebut sudah relatif kecil pada iterasi ke-30, yaitu $54\times 10^{-5}$, dibandingkan dengan galat pada iterasi pertama, yaitu $2\times 10^{-2}$. Nilai tersebut terus berkurang secara perlahan hingga $8\times 10^{-5}$ pada iterasi ke-480. Terlihat pula bahwa nilai metrik PSNR dan MSE tersebut berturut-turut naik dan turun pada tiap iterasinya, sesuai dengan peningkatan kualitas citra pada \ref{fig:rekoncit2} dan \ref{fig:rekoncit3}, yang menunjukkan bahwa skema iterasi Sabri dapat digunakan dalam rekonstruksi citra tomografi.

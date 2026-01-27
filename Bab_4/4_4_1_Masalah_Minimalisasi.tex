@@ -35,12 +35,12 @@ Untuk fungsi yang memenuhi kondisi konveks dan \textit{proper lower semi-continu
     Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Suatu fungsi $f:X\to \mathbb{R}\cup \{+\infty\}$ disebut \textit{proper} jika himpunan $D(f):=\{x\in X\mid f(x)<+\infty\}\neq \emptyset$.
 \end{defn}
 \begin{defn}\cite{Salisu2022}
-    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Suatu fungsi $f:X\to \mathbb{R}\cup \{+\infty\}$ disebut \textit{lower semi-continuous} pada suatu titik $x\in D(f)$ jika $f(x)\leq \liminf_{n\to\infty} f(x_n)$ untuk setiap barisan $\{x_n\}$ yang konvergen di $D(f)$ dengan limit $x\in X$. Jika $f$ \textit{lower semi-continuous} pada setiap titik di $D(f)$, maka $f$ disebut \textit{lower semi-continuous} pada $X$.
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Suatu fungsi $f:X\to \mathbb{R}\cup \{+\infty\}$ disebut \textit{lower semi-continuous} pada suatu titik $x\in D(f)$ jika $f(x)\leq \liminf_{n\to\infty} f(x_n)$ untuk setiap barisan $\{x_n\}_{n=1}^{\infty}$ yang konvergen di $D(f)$ dengan limit $x\in X$. Jika $f$ \textit{lower semi-continuous} pada setiap titik di $D(f)$, maka $f$ disebut \textit{lower semi-continuous} pada $X$.
 \end{defn}
 
 Berdasarkan hal tersebut, didapatkan Teorema berikut. 
 \begin{thm}\label{thm:apl1}
-    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $f:X\to\mathbb{R}\cup\{+\infty\}$ adalah fungsi yang memenuhi kondisi konveks dan \textit{proper lower semi-continuous}. Untuk $x\in X$, barisan $\{x_n\}$ yang didefinisikan sebagai 
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $f:X\to\mathbb{R}\cup\{+\infty\}$ adalah fungsi yang memenuhi kondisi konveks dan \textit{proper lower semi-continuous}. Untuk $x\in X$, barisan $\{x_n\}_{n=1}^{\infty}$ yang didefinisikan sebagai 
     \begin{align}
         \begin{cases}
             q_n &= J^f_{\lambda}\qty((1-c_n)x_n\oplus c_n J^f_{\lambda} (x_n))\\
@@ -48,10 +48,10 @@ Berdasarkan hal tersebut, didapatkan Teorema berikut.
             x_{n+1} &=J^f_{\lambda} \qty((1-a_n)J^f_{\lambda} (q_n)\oplus a_n J^f_{\lambda} (y_n)),
         \end{cases}
     \end{align}
-    dengan $\{a_n\},\{c_n\}\subseteq [a,b]\subset (0,1)$ konvergen-$\Delta$ ke solusi dari permasalahan \eqref{eq:minprob}. Jika $X$ kompak, maka $\{x_n\}$ konvergen kuat. 
+    dengan $\{a_n\}_{n=1}^{\infty},\{c_n\}_{n=1}^{\infty}\subseteq [a,b]\subset (0,1)$ konvergen-$\Delta$ ke solusi dari permasalahan \eqref{eq:minprob}. Jika $X$ kompak, maka $\{x_n\}_{n=1}^{\infty}$ konvergen kuat. 
 \end{thm}
 \begin{bukti}
-    Dengan menggunakan Lema 4 di \cite{Jost1995}, diketahui bahwa $J^f_{\lambda}$ merupakan pemetaan nonekspansif, sehingga merupakan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif juga. Akibatnya, dengan Teorema \ref{thm:konvD} diperoleh bahwa $\{x_n\}$ konvergen-$\Delta$ ke titik tetap dari $J^f_{\lambda}$. Jika $X$ kompak, Teorema \ref{thm:konvK}, menjamin bahwa konvergensinya kuat. Karena titik tetap dari $J^f_{\lambda}$ sama dengan solusi dari permasalahan \eqref{eq:minprob}, artinya Teorema \ref{thm:apl1} terbukti. 
+    Dengan menggunakan Lema 4 di \cite{Jost1995}, diketahui bahwa $J^f_{\lambda}$ merupakan pemetaan nonekspansif, sehingga merupakan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif juga. Akibatnya, dengan Teorema \ref{thm:konvD} diperoleh bahwa $\{x_n\}_{n=1}^{\infty}$ konvergen-$\Delta$ ke titik tetap dari $J^f_{\lambda}$. Jika $X$ kompak, Teorema \ref{thm:konvK}, menjamin bahwa konvergensinya kuat. Karena titik tetap dari $J^f_{\lambda}$ sama dengan solusi dari permasalahan \eqref{eq:minprob}, artinya Teorema \ref{thm:apl1} terbukti. 
 \end{bukti}
 
 Sebagai gambaran, dilakukan simulasi untuk contoh berikut ini. 
@@ -93,11 +93,11 @@ Penjelasan dari Contoh \ref{con:fkonvk} diberikan sebagai berikut.
             -1440 & 480
         \end{bmatrix}.
     \end{align*}
-    Diperhatikan bahwa $H$ memiliki persamaan karakteristik $p(\lambda)=\lambda^2+810\lambda-2692800$ dengan akar-akar 
+    Diperhatikan bahwa $H$ mempunyai persamaan karakteristik $p(\lambda)=\lambda^2+810\lambda-2692800$ dengan akar-akar 
     \begin{align*}
         \lambda_{1,2} = \frac{-810 \pm \sqrt{810^2-4(2692800)}}{2},
     \end{align*}
-    yang jelas memiliki akar negatif. Jadi ada $x\in W$ sehingga matriks Hessian $H$ memiliki nilai eigen negatif, yang berarti $H$ bukan matriks semidefinit positif. Akibatnya $f$ bukanlah fungsi konveks dalam definisi klasik. 
+    yang jelas mempunyai akar negatif. Jadi ada $x\in W$ sehingga matriks Hessian $H$ mempunyai nilai eigen negatif, yang berarti $H$ bukan matriks semidefinit positif. Akibatnya $f$ bukanlah fungsi konveks dalam definisi klasik. 
     \item Kedua, ditunjukkan bahwa $f$ memenuhi Definisi \ref{def:konvgeodesik}, yaitu fungsi konveks secara geodesik. Sebelum itu, diperhatikan bahwa fungsi $p(x)=|x|^3$ adalah fungsi konveks, karena $p''(x)=\frac{6x^2}{|x|}\geq 0$ untuk setiap $x\in \mathbb{R}\backslash \{0\}$. Dengan fakta tersebut, didapatkan bahwa untuk setiap $t\in(0,1)$ dan $w,z\in X$ berlaku
     \begin{align*}
         f\qty((1-t)w\oplus tz) =~& f\big((1-t)w_1+tz_1, \qty((1-t)w_1+tz_1)^3\\
@@ -211,7 +211,7 @@ Untuk ilustrasi, dilakukan simulasi numerik untuk Contoh \ref{con:fkonvk} dengan
 
 
 \begin{longtable}{|c|>{\centering\arraybackslash}p{4cm} | >{\centering\arraybackslash}p{4cm} |}
-\caption{\centering Galat simulasi $d(x_n,x^*)$ untuk Contoh \ref{con:fkonvk} dengan skema iterasi Sabri dan JK}\label{tab:errsimulasi}\\
+\caption{\centering Galat simulasi $d(x_n,x_{n+1})$ untuk Contoh \ref{con:fkonvk} dengan skema iterasi Sabri dan JK}\label{tab:errsimulasi}\\
 \hline
 {\textbf{n}} & {\textbf{Galat Sabri}} & {\textbf{Galat JK}} \\
 \hline
@@ -304,6 +304,6 @@ Untuk ilustrasi, dilakukan simulasi numerik untuk Contoh \ref{con:fkonvk} dengan
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth]{Bab_4/galatsim.png}
-    \caption{Galat $d(x_n,x^*)$ (skala log) vs iterasi}
+    \caption{Galat $d(x_n,x_{n+1})$ (skala log) vs iterasi}
     \label{fig:galatsim}
 \end{figure}

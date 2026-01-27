@@ -4,10 +4,10 @@
 \contentsline {chapter}{ABSTRAK}{ix}{Doc-Start}%
 \contentsline {chapter}{ABSTRACT}{xi}{Doc-Start}%
 \contentsline {chapter}{KATA PENGANTAR}{xiii}{Doc-Start}%
-\contentsline {chapter}{DAFTAR ISI}{xv}{Item.4}%
-\contentsline {chapter}{DAFTAR GAMBAR}{xvii}{Item.4}%
-\contentsline {chapter}{DAFTAR TABEL}{xix}{Item.4}%
-\contentsline {chapter}{DAFTAR NOTASI}{xxi}{Item.4}%
+\contentsline {chapter}{DAFTAR ISI}{xv}{Item.5}%
+\contentsline {chapter}{DAFTAR GAMBAR}{xvii}{Item.5}%
+\contentsline {chapter}{DAFTAR TABEL}{xix}{Item.5}%
+\contentsline {chapter}{DAFTAR NOTASI}{xxi}{Item.5}%
 \contentsline {chapter}{\numberline {BAB 1}PENDAHULUAN}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Rumusan Masalah}{3}{section.1.2}%
@@ -26,14 +26,15 @@
 \contentsline {chapter}{\numberline {BAB 4}HASIL DAN PEMBAHASAN}{35}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Pemetaan $(\alpha ,\beta ,\gamma )$-nonekspansif di Ruang $CAT_p(0)$}{35}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Konvergensi Skema Iterasi Sabri untuk Pemetaan $(\alpha ,\beta ,\gamma )$-nonekspansif}{42}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Percobaan Numerik}{49}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Simulasi Numerik}{49}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Aplikasi pada Masalah Optimasi}{58}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Masalah Minimalisasi}{58}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Rekonstruksi Citra}{67}{subsection.4.4.2}%
-\contentsline {chapter}{\numberline {BAB 5}KESIMPULAN DAN SARAN}{75}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Kesimpulan}{75}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Saran}{76}{section.5.2}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{77}{Item.35}%
+\contentsline {chapter}{\numberline {BAB 5}KESIMPULAN DAN SARAN}{77}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Kesimpulan}{77}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Saran}{78}{section.5.2}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{79}{Item.36}%
 \addvspace {1ex}
-\contentsline {chapter}{LAMPIRAN}{81}{Item.35}%
-\contentsline {chapter}{BIODATA PENULIS}{113}{table.2.1}%
+\contentsline {chapter}{LAMPIRAN}{83}{Item.36}%
+\contentsline {chapter}{UCAPAN TERIMA KASIH}{115}{table.2.1}%
+\contentsline {chapter}{BIODATA PENULIS}{117}{Item.44}%

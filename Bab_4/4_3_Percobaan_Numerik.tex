@@ -1,7 +1,7 @@
-\section{Percobaan Numerik}
-Pada bagian ini, dilakukan percobaan numerik untuk menguji laju konvergensi dari skema iterasi Sabri dibanding dengan skema iterasi lainnya. Untuk percobaan ini, terlebih dahulu dikenalkan skema iterasi JK yang dikembangkan pada ruang $CAT_p(0)$ oleh Salisu sebagai berikut. 
+\section{Simulasi Numerik}
+Pada bagian ini, dilakukan simulasi numerik untuk menguji laju konvergensi dari skema iterasi Sabri dibanding dengan skema iterasi lainnya. Untuk simulasi ini, terlebih dahulu dikenalkan skema iterasi JK yang dikembangkan pada ruang $CAT_p(0)$ oleh Salisu sebagai berikut. 
 \begin{defn}[\textbf{Skema Iterasi JK}]\cite{Salisu2022}\label{defn:jk}
-% Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. 
+% Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W\subseteq X$ dengan $W\neq\emptyset$ dan konveks. 
 Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi JK pada ruang $CAT_p(0)$ sebagai berikut:
     \begin{align}\label{eq:jkcat}
        \begin{cases}
@@ -10,11 +10,11 @@ Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ did
         x_{n+1} &= T\left((1-a_n)Tq_n\oplus a_n Ty_n\right),
        \end{cases}
     \end{align}
-    dengan $\{a_n\}\subseteq [0,1]$ dan $\{c_n\}\subseteq [0,1]$.
+    dengan $\{a_n\}_{n=1}^{\infty}\subseteq [0,1]$ dan $\{c_n\}_{n=1}^{\infty}\subseteq [0,1]$.
 \end{defn}
 Selain itu, berikut ini dikenalkan pula skema iterasi Thakur, Abbas, dan Agarwal pada ruang $CAT_p(0)$. 
 \begin{defn}[\textbf{Skema Iterasi Thakur}]\label{defn:thakur}
-% Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. 
+% Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W\subseteq X$ dengan $W\neq\emptyset$ dan konveks. 
 Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi Thakur pada ruang $CAT_p(0)$ sebagai berikut:
     \begin{align}\label{eq:thakurcat}
        \begin{cases}
@@ -23,10 +23,10 @@ Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ did
         x_{n+1} &= Ty_n,
        \end{cases}
     \end{align}
-    dengan $\{a_n\}\subseteq [0,1]$ dan $\{c_n\}\subseteq [0,1]$.
+    dengan $\{a_n\}_{n=1}^{\infty}\subseteq [0,1]$ dan $\{c_n\}_{n=1}^{\infty}\subseteq [0,1]$.
 \end{defn}
 \begin{defn}[\textbf{Skema Iterasi Abbas}]\label{defn:abbas}
-% Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. 
+% Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W\subseteq X$ dengan $W\neq\emptyset$ dan konveks. 
 Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi Abbas pada ruang $CAT_p(0)$ sebagai berikut:
     \begin{align}\label{eq:abbascat}
        \begin{cases}
@@ -35,10 +35,10 @@ Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ did
         x_{n+1} &= (1-a_n)Ty_n\oplus a_n Tq_n,
        \end{cases}
     \end{align}
-    dengan $\{a_n\}\subseteq [0,1]$, $\{b_n\}\subseteq [0,1]$, dan $\{c_n\}\subseteq [0,1]$.
+    dengan $\{a_n\}_{n=1}^{\infty}\subseteq [0,1]$, $\{b_n\}_{n=1}^{\infty}\subseteq [0,1]$, dan $\{c_n\}_{n=1}^{\infty}\subseteq [0,1]$.
 \end{defn}
 \begin{defn}[\textbf{Skema Iterasi Agarwal}]\label{defn:agarwal}
-% Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. 
+% Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W\subseteq X$ dengan $W\neq\emptyset$ dan konveks. 
 Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi Agarwal pada ruang $CAT_p(0)$ sebagai berikut:
     \begin{align}\label{eq:agarwalcat}
        \begin{cases}
@@ -46,13 +46,13 @@ Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ did
         x_{n+1} &= (1-a_n)Tx_n\oplus a_n Ty_n,
        \end{cases}
     \end{align}
-    dengan $\{a_n\}\subseteq [0,1]$ dan $\{c_n\}\subseteq [0,1]$.
+    dengan $\{a_n\}_{n=1}^{\infty}\subseteq [0,1]$ dan $\{c_n\}_{n=1}^{\infty}\subseteq [0,1]$.
 \end{defn}
 
-Percobaan numerik dilakukan dengan perangkat lunak Google Colab yang menggunakan bahasa pemrograman Python. Digunakan beberapa variasi parameter, baik dari nilai awal $x_0$ maupun parameter di skema iterasinya, yaitu barisan $\{a_n\},\{b_n\},\{c_n\}$.
-Pemetaan dan ruang yang digunakan dalam percobaan ini diambil dari Contoh \ref{con:abcnon} yang memiliki titik tetap $x^*=(1,1,0,0,\dots)$. 
+Simulasi numerik dilakukan dengan perangkat lunak Google Colab yang menggunakan bahasa pemrograman Python. Digunakan beberapa variasi parameter, baik dari nilai awal $x_0$ maupun parameter di skema iterasinya, yaitu barisan $\{a_n\}_{n=1}^{\infty},\{b_n\}_{n=1}^{\infty},\{c_n\}_{n=1}^{\infty}$.
+Pemetaan dan ruang yang digunakan dalam simulasi ini diambil dari Contoh \ref{con:abcnon} yang mempunyaii titik tetap $x^*=(1,1,0,0,\dots)$. 
 
-Untuk hasil numerik tiap iterasi, digunakan batas galat $d(x_{n+1},x_n)<10^{-6}$, sedangkan untuk jumlah iterasi yang diperlukan untuk konvergen dari masing-masing skema iterasi, digunakan batas galat $d(x_{n+1},x_n)<10^{-16}$. Dalam percobaan ini, laju konvergensi skema iterasi Sabri \eqref{eq:sabricat} dibandingkan dengan Skema iterasi JK \eqref{eq:jkcat}, Thakur \eqref{eq:thakurcat}, Abbas \ref{eq:abbascat}, dan Agarwal \eqref{eq:agarwalcat}. Kode dari percobaan ini dapat dilihat pada Lampiran A.1.
+Untuk hasil numerik tiap iterasi, digunakan batas galat $d(x_{n+1},x_n)<10^{-6}$, sedangkan untuk jumlah iterasi yang diperlukan untuk konvergen dari masing-masing skema iterasi, digunakan batas galat $d(x_{n+1},x_n)<10^{-16}$. Dalam simulasi ini, laju konvergensi skema iterasi Sabri \eqref{eq:sabricat} dibandingkan dengan Skema iterasi JK \eqref{eq:jkcat}, Thakur \eqref{eq:thakurcat}, Abbas \ref{eq:abbascat}, dan Agarwal \eqref{eq:agarwalcat}. Kode dari simulasi ini dapat dilihat pada Lampiran A.1.
 
 Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} disajikan hasil numerik dari tiap iterasi dengan nilai awal $(2,3,0,0,\dots)$ dan parameter $a_n=0.92, b_n=0.83, c_n=0.81$ untuk setiap $n\in\mathbb{N}$ hingga batas galat $d(x_{n+1},x_n)<10^{-6}$.
 
@@ -168,7 +168,7 @@ Pada \ref{tab:sabjk}, \ref{tab:sabthkur}, \ref{tab:sababb}, dan \ref{tab:sabag} 
 \end{table}
 
 \begin{longtable}{cccccc}
-\caption{\centering Galat $d(x_n, x^*)$}\label{tab:galat}\\
+\caption{\centering Galat $d(x_n, x_{n+1})$}\label{tab:galat}\\
 \hline
 % \textbf{Iterasi} & \multicolumn{5}{c}{\textbf{Nilai Galat $d(x_n, x^*)$}} \\
 % \hline
@@ -232,10 +232,10 @@ $\mathbf{n}$ & \textbf{Sabri} & \textbf{JK} & \textbf{Thakur} & \textbf{Abbas} &
     \caption{Galat $d(x_{n+1},x_n)$ (dalam log) vs iterasi}
     \label{fig:galatperc}
 \end{figure}
-Dengan galat kurang dari $10^{-6}$, skema iterasi Sabri hanya membutuhkan 3 iterasi dibanding dengan JK (4 iterasi), Thakur (5 iterasi), Abbas (7 iterasi), dan Agarwal (8 iterasi). Pada \ref{tab:galat}, diberikan pula nilai galat $d(x_n,x^*)$ dari tiap iterasi. \ref{fig:galatperc} juga memberikan gambaran mengenai penurunan galatnya. 
+Dengan galat kurang dari $10^{-6}$, skema iterasi Sabri hanya membutuhkan 3 iterasi dibanding dengan JK (4 iterasi), Thakur (5 iterasi), Abbas (7 iterasi), dan Agarwal (8 iterasi). Pada \ref{tab:galat}, diberikan pula nilai galat $d(x_n,x_{n+1})$ dari tiap iterasi. \ref{fig:galatperc} juga memberikan gambaran mengenai penurunan galatnya. 
 
 
-Selanjutnya, pada \ref{tab:paramkonstan}, \ref{tab:paramturun}, \ref{tab:paramnaik}, \ref{tab:paramnaikturun}, dan \ref{tab:paramturunnaik}, disajikan jumlah iterasi yang diperlukan sampai batas galat $d(x_{n+1},x^*)<10^{-16}$ dari masing-masing skema iterasi dengan nilai awal dan parameter yang berbeda. Nilai awal dipilih secara acak dengan batasan nilainya berada pada domain pemetaan yang digunakan. Pada tabel-tabel tersebut parameter barisan $\{a_n\}$ dan $\{c_n\}$ berturut-turut dipilih dengan kondisi konstan-konstan, turun-turun, naik-naik, naik-turun, dan turun-naik. 
+Selanjutnya, pada \ref{tab:paramkonstan}, \ref{tab:paramturun}, \ref{tab:paramnaik}, \ref{tab:paramnaikturun}, dan \ref{tab:paramturunnaik}, disajikan jumlah iterasi yang diperlukan sampai batas galat $d(x_{n+1},x^*)<10^{-16}$ dari masing-masing skema iterasi dengan nilai awal dan parameter yang berbeda. Nilai awal dipilih secara acak dengan batasan nilainya berada pada domain pemetaan yang digunakan. Pada tabel-tabel tersebut parameter barisan $\{a_n\}_{n=1}^{\infty}$ dan $\{c_n\}_{n=1}^{\infty}$ berturut-turut dipilih dengan kondisi konstan-konstan, turun-turun, naik-naik, naik-turun, dan turun-naik. 
 % \begin{longtable}{cccccc}
 % \caption{\centering Iterasi dengan parameter $a_n = 0.42, b_n=0.83, c_n=0.31$}\\
 % \hline
@@ -358,9 +358,9 @@ $x_0$ & Sabri & JK & Thakur & Abbas & Agarwal \\
 \end{tabular}
     \label{tab:paramturunnaik}
 \end{table}
-Hasil tersebut menunjukkan bahwa skema iterasi Sabri memiliki laju konvergensi yang lebih baik daripada yang lainnya secara numerik. Dengan parameter tertentu, skema tersebut hanya membutuhkan 8 iterasi untuk konvergen ke titik tetapnya dengan galat kurang dari $10^{-16}$. Secara analitik, skema iterasi Sabri lebih cepat karena nilai galat asimtotiknya, yaitu $\lambda\leq \frac{\alpha^3}{(1-\gamma)^3}$, sedangkan untuk JK dan Thakur adalah $\lambda\leq \frac{\alpha^2}{(1-\gamma)^2}$ yang ditunjukkan dalam teorema berikut ini. 
+Hasil tersebut menunjukkan bahwa skema iterasi Sabri mempunyai laju konvergensi yang lebih baik daripada yang lainnya secara numerik. Dengan parameter tertentu, skema tersebut hanya membutuhkan 8 iterasi untuk konvergen ke titik tetapnya dengan galat kurang dari $10^{-16}$. Secara analitik, skema iterasi Sabri lebih cepat karena nilai galat asimtotiknya, yaitu $\lambda\leq \frac{\alpha^3}{(1-\gamma)^3}$, sedangkan untuk JK dan Thakur adalah $\lambda\leq \frac{\alpha^2}{(1-\gamma)^2}$ yang ditunjukkan dalam teorema berikut ini. 
 \begin{thm}
-Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup, konveks, dan kompak. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $\alpha+\gamma<1$, $Fix(T)\neq \emptyset$, serta $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi JK \eqref{eq:jkcat} dengan $\{a_n\},\{c_n\}\subset (0,1)$, maka $\{x_n\}$ memiliki laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^2}{(1-\gamma)^2}$.
+Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W\subseteq X$ dengan $W\neq\emptyset$, tertutup, konveks, dan kompak. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $\alpha+\gamma<1$, $Fix(T)\neq \emptyset$, serta $\{x_n\}_{n=1}^{\infty}$ adalah barisan yang dikonstruksi melalui skema iterasi JK \eqref{eq:jkcat} dengan $\{a_n\}_{n=1}^{\infty},\{c_n\}_{n=1}^{\infty}\subset (0,1)$, maka $\{x_n\}_{n=1}^{\infty}$ mempunyai laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^2}{(1-\gamma)^2}$.
 \end{thm}
 \begin{bukti}
     Berdasarkan Lema \ref{lema:d,d^p} dan Lema \ref{lemma:tutx}, diperoleh bahwa untuk setiap $x^*\in Fix(T)$ berlaku
@@ -388,10 +388,10 @@ Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpuna
     \begin{align*}
         \lim_{n\to\infty} \dfrac{d(x_{n+1},x^*)}{d(x_n,x^*)} \leq \frac{\alpha^2}{(1-\gamma)^2}<+\infty
     \end{align*}
-    Hal ini berarti $\{x_n\}$ memiliki laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^2}{(1-\gamma)^2}$.
+    Hal ini berarti $\{x_n\}_{n=1}^{\infty}$ mempunyai laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^2}{(1-\gamma)^2}$.
 \end{bukti}
 \begin{thm}
-Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup, konveks, dan kompak. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $\alpha+\gamma<1$, $Fix(T)\neq \emptyset$, serta $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Thakur \eqref{eq:thakurcat} dengan $\{a_n\},\{c_n\}\subset (0,1)$, maka $\{x_n\}$ memiliki laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^2}{(1-\gamma)^2}$.
+Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W\subseteq X$ dengan $W\neq\emptyset$, tertutup, konveks, dan kompak. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $\alpha+\gamma<1$, $Fix(T)\neq \emptyset$, serta $\{x_n\}_{n=1}^{\infty}$ adalah barisan yang dikonstruksi melalui skema iterasi Thakur \eqref{eq:thakurcat} dengan $\{a_n\}_{n=1}^{\infty},\{c_n\}_{n=1}^{\infty}\subset (0,1)$, maka $\{x_n\}_{n=1}^{\infty}$ mempunyai laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^2}{(1-\gamma)^2}$.
 \end{thm}
 \begin{bukti}
     Berdasarkan Lema \ref{lema:d,d^p} dan Lema \ref{lemma:tutx}, diperoleh bahwa untuk setiap $x^*\in Fix(T)$ berlaku
@@ -416,6 +416,6 @@ Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpuna
     \begin{align*}
         \lim_{n\to\infty} \dfrac{d(x_{n+1},x^*)}{d(x_n,x^*)} \leq \frac{\alpha^2}{(1-\gamma)^2}<+\infty
     \end{align*}
-    Hal ini berarti $\{x_n\}$ memiliki laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^2}{(1-\gamma)^2}$.
+    Hal ini berarti $\{x_n\}_{n=1}^{\infty}$ mempunyai laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^2}{(1-\gamma)^2}$.
 \end{bukti}
 % Hasil ini secara intuitif dapat dijelaskan dari struktur iterasi Sabri yang melibatkan komposisi pemetaan nonekspansif $T$ secara berlapis pada setiap langkah iterasi, sehingga jarak barisan iterasi terhadap titik tetap berkurang lebih signifikan pada setiap iterasi dibandingkan dengan skema iterasi lainnya.

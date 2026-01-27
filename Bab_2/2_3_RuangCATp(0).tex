@@ -332,22 +332,22 @@ Dua contoh berikut ini mengilustrasikan konsep himpunan konveks dan bukan konvek
 
 Definisi berikut ini menyatakan konsep barisan terbatas di ruang $CAT_p(0)$ yang secara langsung diadaptasi dari konsep barisan terbatas di ruang metrik pada umumnya.
 \begin{defn}
-    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Suatu barisan $\{x_n\}$ di $X$ disebut terbatas jika terdapat $B>0$ dan $M\in X$ sehingga $d(x_n,M)<B$ untuk setiap $n\in \mathbb{N}$.
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Suatu barisan $\{x_n\}_{n=1}^{\infty}$ di $X$ disebut terbatas jika terdapat $B>0$ dan $M\in X$ sehingga $d(x_n,M)<B$ untuk setiap $n\in \mathbb{N}$.
 \end{defn}
 
 Pada ruang ini, konvergensi lemah yang umum digunakan pada ruang Banach digantikan dengan konsep konvergensi-$\Delta$. Berikut ini diberikan definisi pusat asimtotik dan konvergensi-$\Delta$ di ruang $CAT_p(0)$.
 \begin{defn}\cite{Salisu2022}\label{defn:asimtotik}
-    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $\{x_n\}$ adalah barisan terbatas di $X$. Pusat asimtotik dari barisan $\{x_n\}$ di suatu $CAT_p(0)$ didefinisikan sebagai 
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $\{x_n\}_{n=1}^{\infty}$ adalah barisan terbatas di $X$. Pusat asimtotik dari barisan $\{x_n\}_{n=1}^{\infty}$ di suatu $CAT_p(0)$ didefinisikan sebagai 
     \begin{equation}
-        A(\{x_n\}) := \{x\in X\mid\limsup_{n\to\infty} d(x,x_n) = \inf_{y\in X} \limsup_{n\to \infty} d(y,x_n)\}
+        A(\{x_n\}_{n=1}^{\infty}) := \{x\in X\mid\limsup_{n\to\infty} d(x,x_n) = \inf_{y\in X} \limsup_{n\to \infty} d(y,x_n)\}
     \end{equation}
 \end{defn}
 \begin{exam}\label{con:pusasimtot}
-    Diberikan ruang $CAT_p(0)$, yaitu $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan barisan $\{x_n\}\subseteq \mathbb{R}^2$ dengan $x_n=\qty(0,(-1)^n)\in\mathbb{R}^2$ untuk setiap $n\in \mathbb{N}$. Barisan tersebut adalah barisan terbatas karena untuk setiap $n,m\in \mathbb{N}$, diperoleh
+    Diberikan ruang $CAT_p(0)$, yaitu $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan barisan $\{x_n\}_{n=1}^{\infty}\subseteq \mathbb{R}^2$ dengan $x_n=\qty(0,(-1)^n)\in\mathbb{R}^2$ untuk setiap $n\in \mathbb{N}$. Barisan tersebut adalah barisan terbatas karena untuk setiap $n,m\in \mathbb{N}$, diperoleh
     \begin{align*}
         \tilde{d}(x_n,x_m) &= \sqrt{(0-0)^2 + \qty(0^2 - (-1)^n + (-1)^m - 0^2)^2} = |(-1)^n - (-1)^m| \leq 2.
     \end{align*}
-    Selanjutnya, ditentukan pusat asimtotik dari barisan $\{x_n\}$. Diketahui bahwa untuk setiap $x=(x_1,x_2)\in \mathbb{R}^2$, berlaku
+    Selanjutnya, ditentukan pusat asimtotik dari barisan $\{x_n\}_{n=1}^{\infty}$. Diketahui bahwa untuk setiap $x=(x_1,x_2)\in \mathbb{R}^2$, berlaku
     \begin{align*}
         \limsup_{n\to\infty} \tilde{d}(x,x_n) &= \limsup_{n\to\infty} \sqrt{(x_1 - 0)^2 + \qty(x_1^2 - x_2 + (-1)^n - 0^2)^2}\\
         &= \max\left\{\sqrt{x_1^2 + (x_1^2 - x_2 + 1)^2}, \sqrt{x_1^2 + (x_1^2 - x_2 - 1)^2}\right\},
@@ -358,23 +358,23 @@ Pada ruang ini, konvergensi lemah yang umum digunakan pada ruang Banach digantik
     \end{align*}
     Nilai minimum dari fungsi $f(y_1,y_2)=\max\left\{\sqrt{y_1^2 + (y_1^2 - y_2 + 1)^2}, \sqrt{y_1^2 + (y_1^2 - y_2 - 1)^2}\right\}$ adalah $1$ yang terjadi pada titik $(0,0)$, sehingga
     \begin{align*}
-        A(\{x_n\}) &= \{(x_1,x_2)\in \mathbb{R}^2 \mid\limsup_{n\to\infty} \tilde{d}((x_1,x_2),x_n) = 1\}= \{(0,0)\}.
+        A(\{x_n\}_{n=1}^{\infty}) &= \{(x_1,x_2)\in \mathbb{R}^2 \mid\limsup_{n\to\infty} \tilde{d}((x_1,x_2),x_n) = 1\}= \{(0,0)\}.
     \end{align*}
-    Dengan demikian, pusat asimtotik dari barisan $\{x_n\}$ adalah $\{(0,0)\}$.
+    Dengan demikian, pusat asimtotik dari barisan $\{x_n\}_{n=1}^{\infty}$ adalah $\{(0,0)\}$.
 \end{exam}
 Lema berikut ini menyatakan keunikan pusat asimtotik dari suatu barisan terbatas di ruang $CAT_p(0)$.
 \begin{lemma}\cite{Salisu2022}\label{Lema:asimtotik}
-    Pusat asimtotik dari suatu barisan terbatas di ruang $CAT_p(0)$ memiliki tepat satu elemen. 
+    Pusat asimtotik dari suatu barisan terbatas di ruang $CAT_p(0)$ mempunyai tepat satu elemen. 
 \end{lemma}
 \begin{defn}\cite{Salisu2022}\label{defn:konvD}
-    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $\{x_n\}$ adalah barisan terbatas di $X$. Barisan $\{x_n\}$ disebut sebagai konvergen-$\Delta$ ke suatu titik $x\in X$ (dinotasikan $\Delta-\lim_{n\to\infty} x_n=x$) jika $\{x\}$ adalah pusat asimtotik dari setiap subbarisan $\{x_{n_k}\}$ dari $\{x_n\}$.
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $\{x_n\}_{n=1}^{\infty}$ adalah barisan terbatas di $X$. Barisan $\{x_n\}_{n=1}^{\infty}$ disebut sebagai konvergen-$\Delta$ ke suatu titik $x\in X$ (dinotasikan $\Delta-\lim_{n\to\infty} x_n=x$) jika $\{x\}$ adalah pusat asimtotik dari setiap subbarisan $\{x_{n_k}\}_{k=1}^{\infty}$ dari $\{x_n\}_{n=1}^{\infty}$.
 \end{defn}
 \begin{exam}
-    Diberikan ruang $CAT_p(0)$, yaitu $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan barisan $\{x_n\}\subseteq \mathbb{R}^2$ dengan $x_n=\qty(0,\dfrac{1}{n})\in \mathbb{R}^2$ untuk setiap $n\in \mathbb{N}$. Barisan tersebut adalah barisan terbatas karena untuk setiap $n,m\in \mathbb{N}$, diperoleh
+    Diberikan ruang $CAT_p(0)$, yaitu $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan barisan $\{x_n\}_{n=1}^{\infty}\subseteq \mathbb{R}^2$ dengan $x_n=\qty(0,\dfrac{1}{n})\in \mathbb{R}^2$ untuk setiap $n\in \mathbb{N}$. Barisan tersebut adalah barisan terbatas karena untuk setiap $n,m\in \mathbb{N}$, diperoleh
     \begin{align*}
         \tilde{d}(x_n,x_m) &= \sqrt{(0-0)^2 + \qty(0^2 - \dfrac{1}{n} + \dfrac{1}{m} - 0^2)^2} = \left|\dfrac{1}{n} - \dfrac{1}{m}\right| \leq 1.
     \end{align*}
-    Selanjutnya, ditentukan pusat asimtotik dari setiap subbarisan $\{x_{n_k}\}$ dari $\{x_n\}$. Diketahui bahwa untuk setiap $x=(x_1,x_2)\in (\mathbb{R}^2,\tilde{d})$, berlaku
+    Selanjutnya, ditentukan pusat asimtotik dari setiap subbarisan $\{x_{n_k}\}_{k=1}^{\infty}$ dari $\{x_n\}_{n=1}^{\infty}$. Diketahui bahwa untuk setiap $x=(x_1,x_2)\in (\mathbb{R}^2,\tilde{d})$, berlaku
     \begin{align*}
         \limsup_{k\to\infty} \tilde{d}(x,x_{n_k}) &= \limsup_{k\to\infty} \sqrt{(x_1 - 0)^2 + \qty(x_1^2 - x_2 + \dfrac{1}{n_k} - 0^2)^2}\\
         &= \sqrt{x_1^2 + (x_1^2 - x_2)^2}.
@@ -385,13 +385,13 @@ Lema berikut ini menyatakan keunikan pusat asimtotik dari suatu barisan terbatas
     \end{align*}
     Nilai minimum dari fungsi $f(y_1,y_2)=\sqrt{y_1^2 + (y_1^2 - y_2)^2}$ adalah $0$ yang terjadi pada titik $(0,0)$. Dengan demikian, diperoleh
     \begin{align*}
-        A(\{x_{n_k}\}) &= \{(x_1,x_2)\in \mathbb{R}^2 \mid\limsup_{k\to\infty} \tilde{d}((x_1,x_2),x_{n_k}) = 0\}\\
+        A(\{x_{n_k}\}_{k=1}^{\infty}) &= \{(x_1,x_2)\in \mathbb{R}^2 \mid\limsup_{k\to\infty} \tilde{d}((x_1,x_2),x_{n_k}) = 0\}\\
         &= \{(0,0)\}.
     \end{align*}
-    Karena pusat asimtotik dari setiap subbarisan $\{x_{n_k}\}$ adalah $\{(0,0)\}$, maka barisan $\{x_n\}$ konvergen-$\Delta$ ke titik $(0,0)$, yaitu $\Delta-\lim_{n\to\infty} x_n = (0,0)$.
+    Karena pusat asimtotik dari setiap subbarisan $\{x_{n_k}\}_{k=1}^{\infty}$ adalah $\{(0,0)\}$, maka barisan $\{x_n\}_{n=1}^{\infty}$ konvergen-$\Delta$ ke titik $(0,0)$, yaitu $\Delta-\lim_{n\to\infty} x_n = (0,0)$.
 \end{exam}
 \begin{exam}
-    Diberikan ruang $CAT_p(0)$, yaitu $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan barisan $\{x_n\}\subseteq \mathbb{R}^2$ dengan $x_n=\qty(0,(-1)^n)\in \mathbb{R}^2$ untuk setiap $n\in \mathbb{N}$. Sebagaimana pada Contoh \ref{con:pusasimtot}, barisan tersebut adalah barisan terbatas dan pusat asimtotik dari barisan $\{x_n\}$ adalah $\{(0,0)\}$. Kemudian, diperhatikan bahwa terdapat subbarisan $\{x_{n_k}\}$ dari $\{x_n\}$ dengan $x_{n_k}=\qty(0,1)$ untuk setiap $k\in \mathbb{N}$. Diketahui bahwa untuk setiap $x=(x_1,x_2)\in \mathbb{R}^2$, berlaku
+    Diberikan ruang $CAT_p(0)$, yaitu $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan barisan $\{x_n\}_{n=1}^{\infty}\subseteq \mathbb{R}^2$ dengan $x_n=\qty(0,(-1)^n)\in \mathbb{R}^2$ untuk setiap $n\in \mathbb{N}$. Sebagaimana pada Contoh \ref{con:pusasimtot}, barisan tersebut adalah barisan terbatas dan pusat asimtotik dari barisan $\{x_n\}_{n=1}^{\infty}$ adalah $\{(0,0)\}$. Kemudian, diperhatikan bahwa terdapat subbarisan $\{x_{n_k}\}_{k=1}^{\infty}$ dari $\{x_n\}_{n=1}^{\infty}$ dengan $x_{n_k}=\qty(0,1)$ untuk setiap $k\in \mathbb{N}$. Diketahui bahwa untuk setiap $x=(x_1,x_2)\in \mathbb{R}^2$, berlaku
     \begin{align*}
         \limsup_{k\to\infty} \tilde{d}(x,x_{n_k}) &= \limsup_{k\to\infty} \sqrt{(x_1 - 0)^2 + \qty(x_1^2 - x_2 + 1 - 0^2)^2}\\
         &= \sqrt{x_1^2 + (x_1^2 - x_2 + 1)^2}.
@@ -402,25 +402,25 @@ Lema berikut ini menyatakan keunikan pusat asimtotik dari suatu barisan terbatas
     \end{align*}
     Nilai minimum dari fungsi $f(y_1,y_2)=\sqrt{y_1^2 + (y_1^2 - y_2 + 1)^2}$ adalah $0$ yang terjadi pada titik $(0,1)$. Dengan demikian, diperoleh
     \begin{align*}
-        A(\{x_{n_k}\}) &= \{(x_1,x_2)\in \mathbb{R}^2 \mid\limsup_{k\to\infty} \tilde{d}((x_1,x_2),x_{n_k}) = 0\}\\
+        A(\{x_{n_k}\}_{k=1}^{\infty}) &= \{(x_1,x_2)\in \mathbb{R}^2 \mid\limsup_{k\to\infty} \tilde{d}((x_1,x_2),x_{n_k}) = 0\}\\
         &= \{(0,1)\}.
     \end{align*}
-    Dengan cara yang sama dapat ditentukan pusat asimtotik dari subbarisan lain, yaitu $\{x_{m_k}\}$ dengan $x_{m_k}=\qty(0,-1)$ untuk setiap $k\in \mathbb{N}$. Pusat asimtotik dari subbarisan tersebut adalah $A(\{x_{m_k}\})=\{(0,-1)\}$. Jadi terdapat dua subbarisan dari $\{x_n\}$ yang memiliki pusat asimtotik berbeda, sehingga barisan $\{x_n\}$ tidak konvergen-$\Delta$.
+    Dengan cara yang sama dapat ditentukan pusat asimtotik dari subbarisan lain, yaitu $\{x_{m_k}\}$ dengan $x_{m_k}=\qty(0,-1)$ untuk setiap $k\in \mathbb{N}$. Pusat asimtotik dari subbarisan tersebut adalah $A(\{x_{m_k}\})=\{(0,-1)\}$. Jadi terdapat dua subbarisan dari $\{x_n\}_{n=1}^{\infty}$ yang mempunyai pusat asimtotik berbeda, sehingga barisan $\{x_n\}_{n=1}^{\infty}$ tidak konvergen-$\Delta$.
 \end{exam}
 
 Untuk konvergensi kuat di ruang $CAT_p(0)$, konsepnya sama dengan konvergensi kuat di ruang metrik pada umumnya, yaitu sebagai berikut.
 \begin{defn}\cite{Salisu2022}\label{defn:konvK}
-    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $\{x_n\}$ adalah barisan di $X$. Barisan $\{x_n\}$ disebut konvergen kuat ke suatu titik $x\in X$ (dinotasikan $\lim_{n\to\infty} d(x_n,x)=0$) jika untuk setiap $\varepsilon>0$, terdapat $n_0\in \mathbb{N}$ sehingga untuk setiap $n\geq n_0$ berlaku $d(x_n,x)<\varepsilon$.
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $\{x_n\}_{n=1}^{\infty}$ adalah barisan di $X$. Barisan $\{x_n\}_{n=1}^{\infty}$ disebut konvergen kuat ke suatu titik $x\in X$ (dinotasikan $\lim_{n\to\infty} d(x_n,x)=0$) jika untuk setiap $\varepsilon>0$, terdapat $n_0\in \mathbb{N}$ sehingga untuk setiap $n\geq n_0$ berlaku $d(x_n,x)<\varepsilon$.
 \end{defn}
 \begin{exam}
-    Diberikan ruang $CAT_p(0)$, yaitu ruang $CAT(0)$ $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan barisan $\{x_n\}\subseteq \mathbb{R}^2$ dengan $x_n=\qty(0,\dfrac{1}{n})\in\mathbb{R}^2$ untuk setiap $n\in \mathbb{N}$. Barisan tersebut konvergen kuat ke titik $x=(0,0)$ karena untuk setiap $\varepsilon>0$, dapat dipilih $n_0\in \mathbb{N}$ dengan $n_0> \frac{1}{\varepsilon}$ sehingga untuk setiap $n\geq n_0$ berlaku
+    Diberikan ruang $CAT_p(0)$, yaitu ruang $CAT(0)$ $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan barisan $\{x_n\}_{n=1}^{\infty}\subseteq \mathbb{R}^2$ dengan $x_n=\qty(0,\dfrac{1}{n})\in\mathbb{R}^2$ untuk setiap $n\in \mathbb{N}$. Barisan tersebut konvergen kuat ke titik $x=(0,0)$ karena untuk setiap $\varepsilon>0$, dapat dipilih $n_0\in \mathbb{N}$ dengan $n_0> \frac{1}{\varepsilon}$ sehingga untuk setiap $n\geq n_0$ berlaku
     \begin{align*}
         \tilde{d}(x_n,x) &= \sqrt{(0-0)^2 + \qty(0^2 - \dfrac{1}{n} - 0^2)^2} = \dfrac{1}{n} < \varepsilon.
     \end{align*}
 \end{exam}
 Teorema berikut ini menyatakan hubungan antara konvergensi kuat, konvergensi $\Delta$, dan barisan terbatas.
 \begin{thm}\cite{Salisu2022}
-    Diberikan ruang $CAT_p(0)$ $(X,d,G)$. Jika $\{x_n\}$ adalah barisan di $X$ yang konvergen kuat, maka $\{x_n\}$ konvergen-$\Delta$ dan  terbatas.
+    Diberikan ruang $CAT_p(0)$ $(X,d,G)$. Jika $\{x_n\}_{n=1}^{\infty}$ adalah barisan di $X$ yang konvergen kuat, maka $\{x_n\}_{n=1}^{\infty}$ konvergen-$\Delta$ dan  terbatas.
 \end{thm}
 % \todo{himpunan kompak}
 Definisi berikut ini menyatakan konsep kelengkapak ruang dan himpunan kompak di ruang $CAT_p(0)$ yang secara langsung diadaptasi dari konsep di ruang metrik pada umumnya.
@@ -429,26 +429,26 @@ Definisi berikut ini menyatakan konsep kelengkapak ruang dan himpunan kompak di 
 \end{defn}
 
 \begin{defn}
-    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Suatu himpunan bagian $\mathcal{M}\subseteq X$ disebut kompak jika setiap barisan di $\mathcal{M}$ memiliki subbarisan yang konvergen kuat ke suatu titik di $\mathcal{M}$.
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Suatu himpunan bagian $\mathcal{M}\subseteq X$ disebut kompak jika setiap barisan di $\mathcal{M}$ mempunyai subbarisan yang konvergen kuat ke suatu titik di $\mathcal{M}$.
 \end{defn}
 % \begin{exam}
-%     Diberikan ruang $CAT_p(0)$, yaitu $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan himpunan bagian $\mathcal{M}=\{(x_1,x_2)\in \mathbb{R}^2\mid x_1^2 + (x_1^2-x_2)^2 \leq 1\}\subset \mathbb{R}^2$. Himpunan bagian tersebut adalah himpunan kompak karena setiap barisan di $\mathcal{M}$ memiliki subbarisan yang konvergen ke suatu titik di $\mathcal{M}$.
+%     Diberikan ruang $CAT_p(0)$, yaitu $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan himpunan bagian $\mathcal{M}=\{(x_1,x_2)\in \mathbb{R}^2\mid x_1^2 + (x_1^2-x_2)^2 \leq 1\}\subset \mathbb{R}^2$. Himpunan bagian tersebut adalah himpunan kompak karena setiap barisan di $\mathcal{M}$ mempunyai subbarisan yang konvergen ke suatu titik di $\mathcal{M}$.
 % \end{exam}
 % Penjelasan dari contoh tersebut adalah sebagai berikut. 
-% Dimisalkan $\{x_n\}\subseteq \mathcal{M}$ adalah barisan di $\mathcal{M}$ dengan $x_n=(x_{n1},x_{n2})$ untuk setiap $n\in \mathbb{N}$. 
+% Dimisalkan $\{x_n\}_{n=1}^{\infty}\subseteq \mathcal{M}$ adalah barisan di $\mathcal{M}$ dengan $x_n=(x_{n1},x_{n2})$ untuk setiap $n\in \mathbb{N}$. 
 
 
 Berikut ini diberikan definisi mengenai sifat demiclosedness pada pemetaan di ruang $CAT_p(0)$.
 \begin{defn}\cite{Salisu2022}\label{defn:demi}
-    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Pemetaan $T:X\to X$ disebut memiliki sifat \textbf{demiclosedness} jika untuk setiap barisan $\{x_n\}\subseteq X$ yang konvergen-$\Delta$ ke $x\in X$ dan memenuhi $\lim_{n\to \infty} d(x_n,Tx_n)=0$, maka berlaku $x=Tx$. 
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$. Pemetaan $T:X\to X$ disebut mempunyai sifat \textbf{demiclosedness} jika untuk setiap barisan $\{x_n\}_{n=1}^{\infty}\subseteq X$ yang konvergen-$\Delta$ ke $x\in X$ dan memenuhi $\lim_{n\to \infty} d(x_n,Tx_n)=0$, maka berlaku $x=Tx$. 
 \end{defn}
 \begin{exam}
-    Diberikan ruang $CAT_p(0)$, yaitu $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan pemetaan $T:\mathbb{R}^2\to\mathbb{R}^2$ yang didefinisikan sebagai $T\qty((x_1,x_2)) = \left(\dfrac{x_1}{2}, \dfrac{x_2}{2}\right)$ untuk setiap $(x_1,x_2)\in \mathbb{R}^2$. Diketahui bahwa titik tetap dari $T$ adalah $(0,0)$. Misalkan $\{x_n\}\subseteq \mathbb{R}^2$ adalah barisan yang konvergen-$\Delta$ ke titik $(0,0)$ dan $\lim_{n\to \infty} d(x_n,Tx_n)=0$. Dari sini didapatkan $A({x_n})={(0,0)}$. Selanjutnya, diperhatikan bahwa 
+    Diberikan ruang $CAT_p(0)$, yaitu $(\mathbb{R}^2,\tilde{d})$ pada Contoh \ref{con:segkom} dan pemetaan $T:\mathbb{R}^2\to\mathbb{R}^2$ yang didefinisikan sebagai $T\qty((x_1,x_2)) = \left(\dfrac{x_1}{2}, \dfrac{x_2}{2}\right)$ untuk setiap $(x_1,x_2)\in \mathbb{R}^2$. Diketahui bahwa titik tetap dari $T$ adalah $(0,0)$. Misalkan $\{x_n\}_{n=1}^{\infty}\subseteq \mathbb{R}^2$ adalah barisan yang konvergen-$\Delta$ ke titik $(0,0)$ dan $\lim_{n\to \infty} d(x_n,Tx_n)=0$. Dari sini didapatkan $A({x_n})={(0,0)}$. Selanjutnya, diperhatikan bahwa 
     \begin{align*}
         \limsup _{n\to\infty} \tilde{d}\qty(T\qty((0,0)),x_{n}) &= \limsup_{n\to\infty} \sqrt{(0 - x_{n1})^2 + \qty(0^2 - 0 + x_{n2} - 0^2)^2}\\
         &= \limsup_{n\to\infty} \tilde{d}((0,0),x_n).
     \end{align*}
-    Hal ini berarti, $T\qty((0,0)) \in A(\{x_n\})$ sehingga $T\qty((0,0)) = (0,0)$. Dengan demikian, pemetaan $T$ memiliki sifat demiclosedness.
+    Hal ini berarti, $T\qty((0,0)) \in A(\{x_n\}_{n=1}^{\infty})$ sehingga $T\qty((0,0)) = (0,0)$. Dengan demikian, pemetaan $T$ mempunyai sifat demiclosedness.
    \end{exam}
 
    Dalam tesis ini dinotasikan $\qty(d(x,y))^p$ sebagai perkalian dari $d(x,y)$ dengan $d(x,y)$ sebanyak $p$ kali yaitu 
@@ -469,5 +469,5 @@ Berikut ini diberikan definisi mengenai sifat demiclosedness pada pemetaan di ru
 
 Selain itu, berikut ini diberikan teorema yang menyatakan kondisi konvergensi-$\Delta$ dari suatu barisan di ruang $CAT_p(0)$.
 \begin{thm}\cite{Salisu2022}\label{thm:kondisikonvD}
-    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup dan konveks. Diberikan pula $T:W\to W$ adalah pemetaan yang memiliki titik tetap dan memenuhi sifat demiclosedness \ref{defn:demi}. Jika $\{x_n\}$ adalah barisan di $W$ yang memenuhi $\lim_{n\to\infty}d(x_n,Tx_n)=0$ dan barisan $\{d(x_n,x^*)\}$ konvergen di $\mathbb{R}$ untuk setiap $x^*$ titik tetap dari $T$, maka barisan $\{x_n\}$ konvergen-$\Delta$ ke titik tetap dari $T$.
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W\subseteq X$ dengan $W\neq\emptyset$, tertutup, dan konveks. Diberikan pula $T:W\to W$ adalah pemetaan yang mempunyai titik tetap dan memenuhi sifat demiclosedness \ref{defn:demi}. Jika $\{x_n\}_{n=1}^{\infty}$ adalah barisan di $W$ yang memenuhi $\lim_{n\to\infty}d(x_n,Tx_n)=0$ dan barisan $\{d(x_n,x^*)\}$ konvergen di $\mathbb{R}$ untuk setiap $x^*$ titik tetap dari $T$, maka barisan $\{x_n\}_{n=1}^{\infty}$ konvergen-$\Delta$ ke titik tetap dari $T$.
 \end{thm}

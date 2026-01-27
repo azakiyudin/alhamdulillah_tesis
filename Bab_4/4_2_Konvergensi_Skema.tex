@@ -3,7 +3,7 @@ Pada bagian ini disajikan skema iterasi Sabri pada ruang $CAT_p(0)$ dan hasil te
 
 Berikut ini diberikan skema iterasi Sabri pada ruang $CAT_p(0)$.
 \begin{defn}[\textbf{Skema Iterasi Sabri}]\label{defn:sabri}
-Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W$ adalah himpunan bagian tak kosong dari $X$ yang konveks. Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi Sabri pada ruang $CAT_p(0)$ sebagai berikut:
+Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W\subseteq X$ dengan $W\neq\emptyset$ dan konveks. Untuk suatu pemetaan $T:W\to W$, $x_0\in W$, dan $n\in\mathbb{N}\cup \{0\} $ didefinisikan skema iterasi Sabri pada ruang $CAT_p(0)$ sebagai berikut:
     \begin{align}\label{eq:sabricat}
        \begin{cases}
             q_n&= T\left((1-c_n)x_n \oplus c_nTx_n\right),\\
@@ -11,7 +11,7 @@ Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ dan $W$ adalah himpunan bagian tak 
         x_{n+1} &= T\left((1-a_n)Tq_n\oplus a_n Ty_n\right).
        \end{cases}
     \end{align}
-    dengan $\{a_n\}\subseteq [0,1]$ dan $\{c_n\}\subseteq [0,1]$.
+    dengan $\{a_n\}_{n=1}^{\infty}\subseteq [0,1]$ dan $\{c_n\}_{n=1}^{\infty}\subseteq [0,1]$.
 \end{defn}
 Berikut ini adalah diagram alir dari skema iterasi Sabri pada ruang $CAT_p(0)$.
 \begin{figure}[H]
@@ -67,7 +67,7 @@ Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan
     Dengan demikian $\lim_{n\to\infty} d(x_n,x^*) = 0$.
 \end{bukti}
 \begin{lemma}\label{Lema:xntxn0}
-    Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$. Jika $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{c_n\}\subset (0,1)$, maka $\lim_{n\to\infty} d(x_n,Tx_n)=0$.
+    Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$. Jika $\{x_n\}_{n=1}^{\infty}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\}_{n=1}^{\infty},\{c_n\}_{n=1}^{\infty}\subset (0,1)$, maka $\lim_{n\to\infty} d(x_n,Tx_n)=0$.
 \end{lemma}
 \begin{bukti}
     Diambil sebarang $x^*\in Fix(T)$, berdasarkan Lema \ref{lema:d,d^p} dan \ref{lemma:tutx}, didapatkan bahwa
@@ -111,10 +111,10 @@ Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan
 
 Teorema berikut ini menyajikan syarat eksistensi titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif.
 \begin{thm}\label{thm:fixtnonemp}
-    Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Jika $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} sehingga $\{x_n\}$ terbatas dan $\lim_{n\to\infty} d(x_n,Tx_n)=0$, maka $Fix(T)\neq\emptyset$.
+    Diberikan $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Jika $\{x_n\}_{n=1}^{\infty}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} sehingga $\{x_n\}_{n=1}^{\infty}$ terbatas dan $\lim_{n\to\infty} d(x_n,Tx_n)=0$, maka $Fix(T)\neq\emptyset$.
 \end{thm}
 \begin{bukti}
-    Diambil sebarang $x^*\in A(\{x_n\})$, maka dengan ketaksamaan \ref{eq:ineqabcnoneks}, diperoleh bahwa 
+    Diambil sebarang $x^*\in A(\{x_n\}_{n=1}^{\infty})$, maka dengan ketaksamaan \ref{eq:ineqabcnoneks}, diperoleh bahwa 
     \begin{align*}
         d(x_n,Tx^*)\leq \frac{\alpha}{1-\gamma}d(x_n,x^*)+\frac{1+\beta}{1-\gamma}d(x_n,Tx_n).
     \end{align*}
@@ -122,11 +122,11 @@ Teorema berikut ini menyajikan syarat eksistensi titik tetap dari pemetaan $(\al
     \begin{align*}
         \limsup_{n\to\infty}d(x_n, Tx^*)=\limsup_{n\to\infty}d(x_n,x^*)\leq \limsup_{n\to\infty} d(x_n,x^*).
     \end{align*}
-    Dari sini didapatkan $Tx^*\in A(\{x_n\})$, sehingga berdasarkan Lema \ref{Lema:asimtotik}, diperoleh bahwa $A(\{x_n\})$ tepat memiliki satu elemen, yang berarti $x^*=Tx^*$. Dengan demikian $Fix(T)\neq \emptyset$.
+    Dari sini didapatkan $Tx^*\in A(\{x_n\}_{n=1}^{\infty})$, sehingga berdasarkan Lema \ref{Lema:asimtotik}, diperoleh bahwa $A(\{x_n\}_{n=1}^{\infty})$ tepat mempunyai satu elemen, yang berarti $x^*=Tx^*$. Dengan demikian $Fix(T)\neq \emptyset$.
 \end{bukti}
 Selanjutnya, dua teorema berikut ini menyajikan hasil konvergensi dari skema Sabri, yakni konvergensi-$\Delta$ dan konvergensi kuat, untuk aproksimasi titik tetap dari pemetaan $(\alpha,\beta,\gamma)$-nonekspansif
 \begin{thm}\label{thm:konvD}
-    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup dan konveks. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$ dan $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{c_n\}\subset (0,1)$, maka $\{x_n\}$ konvergen-$\Delta$ ke suatu titik tetap dari $T$.
+    Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W\subseteq X$ dengan $W\neq\emptyset$, tertutup, dan konveks. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$ dan $\{x_n\}_{n=1}^{\infty}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\}_{n=1}^{\infty},\{c_n\}_{n=1}^{\infty}\subset (0,1)$, maka $\{x_n\}_{n=1}^{\infty}$ konvergen-$\Delta$ ke suatu titik tetap dari $T$.
 \end{thm}
 \begin{bukti}
     Diamati bahwa $T$ merupakan pemetaan $(\alpha,\beta,\gamma)$-nonekspansif. Dari Lema \ref{Lema:dxnx*}, didapatkan bahwa $\{d(x_n,x^*)\}$ konvergen untuk setiap $x^*\in Fix(T)$.
@@ -137,14 +137,14 @@ Selanjutnya, dua teorema berikut ini menyajikan hasil konvergensi dari skema Sab
      \begin{align}
          \lim_{n\to\infty} d(x_n,Tx_n)=0.
      \end{align}
-     Selanjutnya, dari Lema \ref{Lema:demi}, didapat bahwa $T$ memiliki sifat demiclosedness. Hal ini berarti semua kondisi pada Teorema \ref{thm:kondisikonvD} terpenuhi, sehingga $\{x_n\}$ konvergen$-\Delta$.
+     Selanjutnya, dari Lema \ref{Lema:demi}, didapat bahwa $T$ mempunyai sifat demiclosedness. Hal ini berarti semua kondisi pada Teorema \ref{thm:kondisikonvD} terpenuhi, sehingga $\{x_n\}_{n=1}^{\infty}$ konvergen$-\Delta$.
 \end{bukti}
 Untuk mendapatkan hasil konvergensi kuat, diperlukan syarat tambahan, yaitu himpunan $W$ haruslah merupakan himpunan kompak. 
 \begin{thm}\label{thm:konvK}
-     Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup, konveks, dan kompak. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$ dan $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{c_n\}\subset (0,1)$, maka $\{x_n\}$ konvergen kuat ke suatu titik tetap dari $T$.
+     Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W\subseteq X$ dengan $W\neq\emptyset$, tertutup, konveks, dan kompak. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $Fix(T)\neq \emptyset$ dan $\{x_n\}_{n=1}^{\infty}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\}_{n=1}^{\infty},\{c_n\}_{n=1}^{\infty}\subset (0,1)$, maka $\{x_n\}_{n=1}^{\infty}$ konvergen kuat ke suatu titik tetap dari $T$.
 \end{thm}
 \begin{bukti}
-    Diperhatikan bahwa $W$ adalah himpunan kompak, ini berarti ada subbarisan $\{x_{n_k}\}$ dari $\{x_n\}$ yang konvergen kuat ke $x\in W$ atau $\lim_{k\to\infty} d(x_{n_k},x)=0$. Akibatnya $\{x_{n_k}\}$ juga konvergen$-\Delta$ ke $x\in W$.  Dengan menggunakan fakta bahwa $W$ himpunan kompak dan $Fix(T)\neq\emptyset$, maka berdasarkan Lema \ref{Lema:xntxn0}, diperoleh
+    Diperhatikan bahwa $W$ adalah himpunan kompak, ini berarti ada subbarisan $\{x_{n_k}\}_{k=1}^{\infty}$ dari $\{x_n\}_{n=1}^{\infty}$ yang konvergen kuat ke $x\in W$ atau $\lim_{k\to\infty} d(x_{n_k},x)=0$. Akibatnya $\{x_{n_k}\}_{k=1}^{\infty}$ juga konvergen$-\Delta$ ke $x\in W$.  Dengan menggunakan fakta bahwa $W$ himpunan kompak dan $Fix(T)\neq\emptyset$, maka berdasarkan Lema \ref{Lema:xntxn0}, diperoleh
     \begin{align*}
         \lim_{k\to\infty} d(x_{n_k},Tx_{n_k})=\lim_{k\to\infty} d(x_n,Tx_n)=0.
     \end{align*}
@@ -156,18 +156,18 @@ Untuk mendapatkan hasil konvergensi kuat, diperlukan syarat tambahan, yaitu himp
     \begin{align*}
         \lim_{n\to\infty} d(x_{n},x) =\lim_{k\to\infty} d(x_{n_k},x)=0.
     \end{align*}
-    Dengan demikian, barisan $\{x_n\}$ konvergen kuat ke titik tetap dari $T$.
+    Dengan demikian, barisan $\{x_n\}_{n=1}^{\infty}$ konvergen kuat ke titik tetap dari $T$.
 \end{bukti}
 Selanjutnya, diberikan laju konvergensi dari barisan yang dikonstruksi dari skema iterasi Sabri. Berikut ini, terlebih dahulu diberikan definisi dari laju konvergensi dari suatu barisan.
 \begin{defn}\label{defn:lajukonv}\cite{Berinde2015}
-    Diberikan ruang $CAT_p(0)$ $(X,d,G)$. $\{x_n\}$ adalah barisan yang konvergen ke $x\in X$. Jika terdapat $r\in [1,2]$ yang memenuhi 
+    Diberikan ruang $CAT_p(0)$ $(X,d,G)$. $\{x_n\}_{n=1}^{\infty}$ adalah barisan yang konvergen ke $x\in X$. Jika terdapat $r\in [1,2]$ yang memenuhi 
     \begin{align*}
         \lim_{n\to\infty} \dfrac{d(x_{n+1},x^*)}{\qty[d(x_n,x^*)]^r}=\lambda <+\infty,
     \end{align*}
-    maka $r$ disebut sebagai laju konvergensi dari $\{x_n\}$ dengan $\lambda$ sebagai galat asimtotik. Jika $r=1$, laju konvergensinya linear, jika $r=2$, laju konvergensinya kuadratik, dan jika $1<r<2$, laju konvergensinya superlinear.
+    maka $r$ disebut sebagai laju konvergensi dari $\{x_n\}_{n=1}^{\infty}$ dengan $\lambda$ sebagai galat asimtotik. Jika $r=1$, laju konvergensinya linear, jika $r=2$, laju konvergensinya kuadratik, dan jika $1<r<2$, laju konvergensinya superlinear.
 \end{defn}
 \begin{thm}\label{thm:laju}
-Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpunan bagian tak kosong dari $X$ yang tertutup, konveks, dan kompak. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $\alpha+\gamma<1$, $Fix(T)\neq \emptyset$, serta $\{x_n\}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\},\{c_n\}\subset (0,1)$, maka $\{x_n\}$ memiliki laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^3}{(1-\gamma)^3}$.
+Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W\subseteq X$ dengan $W\neq\emptyset$, tertutup, konveks, dan kompak. Jika $T:W\to W$ adalah pemetaan $(\alpha,\beta,\gamma)$-nonekspansif dengan $\alpha+\gamma<1$, $Fix(T)\neq \emptyset$, serta $\{x_n\}_{n=1}^{\infty}$ adalah barisan yang dikonstruksi melalui skema iterasi Sabri \eqref{eq:sabricat} dengan $\{a_n\}_{n=1}^{\infty},\{c_n\}_{n=1}^{\infty}\subset (0,1)$, maka $\{x_n\}_{n=1}^{\infty}$ mempunyai laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^3}{(1-\gamma)^3}$.
 \end{thm}
 \begin{bukti}
     Berdasarkan ketaksamaan \eqref{eq:ineqdxnx*}, didapatkan bahwa untuk setiap $n\in\N$ berlaku 
@@ -178,7 +178,7 @@ Diberikan $(X,d,G)$ adalah ruang $CAT _p(0)$ yang lengkap dan $W$ adalah himpuna
     \begin{align*}
         \lim_{n\to\infty} \frac{d(x_{n+1},x^*)}{d(x_n,x^*)}\leq \frac{\alpha^3}{(1-\gamma)^3}<+\infty.
     \end{align*}
-    Hal ini berarti $\{x_n\}$ memiliki laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^3}{(1-\gamma)^3}$.
+    Hal ini berarti $\{x_n\}_{n=1}^{\infty}$ mempunyai laju konvergensi linear dengan galat asimtotik $\lambda\leq \frac{\alpha^3}{(1-\gamma)^3}$.
 \end{bukti}
 % \begin{bukti}
 %     \begin{align*}

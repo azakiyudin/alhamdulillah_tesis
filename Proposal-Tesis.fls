@@ -490,9 +490,6 @@ INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptm
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.tfm
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7y.vf
-INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\Jekiyudin\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT .\Proposal-Tesis.lot
 INPUT .\Proposal-Tesis.lot
 INPUT Proposal-Tesis.lot
@@ -501,6 +498,9 @@ INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptm
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.tfm
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7y.vf
+INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\Jekiyudin\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7y.vf
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\Jekiyudin\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
@@ -537,11 +537,11 @@ INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi1
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr7t.tfm
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr7t.tfm
-INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
-INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
 INPUT .\Bab_2\2_4_Pemetaan_Nonekspansif.tex
 INPUT .\Bab_2\2_4_Pemetaan_Nonekspansif.tex
 INPUT Bab_2\2_4_Pemetaan_Nonekspansif.tex
+INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
+INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1ppl.fd
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1ppl.fd
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1ppl.fd
@@ -662,6 +662,9 @@ INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1pcr.f
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1pcr.fd
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrr8c.tfm
 INPUT C:\Users\Jekiyudin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\courier\pcrr8c.vf
+INPUT .\terimakasih.tex
+INPUT .\terimakasih.tex
+INPUT terimakasih.tex
 INPUT .\biodata.tex
 INPUT .\biodata.tex
 INPUT .\biodata.tex

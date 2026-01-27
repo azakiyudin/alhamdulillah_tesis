@@ -35,7 +35,7 @@ draw=black]
 
 \node (input) [io, below of=start,align=center,yshift=-0.3cm] 
     {Inisialisasi nilai awal $x_0\in W$, $n=0$, batas galat $\varepsilon>0$, \\
-    batas iterasi $N$, dan parameter iterasi $\{a_n\},\{c_n\}\subseteq (0,1)$};
+    batas iterasi $N$, dan parameter iterasi $\{a_n\}_{n=1}^{\infty},\{c_n\}_{n=1}^{\infty}\subseteq (0,1)$};
 
 \node (qn) [process, below of=input,yshift=-0.3cm] 
 {$q_n = T\big((1-c_n)x_n \oplus c_n T x_n\big)$};
